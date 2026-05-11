@@ -43,12 +43,12 @@ const WordPressPage = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto md:pt-10 px-6 w-full flex flex-col items-center text-center">
           <FadeIn direction="up">
-            <span className="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4 block">
+            <span className="text-[#997819] font-bold tracking-widest uppercase text-sm mb-4 block">
               Enterprise-Grade WordPress Websites
             </span>
             <h1 className="text-white text-5xl md:text-6xl font-black leading-tight mb-6 uppercase">
               WordPress Engineered for{" "}
-              <span className="text-orange-500">Business </span>
+              <span className="text-[#997819]">Business </span>
               GROWTH
             </h1>
             <p className="text-gray-300 text-lg md:text-lg max-w-2xl mb-10 mx-auto">
@@ -56,7 +56,7 @@ const WordPressPage = () => {
               scalable, and secure{" "}
               <Link
                 href="/how-to-start-a-blog-on-wordpress/"
-                className="text-[#B54118] font-bold"
+                className="text-[#997819] font-bold"
               >
                 WordPress
               </Link>{" "}
@@ -64,7 +64,7 @@ const WordPressPage = () => {
             </p>
             <div className="flex justify-center gap-4">
               <Link href="/contact-us/">
-                <button className="bg-[#B54118] text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-all">
+                <button className="bg-[#997819] text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-all">
                   Build Your WordPress Platform →
                 </button>
               </Link>
@@ -80,18 +80,18 @@ const WordPressPage = () => {
             <FadeIn direction="left">
               <h2 className="text-4xl md:text-5xl font-black dark:text-white uppercase tracking-tighter mb-6 leading-none">
                 Professional <br />
-                <span className="text-[#B54118]">WordPress Website</span> <br />
+                <span className="text-[#997819]">WordPress Website</span> <br />
                 Design UK
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-lg mb-8">
                 At{" "}
-                <Link href="/about-us" className="text-[#B54118] font-bold">
+                <Link href="/about-us" className="text-[#997819] font-bold">
                   BizGrow Digital
                 </Link>
                 , we build WordPress websites that combine stunning{" "}
                 <Link
                   href="/what-is-web-design-the-ultimate-guide-to-designing-a-website/"
-                  className="text-[#B54118] font-bold"
+                  className="text-[#997819] font-bold"
                 >
                   design
                 </Link>{" "}
@@ -118,7 +118,7 @@ const WordPressPage = () => {
                   },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
-                    <Check className="text-[#B54118] shrink-0" size={24} />
+                    <Check className="text-[#997819] shrink-0" size={24} />
                     <div>
                       <h3 className="font-bold dark:text-white text-sm uppercase tracking-wide">
                         {item.title}
@@ -130,7 +130,7 @@ const WordPressPage = () => {
               </div>
             </FadeIn>
             <FadeIn direction="right" className="relative">
-              <div className="relative z-10 rounded-[3rem] overflow-hidden border-2 border-[#B54118]/20 shadow-2xl">
+              <div className="relative z-10 rounded-[3rem] overflow-hidden border-2 border-[#997819]/20 shadow-2xl">
                 <Image
                   src="/wp-design-uk.jpg"
                   width={600}
@@ -139,7 +139,7 @@ const WordPressPage = () => {
                   className="w-full h-125 object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#B54118]/10 blur-3xl -z-10" />
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#997819]/10 blur-3xl -z-10" />
             </FadeIn>
           </div>
         </div>
@@ -159,7 +159,7 @@ const WordPressPage = () => {
                 We build performance-focused{" "}
                 <Link
                   href="/custom-wordpress-development-services-in-the-uk/"
-                  className="text-[#B54118] font-bold underline"
+                  className="text-[#997819] font-bold underline"
                 >
                   WordPress websites
                 </Link>{" "}
@@ -195,14 +195,14 @@ const WordPressPage = () => {
                   key={i}
                   className="group relative p-10 bg-white dark:bg-[#001235]/40 backdrop-blur-md rounded-[2.5rem] border-2 border-slate-100 dark:border-white/5 shadow-xl hover:-translate-y-2 transition-all duration-500"
                 >
-                  <div className="text-[#B54118] mb-6">{box.icon}</div>
-                  <h3 className="text-2xl font-black dark:text-white mb-3 tracking-tight group-hover:text-[#B54118] transition-colors uppercase">
+                  <div className="text-[#997819] mb-6">{box.icon}</div>
+                  <h3 className="text-2xl font-black dark:text-white mb-3 tracking-tight group-hover:text-[#997819] transition-colors uppercase">
                     {box.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                     {box.desc}
                   </p>
-                  <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#B54118] group-hover:w-full transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#997819] group-hover:w-full transition-all duration-500" />
                 </div>
               ))}
             </div>
@@ -216,7 +216,7 @@ const WordPressPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-black dark:text-white uppercase tracking-tighter">
               Benefits for Your{" "}
-              <span className="text-[#B54118]">UK Business</span>
+              <span className="text-[#997819]">UK Business</span>
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -229,7 +229,7 @@ const WordPressPage = () => {
                     Quickly update{" "}
                     <Link
                       href="/the-ultimate-guide-to-creating-scroll-stopping-content-in-the-uk/"
-                      className="text-[#B54118] font-bold"
+                      className="text-[#997819] font-bold"
                     >
                       content
                     </Link>{" "}
@@ -249,7 +249,7 @@ const WordPressPage = () => {
                   <>
                     <Link
                       href="/how-good-ux-can-keep-visitors-on-your-website-longer/"
-                      className="text-[#B54118] font-bold"
+                      className="text-[#997819] font-bold"
                     >
                       Mobile-optimised
                     </Link>{" "}
@@ -270,12 +270,12 @@ const WordPressPage = () => {
               {
                 title: "Marketing Support",
                 icon: <Zap />,
-                desc: <>Seamless integration with <Link href="/a-beginners-guide-to-email-marketing-that-actually-works/" className="text-[#B54118] font-bold">email</Link>, social, and analytics.</>,
+                desc: <>Seamless integration with <Link href="/a-beginners-guide-to-email-marketing-that-actually-works/" className="text-[#997819] font-bold">email</Link>, social, and analytics.</>,
               },
             ].map((benefit, i) => (
               <FadeIn key={i} direction="up" delay={i * 0.1}>
-                <div className="p-8 bg-white dark:bg-white/5 rounded-[2rem] border border-zinc-200 dark:border-white/10 hover:border-[#B54118] transition-all group">
-                  <div className="w-12 h-12 rounded-xl bg-[#B54118]/10 text-[#B54118] flex items-center justify-center mb-6 group-hover:bg-[#B54118] group-hover:text-white transition-all">
+                <div className="p-8 bg-white dark:bg-white/5 rounded-[2rem] border border-zinc-200 dark:border-white/10 hover:border-[#997819] transition-all group">
+                  <div className="w-12 h-12 rounded-xl bg-[#997819]/10 text-[#997819] flex items-center justify-center mb-6 group-hover:bg-[#997819] group-hover:text-white transition-all">
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-black dark:text-white mb-3 uppercase tracking-tight">
@@ -294,14 +294,14 @@ const WordPressPage = () => {
       {/* 🚀 4 PREMIUM COMPARISON: Standard vs BizGrow */}
       <section className="dark:bg-black py-24 relative overflow-hidden dark:border-t-2 dark:border-orange-700">
         {/* Background Glow Effect */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#B54118]/5 blur-[120px] rounded-full -z-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#997819]/5 blur-[120px] rounded-full -z-10" />
 
         <div className="relative py-20 bg-slate-900 dark:bg-[#001235]/30 backdrop-blur-xl border-2 border-white/5 dark:border-white/10 text-white rounded-[3.5rem] mx-4 md:mx-10 shadow-2xl overflow-hidden">
           <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
             <FadeIn direction="up">
               <h2 className="text-4xl md:text-6xl font-black mb-16 tracking-tighter uppercase">
                 Standard WordPress vs{" "}
-                <span className="text-[#B54118]">BizGrow WordPress</span>
+                <span className="text-[#997819]">BizGrow WordPress</span>
               </h2>
             </FadeIn>
 
@@ -341,13 +341,13 @@ const WordPressPage = () => {
 
               {/* ✅ BIZ GROW WP (THE WINNER) */}
               <FadeIn direction="right" delay={0.4}>
-                <div className="relative h-full p-10 border-2 border-[#B54118] rounded-[2.5rem] bg-[#B54118]/10 shadow-[0_0_40px_rgba(181,65,24,0.15)] overflow-hidden group">
+                <div className="relative h-full p-10 border-2 border-[#997819] rounded-[2.5rem] bg-[#997819]/10 shadow-[0_0_40px_rgba(181,65,24,0.15)] overflow-hidden group">
                   {/* Winner Badge */}
-                  <div className="absolute -top-0 left-1/2 -translate-x-1/2 bg-[#B54118] px-6 py-2 rounded-b-2xl text-[10px] font-black uppercase tracking-[0.3em] shadow-lg">
+                  <div className="absolute -top-0 left-1/2 -translate-x-1/2 bg-[#997819] px-6 py-2 rounded-b-2xl text-[10px] font-black uppercase tracking-[0.3em] shadow-lg">
                     The Winner
                   </div>
 
-                  <h3 className="text-2xl font-black mb-8 text-[#B54118] uppercase tracking-tight">
+                  <h3 className="text-2xl font-black mb-8 text-[#997819] uppercase tracking-tight">
                     BizGrow WordPress Solutions
                   </h3>
 
@@ -359,7 +359,7 @@ const WordPressPage = () => {
                       <>
                         <Link
                           href="/search-engine-optimisation/"
-                          className="text-[#B54118] underline"
+                          className="text-[#997819] underline"
                         >
                           SEO
                         </Link>
@@ -380,7 +380,7 @@ const WordPressPage = () => {
                   </ul>
 
                   {/* Subtle Inner Glow */}
-                  <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-[#B54118]/20 blur-3xl rounded-full" />
+                  <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-[#997819]/20 blur-3xl rounded-full" />
                 </div>
               </FadeIn>
             </div>
@@ -400,10 +400,10 @@ const WordPressPage = () => {
             <div className="relative z-10">
               <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter mb-8">
                 Let's Build Your <br />{" "}
-                <span className="text-[#B54118]">WordPress Masterpiece</span>
+                <span className="text-[#997819]">WordPress Masterpiece</span>
               </h2>
               <Link href="/contact-us">
-                <button className="px-10 py-5 bg-[#B54118] text-white font-black rounded-2xl uppercase tracking-widest hover:scale-110 transition-all">
+                <button className="px-10 py-5 bg-[#997819] text-white font-black rounded-2xl uppercase tracking-widest hover:scale-110 transition-all">
                   Start Your Project →
                 </button>
               </Link>
