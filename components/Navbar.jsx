@@ -75,44 +75,7 @@ export default function Navbar() {
       icon: <TrendingUp />, 
     },
    
-    {
-      title: "WordPress",
-      description: "Custom WP development & themes",
-      href: "/wordpress-website",
-      icon: <FaCode />,
-    },
-  
-    {
-      title: "Facebook Marketing",
-      description: "Targeted ads & social growth",
-      href: "/facebook-marketing-services",
-      icon: <FaBullhorn />,
-    },
-    {
-      title: "Social Media Marketing",
-      description: "Engagement & community building",
-      href: "/social-media-marketing",
-      icon: <FaBullhorn />,
-    },
-    {
-      title: "Web Development",
-      description:
-        "High-performance React & Next.js apps with Framer Motion & GSAP animations.",
-      href: "/web-development",
-      icon: <Code2 />,
-    },
-    {
-      title: "Graphic Design",
-      description: "Creative logos & branding",
-      href: "/graphic-design-services",
-      icon: <FaPaintBrush />,
-    },
-    {
-      title: "Search Engine Optimisation",
-      description: "Boost your organic visibility",
-      href: "/search-engine-optimisation",
-      icon: <FaSearch />,
-    },
+   
   ];
 
   // 🔥 Enhanced Global Search Logic
