@@ -128,14 +128,14 @@ export default function LuxuryGridSlider() {
               exit={{ opacity: 0, x: 20 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-4 mt-20 mb-6">
                 <span className="w-10 h-[1px] bg-[#997819]"></span>
-                <h2 className="text-[#997819] text-[9px] md:text-[11px] font-black tracking-[0.4em] uppercase">
+                <h2 className="text-[#997819] text-[9px]  md:text-[11px] font-black tracking-[0.4em] uppercase">
                   BIZGROW MEDIA PREMIUM
                 </h2>
               </div>
 
-              <h1 className="text-5xl md:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
+              <h1 className="text-5xl md:text-[8vw]  font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
                 {currentSlide.title} <br />
                 <span 
                   className="text-transparent italic font-serif font-light block mt-2"
