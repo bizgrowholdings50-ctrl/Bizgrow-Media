@@ -1,0 +1,185 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{--navy:#0D2461;--navy-light:#1a3580;--gold:#B8860B;--gold-light:#D4A017;--navy-bg:#EEF1FA}
+  .page-wrap{display:flex;justify-content:center;align-items:flex-start;padding:1.5rem 1rem;min-height:100vh}
+  .wrap{font-family:'DM Sans',sans-serif;width:100%;max-width:680px}
+  .card{background:var(--color-background-primary);border:0.5px solid #c8d0e8;border-radius:12px;padding:1.75rem}
+  .section-divider{display:flex;align-items:center;gap:10px;margin:1.25rem 0 1rem}
+  .section-divider span{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+  .section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:var(--gold);opacity:.3}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-bottom:.85rem}
+  .row.full{grid-template-columns:1fr}
+  .field{display:flex;flex-direction:column;gap:5px}
+  .field label{font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--navy)}
+  .field input,.field select,.field textarea{width:100%;padding:9px 13px;border:1px solid #c8d0e8;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13.5px;color:var(--color-text-primary);background:var(--color-background-primary);outline:none;appearance:none;-webkit-appearance:none;transition:border-color .2s}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(13,36,97,0.08)}
+  .field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%230D2461' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:34px}
+  .appt-check{display:flex;align-items:center;gap:10px;padding:11px 14px;border:1px solid #c8d0e8;border-radius:8px;cursor:pointer;background:var(--color-background-primary);transition:all .2s;margin-bottom:.85rem}
+  .appt-check.checked{border-color:var(--navy);background:var(--navy-bg)}
+  .appt-check input[type=checkbox]{width:16px;height:16px;accent-color:var(--navy);cursor:pointer;flex-shrink:0}
+  .appt-check-label{font-size:13.5px;color:var(--color-text-primary);cursor:pointer;user-select:none}
+  .appt-check-label span{font-size:12px;color:#4a5a8a;display:block;font-weight:300}
+  .cal-wrap{border:1px solid #c8d0e8;border-radius:8px;padding:1rem;margin-bottom:.85rem}
+  .cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem}
+  .cal-nav{background:var(--navy-bg);border:1px solid #c8d0e8;border-radius:6px;width:30px;height:30px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--navy);font-size:15px;font-weight:500}
+  .cal-nav:hover{background:var(--navy);color:#fff}
+  .cal-month{font-size:14px;font-weight:500;color:var(--navy)}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+  .cal-dl{text-align:center;font-size:10.5px;font-weight:500;color:var(--gold);padding:3px 0;letter-spacing:.05em}
+  .cal-day{text-align:center;padding:6px 3px;font-size:12.5px;border-radius:6px;cursor:pointer;color:var(--color-text-secondary);transition:all .15s;border:1px solid transparent}
+  .cal-day:hover:not(.empty):not(.past){background:var(--navy-bg);color:var(--navy);border-color:#c8d0e8}
+  .cal-day.today{color:var(--gold);font-weight:500}
+  .cal-day.selected{background:var(--navy);color:#fff;font-weight:500}
+  .cal-day.past{opacity:.35;cursor:default}
+  .cal-day.empty{cursor:default}
+  .time-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:.75rem}
+  .time-slot{padding:7px 4px;border:1px solid #c8d0e8;border-radius:6px;font-size:12px;color:var(--color-text-secondary);cursor:pointer;text-align:center;transition:all .15s;background:var(--color-background-primary)}
+  .time-slot:hover{border-color:var(--navy);color:var(--navy);background:var(--navy-bg)}
+  .time-slot.sel{background:var(--navy);color:#fff;border-color:var(--navy);font-weight:500}
+  .sel-info{font-size:11.5px;color:#4a5a8a;margin-top:5px;min-height:15px}
+  .btn-send{width:100%;padding:13px;border:none;border-radius:8px;background:var(--navy);color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:1.25rem;transition:background .2s,transform .1s;letter-spacing:.02em}
+  .btn-send:hover{background:var(--navy-light)}
+  .btn-send:active{transform:scale(0.99);background:var(--navy)}
+  .success-wrap{text-align:center;padding:2rem 1rem}
+  .success-icon{width:52px;height:52px;background:var(--navy-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:22px;color:var(--navy);border:1.5px solid #c8d0e8}
+  .success-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:.4rem}
+  .success-sub{font-size:13px;color:#4a5a8a;font-weight:300;line-height:1.6}
+  .reset-btn{margin-top:1.25rem;padding:9px 24px;border:1px solid #c8d0e8;border-radius:8px;background:var(--color-background-primary);font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer;color:var(--color-text-secondary)}
+</style>
+
+<div class="page-wrap">
+  <div class="wrap">
+    
+    <div class="card" id="formCard">
+      <div id="mainForm">
+        <div class="section-divider"><span><i class="ti ti-user" style="font-size:11px" aria-hidden="true"></i> Your details</span></div>
+
+        <div class="row full">
+          <div class="field">
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" placeholder="Your full name">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="phone">Contact Number</label>
+            <input type="tel" id="phone" placeholder="+44 7700 000000">
+          </div>
+        </div>
+
+        <div class="row full">
+          <div class="field">
+            <label for="service">Service Interested In</label>
+            <select id="service">
+              <option value="" disabled selected>Select a service...</option>
+              <option value="Studio &amp; Production">Studio &amp; Production</option>
+              <option value="Content Engine">Content Engine</option>
+              <option value="Authority Builder">Authority Builder</option>
+              <option value="Growth Engine">Growth Engine</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row full">
+          <div class="field">
+            <label for="message">Message (optional)</label>
+            <textarea id="message" rows="2" placeholder="Tell us more about your goals..." style="resize:vertical;font-family:'DM Sans',sans-serif;font-size:13.5px"></textarea>
+          </div>
+        </div>
+
+        <div class="section-divider"><span><i class="ti ti-calendar" style="font-size:11px" aria-hidden="true"></i> Appointment</span></div>
+
+        <div class="appt-check" id="apptToggle" onclick="toggleAppt()">
+          <input type="checkbox" id="apptCheck" aria-label="Book an appointment slot">
+          <div class="appt-check-label">
+            I'd like to book an appointment
+            <span>Check this to select a date &amp; time slot</span>
+          </div>
+        </div>
+
+        <div id="calSection" style="display:none">
+          <div class="row">
+            <div class="field">
+              <label for="country">Country / Timezone</label>
+              <select id="country" onchange="updateTz()">
+                <option value="" disabled selected>Select your country...</option>
+                <option value="Europe/London">United Kingdom (GMT/BST)</option>
+                <option value="Asia/Karachi">Pakistan (PKT +5:00)</option>
+                <option value="Asia/Kolkata">India (IST +5:30)</option>
+                <option value="America/New_York">USA — New York (EST)</option>
+                <option value="America/Los_Angeles">USA — Los Angeles (PST)</option>
+                <option value="Europe/Berlin">Germany (CET +1:00)</option>
+                <option value="Asia/Dubai">UAE / Dubai (GST +4:00)</option>
+                <option value="Asia/Riyadh">Saudi Arabia (AST +3:00)</option>
+                <option value="Asia/Dhaka">Bangladesh (BST +6:00)</option>
+                <option value="Asia/Singapore">Singapore (SGT +8:00)</option>
+                <option value="Australia/Sydney">Australia — Sydney (AEST)</option>
+                <option value="America/Toronto">Canada (EST)</option>
+              </select>
+            </div>
+            <div class="field" style="justify-content:flex-end">
+              <label style="opacity:0">tz</label>
+              <div id="tzInfo" style="padding:9px 13px;border:1px solid #c8d0e8;border-radius:8px;font-size:12.5px;color:#4a5a8a;background:var(--navy-bg)">Select country to see local time</div>
+            </div>
+          </div>
+          <div class="cal-wrap">
+            <div class="cal-header">
+              <button class="cal-nav" onclick="changeMonth(-1)" aria-label="Previous">&#8249;</button>
+              <span class="cal-month" id="calLabel"></span>
+              <button class="cal-nav" onclick="changeMonth(1)" aria-label="Next">&#8250;</button>
+            </div>
+            <div class="cal-grid" id="calGrid"></div>
+            <div class="sel-info" id="dateInfo"></div>
+          </div>
+          <div id="timeSection" style="display:none;margin-bottom:.85rem">
+            <div class="field">
+              <label>Select Time Slot <span id="tzLabel" style="text-transform:none;letter-spacing:0;font-weight:300;font-size:10px"></span></label>
+              <div class="time-grid" id="timeGrid"></div>
+              <div class="sel-info" id="timeInfo"></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-send" onclick="sendBoth()">
+          <i class="ti ti-send" style="font-size:16px" aria-hidden="true"></i> Send Query
+        </button>
+      </div>
+
+      <div id="successWrap" style="display:none">
+        <div class="success-wrap">
+          <div class="success-icon"><i class="ti ti-check" aria-hidden="true"></i></div>
+          <div class="success-title">Query Sent!</div>
+          <div class="success-sub">Thank you! BizGrow Media will be in touch with you shortly.</div>
+          <button class="reset-btn" onclick="resetForm()">
+            <i class="ti ti-plus" style="font-size:13px" aria-hidden="true"></i> New Enquiry
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let apptOn=false,selDate=null,selTime=null;
+let curY,curM;
+const today=new Date();
+const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+const DAYS=['Su','Mo','Tu','We','Th','Fr','Sa'];
+function toggleAppt(){apptOn=!apptOn;document.getElementById('apptCheck').checked=apptOn;document.getElementById('apptToggle').className=apptOn?'appt-check checked':'appt-check';document.getElementById('calSection').style.display=apptOn?'block':'none';}
+function updateTz(){const tz=document.getElementById('country').value;if(!tz)return;try{const fmt=new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',hour12:true,weekday:'short',day:'numeric',month:'short'});document.getElementById('tzInfo').textContent='Local time: '+fmt.format(new Date());document.getElementById('tzLabel').textContent='(your local time)';buildTimeSlots();}catch(e){}}
+function buildTimeSlots(){const slots=['09:00','09:30','10:00','10:30','11:00','11:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30'];const g=document.getElementById('timeGrid');g.innerHTML='';selTime=null;document.getElementById('timeInfo').textContent='';slots.forEach(s=>{const b=document.createElement('div');b.className='time-slot';b.textContent=s;b.onclick=()=>{document.querySelectorAll('.time-slot').forEach(x=>x.className='time-slot');b.className='time-slot sel';selTime=s;document.getElementById('timeInfo').textContent='Selected: '+s;};g.appendChild(b);});}
+function initCal(){curY=today.getFullYear();curM=today.getMonth();renderCal();}
+function changeMonth(d){curM+=d;if(curM>11){curM=0;curY++;}if(curM<0){curM=11;curY--;}renderCal();}
+function renderCal(){document.getElementById('calLabel').textContent=MONTHS[curM]+' '+curY;const g=document.getElementById('calGrid');g.innerHTML='';DAYS.forEach(d=>{const l=document.createElement('div');l.className='cal-dl';l.textContent=d;g.appendChild(l);});const first=new Date(curY,curM,1).getDay();const total=new Date(curY,curM+1,0).getDate();for(let i=0;i<first;i++){const e=document.createElement('div');e.className='cal-day empty';g.appendChild(e);}for(let d=1;d<=total;d++){const cell=document.createElement('div');const isToday=d===today.getDate()&&curM===today.getMonth()&&curY===today.getFullYear();const isPast=new Date(curY,curM,d)<new Date(today.getFullYear(),today.getMonth(),today.getDate());cell.className='cal-day'+(isToday?' today':'')+(isPast?' past':'');cell.textContent=d;if(!isPast){cell.onclick=()=>{document.querySelectorAll('.cal-day').forEach(x=>x.classList.remove('selected'));cell.classList.add('selected');selDate=new Date(curY,curM,d);document.getElementById('dateInfo').textContent='Date: '+selDate.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});if(document.getElementById('country').value){document.getElementById('timeSection').style.display='block';}else{document.getElementById('dateInfo').textContent+=' — please select your country first';}};}g.appendChild(cell);}}
+function buildMsg(){const name=document.getElementById('fname').value.trim();const email=document.getElementById('email').value.trim();const phone=document.getElementById('phone').value.trim();const service=document.getElementById('service').value;const msg=document.getElementById('message').value.trim();if(!name||!email||!phone||!service){alert('Please fill in Name, Email, Contact Number and Service.');return null;}if(apptOn&&!selDate){alert('Please select a date for your appointment.');return null;}if(apptOn&&!selTime){alert('Please select a time slot.');return null;}let body='New enquiry from BizGrow Media website\n\n';body+='Name: '+name+'\n';body+='Email: '+email+'\n';body+='Phone: '+phone+'\n';body+='Service: '+service+'\n';if(msg)body+='Message: '+msg+'\n';if(apptOn&&selDate&&selTime){body+='\nAppointment requested:\n';body+='Date: '+selDate.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'})+'\n';body+='Time: '+selTime+'\n';}return{name,email,phone,service,body};}
+function sendBoth(){const d=buildMsg();if(!d)return;const sub=encodeURIComponent('New Enquiry — '+d.service);const bod=encodeURIComponent(d.body);const txt=encodeURIComponent(d.body);window.open('mailto:info@bizgrowmedia.co.uk?subject='+sub+'&body='+bod,'_blank');setTimeout(()=>window.open('https://wa.me/923312814214?text='+txt,'_blank'),600);document.getElementById('mainForm').style.display='none';document.getElementById('successWrap').style.display='block';}
+function resetForm(){document.getElementById('mainForm').style.display='block';document.getElementById('successWrap').style.display='none';['fname','email','phone','message'].forEach(id=>document.getElementById(id).value='');document.getElementById('service').value='';document.getElementById('country').value='';document.getElementById('tzInfo').textContent='Select country to see local time';document.getElementById('dateInfo').textContent='';document.getElementById('timeInfo').textContent='';document.getElementById('timeSection').style.display='none';document.getElementById('calSection').style.display='none';document.getElementById('apptToggle').className='appt-check';document.getElementById('apptCheck').checked=false;apptOn=false;selDate=null;selTime=null;renderCal();}
+initCal();
+</script>

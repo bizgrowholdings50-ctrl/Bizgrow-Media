@@ -37,7 +37,7 @@ const page = () => {
           Designing high-performance, secure, and{" "}
           <Link
             href="/how-to-write-an-seo-optimised-blog-in-2026/"
-            className="text-[#B54118] font-bold"
+            className="text-[#997819] font-bold"
           >
             SEO-optimised
           </Link>{" "}
@@ -46,9 +46,9 @@ const page = () => {
         </>
       ),
       icon: <Globe className="w-8 h-8" />,
-      bgColor: "bg-[#B54118]/10", // 10% Opacity of your brand color
+      bgColor: "bg-[#997819]/10", // 10% Opacity of your brand color
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#B54118]",
+      hoverBg: "group-hover:bg-[#997819]",
     },
     {
       title: "Graphic Design",
@@ -58,7 +58,7 @@ const page = () => {
           Creating visually compelling, user-focused{" "}
           <Link
             href="/how-can-web-graphic-design-elevate-your-digital-presence/"
-            className="text-[#B54118] font-bold"
+            className="text-[#997819] font-bold"
           >
             designs
           </Link>{" "}
@@ -67,18 +67,18 @@ const page = () => {
         </>
       ),
       icon: <Palette className="w-8 h-8" />,
-      bgColor: "bg-[#B54118]/10",
+      bgColor: "bg-[#997819]/10",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#B54118]",
+      hoverBg: "group-hover:bg-[#997819]",
     },
     {
       title: "SEO",
       path: "/search-engine-optimisation",
       desc: "Improving search engine visibility and driving high-quality organic traffic through strategic, results-focused Google ranking optimisation.",
       icon: <TrendingUp className="w-8 h-8" />,
-      bgColor: "bg-[#B54118]/10",
+      bgColor: "bg-[#997819]/10",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#B54118]",
+      hoverBg: "group-hover:bg-[#997819]",
     },
     {
       title: "Digital Marketing",
@@ -91,7 +91,7 @@ const page = () => {
           strategies.
           <Link
             href="/social-media-for-uk-consultants/"
-            className="text-[#B54118] font-bold"
+            className="text-[#997819] font-bold"
           >
             social media
           </Link>{" "}
@@ -99,9 +99,9 @@ const page = () => {
         </>
       ),
       icon: <Megaphone className="w-8 h-8" />,
-      bgColor: "bg-[#B54118]/10",
+      bgColor: "bg-[#997819]/10",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#B54118]",
+      hoverBg: "group-hover:bg-[#997819]",
     },
     {
       title: "Social Media Marketing",
@@ -110,7 +110,7 @@ const page = () => {
           Building brand awareness and meaningful engagement through strategic{" "}
           <Link
             href="/10-creative-content-techniques-to-improve-seo-results/"
-            className="text-[#B54118] font-bold"
+            className="text-[#997819] font-bold"
           >
             content
           </Link>
@@ -119,18 +119,18 @@ const page = () => {
       ),
       path: "/social-media-marketing",
       icon: <Fingerprint className="w-8 h-8" />,
-      bgColor: "bg-[#B54118]/10",
+      bgColor: "bg-[#997819]/10",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#B54118]",
+      hoverBg: "group-hover:bg-[#997819]",
     },
     {
       title: "Creative Content",
       desc: "Crafting high-quality, audience-focused content that strengthens brand messaging, builds trust, and drives meaningful engagement.",
       path: "/creative-content",
       icon: <PenTool className="w-8 h-8" />,
-      bgColor: "bg-[#B54118]/10",
+      bgColor: "bg-[#997819]/10",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#B54118]",
+      hoverBg: "group-hover:bg-[#997819]",
     },
     {
       title: "FACEBOOK MARKETING",
@@ -139,7 +139,7 @@ const page = () => {
           Grow your brand organically on{" "}
           <Link
             href="/facebook-marketing-services/"
-            className="text-[#B54118] font-bold"
+            className="text-[#997819] font-bold"
           >
             Facebook
           </Link>{" "}
@@ -149,9 +149,9 @@ const page = () => {
       ),
       path: "/facebook-marketing-services",
       icon: <Facebook className="w-8 h-8" />,
-      bgColor: "bg-[#B54118]/10",
+      bgColor: "bg-[#997819]/10",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#B54118]",
+      hoverBg: "group-hover:bg-[#997819]",
     },
     {
       title: "WORDPRESS DEVELOPMENT",
@@ -160,7 +160,7 @@ const page = () => {
           Create fast, secure, and SEO-friendly{" "}
           <Link
             href="/custom-wordpress-development-services-in-the-uk/"
-            className="text-[#B54118] font-bold"
+            className="text-[#997819] font-bold"
           >
             WordPress websites
           </Link>{" "}
@@ -170,9 +170,9 @@ const page = () => {
       ),
       path: "/wordpress-website",
       icon: <FaWordpress className="w-8 h-8" />,
-      bgColor: "bg-[#B54118]/10",
+      bgColor: "bg-[#997819]/10",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#B54118]",
+      hoverBg: "group-hover:bg-[#997819]",
     },
     {
       title: "LEAD GENERATION",
@@ -181,7 +181,7 @@ const page = () => {
           Attract and convert high-quality UK{" "}
           <Link
             href="/8-effective-lead-generation-strategies/"
-            className="text-[#B54118] font-bold"
+            className="text-[#997819] font-bold"
           >
             leads
           </Link>{" "}
@@ -191,9 +191,9 @@ const page = () => {
       ),
       path: "/lead-generation-solutions",
       icon: <Users className="w-8 h-8" />,
-      bgColor: "bg-[#B54118]/10",
+      bgColor: "bg-[#997819]/10",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#B54118]",
+      hoverBg: "group-hover:bg-[#997819]",
     },
     {
       title: "E-MAIL MARKETING",
@@ -202,7 +202,7 @@ const page = () => {
           Engage your UK audience with personalised, relevant{" "}
           <Link
             href="/a-beginners-guide-to-email-marketing-that-actually-works/"
-            className="text-[#B54118] font-bold"
+            className="text-[#997819] font-bold"
           >
             emails
           </Link>{" "}
@@ -212,9 +212,9 @@ const page = () => {
       ),
       path: "/email-marketing",
       icon: <MailCheck className="w-8 h-8" />,
-      bgColor: "bg-[#B54118]/10",
+      bgColor: "bg-[#997819]/10",
       hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#B54118]",
+      hoverBg: "group-hover:bg-[#997819]",
     },
   ];
 
@@ -245,7 +245,7 @@ const page = () => {
             font-bold mt-26 max-w-5xl px-4"
             >
               Data-Driven Solutions to{" "}
-              <span className="text-orange-500">Scale Your Business </span>
+              <span className="text-[#997819]">Scale Your Business </span>
               Growth
             </h1>
           </FadeIn>
@@ -256,7 +256,7 @@ const page = () => {
               increase visibility, attract qualified{" "}
               <Link
                 href="/lead-generation-agency-uk-in-2026/"
-                className="text-[#B54118] font-bold"
+                className="text-[#997819] font-bold"
               >
                 leads
               </Link>
@@ -269,7 +269,7 @@ const page = () => {
             {/* 🔹 FIX: Button ko is div mein wrap kiya taake alignment force ho sake */}
             <div className="w-full flex justify-center">
               <Link href="/contact-us">
-                <button className="mt-8 px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
+                <button className="mt-8 px-8 py-4 bg-[#997819] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
                   Contact Us →
                 </button>
               </Link>
@@ -281,7 +281,7 @@ const page = () => {
       {/* 🚀 UNIQUE SERVICES GRID: Consistent & Premium */}
       <section className="py-24 bg-gray-50 dark:bg-black relative overflow-hidden">
         {/* Background Decorative Blob */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#B54118]/5 blur-[120px] rounded-full -z-10" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#997819]/5 blur-[120px] rounded-full -z-10" />
 
         <div className="max-w-7xl mx-auto px-6">
           {/* Header Text */}
@@ -289,9 +289,9 @@ const page = () => {
             <FadeIn direction="up" delay={0.2}>
               <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tighter">
                 Data-Powered Solutions for <br />
-                <span className="text-[#B54118]">Next-Level Growth</span>
+                <span className="text-[#997819]">Next-Level Growth</span>
               </h2>
-              <div className="w-24 h-2 bg-[#B54118] mx-auto mt-6 rounded-full" />
+              <div className="w-24 h-2 bg-[#997819] mx-auto mt-6 rounded-full" />
             </FadeIn>
 
             <FadeIn direction="up" delay={0.4}>
@@ -312,9 +312,9 @@ const page = () => {
                 className="h-full"
               >
                 {/* 🔹 Consistent Card Styling */}
-                <div className="group relative h-full p-10 bg-white dark:bg-[#001235]/40 backdrop-blur-md rounded-[2.5rem] border-2 border-slate-100 dark:border-white/5 shadow-xl hover:shadow-[#B54118]/20 transition-all duration-500 flex flex-col items-start text-left overflow-hidden">
+                <div className="group relative h-full p-10 bg-white dark:bg-[#001235]/40 backdrop-blur-md rounded-[2.5rem] border-2 border-slate-100 dark:border-white/5 shadow-xl hover:shadow-[#997819]/20 transition-all duration-500 flex flex-col items-start text-left overflow-hidden">
                   {/* Hover Glow Effect */}
-                  <div className="absolute -inset-full bg-gradient-to-br from-[#B54118]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
+                  <div className="absolute -inset-full bg-gradient-to-br from-[#997819]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
 
                   {/* Icon Container - Matching Home Style */}
                   <div
@@ -325,7 +325,7 @@ const page = () => {
                     {service.icon}
                   </div>
 
-                  <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-tight group-hover:text-[#B54118] transition-colors">
+                  <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-tight group-hover:text-[#997819] transition-colors">
                     {service.title}
                   </h3>
 
@@ -335,13 +335,13 @@ const page = () => {
 
                   {/* 🔹 Consistent Arrow/Link for Services */}
                   <Link href={service.path} className="mt-8">
-                    <div className="flex items-center gap-2 text-[#B54118] font-bold text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 cursor-pointer">
+                    <div className="flex items-center gap-2 text-[#997819] font-bold text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 cursor-pointer">
                       Explore More <span>→</span>
                     </div>
                   </Link>
 
                   {/* 🔹 Bottom Accent Line - Matching Why Choose Us */}
-                  <div className="absolute bottom-0 left-0 w-0 h-2 bg-[#B54118] group-hover:w-full transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 w-0 h-2 bg-[#997819] group-hover:w-full transition-all duration-500" />
                 </div>
               </FadeIn>
             ))}
@@ -365,21 +365,21 @@ const page = () => {
             }}
           >
             {/* 🔹 Dynamic Overlay: Depth create karne ke liye */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-[#B54118]/30 z-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-[#997819]/30 z-0"></div>
 
             {/* 🔹 Modern Glass Border */}
-            <div className="absolute inset-0 border-2 border-white/10 rounded-[3.5rem] z-10 pointer-events-none group-hover:border-[#B54118]/30 transition-all duration-500"></div>
+            <div className="absolute inset-0 border-2 border-white/10 rounded-[3.5rem] z-10 pointer-events-none group-hover:border-[#997819]/30 transition-all duration-500"></div>
 
             <div className="relative z-20 max-w-4xl mx-auto px-6">
               <FadeIn direction="up">
                 {/* Top Badge */}
-                <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
+                <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#997819] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
                   Take the Leap
                 </span>
 
                 <h2 className="text-4xl md:text-7xl mt-4 font-black mb-8 leading-[1.1] tracking-tighter uppercase">
                   Scale Your Presence <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B54118] to-orange-400">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#997819] to-orange-400">
                     with Confidence
                   </span>
                 </h2>
@@ -395,7 +395,7 @@ const page = () => {
 
               <FadeIn direction="up" delay={0.4}>
                 <Link href="/contact-us">
-                  <button className="relative px-8 py-4 bg-[#B54118] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(181,65,24,0.5)]">
+                  <button className="relative px-8 py-4 bg-[#997819] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(181,65,24,0.5)]">
                     {/* Shine Animation Effect */}
                     <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
                     <span className="relative z-10 text-lg uppercase tracking-widest">
@@ -407,8 +407,8 @@ const page = () => {
             </div>
 
             {/* 🔹 Background Glowing Orbs */}
-            <div className="absolute -top-20 -left-20 w-80 h-80 bg-[#B54118]/10 blur-[120px] rounded-full"></div>
-            <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[#B54118]/10 blur-[120px] rounded-full"></div>
+            <div className="absolute -top-20 -left-20 w-80 h-80 bg-[#997819]/10 blur-[120px] rounded-full"></div>
+            <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[#997819]/10 blur-[120px] rounded-full"></div>
           </div>
         </div>
       </section>

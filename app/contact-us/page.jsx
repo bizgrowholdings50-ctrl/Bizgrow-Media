@@ -1,307 +1,226 @@
 "use client";
-import React, { useState } from "react"; // useState add kiya
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  MessageSquareCode,
-  Loader2,
-  CheckCircle,
-} from "lucide-react"; // Extra icons
+import { Mail, Phone, MapPin, Send, ArrowRight, CheckCircle, Loader2, Calendar, Globe } from "lucide-react";
 import FadeIn from "@components/MotionWrapper";
-
-
+import { motion, AnimatePresence } from "framer-motion";
 
 const ContactPage = () => {
-  // 1. Form States
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [status, setStatus] = useState("idle"); // idle, sending, success, error
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
+  const [apptOn, setApptOn] = useState(false);
+  const [selDate, setSelDate] = useState("");
+  const [selTime, setSelTime] = useState("");
+  const [timezone, setTimezone] = useState("Europe/London");
+  const [status, setStatus] = useState("idle");
 
-  const contactInfo = [
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Call Us",
-      details: "+44 7903 332433 / 020 8090 4209",
-      desc: "Mon-Fri from 9am to 5pm.",
-      bgColor: "bg-orange-100",
-      iconColor: "text-[#B54118]",
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email Us",
-      details: "Info@bizgrow-digital.co.uk",
-      desc: "We respond within 24 hours.",
-      bgColor: "bg-blue-100",
-      iconColor: "text-blue-600",
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: "Visit Us",
-      details: "CEME Campus, Marsh Way, RM13 8EU",
-      desc: "Come say hello at our office.",
-      bgColor: "bg-green-100",
-      iconColor: "text-green-600",
-    },
-    {
-      icon: <MessageSquareCode className="w-6 h-6" />,
-      title: "Social Connect",
-      details: "BizGrow Holdings Ltd.",
-      desc: "Follow us on Facebook for latest updates.",
-      bgColor: "bg-purple-100",
-      iconColor: "text-purple-600",
-      isSocial: true,
-      link: "https://www.facebook.com/bizgrowholdings",
-    },
-  ];
+  const slots = ["09:00", "10:30", "12:00", "14:00", "15:30", "17:00"];
 
-  // 2. Handle Input Changes
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  // 3. Handle Form Submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("sending");
 
+    const payload = {
+      ...formData,
+      appointment: apptOn ? { date: selDate, time: selTime, timezone } : null
+    };
+
     try {
-      const response = await fetch("/api/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+      // 1. Send to your Resend API
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
       });
 
-      if (response.ok) {
+      if (res.ok) {
+        // 2. WhatsApp Trigger
+        const waMsg = `*New Lead from Website*\n\n*Name:* ${payload.name}\n*Service:* ${payload.subject}${apptOn ? `\n*Meeting:* ${selDate} @ ${selTime}` : ''}`;
+        window.open(`https://wa.me/923312814214?text=${encodeURIComponent(waMsg)}`, '_blank');
+        
         setStatus("success");
-        setFormData({ name: "", email: "", subject: "", message: "" });
-        setTimeout(() => setStatus("idle"), 5000); // 5 sec baad normal
       } else {
-        setStatus("error");
+        throw new Error("Failed to send");
       }
-    } catch (error) {
-      console.error("Error:", error);
-      setStatus("error");
+    } catch (err) {
+      alert("Something went wrong. Please try again.");
+      setStatus("idle");
     }
   };
 
   return (
-    <section className="relative w-full bg-gray-50 dark:bg-black dark:border-y-2 dark:border-orange-700 antialiased">
-      {/* --- HERO SECTION --- */}
-      <div className="relative h-[75vh] md:h-screen w-full">
-        <Image
-          src="/contact-us-hero.jpg"
-          alt="Contact - BizGrow Digital today"
-          fill
-          fetchPriority="high"
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center px-4">
+    <section className="w-full bg-[#fcfcfc] dark:bg-[#02040a] antialiased">
+      {/* --- 1. HERO SECTION (Same as yours) --- */}
+      <div className="relative h-[85vh] md:h-screen w-full flex items-center justify-center overflow-hidden bg-[#12066a]">
+        <div className="absolute inset-0 z-0">
+          <Image src="/contact-us-hero.jpg" alt="Bizgrow Contact" fill priority className="object-cover opacity-40 grayscale-[50%]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#12066a]/90 via-transparent to-[#997819]/60 dark:to-[#02040a]" />
+        </div>
+        <div className="relative z-10 max-w-5xl px-6 text-center">
           <FadeIn direction="up">
-            <h1 className="text-white text-5xl md:text-7xl text-center font-bold tracking-tighter">
-              Let’s Start a{" "}
-              <span className="text-orange-500">Conversation</span>
+            <span className="inline-block px-4 py-1.5 mb-6 rounded-full border border-[#997819] text-[#997819] text-[10px] font-black uppercase tracking-[0.4em] backdrop-blur-md">Get in Touch</span>
+            <h1 className="text-white text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] uppercase">Let's Start a <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#997819] via-[#d4af37] to-[#997819]">Conversation</span>
             </h1>
           </FadeIn>
-          <FadeIn direction="up" delay={0.2}>
-            <div className="w-full flex justify-center">
-              <p className="text-gray-200 text-lg md:text-xl text-center mt-4 max-w-2xl font-light">
-                Have a project in mind? Reach out to us and let’s build
-                something incredible together.
-              </p>
+        </div>
+      </div>
+
+      {/* --- 2. MAIN CONTENT --- */}
+      <div className="max-w-7xl mx-auto px-6 py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+          
+          {/* LEFT: Info Panel (Same as yours) */}
+          <div className="lg:col-span-5 space-y-12">
+            <div>
+              <h2 className="text-[#12066a] dark:text-white text-4xl font-black uppercase tracking-tighter">Ready to Scale <br />Your Business?</h2>
+              <div className="w-20 h-1.5 bg-[#997819] mt-6 rounded-full" />
+            </div>
+            <div className="space-y-6">
+              {[
+                { icon: <Phone />, label: "Call Us", val: "+44 7903 332433" },
+                { icon: <Mail />, label: "Email", val: "Info@bizgrow-digital.co.uk" },
+                { icon: <MapPin />, label: "Location", val: "London, RM13 8EU" }
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-6 p-6 rounded-[2rem] bg-white dark:bg-[#12066a]/10 border border-gray-100 dark:border-white/5 shadow-sm">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#12066a] text-[#997819]">{item.icon}</div>
+                  <div>
+                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{item.label}</p>
+                    <h4 className="text-lg font-bold text-[#12066a] dark:text-white">{item.val}</h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT: The New Interactive Form */}
+          <div className="lg:col-span-7 relative">
+            <FadeIn direction="up">
+              <div className="bg-white dark:bg-[#050814] rounded-[3.5rem] p-8 md:p-12 border border-gray-200 dark:border-white/10 shadow-2xl">
+                
+                {status === "success" ? (
+                  <motion.div initial={{ scale: 0.9 }} animate={{ scale: 1 }} className="text-center py-20">
+                    <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-6" />
+                    <h3 className="text-2xl font-black text-[#12066a] dark:text-white uppercase">Inquiry Received</h3>
+                    <p className="text-gray-500 mt-4">Thank you! Hamari team jald rabta karegi.</p>
+                    <button onClick={() => setStatus("idle")} className="mt-8 text-[#997819] font-black text-xs uppercase border-b-2 border-[#997819]">Send Another</button>
+                  </motion.div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="space-y-2">
+                        <label className="text-[10px] font-black text-[#12066a] dark:text-gray-400 uppercase tracking-widest">Full Name</label>
+                        <input name="name" required onChange={handleChange} className="w-full bg-gray-50 dark:bg-white/5 border-b-2 border-gray-200 dark:border-white/10 p-3 outline-none focus:border-[#997819] transition-all dark:text-white font-bold" />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-[10px] font-black text-[#12066a] dark:text-gray-400 uppercase tracking-widest">Email Address</label>
+                        <input name="email" type="email" required onChange={handleChange} className="w-full bg-gray-50 dark:bg-white/5 border-b-2 border-gray-200 dark:border-white/10 p-3 outline-none focus:border-[#997819] transition-all dark:text-white font-bold" />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="space-y-2">
+                        <label className="text-[10px] font-black text-[#12066a] dark:text-gray-400 uppercase tracking-widest">Phone Number</label>
+                        <input name="phone" required onChange={handleChange} className="w-full bg-gray-50 dark:bg-white/5 border-b-2 border-gray-200 dark:border-white/10 p-3 outline-none focus:border-[#997819] transition-all dark:text-white font-bold" />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-[10px] font-black text-[#12066a] dark:text-gray-400 uppercase tracking-widest">Service</label>
+                        <select name="subject" required onChange={handleChange} className="w-full bg-gray-50 dark:bg-white/5 border-b-2 border-gray-200 dark:border-white/10 p-3 outline-none focus:border-[#997819] transition-all dark:text-white font-bold appearance-none">
+                          <option value="">Select Service...</option>
+                          <option value="Security Web">Security Solutions</option>
+                          <option value="Authority Builder">Authority Builder</option>
+                          <option value="Content Engine">Content Engine</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    {/* Appointment Toggle */}
+                    <div 
+                      onClick={() => setApptOn(!apptOn)}
+                      className={`flex items-center gap-4 p-5 rounded-2xl border-2 cursor-pointer transition-all ${apptOn ? 'border-[#997819] bg-[#997819]/5' : 'border-gray-100 dark:border-white/5'}`}
+                    >
+                      <div className={`w-5 h-5 rounded border flex items-center justify-center ${apptOn ? 'bg-[#997819] border-[#997819]' : 'border-gray-400'}`}>
+                        {apptOn && <div className="w-2 h-2 bg-white rounded-full" />}
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-xs font-black text-[#12066a] dark:text-white uppercase tracking-tighter">Book a Discovery Call</p>
+                        <p className="text-[10px] text-gray-400">Select a date & time for a meeting</p>
+                      </div>
+                      <Calendar className={apptOn ? "text-[#997819]" : "text-gray-400"} size={20} />
+                    </div>
+
+                    {/* Calendar Section */}
+                    <AnimatePresence>
+                      {apptOn && (
+                        <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6 p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-dashed border-[#997819]/40">
+                          <div className="grid grid-cols-2 gap-4">
+                            <div className="space-y-1">
+                              <label className="text-[9px] font-bold uppercase text-gray-400">Timezone</label>
+                              <select onChange={(e) => setTimezone(e.target.value)} className="w-full bg-transparent text-xs font-bold dark:text-white outline-none">
+                                <option value="Europe/London">UK (GMT/BST)</option>
+                                <option value="Asia/Karachi">Pakistan (PKT)</option>
+                              </select>
+                            </div>
+                            <div className="space-y-1">
+                              <label className="text-[9px] font-bold uppercase text-gray-400">Select Date</label>
+                              <input type="date" required={apptOn} onChange={(e) => setSelDate(e.target.value)} className="w-full bg-transparent text-xs font-bold dark:text-white outline-none" />
+                            </div>
+                          </div>
+                          
+                          <div className="grid grid-cols-3 gap-2">
+                            {slots.map(slot => (
+                              <button key={slot} type="button" onClick={() => setSelTime(slot)} className={`py-2 text-[10px] font-bold rounded-lg border transition-all ${selTime === slot ? 'bg-[#12066a] text-white border-[#12066a]' : 'bg-white dark:bg-transparent dark:text-white border-gray-200 dark:border-white/10'}`}>
+                                {slot}
+                              </button>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black text-[#12066a] dark:text-gray-400 uppercase tracking-widest">Brief Message</label>
+                      <textarea name="message" rows={2} onChange={handleChange} className="w-full bg-gray-50 dark:bg-white/5 border-b-2 border-gray-200 dark:border-white/10 p-3 outline-none focus:border-[#997819] transition-all dark:text-white font-bold resize-none" />
+                    </div>
+
+                    <button disabled={status === "sending"} className="group relative w-full py-6 bg-[#12066a] text-white font-black rounded-2xl overflow-hidden transition-all shadow-xl active:scale-[0.98]">
+                      <div className="relative z-10 flex items-center justify-center gap-4 uppercase tracking-[0.3em] text-[10px]">
+                        {status === "sending" ? <Loader2 className="animate-spin w-4 h-4" /> : "Initiate Conversation"}
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                      </div>
+                      <div className="absolute inset-0 bg-[#997819] translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                    </button>
+                  </form>
+                )}
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </div>
+
+      {/* --- 3. MINIMAL MAP SECTION --- */}
+      <section className="px-6 pb-24">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn direction="up">
+            <div className="relative rounded-[3.5rem] overflow-hidden h-[500px] border border-gray-200 dark:border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000 group">
+              {/* Overlay for a more professional look */}
+              <div className="absolute inset-0 bg-[#12066a]/5 pointer-events-none group-hover:bg-transparent transition-all duration-1000 z-10" />
+              
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.540423055107!2d0.18023637684638787!3d51.5216139718159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a594419967e5%3A0x6b772c91807d4b4!2sCEME%20Campus%2C%20Marsh%20Way%2C%20Rainham%20RM13%208EU%2C%20UK!5e0!3m2!1sen!2s!4v1715000000000!5m2!1sen!2s" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Bizgrow Location"
+                className="relative z-0"
+              />
             </div>
           </FadeIn>
         </div>
-      </div>
-
-      {/* --- CONTACT CONTENT --- */}
-      <div className="max-w-7xl mx-auto px-4 py-20 dark:border-t dark:border-orange-700 relative z-10">
-        <h2 className="text-5xl mb-4 font-black text-center text-slate-900 dark:text-white uppercase">
-          Get in Touch
-        </h2>
-        <div className="w-1/5 h-1 my-6 bg-[#B54118] mx-auto rounded-full" />
-       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-  {/* 1. Contact Info - Minimalist Floating Style */}
-  <div className="lg:col-span-1 space-y-8">
-    <div className="space-y-2 mb-10 text-left">
-      <h3 className="text-[#B54118] font-black text-xs tracking-[0.4em] uppercase">
-        Contact Details
-      </h3>
-      <h2 className="text-4xl font-black dark:text-white text-slate-900 leading-none">
-        LET'S START <br /> SOMETHING BIG.
-      </h2>
-    </div>
-
-    {contactInfo.map((item, index) => {
-      const ItemContent = (
-        <div className="group flex items-center gap-6 p-2 cursor-pointer">
-          <div
-            className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-500 border border-gray-100 dark:border-white/10 group-hover:border-[#B54118] group-hover:bg-[#B54118] group-hover:text-white ${item.iconColor} bg-white dark:bg-slate-900 shadow-xl group-hover:shadow-[#B54118]/40 shrink-0`}
-          >
-            <div className="group-hover:scale-110 transition-transform duration-500">
-              {item.icon}
-            </div>
-          </div>
-          <div className="flex flex-col text-left">
-            <span className="text-gray-400 text-[10px] font-black uppercase tracking-widest">
-              {item.title}
-            </span>
-            <span className="text-lg font-bold dark:text-white text-slate-800 group-hover:text-[#B54118] transition-colors duration-300">
-              {item.details}
-            </span>
-          </div>
-        </div>
-      );
-
-      return (
-        <FadeIn key={index} direction="right" delay={index * 0.1}>
-          {item.isSocial ? (
-            <a href={item.link} target="_blank" rel="noopener noreferrer" className="block">
-              {ItemContent}
-            </a>
-          ) : (
-            <div>{ItemContent}</div>
-          )}
-        </FadeIn>
-      );
-    })}
-  </div>
-
-  {/* 2. Contact Form Container */}
-  <div className="lg:col-span-2 relative">
-    <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#B54118]/20 blur-[120px] rounded-full z-0 pointer-events-none" />
-    <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-orange-500/10 blur-[120px] rounded-full z-0 pointer-events-none" />
-
-    <FadeIn direction="up">
-      <div className="relative z-10 overflow-hidden bg-white/80 dark:bg-black/40 backdrop-blur-2xl p-8 md:p-14 rounded-[3.5rem] border border-gray-200 dark:border-white/10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] min-h-[500px] flex flex-col justify-center">
-        
-        {status === "success" ? (
-          /* --- ULTRA PREMIUM SUCCESS STATE --- */
-          <div className="flex flex-col items-center justify-center text-center space-y-6 animate-in fade-in zoom-in duration-500">
-            <div className="relative">
-                <div className="absolute inset-0 bg-green-500/20 blur-3xl rounded-full" />
-                <CheckCircle className="w-24 h-24 text-green-500 relative z-10 animate-bounce" />
-            </div>
-            <div className="space-y-2">
-                <h3 className="text-4xl font-black dark:text-white text-slate-900 tracking-tighter uppercase">Message Sent!</h3>
-                <p className="text-gray-500 dark:text-gray-400 font-medium max-w-sm mx-auto">
-                    Thank you for reaching out. Our team will get back to you within 24 hours.
-                </p>
-            </div>
-            <button 
-                onClick={() => setStatus("idle")} 
-                className="text-[#B54118] font-black text-xs uppercase tracking-[0.3em] hover:underline pt-4"
-            >
-                Send another message
-            </button>
-          </div>
-        ) : (
-          /* --- CONTACT FORM --- */
-          <form onSubmit={handleSubmit} className="space-y-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-              {[
-                { label: "Your Name", name: "name", type: "text", placeholder: "JOHN DOE" },
-                { label: "Email Address", name: "email", type: "email", placeholder: "HELLO@BIZGROW.COM" },
-              ].map((field) => (
-                <div key={field.name} className="relative group text-left">
-                  <input
-                    name={field.name}
-                    value={formData[field.name]}
-                    onChange={handleChange}
-                    required
-                    type={field.type}
-                    placeholder=" "
-                    className="w-full bg-transparent border-b-2 border-gray-200 dark:border-white/10 py-4 focus:border-[#B54118] outline-none transition-all duration-500 peer dark:text-white font-bold text-lg"
-                  />
-                  <label className="absolute left-0 top-0 text-gray-400 text-xs font-black uppercase tracking-widest transition-all duration-500 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-xs peer-focus:text-[#B54118] pointer-events-none">
-                    {field.label}
-                  </label>
-                </div>
-              ))}
-
-              <div className="relative group md:col-span-2 text-left">
-                <input
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  type="text"
-                  placeholder=" "
-                  className="w-full bg-transparent border-b-2 border-gray-200 dark:border-white/10 py-4 focus:border-[#B54118] outline-none transition-all duration-500 peer dark:text-white font-bold text-lg"
-                />
-                <label className="absolute left-0 top-0 text-gray-400 text-xs font-black uppercase tracking-widest transition-all duration-500 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-xs peer-focus:text-[#B54118] pointer-events-none">
-                  What are you looking for?
-                </label>
-              </div>
-
-              <div className="relative group md:col-span-2 text-left">
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={3}
-                  placeholder=" "
-                  className="w-full bg-transparent border-b-2 border-gray-200 dark:border-white/10 py-4 focus:border-[#B54118] outline-none transition-all duration-500 peer dark:text-white font-bold text-lg resize-none"
-                />
-                <label className="absolute left-0 top-0 text-gray-400 text-xs font-black uppercase tracking-widest transition-all duration-500 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-xs peer-focus:text-[#B54118] pointer-events-none">
-                  Project Details
-                </label>
-              </div>
-            </div>
-
-            <div className="pt-6 text-left">
-              <button
-                disabled={status === "sending"}
-                className="relative overflow-hidden w-full md:w-auto px-20 py-6 bg-black dark:bg-white text-white dark:text-black font-black rounded-full transition-all duration-500 hover:bg-[#B54118] dark:hover:bg-[#B54118] hover:text-white shadow-2xl group active:scale-95 disabled:opacity-50"
-              >
-                <div className="relative z-10 flex items-center justify-center gap-4 uppercase tracking-[0.3em] text-xs font-black">
-                  {status === "sending" ? "Processing..." : "Submit Inquiry"}
-                  <Send className="w-4 h-4 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-500" />
-                </div>
-              </button>
-              {status === "error" && (
-                <p className="text-red-500 mt-4 text-xs font-bold uppercase tracking-widest">
-                  ⚠️ Error! Please try again.
-                </p>
-              )}
-            </div>
-          </form>
-        )}
-      </div>
-    </FadeIn>
-  </div>
-</div>
-      </div>
-
-      {/* --- MAP SECTION --- */}
-      <section className="pb-20 px-4 md:px-20">
-        <FadeIn direction="up">
-          <div className="max-w-7xl mx-auto">
-            <div
-              className="relative w-full h-[450px] rounded-[3rem] overflow-hidden border-5 
-             border-white dark:border-orange-500 shadow-2xl bg-gray-200"
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.565874492323!2d0.15570537704646543!3d51.53951557182046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a59483015f6f%3A0xc07a2164a2752174!2sCEME%20Innovation%20Centre!5e0!3m2!1sen!2suk!4v1709123456789!5m2!1sen!2suk"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                title="BizGrow Digital Location" //
-                allowFullScreen
-                loading="lazy"
-                className="transition-all duration-700"
-              />
-            </div>
-          </div>
-        </FadeIn>
       </section>
     </section>
   );

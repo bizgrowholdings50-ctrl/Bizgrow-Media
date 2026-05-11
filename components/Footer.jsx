@@ -62,33 +62,33 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-[#000B25] text-white pt-24 pb-12 px-6 md:px-12 overflow-hidden">
+    <footer className="relative bg-[#12066a] text-white pt-24 pb-12 px-6 md:px-12 overflow-hidden">
       {/* Decorative Background Glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#B54118]/10 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#997819]/10 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-10">
           {/* Column 1: Brand Identity */}
-          <div className="space-y-8 text-left">
-            <div className="relative inline-block">
+          <div className="space-y-2 text-left">
+            <div className="relative -mt-10 inline-block">
               <Image
-                src="/BizGrow-digital-logo.png"
+                src="/footer-logo.png"
                 alt="BizGrow Digital Logo"
-                width={140}
-                height={70}
-                className="brightness-110 drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]"
+                width={150}
+                height={80}
+                className="brightness-110 -ml-4 drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]"
                 priority
               />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed font-medium max-w-sm">
-              <span className="text-white font-bold">BizGrow Digital</span> is a
+              <span className="text-white font-bold">BizGrow Media</span> is a
               results-driven digital solutions company. We equip businesses with
               modern web development and data-driven marketing strategies to
               achieve measurable growth.
             </p>
-            <div className="text-2xl font-black text-white tracking-tighter uppercase italic ">
-              BIZGROW <span className="text-[#FF5722]">DIGITAL</span>
+            <div className="text-2xl font-black text-white tracking-tighter uppercase  ">
+              BIZGROW <span className="text-[#997819]">MEDIA</span>
             </div>
           </div>
 
@@ -104,7 +104,7 @@ const Footer = () => {
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-all duration-300 text-sm font-bold uppercase tracking-widest flex items-center group"
                   >
-                    <span className="w-0 group-hover:w-4 h-[2px] bg-[#B54118] mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                    <span className="w-0 group-hover:w-4 h-[2px] bg-[#997819] mr-0 group-hover:mr-2 transition-all duration-300"></span>
                     {link.name}
                   </Link>
                 </li>
@@ -124,7 +124,7 @@ const Footer = () => {
                     href={link.href}
                     className="group flex items-center text-gray-300 hover:text-white transition-all duration-300 text-xs font-bold uppercase tracking-[0.15em]"
                   >
-                    <span className="w-0 group-hover:w-6 h-[2px] bg-[#B54118] mr-0 group-hover:mr-3 transition-all duration-500 ease-out"></span>
+                    <span className="w-0 group-hover:w-6 h-[2px] bg-[#997819] mr-0 group-hover:mr-3 transition-all duration-500 ease-out"></span>
                     <span className="group-hover:translate-x-1 transition-transform duration-500">
                       {link.name}
                     </span>
@@ -142,7 +142,7 @@ const Footer = () => {
               </h3>
               <div className="space-y-5">
                 <a href="tel:+447903332433" className="flex items-center group">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-[#B54118] transition-all duration-500 mr-4 border border-white/10 group-hover:border-transparent">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-[#997819] transition-all duration-500 mr-4 border border-white/10 group-hover:border-transparent">
                     <FaPhoneAlt className="text-sm group-hover:scale-110 transition-transform" />
                   </div>
                   <span className="text-gray-300 text-sm font-bold group-hover:text-white transition-colors">
@@ -153,7 +153,7 @@ const Footer = () => {
                   href="mailto:info@bizgrow-digital.co.uk"
                   className="flex items-center group"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-[#B54118] transition-all duration-500 mr-4 border border-white/10 group-hover:border-transparent">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-[#997819] transition-all duration-500 mr-4 border border-white/10 group-hover:border-transparent">
                     <FaEnvelope className="text-sm group-hover:scale-110 transition-transform" />
                   </div>
                   <span className="text-gray-300 text-sm font-bold group-hover:text-white transition-colors truncate">
@@ -182,7 +182,7 @@ const Footer = () => {
                   target="_blank"
                   aria-label={`Follow us on ${label}`}
                   rel="noopener noreferrer"
-                  className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-[#B54118] hover:text-white hover:border-[#B54118] hover:-translate-y-1 transition-all duration-500"
+                  className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-[#997819] hover:text-white hover:border-[#997819] hover:-translate-y-1 transition-all duration-500"
                 >
                   <Icon size={16} />
                 </a>

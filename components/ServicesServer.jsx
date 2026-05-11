@@ -15,61 +15,55 @@ export default function ServicesSection() {
 
   const visibleCards = [
     {
-      title: "Website Development",
-      img: "/web-development2.jpg",
-      alt: "Website Development - BizGrowDigital",
-      desc: "High-performance websites designed to attract, engage, and convert.",
+      title: "Professional Studio Rental",
+      img: "/studio-rental.jpg",
+      alt: "Professional Production Studio Rental UK - Bizgrow Media",
+      desc: "State-of-the-art studio spaces for photography, videography, and podcasting. Fully equipped with professional lighting and acoustic treatment.",
     },
     {
-      title: "Search Engine Optimisation",
-      img: "/SEO.jpg",
-      alt: "Search Engine Optimisation - BizGrowDigital",
-      desc: "Data-driven SEO strategies that increase visibility and drive qualified traffic.",
+      title: "Cinematic Video Production",
+      img: "/video-production.jpg",
+      alt: "High-End Video Production Services - Bizgrow Media",
+      desc: "From TV commercials to social media reels, we create high-impact visual stories that capture your brand's essence in 4K.",
+    },
+   
+    {
+      title: "Creative Brand Identity",
+      img: "/brand-identity.jpg",
+      alt: "Creative Branding and Graphic Design - Bizgrow Media",
+      desc: "Crafting premium brand identities and graphic designs that reflect the prestige of your business in the UK market.",
     },
     {
-      title: "Digital Marketing",
-      img: "/Social media.jpg",
-      alt: "Digital Marketing - BizGrowDigital",
-      desc: "Integrated digital marketing strategies designed to grow reach, leads, and revenue.",
-    },
-    {
-      title: "Creative Content",
-      img: "/creative.webp",
-      alt: "Creative Content - BizGrowDigital",
-      desc: "Compelling content crafted to engage audiences and strengthen your brand.",
-    },
-    {
-      title: "Graphic Design",
-      img: "/graphic-design.jpg",
-      alt: "Graphic Design - BizGrowDigital",
-      desc: "Professional graphic design that communicates your brand with clarity.",
+      title: "Web & Product Development",
+      img: "/web-dev.jpg",
+      alt: "Next.js Web Development - Bizgrow Media",
+      desc: "Building high-performance, SEO-optimized websites using Next.js to provide a seamless digital experience for your clients.",
     },
   ];
 
   return (
     <section
       ref={container}
-      className="relative w-full h-[300vh] md:h-[400vh] bg-[#F2E8D5] dark:bg-black dark:border-b-2 dark:border-orange-700"
+      className="relative w-full h-[300vh] md:h-[400vh] bg-white dark:bg-gray-800 dark:border-b-2 dark:border-[#997819]"
     >
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden">
         {/* --- Heading: Optimized Spacing --- */}
         <div className="text-center z-10 w-full px-6 flex flex-col items-center mb-4 md:mb-8">
           <FadeIn direction="up">
-            <h2 className="text-4xl md:text-6xl lg:text-6xl mt-8 text-[#B54118] font-black uppercase tracking-tighter leading-none pt-10">
-              Our Digital Services
+            <h2 className="text-4xl md:text-5xl mt-12 text-[#12066a] dark:text-[#997819] font-black uppercase tracking-tighter leading-none pt-10">
+              Our Media Services
             </h2>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.2}>
-            <p className="text-black dark:text-white mt-2 text-sm md:text-[16px] font-medium max-w-xl mx-auto opacity-90">
-              Empowering your business to thrive online with tailored digital
-              solutions.
+            <p className="text-slate-600 dark:text-white/80 mt-2 text-sm md:text-[16px] font-medium max-w-xl mx-auto">
+              Where professional production meets strategic digital growth.
             </p>
           </FadeIn>
         </div>
 
         {/* --- Cards Wrapper: Fully Responsive Container --- */}
-        <div className="relative w-full mt-7 max-w-6xl px-4 h-[55vh] md:h-[50vh] flex items-center justify-center">
+        <div className="relative w-full mt-10 max-w-6xl px-4 h-[55vh] md:h-[35vh] flex items-center justify-center">
           {visibleCards.map((card, idx) => {
             const start = idx * 0.18;
             const end = start + 0.25;
@@ -92,14 +86,13 @@ export default function ServicesSection() {
           <Link
             href="/our-digital-services"
             className="group"
-            aria-label="View all of our digital services"
+            aria-label="View all of our services"
           >
             <button
-              className="relative z-30 group/btn overflow-hidden px-10 py-5 md:px-14 md:py-4 my-6 bg-[#B54118] text-white text-base md:text-lg font-black rounded-2xl hover:scale-110 active:scale-95 transition-all duration-500 shadow-[0_20px_50px_rgba(181,65,24,0.3)] uppercase tracking-widest min-h-[48px]"
-              aria-label="Explore all of our digital services"
+              className="relative z-30 group/btn overflow-hidden  mt-10 px-10 py-5 md:px-14 md:py-4 my-6 bg-[#997819] text-white text-base md:text-lg font-black rounded-2xl hover:scale-110 active:scale-95 transition-all duration-500 shadow-[0_20px_50px_rgba(153,120,25,0.3)] uppercase tracking-widest min-h-[48px]"
             >
-              <span className="relative z-20 group-hover/btn:text-[#B54118]">
-                Explore All Services →
+              <span className="relative z-20 group-hover/btn:text-[#12066a]">
+                View All Capabilities →
               </span>
               <div className="absolute inset-0 bg-white z-10 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500"></div>
             </button>
@@ -113,7 +106,6 @@ export default function ServicesSection() {
 function Card({ title, img, desc, alt, i, progress, range, isFirst, isLast }) {
   const [start, end] = range;
 
-  // Logic remains same, but we use percentages that adapt to parent width
   const xTranslate = isFirst ? "0%" : "150%";
   const xExit = isLast ? "0%" : "-150%";
 
@@ -136,15 +128,14 @@ function Card({ title, img, desc, alt, i, progress, range, isFirst, isLast }) {
   return (
     <motion.div
       style={{ x, opacity, scale, zIndex: i }}
-      className="absolute w-full max-w-[95%] lg:max-w-4xl shadow-[0_40px_100px_rgba(0,0,0,0.2)] dark:shadow-[0_40px_100px_rgba(0,0,0,0.6)] rounded-[2.5rem] bg-white dark:bg-[#000B25] p-5 md:p-10 border border-gray-100 dark:border-white/5 flex flex-col md:flex-row gap-6 md:gap-10 items-center will-change-transform"
+      className="absolute w-full max-w-[95%] dark:bg-black/60 lg:max-w-4xl shadow-[0_40px_100px_rgba(0,0,0,0.1)] dark:shadow-[0_40px_100px_rgba(0,0,0,0.4)] rounded-[2.5rem] bg-white  p-5 md:p-10 border border-slate-200 dark:border-[#997819] flex flex-col md:flex-row gap-6 md:gap-10 items-center will-change-transform"
     >
-      {/* Image Container: Fixed Ratios */}
-      <div className="w-full md:w-1/2 aspect-video md:aspect-square lg:aspect-video overflow-hidden rounded-[1.5rem] shrink-0 border dark:border-white/10">
+      {/* Image Container */}
+      <div className="w-full md:w-1/2 aspect-video md:aspect-square lg:aspect-video overflow-hidden rounded-[1.5rem] shrink-0 border dark:border-[#997819]/10">
         <Image
           src={img}
           width={600}
           height={400}
-          // sizes attribute added to solve Performance issue
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
           alt={alt}
           className="object-cover w-full h-full transition-transform duration-700 hover:scale-110"
@@ -153,17 +144,17 @@ function Card({ title, img, desc, alt, i, progress, range, isFirst, isLast }) {
       </div>
 
       {/* Content Container */}
-      <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center">
+      <div className="w-full md:w-1/2 text-center md:text-left  flex flex-col justify-center">
         <div className="flex flex-col items-center md:items-start mb-2">
-          <span className="px-4 py-1 rounded-full bg-orange-500/10 text-[#B54118] font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mb-3">
-            Strategy 0{i + 1}
+          <span className="px-4 py-1 rounded-full bg-[#997819]/10 text-[#997819] font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mb-3">
+            Service 0{i + 1}
           </span>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl text-[#B54118] dark:text-orange-500 font-black leading-[1.1] uppercase tracking-tighter">
+          <h3 className="text-2xl md:text-3xl text-[#12066a] dark:text-[#997819] font-black leading-[1.1] uppercase tracking-tighter">
             {title}
           </h3>
         </div>
 
-        <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base lg:text-lg mt-3 font-medium leading-relaxed">
+        <p className="text-slate-600 dark:text-white/70 text-sm md:text-base lg:text-lg mt-3 font-medium leading-relaxed">
           {desc}
         </p>
       </div>

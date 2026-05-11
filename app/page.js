@@ -3,459 +3,355 @@ import React from "react";
 import ServicesServer from "@components/ServicesServer";
 import Link from "next/link";
 import FadeIn from "@components/MotionWrapper";
-import { TrendingUp, Search, Palette, BarChart3, Globe2 } from "lucide-react";
+import {
+  TrendingUp,
+  Camera,
+  Video,
+  Mic2,
+  Clapperboard,
+  BarChart3,
+  ArrowRight,
+  Zap,
+  ShieldCheck,
+  CheckCircle2,
+} from "lucide-react";
+import PremiumCarousel from "@components/PremiumCarousel";
 
 export const metadata = {
-  title: "BizGrow Digital | Expert Digital Marketing Services UK", // Ye layout wale template ki wajah se "About Us | BizGrow Digital" ban jayega
+  title: "BizGrow Media | Premium Business Media & Brand Growth",
   description:
-    "BizGrow Digital’s UK digital marketing agency helps businesses grow with SEO, social media, web development, and lead generation strategies.",
-  alternates: {
-    canonical: "https://bizgrowmedia.co.uk",
-  },
+    "Put your brand in the spotlight.BizGrow Media delivers Studio & Production, Content Engine, Authority Builder, and Growth Engine solutions.",
+  alternates: { canonical: "https://bizgrowmedia.co.uk" },
 };
 
 const HomePage = () => {
   return (
-    <main className="w-full">
-      {/* Hero Section */}
+    <main className="w-full bg-white dark:bg-[#12066a]">
+      {/* 1. Hero Section - Premium Carousel */}
       <section className="relative w-full h-[95vh] md:h-screen">
-        <Image
-          src="/admin-ajax.webp"
-          fill
-          priority
-          fetchPriority="high"
-          alt="Home Page - BizGrow Digital"
-          className="object-cover transition-all duration-700"
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8AKpT899BQAAAABJRU5ErkJggg=="
-          // Sizes attribute add karein
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
-        />
-        <div className="absolute inset-0 w-full bg-black/60 flex flex-col items-center justify-center text-center px-4">
-          <FadeIn direction="up" delay={0}>
-            <h1 className="text-white text-3xl md:text-5xl mt-20   md:mx-28 font-bold md:leading-[4rem]">
-              Smart Digital Marketing Solutions for UK Business Growth
-            </h1>
-          </FadeIn>
-          <FadeIn direction="up" delay={0.4}>
-            <p className="mt-6 text-white max-w-4xl mx-auto text-sm md:text-lg">
-              We help UK businesses increase online visibility, attract
-              qualified leads, and grow faster through{" "}
-              <Link
-                href="/write-better-content-with-these-e-e-a-t-seo-techniques/"
-                className="text-[#B54118] font-bold"
-              >
-                SEO
-              </Link>
-              ,{" "}
-              <Link
-                href="/what-is-b2b-web-development-in-the-uk/"
-                className="text-[#B54118] font-bold"
-              >
-                web development
-              </Link>
-              , and data-driven{" "}
-              <Link
-                href="/how-digital-marketing-drives-faster-growth-for-businesses/"
-                className="text-[#B54118] font-bold"
-              >
-                digital marketing
-              </Link>{" "}
-              strategies.
-            </p>
-          </FadeIn>
-          <FadeIn direction="up" delay={0.6}>
-            <Link href="/our-digital-services">
-              <button className="relative z-15 overflow-hidden group/btn mt-8 px-8 py-4 bg-[#B54118] text-white font-semibold rounded-xl hover:scale-105 transition">
-                <span className="relative z-10 group-hover/btn:text-[#B54118]">
-                  Explore Our Services →
-                </span>
-                <div className="absolute inset-0 bg-white z-5 -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-500 "></div>
-              </button>
-            </Link>
-          </FadeIn>
-        </div>
+        <PremiumCarousel />
       </section>
 
-      {/* 🚀 UNIQUE FEATURE SECTION: Boost Online Presence */}
-      <section className="relative py-24 bg-white dark:bg-[#000B25]  overflow-hidden">
-        {/* Background Subtle Branding Elements */}
-        <div className="absolute top-0 left-0 w-64 h-64 bg-[#B54118]/5 blur-[100px] rounded-full -z-10" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#B54118]/5 blur-[130px] rounded-full -z-10" />
+      {/* 2. BRAND STORY: THE POWER OF BUSINESS MEDIA */}
+      <section className="relative py-24 md:py-32 overflow-hidden bg-white dark:bg-gray-800 ">
+        <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-[#997819]/10 blur-[150px] rounded-full pointer-events-none opacity-50" />
+        <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-[#12066a]/5 dark:bg-white/5 blur-[100px] rounded-full pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* 🔹 Left Content: Text & Action */}
-            <div className="relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div className="relative z-10 order-1 lg:order-1">
               <FadeIn direction="up">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 dark:bg-white/5 border border-orange-100 dark:border-white/10 mb-8">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#B54118] opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#B54118]"></span>
-                  </span>
-                  <span className="text-xs font-black uppercase tracking-widest text-[#B54118] dark:text-orange-400">
-                    Skyrocket Your Growth
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="w-12 h-[1px] bg-[#997819]"></span>
+                  <span className="text-[#997819] font-black tracking-[0.5em] uppercase text-[10px] md:text-xs">
+                    The Power Of Business Media
                   </span>
                 </div>
 
-                <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-8 leading-[1.1] tracking-tighter">
-                  Boost Your Online Presence with <br />
-                  <span className="text-[#B54118] inline-block mt-2">
-                    BizGrow Digital
+                <h2 className="text-5xl md:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-[0.85] tracking-tighter uppercase">
+                  Where Businesses <br />
+                  <span
+                    className="text-transparent bg-clip-text bg-gradient-to-r from-[#997819] to-[#d4af37]"
+                    style={{ WebkitTextStroke: "1px #997819" }}
+                  >
+                    Become Industry Voices
                   </span>
                 </h2>
-              </FadeIn>
 
-              <FadeIn direction="up" delay={0.2}>
-                <div className="space-y-6">
-                  <p className="text-black dark:text-gray-300 text-lg leading-relaxed font-medium">
-                    Ready to attract more clients, increase website traffic, and
-                    generate qualified leads? BizGrow Digital delivers{" "}
-                    results-driven
-                    <span className="text-[#B54118] dark:text-orange-500 font-bold underline">
-                      <Link
-                        href="/digital-marketing-services/"
-                        className="ml-1"
-                      >
-                        digital marketing
-                      </Link>
-                    </span>{" "}
-                    UK businesses helping brands grow with confidence.
+                <div className="relative mb-10">
+                  <p className="text-slate-600 dark:text-white/80 text-lg md:text-xl font-medium leading-relaxed pl-8 border-l-4 border-[#997819]">
+                    BizGrow Media is not a conventional marketing platform. It
+                    is a structured network of interconnected media platforms
+                    that positions your brand with a clear and purposeful
+                    message within the industry.
+                    <br />
+                    <br />
+                    Acting as a business media connector, we shape and
+                    communicate your brand through value-led presence, ensuring
+                    your audience clearly recognises the impact and value you
+                    deliver to the people you serve.
                   </p>
+                </div>
 
-                  <p className="text-black dark:text-gray-400 text-base leading-relaxed border-l-4 border-[#B54118] pl-6 italic">
-                    Our team builds high-performing websites, improves Google
-                    rankings through SEO, and creates targeted{" "}
-                    <Link
-                      href="/social-media-marketing/"
-                      className="text-[#B54118] font-bold"
+                {/* Feature Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+                  {[
+                    {
+                      icon: <Camera size={22} />,
+                      title: "PROFESSIONAL STUDIO",
+                      sub: "CONTENT PRODUCTION",
+                    },
+                    {
+                      icon: <Clapperboard size={22} />,
+                      title: "CINEMATIC STRATEGY",
+                      sub: "HIGH-END EXECUTION",
+                    },
+                  ].map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10 hover:border-[#997819]/50 transition-colors duration-300"
                     >
-                      social media marketing
-                    </Link>{" "}
-                    strategies that connect your business with the right
-                    audience.
-                  </p>
-                </div>
-              </FadeIn>
-
-              <FadeIn direction="up" delay={0.4}>
-                <div className="mt-12">
-                  <Link href="/our-digital-services">
-                    <button className="group relative  px-8 py-5 bg-[#B54118] text-white font-black rounded-2xl overflow-hidden transition-all duration-300  hover:shadow-[0_20px_40px_rgba(181,65,24,0.3)]">
-                      <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine" />
-                      <div className="absolute inset-0 bg-white z-10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 "></div>
-                      <span className="relative z-30 group-hover:text-[#B54118] flex items-center gap-3">
-                        Learn More About Our Services
-                        <span className="transition-transform group-hover:translate-x-2">
-                          →
-                        </span>
-                      </span>
-                    </button>
-                  </Link>
-                </div>
-              </FadeIn>
-            </div>
-
-            {/* 🔹 Right Content: Dynamic Image & Floating Elements */}
-            <div className="relative group">
-              <FadeIn direction="left" delay={0.4}>
-                {/* Main Image Container with Border Accent */}
-                <div className="relative z-10 p-4 border border-orange-700/10 dark:border-white/5 rounded-[3rem] backdrop-blur-sm">
-                  <div className="relative aspect-[4/5] md:aspect-square overflow-hidden rounded-[2.5rem] shadow-2xl">
-                    <Image
-                      src="/boost.jpg"
-                      alt="Boost Your Online Presence with BizGrow Digital"
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      priority
-                    />
-                    {/* Overlay on Image */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
-                </div>
-
-                {/* Floating Stats Card (Adding a professional touch) */}
-                <div className="absolute -bottom-8 left-6 md:bottom-12 md:-left-12 z-20 bg-white dark:bg-[#001235] p-6 rounded-3xl shadow-2xl border border-orange-700/10 dark:border-white/10 animate-bounce-slow">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-orange-100 dark:bg-[#B54118]/20 rounded-2xl">
-                      <TrendingUp className="text-[#B54118] h-6 w-6" />
+                      <div className="p-3 bg-[#997819] text-white rounded-xl shadow-lg shadow-[#997819]/20">
+                        {item.icon}
+                      </div>
+                      <div>
+                        <p className="dark:text-white font-black uppercase text-[11px] tracking-widest leading-none">
+                          {item.title}
+                        </p>
+                        <p className="text-[#997819] text-[9px] uppercase font-bold mt-1 tracking-tighter opacity-70">
+                          {item.sub}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-xs text-gray-500 uppercase tracking-widest font-bold">
-                        Growth Rate
-                      </p>
-                      <p className="text-2xl font-black text-slate-900 dark:text-white">
-                        +145%
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
 
-                {/* Background Decorative Frame */}
-                <div className="absolute top-12 -right-12 w-full h-full border-2 border-[#B54118]/20 rounded-[3rem] -z-10 group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-500" />
-              </FadeIn>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Services Section */}
-      <section className="relative">
-        <ServicesServer />
-      </section>
-
-      {/* 🚀 NEW SECTION: Industries We Help Grow */}
-      <section className="py-24 bg-white dark:bg-[#000B25] relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <FadeIn direction="up">
-              <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tighter">
-                Industries <span className="text-[#B54118]">We Work With</span>
-              </h2>
-              <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-400 text-lg font-medium">
-                While we love to work with all of our clients, there is no doubt
-                our portfolio is extensive. We have extreme command over
-                multiple sectors helping them achieve sustainable digital
-                growth.
-              </p>
-            </FadeIn>
-          </div>
-
-          {/* Industries Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
-            {[
-              {
-                name: "E-commerce",
-                img: "/ecommerce-h.jpg",
-                alt: "BizGrow Digital e-commerce marketing services UK",
-              },
-              {
-                name: "Construction",
-                img: "/Construction-h.jpg",
-                alt: "BizGrow Digital construction digital solutions UK",
-              },
-              {
-                name: "Real Estate",
-                img: "/Real Estate-h.jpg",
-                alt: "BizGrow Digital real estate marketing services UK",
-              },
-              {
-                name: "Healthcare",
-                img: "/healthcare-h.jpg",
-                alt: "BizGrow Digital healthcare marketing services UK",
-              },
-              {
-                name: "Hospitality",
-                img: "/HOSPITALITY (1).jpg",
-                alt: "BizGrow Digital hospitality industry services UK",
-              },
-              {
-                name: "Education ",
-                img: "/education-h.jpg",
-                alt: "BizGrow Digital education sector digital services UK",
-              },
-            ].map((industry, idx) => (
-              <FadeIn key={idx} direction="up" delay={idx * 0.1}>
-                <div className="group relative flex flex-col items-center">
-                  {/* Image Container */}
-                  <div className="relative w-full aspect-square overflow-hidden rounded-[2rem] mb-4 shadow-lg border border-gray-100 dark:border-[#B54118]">
-                    <Image
-                      src={industry.img}
-                      alt={industry.alt}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110 "
-                    />
-                    {/* Overlay on Hover */}
-                    <div className="absolute inset-0 bg-[#B54118]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
-                  {/* Industry Name */}
-                  <h3 className="text-sm md:text-lg font-black uppercase tracking-widest text-slate-800 dark:text-white group-hover:text-[#B54118] transition-colors">
-                    {industry.name}
-                  </h3>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-
-          {/* CTA Line for Industries */}
-          <FadeIn direction="up" delay={0.6}>
-            <div className="mt-20 p-10 bg-gray-50 dark:bg-[#001235]/50 rounded-[2.5rem] border  border-[#B54118] text-center">
-              <h4 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-6">
-                Start Your{" "}
-                <span className="text-[#B54118]">UK Digital Growth</span> Today
-              </h4>
-              <Link href="/contact-us">
-                <button className="px-10 py-4 bg-[#B54118] text-white font-black uppercase tracking-widest text-xs rounded-xl hover:shadow-[0_15px_30px_rgba(181,65,24,0.4)] transition-all">
-                  Get a Free Strategy Call
-                </button>
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* 🚀 SECTION: Why Businesses Trust BizGrow Digital */}
-      <section className="py-24 bg-gray-50 dark:bg-black text-center px-6 relative overflow-hidden">
-        {/* Background Decoration */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B54118] to-transparent opacity-30" />
-
-        <div className="max-w-7xl mx-auto">
-          <FadeIn direction="up" delay={0.2}>
-            <h2 className="text-4xl md:text-5xl font-black text-[#B54118] mb-6 uppercase tracking-tighter">
-              <span className="text-slate-900 dark:text-white">
-                Why Businesses Trust{" "}
-              </span>
-              BizGrow Digital?{" "}
-            </h2>
-          </FadeIn>
-
-          <FadeIn direction="up" delay={0.4}>
-            <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-400 mb-16 text-lg md:text-xl leading-relaxed font-medium">
-              BizGrow Digital is a trusted digital marketing agency helping UK
-              businesses improve online visibility, generate qualified leads,
-              and achieve measurable growth through innovative digital
-              strategies.
-            </p>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
-            {/* 🔹 Braces yahan shuru ho rahi hain JS mapping ke liye */}
-            {[
-              {
-                icon: <TrendingUp size={40} strokeWidth={2} />,
-                title: "Results-Driven Marketing",
-                desc: (
-                  <>
-                    Our focus is simple: delivering measurable outcomes such as
-                    increased traffic, higher search rankings, and more
-                    qualified{" "}
-                    <Link
-                      href="/lead-generation-agency-uk-in-2026/"
-                      className="text-[#B54118] font-bold"
-                    >
-                      leads
-                    </Link>
-                    .
-                  </>
-                ),
-                dir: "left",
-              },
-              {
-                icon: <Globe2 size={40} strokeWidth={2} />,
-                title: "UK Market Understanding",
-                desc: "We understand the UK digital landscape and create strategies that connect businesses with the right local and national audiences.",
-                dir: "up",
-              },
-              {
-                icon: <BarChart3 size={40} strokeWidth={2} />,
-                title: "Transparent Performance Reporting",
-                desc: (
-                  <>
-                    Clear analytics and regular reporting keep you informed
-                    about the performance of your{" "}
-                    <Link
-                      href="/the-ultimate-guide-to-digital-marketing-lead-generation-for-the-uk/"
-                      className="text-[#B54118] font-bold"
-                    >
-                      digital marketing
-                    </Link>{" "}
-                    activities.
-                  </>
-                ),
-                dir: "right",
-              },
-            ].map((item, index) => (
-              <FadeIn
-                key={index}
-                direction={item.dir}
-                delay={0.2 * (index + 1)}
-                className="h-full"
-              >
-                <div className="group relative h-full bg-white dark:bg-[#001235]/50 backdrop-blur-sm border-2 border-transparent dark:border-white/5 p-10 rounded-[2rem] shadow-xl hover:shadow-[#B54118]/20 hover:border-[#B54118]/50 transition-all duration-500 flex flex-col items-center text-center overflow-hidden">
-                  {/* Icon Box */}
-                  <div className="relative z-10 mb-8 p-5 rounded-2xl bg-orange-50 dark:bg-[#B54118]/10 text-[#B54118] group-hover:bg-[#B54118] group-hover:text-white transition-all duration-500 transform group-hover:-rotate-12 shadow-md">
-                    {item.icon}
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="relative z-10 text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">
-                    {item.title}
-                  </h3>
-
-                  <p className="relative z-10 text-gray-600 dark:text-gray-300 text-base leading-relaxed flex-grow">
-                    {item.desc}
-                  </p>
-
-                  {/* Bottom Accent Line & Floating Glow */}
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1.5 bg-[#B54118] group-hover:w-full transition-all duration-700" />
-                  <div className="absolute -top-10 -right-10 w-24 h-24 bg-[#B54118]/10 blur-3xl rounded-full group-hover:bg-[#B54118]/20 transition-all" />
-                </div>
-              </FadeIn>
-            ))}
-            {/* 🔹 Braces yahan khatam ho rahi hain */}
-          </div>
-        </div>
-      </section>
-
-      {/* 🚀 FINAL CTA SECTION: Consistent & Impactful */}
-      <section className="dark:bg-black py-24 dark:border-y-2 dark:border-orange-700 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 md:px-10">
-          <div
-            className="relative py-20 md:py-22 rounded-[3.5rem] overflow-hidden text-white text-center shadow-[0_20px_50px_rgba(0,0,0,0.3)] group"
-            style={{
-              backgroundImage: "url('/hero-cta.webp')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundAttachment: "fixed", // Consistent Parallax
-            }}
-          >
-            {/* 🔹 Consistent Overlay - Matching the first CTA */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-[#B54118]/30 z-0"></div>
-
-            {/* 🔹 Glassmorphism Border */}
-            <div className="absolute inset-0 border-2 border-white/10 rounded-[3.5rem] z-10 pointer-events-none transition-colors duration-500 group-hover:border-[#B54118]/40"></div>
-
-            <div className="relative z-20 max-w-4xl mx-auto px-6">
-              <FadeIn direction="up">
-                <div className="flex justify-center mb-6">
-                  <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#B54118] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
-                    Let's Partner Up
-                  </span>
-                </div>
-
-                <h2 className="text-4xl md:text-6xl font-black mb-8 leading-[1.1] tracking-tighter">
-                  Trusted by Top UK GROWING BUSINESSES:
-                  <br />
-                  <span className="text-[#B54118]">
-                    Let's Build Your Success.
-                  </span>
-                </h2>
-              </FadeIn>
-
-              <FadeIn direction="up" delay={0.2}>
-                <p className="mb-12 text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed italic">
-                  “BizGrow Digital helps your UK business grow online. We build
-                  high-performing websites, improve your SEO, and deliver
-                  marketing strategies that generate real results.”
-                </p>
-              </FadeIn>
-
-              <FadeIn direction="up" delay={0.4}>
-                <Link href="/contact-us">
-                  <button className="relative px-8 py-4 bg-[#B54118] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_rgba(181,65,24,0.6)]">
-                    {/* Shine Animation Effect */}
-                    <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
-                    <span className="relative z-10 text-xl uppercase tracking-wider">
-                      Contact Us Now
+                <Link href="/contact-us" className="inline-block group">
+                  <button className="relative overflow-hidden px-12 py-5 bg-[#12066a] dark:bg-[#997819] text-white font-black uppercase tracking-[0.2em] text-xs transition-all duration-500 rounded-full hover:shadow-2xl group-hover:-translate-y-1">
+                    <span className="relative z-10 flex items-center gap-3">
+                      Book Your Production Session <ArrowRight size={16} />
                     </span>
+                    <div className="absolute inset-0 bg-[#997819] dark:bg-[#12066a] translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                   </button>
                 </Link>
               </FadeIn>
             </div>
 
-            {/* 🔹 Animated Accents for Consistency */}
-            <div className="absolute top-0 left-0 w-64 h-64 bg-[#B54118]/10 blur-[100px] rounded-full -z-10"></div>
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#B54118]/10 blur-[100px] rounded-full -z-10"></div>
+            {/* Right Content (Image) */}
+            <div className="relative group order-2 lg:order-2 mt-12 lg:mt-0">
+              <FadeIn direction="left" delay={0.4}>
+                <div className="relative z-10 p-4 border border-[#997819]/10 dark:border-white/5 rounded-[3rem] backdrop-blur-sm">
+                  <div className="relative aspect-[4/5] md:aspect-square overflow-hidden rounded-[2.5rem] shadow-2xl">
+                    <Image
+                      src="/studio.jpg"
+                      alt="BizGrow Media Studio"
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      priority
+                    />
+                  </div>
+                </div>
+              </FadeIn>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. CORE SERVICES: OUR MEDIA SERVICES */}
+      <section className="relative py-32 bg-slate-50 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <FadeIn direction="up">
+              <h2 className="text-[#997819] font-black tracking-[0.4em] uppercase text-xs mb-4">
+                Our Media Services
+              </h2>
+              <h3 className="text-5xl md:text-6xl font-black text-[#12066a] dark:text-white uppercase tracking-tighter">
+                The Future Of Business Media
+              </h3>
+            </FadeIn>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                name: "Studio & Production",
+                icon: <Video />,
+                desc: "A professionally curated production environment engineered for podcasts, executive interviews, visual storytelling, and premium media execution.",
+              },
+              {
+                name: "Content Engine",
+                icon: <Zap />,
+                desc: "High-quality, value-driven content crafted to strengthen audience engagement, elevate brand perception, and deliver meaningful communication.",
+              },
+              {
+                name: "Authority Builder",
+                icon: <ShieldCheck />,
+                desc: "Strategic personal and company branding designed to establish credibility, strengthen industry presence, and position brands as recognised voices.",
+              },
+              {
+                name: "Growth Engine",
+                icon: <TrendingUp />,
+                desc: "Growth-focused media execution built to generate qualified leads, increase revenue potential, and create long-term business momentum.",
+              },
+            ].map((item, idx) => (
+              <FadeIn key={idx} direction="up" delay={idx * 0.1}>
+                <div className="p-10 border border-slate-200 dark:border-white/5 bg-white dark:bg-white/5 hover:border-[#997819] transition-all duration-500 text-left flex flex-col h-full group rounded-[2.5rem]">
+                  <div className="text-[#997819] mb-6 group-hover:scale-125 transition-transform duration-500">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-[#12066a] dark:text-white font-black text-lg tracking-tight mb-4 uppercase">
+                    {item.name}
+                  </h3>
+                  <p className="text-slate-500 dark:text-white/40 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <div className="text-center mt-16">
+            <button className="text-[#12066a] dark:text-[#997819] font-black uppercase tracking-widest text-[10px] flex items-center gap-2 mx-auto group">
+              See How We Build Brands{" "}
+              <ArrowRight
+                size={14}
+                className="group-hover:translate-x-2 transition-transform"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. WHY GROWING BRANDS CHOOSE BIZGROW MEDIA */}
+      <section className="py-32 bg-white dark:bg-gray-800 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <div className="lg:col-span-5">
+              <FadeIn direction="right">
+                <h2 className="text-4xl md:text-5xl font-black text-[#12066a] dark:text-white mb-8 uppercase leading-[0.9] tracking-tighter">
+                  Why Growing Brands Choose{" "}
+                  <span className="text-[#997819]">BizGrow Media?</span>
+                </h2>
+                <p className="text-slate-600 dark:text-white/70 text-lg leading-relaxed mb-6">
+                  Brands choose BizGrow Media because we go beyond creating
+                  content; we build strategic media systems that help businesses
+                  become more visible, credible, and consistent across the
+                  platforms where their audience is already paying attention.
+                </p>
+                <p className="text-slate-500 dark:text-white/40 italic">
+                  Our approach brings together creative production, brand
+                  positioning, content strategy, and growth-led marketing to
+                  help your business show up with clarity, confidence, and
+                  intention.
+                </p>
+              </FadeIn>
+            </div>
+            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                {
+                  title: "Strategic Brand Direction",
+                  desc: "We shape your content around a clear purpose, aligned with your business goals, audience needs, and long-term growth vision.",
+                },
+                {
+                  title: "Premium Creative Quality",
+                  desc: "From visuals to messaging, every asset is created to reflect a polished, professional, and trustworthy brand image.",
+                },
+                {
+                  title: "Consistent Digital Presence",
+                  desc: "We help your business stay active, relevant, and recognisable through structured content and purposeful media systems.",
+                },
+                {
+                  title: "Growth-Led Execution",
+                  desc: "Our work is designed to do more than generate engagement; it helps build trust, strengthen visibility, and support meaningful business growth.",
+                },
+              ].map((item, i) => (
+                <FadeIn key={i} direction="up" delay={i * 0.1}>
+                  <div className="p-8 bg-slate-50 dark:bg-white/[0.02] border border-slate-100 dark:border-white/5 rounded-3xl hover:border-[#997819]/50 transition-all">
+                    <h4 className="text-[#12066a] dark:text-white font-black uppercase text-sm mb-3 tracking-tight">
+                      {item.title}
+                    </h4>
+                    <p className="text-slate-500 dark:text-white/40 text-xs leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. RESULTS YOU CAN EXPECT */}
+      <section className="py-24 bg-[#12066a] dark:bg-[#997819]/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <FadeIn direction="right">
+              <h2 className="text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-none">
+                Results You <br /> Can Expect
+              </h2>
+              <p className="text-white/70 text-lg md:text-xl font-medium italic">
+                At BizGrow Media, we shape every strategy, content piece, and
+                campaign to help your business build a stronger presence,
+                communicate with purpose, and create more growth opportunities.
+              </p>
+            </FadeIn>
+            <div className="space-y-4">
+              {[
+                "Greater visibility across key platforms",
+                "Stronger trust through consistent communication",
+                "Clearer messaging with professional intent",
+                "More meaningful audience engagement",
+                "Better opportunities for enquiries and growth",
+              ].map((text, idx) => (
+                <FadeIn key={idx} direction="up" delay={idx * 0.1}>
+                  <div className="flex items-center gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 group hover:bg-white transition-all duration-500">
+                    <CheckCircle2 size={24} className="text-[#997819]" />
+                    <span className="text-white group-hover:text-[#12066a] font-black uppercase tracking-tight text-sm md:text-base transition-colors">
+                      {text}
+                    </span>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. THE BIZGROW MEDIA ECOSYSTEM */}
+      <section className="py-32 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <FadeIn direction="up">
+            <h2 className="text-4xl md:text-7xl font-black text-[#12066a] dark:text-white uppercase mb-20 tracking-tighter">
+              The BizGrow Media <span className="text-[#997819]">Ecosystem</span>
+            </h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              {[
+                "Studio Hire",
+                "Launch Package",
+                "Content Engine",
+                "Authority Builder",
+                "Media Partner",
+              ].map((step, i) => (
+                <div
+                  key={i}
+                  className="px-10 py-6 border border-slate-200 dark:border-white/10 rounded-full flex items-center gap-4 bg-slate-50 dark:bg-white/[0.02] hover:border-[#997819] transition-all"
+                >
+                  <span className="text-[#997819] font-black text-sm">
+                    Step {i + 1}
+                  </span>
+                  <span className="text-[#12066a] dark:text-white font-black uppercase tracking-widest text-xs">
+                    — {step}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* 7. FINAL IMPACT CTA */}
+      <section className="py-24 bg-white dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="relative py-24 rounded-[4rem] overflow-hidden text-center text-white bg-[#12066a] shadow-2xl">
+            <div className="absolute inset-0 bg-[url('/hero-cta.webp')] bg-cover bg-center bg-fixed opacity-30" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-[#12066a]/80" />
+            <div className="relative z-10 px-6 max-w-3xl mx-auto">
+              <FadeIn direction="up">
+                <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-none">
+                  Working With Brands <br /> That Aim Higher
+                </h2>
+                <p className="text-gray-200 mb-12 text-lg md:text-xl font-light italic">
+                  BizGrow Media helps businesses grow through premium media
+                  production, strategic content, authority positioning, and
+                  growth-focused exposure.
+                </p>
+                <Link href="/contact-us">
+                  <button className="px-12 py-6 bg-[#997819] text-white font-black rounded-2xl uppercase tracking-[0.3em] text-sm hover:scale-110 transition-transform shadow-xl">
+                    Step Into Professional Media
+                  </button>
+                </Link>
+              </FadeIn>
+            </div>
           </div>
         </div>
       </section>

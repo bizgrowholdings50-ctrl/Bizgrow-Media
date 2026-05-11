@@ -35,7 +35,7 @@ export default function CustomCursor() {
       gsap.to(ring, { 
         scale: 2, // 🔹 Sirf halka sa expand hoga (Elegant)
         backgroundColor: "rgba(181, 65, 24, 0.02)", 
-        borderColor: "#B54118",
+        borderColor: "#997819",
         borderWidth: "1px",
         duration: 0.4,
         ease: "expo.out",
@@ -49,7 +49,7 @@ export default function CustomCursor() {
       gsap.to(ring, { 
         scale: 1, 
         backgroundColor: "transparent", 
-        borderColor: "#B54118", 
+        borderColor: "#997819", 
         borderWidth: "1.5px",
         duration: 0.4,
         ease: "power2.out",
@@ -83,14 +83,14 @@ export default function CustomCursor() {
       {/* 🔹 Precision Core */}
       <div
         ref={dotRef}
-        className="fixed top-0 left-0 w-1 h-1 bg-[#B54118] rounded-full pointer-events-none z-[10001]"
+        className="fixed top-0 left-0 w-1 h-1 bg-[#997819] rounded-full pointer-events-none z-[10001]"
         style={{ transform: "translate(-50%, -50%)" }}
       />
       
       {/* 🔹 Floating Ring (Slightly smaller base size: w-6 h-6) */}
       <div
         ref={ringRef}
-        className="fixed top-0 left-0 w-6 h-6 border-[1.5px] border-[#B54118] bg-transparent rounded-full pointer-events-none z-[10000] flex items-center justify-center"
+        className="fixed top-0 left-0 w-6 h-6 border-[1.5px] border-[#997819] bg-transparent rounded-full pointer-events-none z-[10000] flex items-center justify-center"
         style={{ transform: "translate(-50%, -50%)" }}
       >
         {isHovering && (

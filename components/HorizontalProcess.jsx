@@ -98,7 +98,7 @@ const HorizontalProcess = () => {
         >
           <div className="text-center px-4">
             <FadeIn direction="up">
-              <h3 className="text-[#B54118] font-bold tracking-[0.5em] text-xs md:text-sm mb-2">
+              <h3 className="text-[#997819] mt-4 font-bold tracking-[0.5em] text-xs md:text-sm mb-2">
                 OUR APPROACH
               </h3>
             </FadeIn>
@@ -108,7 +108,7 @@ const HorizontalProcess = () => {
                 How We Deliver Tangible Results
               </h2>
             </FadeIn>
-            <div className="w-12 h-1 bg-[#B54118] mx-auto mt-4 rounded-full" />
+            <div className="w-12 h-1 bg-[#997819] mx-auto mt-4 rounded-full" />
           </div>
         </div>
 
@@ -135,7 +135,7 @@ const HorizontalProcess = () => {
               <div className="z-10 w-full lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
                 <FadeIn direction={isVertical ? "up" : "right"}>
                   <span
-                    className="text-[#B54118] font-bold tracking-[0.3em] uppercase
+                    className="text-[#997819] font-bold tracking-[0.3em] uppercase
                    text-sm md:text-base"
                   >
                     {item.id} {item.tag}

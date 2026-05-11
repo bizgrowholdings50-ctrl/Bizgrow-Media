@@ -31,6 +31,28 @@ const nextConfig = {
         destination: '/web-development/',
         permanent: true, // 301 Redirect for SEO
       },
+
+       {
+        source: '/digital-marketing-services/',
+        destination: '/content-engine/',
+        permanent: true, // 301 Redirect for SEO
+      },
+       {
+        source: '/lead-generation-solutions/',
+        destination: '/studio-production/',
+        permanent: true, // 301 Redirect for SEO
+      },
+       {
+        source: '/email-marketing/',
+        destination: '/growth-engine/',
+        permanent: true, // 301 Redirect for SEO
+      },
+
+      {
+        source: '/creative-content',
+        destination: '/authority-builder',
+        permanent: true, // 301 Redirect (SEO ke liye permanent change)
+      },
       {
         source: '/on-page-seo-audit-services-improve-uk-googleankings/',
         destination: '/on-page-seo-audit-services-improve-uk-google-rankings/',
