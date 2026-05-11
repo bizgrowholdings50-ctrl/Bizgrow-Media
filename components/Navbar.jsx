@@ -239,7 +239,7 @@ export default function Navbar() {
                 Packages
               </Link>
               <Link
-                href="/packages"
+                href="/blogs"
                 className="text-[#12066a] dark:text-white dark:hover:text-[#997819] hover:text-[#997819] transition"
               >
                 CaseStudies
