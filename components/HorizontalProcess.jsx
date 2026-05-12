@@ -26,60 +26,92 @@ const HorizontalProcess = () => {
     restDelta: 0.001,
   });
 
-  // Desktop horizontal movement logic
-  const x = useTransform(
-    smoothProgress,
-    [0, 0.05, 0.2, 0.4, 0.55, 0.75, 0.85, 1],
-    ["0vw", "0vw", "-100vw", "-100vw", "-200vw", "-200vw", "-300vw", "-300vw"]
-  );
+  // Desktop horizontal movement logic (Fixed for 5 sections)
+ const x = useTransform(
+  smoothProgress,
+  [
+    0,
+    0.1,
 
- const sections = [
-  {
-    id: "Step 1",
-    title: "Studio Hire",
-    tag: "ENVIRONMENTS", // Professional aur physical space ko represent karta hai
-    img: "/studio-hire.jpg",
-    altText: "BizGrow Digital Planning strategy process",
-    description:
-      "Step into a professionally designed studio space created for podcasts, interviews, and high-quality business content in a comfortable production environment.",
-  },
-  {
-    id: "Step 2",
-    title: "Launch Package",
-    tag: "FOUNDATION", // Brand start karne ke liye 'Foundation' zyada solid lagta hai
-    img: "/pakages.jpg",
-    altText: "BizGrow Digital marketing digital process",
-    description:
-      "BizGrow Media helps your brand start with professionally structured launch packages, strong visuals, and content designed to create a clear and organised media presence",
-  },
-  {
-    id: "Step 3",
-    title: "Content Engine",
-    tag: "CONSISTENCY", // Content Engine ka asal maqsad 'Consistency' maintain karna hai
-    img: "/content.jpg",
-    altText: "BizGrow Digital creative design process",
-    description:
-      "BizGrow Media keeps your brand active with regular content that feels natural and easy to follow. The goal is simple: stay visible and keep people connected to your brand",
-  },
-  {
-    id: "Step 4",
-    title: "Authority Builder",
-    tag: "POSITIONING", // Market mein authority banana 'Positioning' kehlata hai
-    img: "/authority.jpg",
-    altText: "BizGrow Digital web development process",
-    description:
-      "Develop a stronger market presence through professional positioning, refined branding, and strategic media exposure.",
-  },
-  {
-    id: "Step 5",
-    title: "Media Partner",
-    tag: "GROWTH", // Long-term partnership ka end goal hamesha 'Growth' hota hai
-    img: "/coding.jpg",
-    altText: "BizGrow Digital web development process",
-    description:
-      "BizGrow Media stays with you for the long run, supporting your brand as it grows. You get ongoing media support that helps you build stronger reach and real opportunities over time.",
-  },
-];
+    0.2,
+    0.3,
+
+    0.4,
+    0.5,
+
+    0.6,
+    0.7,
+
+    0.8,
+    0.9,
+    1,
+  ],
+  [
+    "0vw",
+    "0vw",
+
+    "-100vw",
+    "-100vw",
+
+    "-200vw",
+    "-200vw",
+
+    "-300vw",
+    "-300vw",
+
+    "-400vw",
+    "-400vw",
+    "-400vw",
+  ]
+);
+
+  const sections = [
+    {
+      id: "Step 1",
+      title: "Studio Hire",
+      tag: "ENVIRONMENTS", // Professional aur physical space ko represent karta hai
+      img: "/studio-hire.jpg",
+      altText: "BizGrow Digital Planning strategy process",
+      description:
+        "Step into a professionally designed studio space created for podcasts, interviews, and high-quality business content in a comfortable production environment.",
+    },
+    {
+      id: "Step 2",
+      title: "Launch Package",
+      tag: "FOUNDATION", // Brand start karne ke liye 'Foundation' zyada solid lagta hai
+      img: "/pakages.jpg",
+      altText: "BizGrow Digital marketing digital process",
+      description:
+        "BizGrow Media helps your brand start with professionally structured launch packages, strong visuals, and content designed to create a clear and organised media presence",
+    },
+    {
+      id: "Step 3",
+      title: "Content Engine",
+      tag: "CONSISTENCY", // Content Engine ka asal maqsad 'Consistency' maintain karna hai
+      img: "/content.jpg",
+      altText: "BizGrow Digital creative design process",
+      description:
+        "BizGrow Media keeps your brand active with regular content that feels natural and easy to follow. The goal is simple: stay visible and keep people connected to your brand",
+    },
+    {
+      id: "Step 4",
+      title: "Authority Builder",
+      tag: "POSITIONING", // Market mein authority banana 'Positioning' kehlata hai
+      img: "/authority.jpg",
+      altText: "BizGrow Digital web development process",
+      description:
+        "Develop a stronger market presence through professional positioning, refined branding, and strategic media exposure.",
+    },
+    {
+      id: "Step 5",
+      title: "Media Partner",
+      tag: "GROWTH", // Long-term partnership ka end goal hamesha 'Growth' hota hai
+      img: "/reach.jpg",
+      altText: "BizGrow Digital web development process",
+      description:
+        "BizGrow Media stays with you for the long run, supporting your brand as it grows. You get ongoing media support that helps you build stronger reach and real opportunities over time.",
+    },
+  ];
 
   const sectionHeightVh = isVertical ? "auto" : (sections.length + 1) * 100;
 
