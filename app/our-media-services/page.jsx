@@ -19,199 +19,48 @@ import FadeIn from "@components/MotionWrapper";
 import { FaWordpress } from "@node_modules/react-icons/fa";
 
 export const metadata = {
-  title: "BizGrow Digital | Expert UK Digital Services",
+  title: "Our Media Services - BizGrow Media ",
   description:
-    "Explore BizGrow Digital’s full range of UK-based digital services, designed to grow your business, boost visibility, and drive results online.",
+    "Want a stronger brand presence? BizGrow Media provides Studio & Production, Content Engine, Authority Builder, and Growth Engine services.",
   alternates: {
-    canonical: "https://bizgrowmedia.co.uk/our-digital-services/",
+    canonical: "https://bizgrowmedia.co.uk/our-media-services/",
   },
 };
 
 const page = () => {
   const services = [
     {
-      title: "Web Development",
-      path: "/web-development",
-      desc: (
-        <>
-          Designing high-performance, secure, and{" "}
-          <Link
-            href="/how-to-write-an-seo-optimised-blog-in-2026/"
-            className="text-[#997819] font-bold"
-          >
-            SEO-optimised
-          </Link>{" "}
-          websites using Next.js, React, and custom WordPress solutions built
-          for scalability and conversions.
-        </>
-      ),
+      title: "Studio & Production",
+      path: "/studio-production",
+      desc: "From podcasts and interviews to branded video content, we create professional media that helps your business appear more polished and engaging.",
       icon: <Globe className="w-8 h-8" />,
       bgColor: "bg-[#997819]/10", // 10% Opacity of your brand color
       hoverIcon: "group-hover:text-white",
       hoverBg: "group-hover:bg-[#997819]",
     },
     {
-      title: "Graphic Design",
-      path: "/graphic-design-services",
-      desc: (
-        <>
-          Creating visually compelling, user-focused{" "}
-          <Link
-            href="/how-can-web-graphic-design-elevate-your-digital-presence/"
-            className="text-[#997819] font-bold"
-          >
-            designs
-          </Link>{" "}
-          that enhance user experience, strengthen brand identity, and engage
-          your target audience.
-        </>
-      ),
+      title: "Content Engine",
+      path: "/content-engine",
+      desc: "BizGrow Media creates valuable, well-structured content that helps your brand stay visible, connect with the right audience, and communicate with clarity.",
       icon: <Palette className="w-8 h-8" />,
       bgColor: "bg-[#997819]/10",
       hoverIcon: "group-hover:text-white",
       hoverBg: "group-hover:bg-[#997819]",
     },
     {
-      title: "SEO",
-      path: "/search-engine-optimisation",
-      desc: "Improving search engine visibility and driving high-quality organic traffic through strategic, results-focused Google ranking optimisation.",
+      title: "Authority Builder",
+      path: "/authority-builder",
+      desc: "BizGrow Media helps businesses and personal brands build a stronger presence through professional branding, credibility, and consistent media positioning.",
       icon: <TrendingUp className="w-8 h-8" />,
       bgColor: "bg-[#997819]/10",
       hoverIcon: "group-hover:text-white",
       hoverBg: "group-hover:bg-[#997819]",
     },
     {
-      title: "Digital Marketing",
-      path: "/digital-marketing-services",
-      desc: (
-        <>
-          Driving brand growth by connecting with the right audience through
-          strategic Driving brand growth by connecting with the right audience
-          through strategic social media management and search engine-led growth
-          strategies.
-          <Link
-            href="/social-media-for-uk-consultants/"
-            className="text-[#997819] font-bold"
-          >
-            social media
-          </Link>{" "}
-          management and search engine-led growth strategies.
-        </>
-      ),
+      title: "Growth Engine",
+      path: "/growth-engine",
+      desc: "Our growth-focused media strategies are designed to help your business reach more people, attract better leads, and create new opportunities.",
       icon: <Megaphone className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10",
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
-    },
-    {
-      title: "Social Media Marketing",
-      desc: (
-        <>
-          Building brand awareness and meaningful engagement through strategic{" "}
-          <Link
-            href="/10-creative-content-techniques-to-improve-seo-results/"
-            className="text-[#997819] font-bold"
-          >
-            content
-          </Link>
-          , platform-focused management, and data-led social growth.
-        </>
-      ),
-      path: "/social-media-marketing",
-      icon: <Fingerprint className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10",
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
-    },
-    {
-      title: "Creative Content",
-      desc: "Crafting high-quality, audience-focused content that strengthens brand messaging, builds trust, and drives meaningful engagement.",
-      path: "/creative-content",
-      icon: <PenTool className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10",
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
-    },
-    {
-      title: "FACEBOOK MARKETING",
-      desc: (
-        <>
-          Grow your brand organically on{" "}
-          <Link
-            href="/facebook-marketing-services/"
-            className="text-[#997819] font-bold"
-          >
-            Facebook
-          </Link>{" "}
-          with content that connects, engages, and builds trust with UK
-          audiences while driving meaningful interactions.
-        </>
-      ),
-      path: "/facebook-marketing-services",
-      icon: <Facebook className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10",
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
-    },
-    {
-      title: "WORDPRESS DEVELOPMENT",
-      desc: (
-        <>
-          Create fast, secure, and SEO-friendly{" "}
-          <Link
-            href="/custom-wordpress-development-services-in-the-uk/"
-            className="text-[#997819] font-bold"
-          >
-            WordPress websites
-          </Link>{" "}
-          tailored for UK businesses, providing a seamless experience for
-          visitors and customers.
-        </>
-      ),
-      path: "/wordpress-website",
-      icon: <FaWordpress className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10",
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
-    },
-    {
-      title: "LEAD GENERATION",
-      desc: (
-        <>
-          Attract and convert high-quality UK{" "}
-          <Link
-            href="/8-effective-lead-generation-strategies/"
-            className="text-[#997819] font-bold"
-          >
-            leads
-          </Link>{" "}
-          through smart, data-driven strategies that turn interested prospects
-          into loyal customers.
-        </>
-      ),
-      path: "/lead-generation-solutions",
-      icon: <Users className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10",
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
-    },
-    {
-      title: "E-MAIL MARKETING",
-      desc: (
-        <>
-          Engage your UK audience with personalised, relevant{" "}
-          <Link
-            href="/a-beginners-guide-to-email-marketing-that-actually-works/"
-            className="text-[#997819] font-bold"
-          >
-            emails
-          </Link>{" "}
-          that build relationships, encourage clicks, and boost your business
-          growth naturally.
-        </>
-      ),
-      path: "/email-marketing",
-      icon: <MailCheck className="w-8 h-8" />,
       bgColor: "bg-[#997819]/10",
       hoverIcon: "group-hover:text-white",
       hoverBg: "group-hover:bg-[#997819]",
@@ -244,23 +93,17 @@ const page = () => {
               className="text-white text-4xl mx-auto md:text-6xl text-center 
             font-bold mt-26 max-w-5xl px-4"
             >
-              Data-Driven Solutions to{" "}
-              <span className="text-[#997819]">Scale Your Business </span>
-              Growth
+              The Right Media Open{" "}
+              <span className="text-[#997819]"> Bigger Business </span>
+              Opportunities
             </h1>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.4} className="w-full">
             <p className="text-white text-md mx-auto md:text-xl text-center max-w-2xl px-4">
-              We deliver end-to-end digital services that empower UK brands to
-              increase visibility, attract qualified{" "}
-              <Link
-                href="/lead-generation-agency-uk-in-2026/"
-                className="text-[#997819] font-bold"
-              >
-                leads
-              </Link>
-              , and outperform their competition.
+              At BizGrow Media, we know every brand has its own journey, which
+              is why our services are built around your vision, audience, and
+              growth goals.
             </p>
           </FadeIn>
 
@@ -270,7 +113,7 @@ const page = () => {
             <div className="w-full flex justify-center">
               <Link href="/contact-us">
                 <button className="mt-8 px-8 py-4 bg-[#997819] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
-                  Contact Us →
+                  Step Into Professional Media →
                 </button>
               </Link>
             </div>
@@ -288,22 +131,23 @@ const page = () => {
           <div className="text-center mb-20">
             <FadeIn direction="up" delay={0.2}>
               <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tighter">
-                Data-Powered Solutions for <br />
-                <span className="text-[#997819]">Next-Level Growth</span>
+                Elite-level services focused on <br />
+                <span className="text-[#997819]">long-term performance</span>
               </h2>
               <div className="w-24 h-2 bg-[#997819] mx-auto mt-6 rounded-full" />
             </FadeIn>
 
             <FadeIn direction="up" delay={0.4}>
               <p className="mt-8 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg md:text-xl font-medium">
-                Leveraging the latest technology and data-driven strategies, we
-                elevate your brand identity and maximise online visibility.
+                BizGrow Media provides all-in-one media services designed to
+                help brands build visibility, engage high-intent audiences, and
+                create stronger business opportunities.
               </p>
             </FadeIn>
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-10 items-stretch">
             {services.map((service, index) => (
               <FadeIn
                 key={index}
@@ -348,6 +192,102 @@ const page = () => {
           </div>
         </div>
       </section>
+      {/* Our Distinction */}
+      <section className="bg-white dark:bg-[#020410] py-40 transition-colors duration-500 overflow-hidden relative">
+        {/* Architectural Background Detail */}
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20 dark:opacity-40">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-gray-200 dark:via-white/10 to-transparent hidden md:block" />
+        </div>
+
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
+          {/* --- Header Section --- */}
+          <div className="mb-32 text-center">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <span className="w-2 h-2 rounded-full bg-[#997819] animate-pulse" />
+              <span className="text-[#997819] font-black uppercase tracking-[0.4em] text-[10px]">
+                Our Distinction
+              </span>
+            </div>
+            <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] mb-8 italic">
+              What Makes <br />
+              <span className="text-[#997819] not-italic">
+                Our Process Different
+              </span>
+            </h2>
+            <div className="w-24 h-[1px] bg-[#997819] mx-auto opacity-50" />
+          </div>
+
+          {/* --- Systematic Flow --- */}
+          <div className="relative space-y-24">
+            {[
+              {
+                label: "Experience",
+                title: "We Pay Attention To How Your Brand Is Experienced",
+                desc: "People often form an impression of how a brand feels online before any conversation begins. Our process is built around helping your business appear more polished, intentional, and professionally presented through every piece of media.",
+              },
+              {
+                label: "Quality",
+                title: "We Prioritise Meaningful Content Over Constant Posting",
+                desc: "We believe strong brands are built through purposeful content, not endless posting. Every piece of media is created to feel relevant, valuable, and worth paying attention to.",
+              },
+              {
+                label: "Personalization",
+                title: "Your Business Doesn’t Get Treated Like Another Project",
+                desc: "Every business communicates differently, which is why our process is shaped by your brand identity, audience, and growth direction rather than a generic approach.",
+              },
+              {
+                label: "Communication",
+                title: "We Think Beyond Cameras And Editing",
+                desc: "Strong media is not only about visuals. It is also about how clearly your business communicates and the impression your brand leaves behind.",
+              },
+              {
+                label: "Impact",
+                title:
+                  "We Focus Less On Promises And More On Meaningful Results",
+                desc: "Our focus is on creating professional media that helps your business build stronger audience connections, better brand perception, and more valuable opportunities over time.",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className={`relative flex flex-col md:flex-row items-center gap-8 md:gap-20 ${
+                  index % 2 !== 0 ? "md:flex-row-reverse" : ""
+                }`}
+              >
+                {/* Card Content */}
+                <div className="flex-1 w-full">
+                  <div className="p-10 rounded-[2.5rem] bg-gray-50/50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 hover:border-[#997819]/30 transition-all duration-700 group shadow-sm hover:shadow-2xl">
+                    <span className="inline-block text-[#997819] font-black uppercase tracking-[0.3em] text-[10px] mb-4">
+                      Section // 0{index + 1}
+                    </span>
+                    <h3 className="text-[#12066a] dark:text-white text-2xl font-black uppercase tracking-tight mb-6 group-hover:text-[#997819] transition-colors duration-500 leading-tight">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-500 dark:text-white/40 text-sm leading-relaxed font-medium">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Central Architectural Marker */}
+                <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white dark:bg-[#020410] border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-xl group-hover:border-[#997819] transition-colors duration-500">
+                  <div className="w-2 h-2 rounded-full bg-[#997819]" />
+                </div>
+
+                {/* Spacer for Symmetry */}
+                <div className="flex-1 hidden md:block" />
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom Callout */}
+          <div className="mt-32 flex flex-col items-center">
+            <div className="h-16 w-px bg-gradient-to-b from-[#997819] to-transparent mb-8" />
+            <p className="text-[10px] font-black uppercase tracking-[0.6em] text-gray-400">
+              End of Methodology
+            </p>
+          </div>
+        </div>
+      </section>
       <HorizontalProcess />
       <ShapeChangeSection />
       <VShapeTransition />
@@ -377,19 +317,19 @@ const page = () => {
                   Take the Leap
                 </span>
 
-                <h2 className="text-4xl md:text-7xl mt-4 font-black mb-8 leading-[1.1] tracking-tighter uppercase">
-                  Scale Your Presence <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#997819] to-orange-400">
-                    with Confidence
+                <h2 className="text-4xl md:text-5xl mt-8 font-black mb-8 leading-[1.1] tracking-tighter uppercase">
+                  Develop your presence in the
+                  <span className="text-transparent ml-1 bg-clip-text bg-gradient-to-r from-[#997819] to-orange-400">
+                    right way,
                   </span>
+                  from day one
                 </h2>
               </FadeIn>
 
               <FadeIn direction="up" delay={0.2}>
                 <p className="mx-auto mb-12 text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl italic">
-                  "We design and optimise digital solutions that convert
-                  visitors into customers, helping your UK business achieve
-                  measurable growth."
+                  "BizGrow Media is a trusted name that helps you establish a
+                  clear, confident presence from the very beginning "
                 </p>
               </FadeIn>
 
@@ -399,7 +339,7 @@ const page = () => {
                     {/* Shine Animation Effect */}
                     <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
                     <span className="relative z-10 text-lg uppercase tracking-widest">
-                      Get Started Now →
+                      Start building the right way →
                     </span>
                   </button>
                 </Link>

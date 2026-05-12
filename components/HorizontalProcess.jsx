@@ -33,44 +33,53 @@ const HorizontalProcess = () => {
     ["0vw", "0vw", "-100vw", "-100vw", "-200vw", "-200vw", "-300vw", "-300vw"]
   );
 
-  const sections = [
-    {
-      id: "01",
-      title: "STRATEGY",
-      tag: "PLANNING",
-      img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2026",
-      altText: "BizGrow Digital Planning strategy process", // <-- Added this
-      description:
-        "We analyse your business, audience, and goals to create a clear, actionable roadmap for growth.",
-    },
-    {
-      id: "02",
-      title: "DIGITAL",
-      tag: "MARKETING",
-      img: "/digital-marketing.jpg",
-      altText: "BizGrow Digital marketing digital process", // <-- Added this
-      description:
-        "We implement targeted digital solutions that improve online visibility, attract leads, and drive measurable results.",
-    },
-    {
-      id: "03",
-      title: "CREATIVE",
-      tag: "DESIGN",
-      img: "/creative-design.jpg",
-      altText: "BizGrow Digital creative design process", // <-- Added this
-      description:
-        "We craft visually engaging, user-focused designs that strengthen your brand identity and enhance engagement.",
-    },
-    {
-      id: "04",
-      title: "DEVELOP",
-      tag: "CODING",
-      img: "/coding.jpg",
-      altText: "BizGrow Digital web development process", // <-- Added this
-      description:
-        "We build fast, secure, and SEO-optimised websites and platforms for optimal performance.",
-    },
-  ];
+ const sections = [
+  {
+    id: "Step 1",
+    title: "Studio Hire",
+    tag: "ENVIRONMENTS", // Professional aur physical space ko represent karta hai
+    img: "/studio-hire.jpg",
+    altText: "BizGrow Digital Planning strategy process",
+    description:
+      "Step into a professionally designed studio space created for podcasts, interviews, and high-quality business content in a comfortable production environment.",
+  },
+  {
+    id: "Step 2",
+    title: "Launch Package",
+    tag: "FOUNDATION", // Brand start karne ke liye 'Foundation' zyada solid lagta hai
+    img: "/pakages.jpg",
+    altText: "BizGrow Digital marketing digital process",
+    description:
+      "BizGrow Media helps your brand start with professionally structured launch packages, strong visuals, and content designed to create a clear and organised media presence",
+  },
+  {
+    id: "Step 3",
+    title: "Content Engine",
+    tag: "CONSISTENCY", // Content Engine ka asal maqsad 'Consistency' maintain karna hai
+    img: "/content.jpg",
+    altText: "BizGrow Digital creative design process",
+    description:
+      "BizGrow Media keeps your brand active with regular content that feels natural and easy to follow. The goal is simple: stay visible and keep people connected to your brand",
+  },
+  {
+    id: "Step 4",
+    title: "Authority Builder",
+    tag: "POSITIONING", // Market mein authority banana 'Positioning' kehlata hai
+    img: "/authority.jpg",
+    altText: "BizGrow Digital web development process",
+    description:
+      "Develop a stronger market presence through professional positioning, refined branding, and strategic media exposure.",
+  },
+  {
+    id: "Step 5",
+    title: "Media Partner",
+    tag: "GROWTH", // Long-term partnership ka end goal hamesha 'Growth' hota hai
+    img: "/coding.jpg",
+    altText: "BizGrow Digital web development process",
+    description:
+      "BizGrow Media stays with you for the long run, supporting your brand as it grows. You get ongoing media support that helps you build stronger reach and real opportunities over time.",
+  },
+];
 
   const sectionHeightVh = isVertical ? "auto" : (sections.length + 1) * 100;
 
@@ -104,8 +113,8 @@ const HorizontalProcess = () => {
             </FadeIn>
 
             <FadeIn direction="up" delay={0.2}>
-              <h2 className="text-3xl md:text-5xl lg:text-5xl dark:text-white font-black text-slate-900 uppercase">
-                How We Deliver Tangible Results
+              <h2 className="text-3xl md:text-5xl lg:text-5xl dark:text-white font-black text-[#12066A] uppercase">
+                The BizGrow Media Ecosystem
               </h2>
             </FadeIn>
             <div className="w-12 h-1 bg-[#997819] mx-auto mt-4 rounded-full" />
@@ -143,7 +152,7 @@ const HorizontalProcess = () => {
                 </FadeIn>
                 <FadeIn direction={isVertical ? "up" : "right"} delay={0.2}>
                   {/* Font sizes optimized for all screens */}
-                  <h3 className="text-5xl sm:text-7xl lg:text-[6.5rem]  font-black dark:text-white text-slate-900 leading-none mt-4">
+                  <h3 className="text-5xl sm:text-6xl font-black dark:text-white text-[#12066A] leading-none mt-4">
                     {item.title}
                   </h3>
                 </FadeIn>
