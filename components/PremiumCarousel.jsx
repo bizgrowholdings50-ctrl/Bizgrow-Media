@@ -67,11 +67,11 @@ export default function LuxuryGridSlider() {
               src={currentSlide.img} 
               alt={currentSlide.title}
               fill
-              className="object-cover object-center contrast-[110%] brightness-[0.8]"
+              className="object-cover object-center contrast-[110%] brightness-[0.9]"
               priority
               unoptimized={currentSlide.img.startsWith('http')} // External images fix
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#000B25] via-[#000B25]/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#000B25] via-[#000B25]/40 to-transparent" />
           </motion.div>
         </AnimatePresence>
       </div>
@@ -82,7 +82,7 @@ export default function LuxuryGridSlider() {
           <motion.div
             key={index}
             initial={{ opacity: 0, letterSpacing: "-0.05em" }}
-            animate={{ opacity: 0.04, letterSpacing: "0.15em" }}
+            animate={{ opacity: 0.05, letterSpacing: "0.13em" }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.8 }}
             className="text-[20vw] font-black text-white italic leading-none select-none uppercase"
@@ -154,7 +154,7 @@ export default function LuxuryGridSlider() {
                 whileTap={{ scale: 0.98 }}
                 className="relative overflow-hidden group border border-[#997819]/50 px-12 py-5 rounded-2xl bg-transparent"
               >
-                <span className="relative z-10 text-white text-[10px] font-black tracking-[0.4em] uppercase group-hover:text-white transition-colors duration-500">
+                <span className="relative z-10 text-white text-[11px] font-black tracking-[0.4em]  group-hover:text-white  duration-500">
                   EXPLORE ECOSYSTEM
                 </span>
                 <div className="absolute inset-0 bg-[#997819] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />

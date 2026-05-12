@@ -14,23 +14,18 @@ import {
 const Footer = () => {
   const importantLinks = [
     { name: "Home", href: "/" },
-    { name: "About Us", href: "/about-us" },
     { name: "Services", href: "/our-digital-services" },
-    { name: "Blog", href: "/blogs" },
-    { name: "Contact Us", href: "/contact-us" },
+    { name: "Case Studies", href: "/blogs" },
+    { name: "Booking", href: "/contact-us" },
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Terms & Conditions", href: "/terms" },
   ];
 
   const servicesLinks = [
-    { name: "Creative Content", href: "/creative-content" },
-    { name: "Email Marketing", href: "/email-marketing" },
-    { name: "Lead Generation", href: "/lead-generation-solutions" },
-    { name: "WordPress", href: "/wordpress-website" },
-    { name: "Digital Marketing", href: "/digital-marketing-services" },
-    { name: "Social Media Marketing", href: "/social-media-marketing" },
-    { name: "Website Development", href: "/web-development" },
-    { name: "Search Engine Optimisation", href: "/search-engine-optimisation" },
+    { name: "Studio Production", href: "/studio-production" },
+    { name: "Authority Builder", href: "/authority-builder" },
+    { name: "Content Engine", href: "/content-engine" },
+    { name: "Growth Engine", href: "/growth-engine" },
   ];
 
   const socialMedia = [
