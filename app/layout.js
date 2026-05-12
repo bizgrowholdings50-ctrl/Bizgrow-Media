@@ -27,12 +27,12 @@ export const metadata = {
   description: "Scale your business with BizGrow Digital. Expert SEO, content strategy, and digital marketing solutions tailored for the UK market.",
   icons: {
     icon: [
-      { url: "/icon.png", href: "/icon.png" },
-      { url: "/icon.png", sizes: "32x32", type: "image/png" },
-      { url: "/icon.png", sizes: "192x192", type: "image/png" },
+      { url: "/site-logo.png", href: "/site-logo.png" },
+      { url: "/site-logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/site-logo.png", sizes: "192x192", type: "image/png" },
     ],
     apple: [
-      { url: "/icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/public/site-logo.png", sizes: "180x180", type: "image/png" },
     ],
   },
   alternates: {
