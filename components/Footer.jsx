@@ -78,7 +78,7 @@ const Footer = () => {
             </div>
             <p className="text-gray-400 text-sm leading-relaxed font-medium max-w-sm">
               <span className="text-white font-bold">BizGrow Media</span> is a
-              results-driven digital solutions company. We equip businesses with
+              results-driven media solutions company. We equip businesses with
               modern web development and data-driven marketing strategies to
               achieve measurable growth.
             </p>
@@ -189,7 +189,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-gray-400 text-[10px] font-black uppercase tracking-[0.4em]">
-            © 2026 BizGrow Digital. Crafted for Excellence.
+            © 2026 BizGrow Media. Crafted for Excellence.
           </p>
           <div className="flex gap-8">
             <Link

@@ -59,7 +59,7 @@ const HomePage = () => {
                 </h2>
 
                 <div className="relative mb-10">
-                  <p className="text-slate-600 dark:text-white/80 text-lg md:text-xl font-medium leading-relaxed pl-8 border-l-4 border-[#997819]">
+                  <p className="text-slate-600 dark:text-white/80 text-md md:text-md font-medium leading-relaxed pl-8 border-l-4 border-[#997819]">
                     BizGrow Media is not a conventional marketing platform. It
                     is a structured network of interconnected media platforms
                     that positions your brand with a clear and purposeful
@@ -212,7 +212,7 @@ const HomePage = () => {
                   Why Growing Brands Choose{" "}
                   <span className="text-[#997819]">BizGrow Media?</span>
                 </h2>
-                <p className="text-slate-600 dark:text-white/70 text-lg leading-relaxed mb-6">
+                <p className="text-slate-600 dark:text-white/70 text-md leading-relaxed mb-6">
                   Brands choose BizGrow Media because we go beyond creating
                   content; we build strategic media systems that help businesses
                   become more visible, credible, and consistent across the
@@ -269,7 +269,7 @@ const HomePage = () => {
               <h2 className="text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-none">
                 Results You <br /> Can Expect
               </h2>
-              <p className="text-white/70 text-lg md:text-xl font-medium italic">
+              <p className="text-white/70 text-lg  font-medium italic">
                 At BizGrow Media, we shape every strategy, content piece, and
                 campaign to help your business build a stronger presence,
                 communicate with purpose, and create more growth opportunities.
@@ -301,7 +301,7 @@ const HomePage = () => {
       <section className="py-32 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <FadeIn direction="up">
-            <h2 className="text-4xl md:text-7xl font-black text-[#12066a] dark:text-white uppercase mb-20 tracking-tighter">
+            <h2 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white uppercase mb-20 tracking-tighter">
               The BizGrow Media <span className="text-[#997819]">Ecosystem</span>
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
@@ -337,10 +337,10 @@ const HomePage = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-[#12066a]/80" />
             <div className="relative z-10 px-6 max-w-3xl mx-auto">
               <FadeIn direction="up">
-                <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-none">
+                <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-none">
                   Working With Brands <br /> That Aim Higher
                 </h2>
-                <p className="text-gray-200 mb-12 text-lg md:text-xl font-light italic">
+                <p className="text-gray-200 mb-12 text-lg  font-light italic">
                   BizGrow Media helps businesses grow through premium media
                   production, strategic content, authority positioning, and
                   growth-focused exposure.
