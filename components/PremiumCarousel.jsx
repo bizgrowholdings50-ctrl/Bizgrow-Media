@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const slides = [
   {
@@ -51,7 +52,6 @@ export default function LuxuryGridSlider() {
 
   return (
     <section className="relative h-[85vh] md:h-screen w-full bg-[#000B25] flex items-center overflow-hidden">
-      
       {/* 1. BACKGROUND IMAGES LAYER */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
@@ -63,13 +63,13 @@ export default function LuxuryGridSlider() {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="absolute inset-0 w-full h-full"
           >
-            <Image 
-              src={currentSlide.img} 
+            <Image
+              src={currentSlide.img}
               alt={currentSlide.title}
               fill
               className="object-cover object-center contrast-[110%] brightness-[0.9]"
               priority
-              unoptimized={currentSlide.img.startsWith('http')} // External images fix
+              unoptimized={currentSlide.img.startsWith("http")} // External images fix
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#000B25] via-[#000B25]/40 to-transparent" />
           </motion.div>
@@ -94,23 +94,25 @@ export default function LuxuryGridSlider() {
 
       {/* 3. MAIN CONTENT GRID */}
       <div className="relative z-10 w-full px-6 md:px-24 grid grid-cols-12 h-full items-center">
-        
         {/* Left Indicator - Navigation dots/lines */}
         <div className="col-span-1 hidden md:flex flex-col gap-6 items-start justify-center h-full border-l border-white/5 pl-8">
           {slides.map((_, i) => (
-            <button 
-              key={i} 
-              onClick={() => setIndex(i)} 
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
               className="relative flex items-center h-12 group transition-all"
             >
-              <span className={`text-[10px] font-black tracking-widest absolute -left-2 transition-colors duration-500 ${index === i ? 'text-[#997819]' : 'text-white/20 group-hover:text-white'}`}>
+              <span
+                className={`text-[10px] font-black tracking-widest absolute -left-2 transition-colors duration-500 ${index === i ? "text-[#997819]" : "text-white/20 group-hover:text-white"}`}
+              >
                 {`0${i + 1}`}
               </span>
               <motion.div
-                animate={{ 
-                  height: index === i ? "48px" : "4px", 
-                  backgroundColor: index === i ? "#997819" : "rgba(255,255,255,0.1)",
-                  x: 35
+                animate={{
+                  height: index === i ? "48px" : "4px",
+                  backgroundColor:
+                    index === i ? "#997819" : "rgba(255,255,255,0.1)",
+                  x: 35,
                 }}
                 className="w-[2px] transition-all duration-700"
               />
@@ -137,7 +139,7 @@ export default function LuxuryGridSlider() {
 
               <h1 className="text-5xl md:text-[8vw]  font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
                 {currentSlide.title} <br />
-                <span 
+                <span
                   className="text-transparent italic font-serif font-light block mt-2"
                   style={{ WebkitTextStroke: "1px #997819" }}
                 >
@@ -149,15 +151,18 @@ export default function LuxuryGridSlider() {
                 {currentSlide.desc}
               </p>
 
-              <motion.button 
+              <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="relative overflow-hidden group border border-[#997819]/50 px-12 py-5 rounded-2xl bg-transparent"
               >
-                <span className="relative z-10 text-white text-[11px] font-black tracking-[0.4em]  group-hover:text-white  duration-500">
-                  EXPLORE ECOSYSTEM
-                </span>
-                <div className="absolute inset-0 bg-[#997819] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+                <Link href="/our-media-services" >
+                  <span className="relative z-10 text-white text-[11px] font-black tracking-[0.4em]  group-hover:text-white  duration-500">
+                    EXPLORE ECOSYSTEM
+                  </span>
+
+                  <div className="absolute inset-0 bg-[#997819] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+                </Link>
               </motion.button>
             </motion.div>
           </AnimatePresence>

@@ -124,7 +124,7 @@ const HomePage = () => {
                   <div className="relative aspect-[4/5] md:aspect-square overflow-hidden rounded-[2.5rem] shadow-2xl">
                     <Image
                       src="/studio.jpg"
-                      alt="BizGrow Media Studio"
+                      alt="The power of business media - BizGrow Media Studio"
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                       priority
@@ -156,22 +156,22 @@ const HomePage = () => {
               {
                 name: "Studio & Production",
                 icon: <Video />,
-                desc: "A professionally curated production environment engineered for podcasts, executive interviews, visual storytelling, and premium media execution.",
+                desc: <>A professionally curated <Link href="/studio-production/" className="text-[#997819] font-bold">production</Link> environment engineered for podcasts, executive interviews, visual storytelling, and premium media execution.</>,
               },
               {
                 name: "Content Engine",
                 icon: <Zap />,
-                desc: "High-quality, value-driven content crafted to strengthen audience engagement, elevate brand perception, and deliver meaningful communication.",
+                desc: <>High-quality, value-driven <Link href="/content-engine/" className="text-[#997819] font-bold">content</Link> crafted to strengthen audience engagement, elevate brand perception, and deliver meaningful communication.</>,
               },
               {
                 name: "Authority Builder",
                 icon: <ShieldCheck />,
-                desc: "Strategic personal and company branding designed to establish credibility, strengthen industry presence, and position brands as recognised voices.",
+                desc: <>Strategic personal and company branding designed to <Link href="/authority-builder/" className="text-[#997819] font-bold">establish credibility</Link>, strengthen industry presence, and position brands as recognised voices.</>,
               },
               {
                 name: "Growth Engine",
                 icon: <TrendingUp />,
-                desc: "Growth-focused media execution built to generate qualified leads, increase revenue potential, and create long-term business momentum.",
+                desc: <>Growth-focused media execution built to generate qualified leads, <Link href="/growth-engine/" className="text-[#997819] font-bold">increase revenue potential</Link>, and create long-term business momentum.</>,
               },
             ].map((item, idx) => (
               <FadeIn key={idx} direction="up" delay={idx * 0.1}>
