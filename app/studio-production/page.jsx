@@ -103,7 +103,7 @@ const StudioProductionPage = () => {
                     confidence, and credibility your audience expects.
                   </p>
                   <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed italic border-l-4 border-[#997819] pl-6">
-                    <b>BizGrow Media</b> helps founders, startups, and growing
+                     <Link href="/" className="text-[#997819] font-bold">BizGrow Media</Link> helps founders, startups, and growing
                     businesses create premium visual content that brings their
                     brand story, services, and message to life more engagingly
                     and memorably.
@@ -159,7 +159,7 @@ const StudioProductionPage = () => {
               {
                 icon: <Radio />,
                 t: "Podcast & Interview",
-                d: "Production for expert-led conversations that build trust and authority.",
+                d: <>Production for expert-led conversations that build trust and <Link href="/authority-builder" className="text-[#997819] font-bold">authority</Link>.</>,
               },
               {
                 icon: <Sparkles />,
@@ -169,7 +169,7 @@ const StudioProductionPage = () => {
               {
                 icon: <Users />,
                 t: "Corporate & Business",
-                d: "Professional content for company profiles and brand communications.",
+                d: <>Professional <Link href="/content-engine" className="text-[#997819] font-bold">content</Link> for company profiles and brand communications.</>,
               },
             ].map((item, i) => (
               <FadeIn key={i} direction="up" delay={i * 0.1}>
