@@ -67,7 +67,7 @@ const page = () => {
         {/* Background Image */}
         <Image
           src="/services-hr.jpg"
-          alt="UK Digital Services by BizGrow Digital"
+          alt="BizGrow Media Open Bigger Business Opportunities"
           fill
           priority
           fetchPriority="high"
@@ -131,7 +131,10 @@ const page = () => {
 
             <FadeIn direction="up" delay={0.4}>
               <p className="mt-8 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg md:text-xl font-medium">
-                BizGrow Media provides all-in-one media services designed to
+                <Link href="/" className="text-[#997819] font-bold">
+                  BizGrow Media{" "}
+                </Link>
+                provides all-in-one media services designed to
                 help brands build visibility, engage high-intent audiences, and
                 create stronger business opportunities.
               </p>

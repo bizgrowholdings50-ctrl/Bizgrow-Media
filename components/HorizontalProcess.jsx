@@ -2,6 +2,7 @@
 import { motion, useTransform, useScroll, useSpring } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import FadeIn from "./MotionWrapper";
+import Link from "next/link";
 
 const HorizontalProcess = () => {
   const targetRef = useRef(null);
@@ -70,46 +71,46 @@ const HorizontalProcess = () => {
       id: "Step 1",
       title: "Studio Hire",
       tag: "ENVIRONMENTS", // Professional aur physical space ko represent karta hai
-      img: "/studio-hire.jpg",
-      altText: "BizGrow Digital Planning strategy process",
+      img: "/with people.jpeg",
+      altText: "Studio hire - BizGrow Media",
       description:
-        "Step into a professionally designed studio space created for podcasts, interviews, and high-quality business content in a comfortable production environment.",
+        <>Step into a professionally designed <Link href="/studio-production" className="text-[#997819] font-bold">studio</Link> space created for podcasts, interviews, and high-quality business content in a comfortable production environment.</>,
     },
     {
       id: "Step 2",
       title: "Launch Package",
       tag: "FOUNDATION", // Brand start karne ke liye 'Foundation' zyada solid lagta hai
       img: "/pakages.jpg",
-      altText: "BizGrow Digital marketing digital process",
+      altText: "Launch package - BizGrow Media",
       description:
-        "BizGrow Media helps your brand start with professionally structured launch packages, strong visuals, and content designed to create a clear and organised media presence",
+        <>BizGrow Media helps your brand start with professionally structured launch <Link href="/packages" className="text-[#997819] font-bold">packages</Link>, strong visuals, and content designed to create a clear and organised media presence</>,
     },
     {
       id: "Step 3",
       title: "Content Engine",
       tag: "CONSISTENCY", // Content Engine ka asal maqsad 'Consistency' maintain karna hai
       img: "/content.jpg",
-      altText: "BizGrow Digital creative design process",
+      altText: "Content engine - BizGrow Media",
       description:
-        "BizGrow Media keeps your brand active with regular content that feels natural and easy to follow. The goal is simple: stay visible and keep people connected to your brand",
+        <>BizGrow Media keeps your brand active with regular <Link href="/content-engine" className="text-[#997819] font-bold">content</Link> that feels natural and easy to follow. The goal is simple: stay visible and keep people connected to your brand</>,
     },
     {
       id: "Step 4",
       title: "Authority Builder",
       tag: "POSITIONING", // Market mein authority banana 'Positioning' kehlata hai
-      img: "/authority.jpg",
-      altText: "BizGrow Digital web development process",
+      img: "/authority-builder.jpg",
+      altText: "Authority builder - BizGrow Media",
       description:
-        "Develop a stronger market presence through professional positioning, refined branding, and strategic media exposure.",
+        <>Develop a <Link href="/authority-builder" className="text-[#997819] font-bold">stronger market presence</Link> through professional positioning, refined branding, and strategic media exposure.</>,
     },
     {
       id: "Step 5",
       title: "Media Partner",
       tag: "GROWTH", // Long-term partnership ka end goal hamesha 'Growth' hota hai
-      img: "/reach.jpg",
-      altText: "BizGrow Digital web development process",
+      img: "/camera behind.jpeg",
+      altText: "BizGrow Media Partner",
       description:
-        "BizGrow Media stays with you for the long run, supporting your brand as it grows. You get ongoing media support that helps you build stronger reach and real opportunities over time.",
+        <>BizGrow Media stays with you for the long run, supporting your <Link href="/growth-engine" className="text-[#997819] font-bold">brand</Link> as it grows. You get ongoing media support that helps you build stronger reach and real opportunities over time.</>,
     },
   ];
 

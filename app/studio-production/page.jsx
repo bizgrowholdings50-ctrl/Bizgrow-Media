@@ -32,14 +32,14 @@ const StudioProductionPage = () => {
       {/* 1 --- HERO SECTION --- */}
       <div className="relative h-[85vh] md:h-screen w-full">
         <Image
-          src="/studio-hero.jpg"
+          src="/single studio pic-.jpeg"
           alt="Studio & Production - BizGrow Media"
           fill
           fetchPriority="high"
           priority
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 w-full mx-auto bg-black/75 flex flex-col pt-12 justify-center items-center px-6">
+        <div className="absolute inset-0 w-full mx-auto bg-black/55 flex flex-col pt-12 justify-center items-center px-6">
           <FadeIn direction="up" delay={0.2}>
             <div className="w-full flex flex-col items-center text-center">
               <span className="text-[#997819] font-bold tracking-[0.4em] uppercase text-xs mb-6">
@@ -66,7 +66,7 @@ const StudioProductionPage = () => {
               <FadeIn direction="right">
                 <div className="relative h-[500px] md:h-[650px] w-full rounded-[3.5rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-white/5">
                   <Image
-                    src="/brand-story-shoot.jpg"
+                    src="/sir-javed-img.jpeg"
                     alt="Premium Production BizGrow Media"
                     fill
                     className="object-cover"

@@ -81,7 +81,7 @@ const ContactPage = () => {
               {[
                 { icon: <Phone />, label: "Call Us", val: "+44 7903 332433" },
                 { icon: <Mail />, label: "Email", val: "info@bizgrowstudios.co.uk" },
-                { icon: <MapPin />, label: "Location", val: "London, RM13 8EU" }
+                { icon: <MapPin />, label: "Location", val: "CEME Campus, Marsh Way, RM13 8EU" }
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-6 p-6 rounded-[2rem] bg-white dark:bg-[#12066a]/10 border border-gray-100 dark:border-white/5 shadow-sm">
                   <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#12066a] text-[#997819]">{item.icon}</div>

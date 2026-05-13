@@ -123,7 +123,7 @@ const HomePage = () => {
                 <div className="relative z-10 p-4 border border-[#997819]/10 dark:border-white/5 rounded-[3rem] backdrop-blur-sm">
                   <div className="relative aspect-[4/5] md:aspect-square overflow-hidden rounded-[2.5rem] shadow-2xl">
                     <Image
-                      src="/studio.jpg"
+                      src="/single studio pic-.jpeg"
                       alt="The power of business media - BizGrow Media Studio"
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
