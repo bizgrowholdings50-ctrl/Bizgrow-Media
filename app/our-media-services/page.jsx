@@ -1,15 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import {
-  Globe,
-  Palette,
-  TrendingUp,
-  Megaphone,
-  Fingerprint,
-  PenTool,
-  Facebook,
-  Users,
-  MailCheck,
+ Mic2, Layers, ShieldCheck, Rocket
 } from "lucide-react";
 import HorizontalProcess from "@components/HorizontalProcess";
 import ShapeChangeSection from "@components/test";
@@ -28,44 +20,44 @@ export const metadata = {
 };
 
 const page = () => {
-  const services = [
-    {
-      title: "Studio & Production",
-      path: "/studio-production",
-      desc: "From podcasts and interviews to branded video content, we create professional media that helps your business appear more polished and engaging.",
-      icon: <Globe className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10", // 10% Opacity of your brand color
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
-    },
-    {
-      title: "Content Engine",
-      path: "/content-engine",
-      desc: "BizGrow Media creates valuable, well-structured content that helps your brand stay visible, connect with the right audience, and communicate with clarity.",
-      icon: <Palette className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10",
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
-    },
-    {
-      title: "Authority Builder",
-      path: "/authority-builder",
-      desc: "BizGrow Media helps businesses and personal brands build a stronger presence through professional branding, credibility, and consistent media positioning.",
-      icon: <TrendingUp className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10",
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
-    },
-    {
-      title: "Growth Engine",
-      path: "/growth-engine",
-      desc: "Our growth-focused media strategies are designed to help your business reach more people, attract better leads, and create new opportunities.",
-      icon: <Megaphone className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10",
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
-    },
-  ];
+ const services = [
+  {
+    title: "Studio & Production",
+    path: "/studio-production",
+    desc: "From podcasts and interviews to branded video content, we create professional media that helps your business appear more polished and engaging.",
+    icon: <Mic2 className="w-8 h-8" />, // Mic2 podcast aur studio environment ke liye perfect hai
+    bgColor: "bg-[#997819]/10",
+    hoverIcon: "group-hover:text-white",
+    hoverBg: "group-hover:bg-[#997819]",
+  },
+  {
+    title: "Content Engine",
+    path: "/content-engine",
+    desc: "BizGrow Media creates valuable, well-structured content that helps your brand stay visible, connect with the right audience, and communicate with clarity.",
+    icon: <Layers className="w-8 h-8" />, // Layers structured content aur "engine" vibration ko represent karta hai
+    bgColor: "bg-[#997819]/10",
+    hoverIcon: "group-hover:text-white",
+    hoverBg: "group-hover:bg-[#997819]",
+  },
+  {
+    title: "Authority Builder",
+    path: "/authority-builder",
+    desc: "BizGrow Media helps businesses and personal brands build a stronger presence through professional branding, credibility, and consistent media positioning.",
+    icon: <ShieldCheck className="w-8 h-8" />, // ShieldCheck credibility aur trust/authority ko zahir karta hai
+    bgColor: "bg-[#997819]/10",
+    hoverIcon: "group-hover:text-white",
+    hoverBg: "group-hover:bg-[#997819]",
+  },
+  {
+    title: "Growth Engine",
+    path: "/growth-engine",
+    desc: "Our growth-focused media strategies are designed to help your business reach more people, attract better leads, and create new opportunities.",
+    icon: <Rocket className="w-8 h-8" />, // Rocket fast growth aur new opportunities/scaling ke liye best hai
+    bgColor: "bg-[#997819]/10",
+    hoverIcon: "group-hover:text-white",
+    hoverBg: "group-hover:bg-[#997819]",
+  },
+];
 
   return (
     // Main Section: Isay py-20 ki zarurat Hero mein nahi hoti agar aap h-screen use kar rahe hain
