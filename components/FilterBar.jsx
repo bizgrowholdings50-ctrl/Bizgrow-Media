@@ -10,7 +10,7 @@ export default function FilterBar({ categories }) {
   const scrollRef = useRef(null);
 
   // Digital site branding colors
-  const BRAND_ORANGE = "#B54118";
+  const BRAND_ORANGE = "#997819";
   const BRAND_BLUE = "#12066a";
 
   const slugArray = params?.slug || [];

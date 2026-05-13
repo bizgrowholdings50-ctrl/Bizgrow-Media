@@ -4,7 +4,7 @@ import FilterBar from "@/components/FilterBar.jsx"; // Digital site wala FilterB
 import { notFound } from "next/navigation";
 
 // Digital site ki branding colors
-const BRAND_ORANGE = "#B54118";
+const BRAND_ORANGE = "#997819";
 const BRAND_BLUE = "#12066a";
 const WP_FIELDS = "_fields=id,slug,title,yoast_head_json";
 
@@ -76,20 +76,20 @@ export default async function BlogPage({ params }) {
         <header className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-black text-[#12066a] dark:text-white mb-4 uppercase tracking-tight">
             {activeCat ? activeCat.replace(/-/g, " ") : "Digital Marketing"}{" "}
-            <span className="text-[#B54118]">Insights</span>
+            <span className="text-[#997819]">Insights</span>
           </h1>
-          <div className="w-16 h-1.5 bg-[#B54118] mx-auto rounded-full" />
+          <div className="w-16 h-1.5 bg-[#997819] mx-auto rounded-full" />
         </header>
 
         {/* FilterBar - Make sure FilterBar is ready for digital site colors */}
         <div className="w-full mb-12">
-          <FilterBar categories={categories} activeColor="#B54118" />
+          <FilterBar categories={categories} activeColor="#997819" />
         </div>
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {Array.isArray(posts) && posts.map((post) => (
-            <article key={post.id} className="group bg-white dark:bg-[#000B25] rounded-2xl shadow-sm border border-gray-100 dark:border-white/5 flex flex-col overflow-hidden hover:shadow-2xl hover:shadow-[#B54118]/10 transition-all duration-500">
+            <article key={post.id} className="group bg-white dark:bg-[#000B25] rounded-2xl shadow-sm border border-gray-100 dark:border-white/5 flex flex-col overflow-hidden hover:shadow-2xl hover:shadow-[#997819]/10 transition-all duration-500">
               <div className="relative h-60 w-full overflow-hidden">
                 <Image 
                   src={post.yoast_head_json?.og_image?.[0]?.url || "/placeholder.jpg"} 
@@ -101,7 +101,7 @@ export default async function BlogPage({ params }) {
               <div className="p-8 flex flex-col flex-grow">
                 <h2 className="text-xl font-extrabold text-[#12066a] dark:text-white mb-6 line-clamp-2 min-h-[3.5rem] leading-snug" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
                 
-                <Link href={`/${post.slug}/`} className="mt-auto text-[#B54118] font-black text-[11px] uppercase tracking-[0.2em] flex items-center gap-2 group/btn transition-all">
+                <Link href={`/${post.slug}/`} className="mt-auto text-[#997819] font-black text-[11px] uppercase tracking-[0.2em] flex items-center gap-2 group/btn transition-all">
                   Read Full Story 
                   <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
                 </Link>
@@ -118,7 +118,7 @@ export default async function BlogPage({ params }) {
                 <Link 
                   key={i} 
                   href={getPageLink(i + 1)} 
-                  className={`w-11 h-11 flex items-center justify-center rounded-full text-sm font-black transition-all ${currentPage === i + 1 ? "bg-[#B54118] text-white shadow-lg shadow-[#B54118]/30" : "text-gray-400 dark:text-gray-500 hover:bg-gray-100 dark:hover:bg-white/5"}`}
+                  className={`w-11 h-11 flex items-center justify-center rounded-full text-sm font-black transition-all ${currentPage === i + 1 ? "bg-[#997819] text-white shadow-lg shadow-[#997819]/30" : "text-gray-400 dark:text-gray-500 hover:bg-gray-100 dark:hover:bg-white/5"}`}
                 >
                   {i + 1}
                 </Link>
@@ -128,7 +128,7 @@ export default async function BlogPage({ params }) {
             {currentPage < totalPages && (
               <Link 
                 href={getPageLink(currentPage + 1)} 
-                className="px-10 py-4 rounded-full border-2 border-[#B54118] text-[#B54118] font-black text-xs uppercase tracking-widest hover:bg-[#B54118] hover:text-white transition-all duration-300 shadow-sm"
+                className="px-10 py-4 rounded-full border-2 border-[#997819] text-[#997819] font-black text-xs uppercase tracking-widest hover:bg-[#997819] hover:text-white transition-all duration-300 shadow-sm"
               >
                 Next Page
               </Link>

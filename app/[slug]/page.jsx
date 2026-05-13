@@ -55,7 +55,7 @@ export default async function SingleBlogPost({ params }) {
       <header className="max-w-4xl mt-10 mx-auto px-6 pt-16 pb-10">
         <Link
           href="/blogs"
-          className="text-[#B54118] font-bold text-sm tracking-widest uppercase mb-8 inline-block hover:underline"
+          className="text-[#997819] font-bold text-sm tracking-widest uppercase mb-8 inline-block hover:underline"
         >
           ← Back to Insights
         </Link>
@@ -63,7 +63,7 @@ export default async function SingleBlogPost({ params }) {
           className="text-[28px] sm:text-4xl md:text-5xl font-black text-[#12066a] dark:text-white leading-[1.2] mb-6 tracking-tight break-words overflow-wrap-anywhere"
           dangerouslySetInnerHTML={{ __html: post.title.rendered }}
         />
-        <div className="text-orange-800 font-medium">
+        <div className="text-[#997819] font-medium">
           {new Date(post.date).toLocaleDateString("en-GB", {
             day: "numeric",
             month: "long",
@@ -106,7 +106,7 @@ export default async function SingleBlogPost({ params }) {
             
             /* Links & Bolds */
             prose-strong:text-[#12066a] prose-strong:font-black
-            prose-a:text-[#B54118] prose-a:font-bold prose-a:underline
+            prose-a:text-[#997819] prose-a:font-bold prose-a:underline
             
             max-w-none blog-content-flow
           "

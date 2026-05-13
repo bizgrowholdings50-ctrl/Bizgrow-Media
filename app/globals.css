@@ -56,7 +56,7 @@ nav {
 .blog-content-flow h2 {
   font-size: 1.5rem !important; 
   line-height: 1.3 !important;
-  border-left: 4px solid #B54118;
+  border-left: 4px solid #997819;
   padding-left: 1rem;
   margin-bottom: 16px;
   word-wrap: break-word !important;
@@ -101,7 +101,7 @@ nav {
 
 .blog-content-flow ul li::before {
   content: "•"; 
-  color: #B54118; 
+  color: #997819; 
   font-weight: bold;
   font-size: 1.5rem;
   position: absolute;
@@ -150,14 +150,14 @@ nav {
 }
 
 .dark .blog-content-flow ol li::before {
-  color: #B54118 !important; /* Dark mode mein numbers orange kar diye */
+  color: #997819 !important; /* Dark mode mein numbers orange kar diye */
 }
 
 /* Responsive adjustments */
 @media (min-width: 768px) {
   .blog-content-flow h2 {
     font-size: 2.5rem !important;
-    border-left: 6px solid #B54118;
+    border-left: 6px solid #997819;
     padding-left: 1.5rem;
   }
 }
