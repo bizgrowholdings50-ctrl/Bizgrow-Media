@@ -122,7 +122,7 @@ const page = () => {
           {/* Header Text */}
           <div className="text-center mb-20">
             <FadeIn direction="up" delay={0.2}>
-              <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tighter">
+              <h2 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white leading-[1.1] tracking-tighter">
                 Elite-level services focused on <br />
                 <span className="text-[#997819]">long-term performance</span>
               </h2>
