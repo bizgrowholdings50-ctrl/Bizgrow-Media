@@ -152,7 +152,7 @@ const Footer = () => {
                     <FaEnvelope className="text-sm group-hover:scale-110 transition-transform" />
                   </div>
                   <span className="text-gray-300 text-sm font-bold group-hover:text-white transition-colors truncate">
-                    Info@bizgrow-digital.co.uk
+                    info@bizgrowstudios.co.uk
                   </span>
                 </a>
               </div>

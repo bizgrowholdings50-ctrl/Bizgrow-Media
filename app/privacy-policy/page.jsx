@@ -98,7 +98,7 @@ const PrivacyPolicy = () => {
                   <p className="text-gray-500 dark:text-gray-400">If you have any questions about this Privacy Policy, reach out to us:</p>
                   <div className="text-xl font-bold dark:text-white">
                     <p className="text-[#997819]">BizGrow Media</p>
-                    <p>Email: <span className="font-light text-gray-600 dark:text-gray-400">Info@bizgrow-digital.co.uk</span></p>
+                    <p>Email: <span className="font-light text-gray-600 dark:text-gray-400">info@bizgrowstudios.co.uk</span></p>
                     <p>Contact no: <span className="font-light dark:text-gray-400 text-gray-600">+44 7903 332433</span></p>
                   </div>
                 </div>

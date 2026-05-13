@@ -305,7 +305,7 @@ const PremiumPackagesPage = () => {
                 </span>
               </div>
               <h2 className="text-[#12066a]  dark:text-white text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
-                How It <br />{" "}
+                How It {" "}
                 <span className="text-[#997819] italic font-light">Works</span>
               </h2>
               <p className="text-gray-500 mx-auto dark:text-white/40 text-lg font-medium max-w-xl leading-relaxed">

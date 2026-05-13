@@ -80,7 +80,7 @@ const ContactPage = () => {
             <div className="space-y-6">
               {[
                 { icon: <Phone />, label: "Call Us", val: "+44 7903 332433" },
-                { icon: <Mail />, label: "Email", val: "Info@bizgrow-digital.co.uk" },
+                { icon: <Mail />, label: "Email", val: "info@bizgrowstudios.co.uk" },
                 { icon: <MapPin />, label: "Location", val: "London, RM13 8EU" }
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-6 p-6 rounded-[2rem] bg-white dark:bg-[#12066a]/10 border border-gray-100 dark:border-white/5 shadow-sm">
