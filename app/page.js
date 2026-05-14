@@ -262,7 +262,7 @@ const HomePage = () => {
       </section>
 
       {/* 5. RESULTS YOU CAN EXPECT */}
-      <section className="py-24 bg-[#12066a] dark:bg-[#997819]/10">
+      <section className="py-24 bg-[#12066a] dark:bg-gray-900 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="right">
@@ -298,7 +298,7 @@ const HomePage = () => {
       </section>
 
       {/* 6. THE BIZGROW MEDIA ECOSYSTEM */}
-      <section className="py-32 bg-white dark:bg-gray-900">
+      <section className="py-32 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <FadeIn direction="up">
             <h2 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white uppercase mb-20 tracking-tighter">
@@ -330,7 +330,7 @@ const HomePage = () => {
       </section>
 
       {/* 7. FINAL IMPACT CTA */}
-      <section className="py-24 bg-white dark:bg-gray-800">
+      <section className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="relative py-24 rounded-[4rem] overflow-hidden text-center text-white bg-[#12066a] shadow-2xl">
             <div className="absolute inset-0 bg-[url('/hero-cta.webp')] bg-cover bg-center bg-fixed opacity-30" />

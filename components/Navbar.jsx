@@ -117,9 +117,9 @@ export default function Navbar() {
           className={`relative overflow-visible w-full max-w-7xl rounded-3xl border shadow-lg transition-all duration-300
           ${
             scrolled
-              ? "py-0.5 bg-white/80 dark:bg-black backdrop-blur-xl scale-[0.98]"
-              : "py-2 md:py-1 bg-white dark:bg-black/70 backdrop-blur-md"
-          } border-[#12066a] dark:border-white/20`}
+              ? "py-0.5 bg-white/80 dark:bg-gray-900  backdrop-blur-xl scale-[0.98]"
+              : "py-2 md:py-1 bg-white dark:bg-gray-900 backdrop-blur-md"
+          } border-[#12066a] dark:border-[#997819]`}
         >
           <div className="px-3 transition-all duration-300 py-1">
             <div className="flex items-center justify-between">

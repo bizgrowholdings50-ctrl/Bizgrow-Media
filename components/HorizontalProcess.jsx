@@ -127,7 +127,7 @@ const HorizontalProcess = () => {
         className={`${
           isVertical
             ? "relative"
-            : "sticky top-0 h-screen w-full flex items-center dark:border-t-2 dark:border-orange-700 overflow-hidden"
+            : "sticky top-0 h-screen w-full flex items-center dark:border-t-2  overflow-hidden"
         }`}
       >
         {/* --- MAIN HEADING --- */}

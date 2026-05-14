@@ -1,286 +1,31 @@
-"use client";
-import React, { useState, useRef, useEffect } from "react";
-import ReactMarkdown from "react-markdown";
-import { MessageSquare, X, Send, Phone } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useLenis } from "lenis/react";
+import { MessageCircle } from 'lucide-react';
 
-export default function ChatBot() {
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const scrollRef = useRef(null);
-  const chatBodyRef = useRef(null);
-
-  const lenis = useLenis();
-
-  // 1. Background Scroll Lock
-  useEffect(() => {
-    if (isOpen) {
-      lenis?.stop();
-      document.body.style.overflow = "hidden";
-    } else {
-      lenis?.start();
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      lenis?.start();
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen, lenis]);
-
-  // 2. Scroll Leakage Fix
-  useEffect(() => {
-    const chatBox = chatBodyRef.current;
-    if (!chatBox) return;
-
-    const handleScrollLock = (e) => {
-      if (!isOpen) return;
-      const isScrollable = chatBox.scrollHeight > chatBox.clientHeight;
-      if (!isScrollable) {
-        if (e.cancelable) e.preventDefault();
-        e.stopPropagation();
-        return;
-      }
-      const isAtTop = chatBox.scrollTop === 0;
-      const isAtBottom =
-        Math.abs(
-          chatBox.scrollHeight - chatBox.clientHeight - chatBox.scrollTop
-        ) < 1;
-      if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
-        if (e.cancelable) e.preventDefault();
-        e.stopPropagation();
-      }
-    };
-
-    chatBox.addEventListener("wheel", handleScrollLock, { passive: false });
-    chatBox.addEventListener("touchmove", handleScrollLock, { passive: false });
-    return () => {
-      chatBox.removeEventListener("wheel", handleScrollLock);
-      chatBox.removeEventListener("touchmove", handleScrollLock);
-    };
-  }, [isOpen]);
-
-  // 3. Smooth Auto-scroll Fix (No Jumping)
-  useEffect(() => {
-    if (scrollRef.current) {
-      requestAnimationFrame(() => {
-        scrollRef.current.scrollTo({
-          top: scrollRef.current.scrollHeight,
-          behavior: "smooth",
-        });
-      });
-    }
-  }, [messages, isLoading]);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!input.trim() || isLoading) return;
-    const userMsg = { role: "user", content: input };
-    setMessages((prev) => [...prev, userMsg]);
-    setInput("");
-    setIsLoading(true);
-
-    try {
-      const response = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: [...messages, userMsg] }),
-      });
-      const data = await response.json();
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: data.content },
-      ]);
-    } catch (error) {
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: "Direct WhatsApp us!" },
-      ]);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
+const WhatsAppWidget = () => {
   return (
-    <>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsOpen(false)}
-            className="fixed inset-0 bg-black/40 backdrop-blur-md z-[9998]"
-          />
-        )}
-      </AnimatePresence>
-
-      <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end font-montserrat">
-        <AnimatePresence mode="wait">
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 20, scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-              className="bg-[#FDFCF9] dark:bg-[#1a1a1a] w-[350px] sm:w-[380px] h-[520px] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-gray-200 dark:border-gray-800 mb-4"
-            >
-              {/* Header */}
-              <div className="h-[70px] bg-gradient-to-r from-[#000B25] to-[#2563eb] p-5 text-white flex justify-between items-center shrink-0">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-md border border-white/20">
-                    <span className="font-playfair font-bold text-lg">B</span>
-                  </div>
-                  <div>
-                    <h3 className="font-playfair font-bold text-sm tracking-wide">
-                      BizGrow Expert
-                    </h3>
-                    <p className="text-[10px] text-green-500 uppercase tracking-widest">
-                      Active Now
-                    </p>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="hover:bg-white/10 p-1.5 rounded-full transition-colors"
-                  aria-label="Close Chat"
-                >
-                  <X size={20} />
-                </button>
-              </div>
-
-              {/* Chat Body */}
-              <div className="flex-1 min-h-0 relative" data-lenis-prevent>
-                <div
-                  ref={(el) => {
-                    scrollRef.current = el;
-                    chatBodyRef.current = el;
-                  }}
-                  style={{
-                    overscrollBehavior: "contain",
-                    scrollBehavior: "smooth",
-                  }}
-                  className="absolute inset-0 overflow-y-auto p-4 space-y-4 custom-scrollbar bg-[#FDFCF9] dark:bg-[#121212]"
-                >
-                  {messages.length === 0 && (
-                    <div className="flex flex-col items-center justify-center min-h-full text-center space-y-2 opacity-50 px-6 pointer-events-none">
-                      <p className="font-playfair italic text-lg text-[#1f2937] dark:text-white">
-                        "Transforming clicks into customers."
-                      </p>
-                    </div>
-                  )}
-
-                  {messages.map((m, i) => (
-                    <div
-                      key={i}
-                      className={`flex ${
-                        m.role === "user" ? "justify-end" : "justify-start"
-                      }`}
-                    >
-                      <div
-                        className={`max-w-[85%] p-3.5 rounded-2xl text-[13px] leading-relaxed shadow-sm ${
-                          m.role === "user"
-                            ? "bg-[#2563eb] text-white rounded-tr-none"
-                            : "bg-white dark:bg-[#1e1e1e] text-[#1f2937] dark:text-gray-200 rounded-tl-none border border-gray-100 dark:border-gray-800"
-                        }`}
-                      >
-                        <div className="prose prose-sm dark:prose-invert max-w-none font-montserrat">
-                          <ReactMarkdown>{m.content}</ReactMarkdown>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                  {isLoading && (
-                    <div className="text-[10px] text-blue-500 animate-pulse ml-2 font-bold tracking-widest uppercase">
-                      Thinking...
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Footer */}
-              <div className="p-4 bg-white dark:bg-[#1a1a1a] border-t border-gray-100 dark:border-gray-800 shrink-0">
-                <a
-                  href="https://wa.me/447903332433"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-[#057e32] text-white text-[11px] font-bold py-3 rounded-2xl mb-3 hover:brightness-110 transition-all shadow-lg"
-                >
-                  <Phone size={14} /> BOOK A STRATEGY CALL
-                </a>
-                <form onSubmit={handleSubmit} className="flex gap-2">
-                  <input
-                    className="flex-1 bg-gray-50 dark:bg-[#252525] rounded-xl px-4 py-2.5 text-sm outline-none border border-gray-200 dark:border-gray-700 text-[#1f2937] dark:text-white"
-                    placeholder="Ask us anything..."
-                    aria-label="Type your message"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                  />
-                  <button
-                    type="submit"
-                    aria-label="Send Message"
-                    className="bg-[#2563eb] text-white p-3 rounded-xl hover:bg-blue-700 shadow-md"
-                  >
-                    <Send size={18} />
-                  </button>
-                </form>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Wapis Add Kiya Gaya: "Chat with us" Label */}
-        <AnimatePresence>
-          {!isOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: 10, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 10, scale: 0.8 }}
-              whileHover={{ scale: 1.05 }}
-              onClick={() => setIsOpen(true)}
-              className="fixed bottom-[90px] right-6 z-[9999] cursor-pointer flex flex-col items-end"
-            >
-              <div className="relative bg-white dark:bg-black text-[#B54118] dark:text-orange-400 text-[12px] font-bold px-4 py-2.5 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-orange-100 dark:border-orange-900 flex items-center gap-2">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                </span>
-                <span className="dark:text-white">Chat with us</span>
-                <div className="absolute -bottom-1 right-5 w-3 h-3 bg-white dark:bg-black rotate-45 border-r border-b border-orange-100 dark:border-orange-900/30"></div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Close Chat Assistant" : "Open Chat Assistant"}
-          className="bg-gradient-to-r from-[#000B25] to-[#2563eb] border border-white/20 text-white p-3 rounded-2xl shadow-xl z-[9999]"
-        >
-          {isOpen ? <X size={28} /> : <MessageSquare size={28} />}
-        </motion.button>
+    <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-3 group">
+      
+      {/* Floating Label (Jo auto dikhega ya hover pe) */}
+      <div className="bg-white text-gray-800 py-2 px-4 rounded-xl shadow-lg border border-gray-100 mb-1 scale-0 group-hover:scale-100 origin-bottom-right transition-all duration-300 font-montserrat text-sm font-medium">
+        Chat with our expert team! 👋
       </div>
 
-      <style jsx global>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #d1d5db;
-          border-radius: 10px;
-        }
-        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #333;
-        }
-        .prose strong {
-          font-weight: 800;
-          color: inherit;
-        }
-      `}</style>
-    </>
+      <a
+        href="https://wa.me/447903332433?text=Hi%20BizGrow%20Expert,%20I'm%20interested%20in%20your%20services."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative flex items-center justify-center w-16 h-16 bg-[#997819] text-white rounded-full shadow-[0_8px_30px_rgb(37,211,102,0.4)] hover:scale-110 transition-transform duration-300"
+      >
+        {/* Pulsing Effect Background */}
+        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></span>
+        
+        {/* Main Icon */}
+        <MessageCircle size={32} fill="currentColor" className="relative z-10" />
+        
+        {/* Notification Dot */}
+        <span className="absolute top-0 right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></span>
+      </a>
+    </div>
   );
-}
+};
+
+export default WhatsAppWidget;
