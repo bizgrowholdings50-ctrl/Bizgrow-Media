@@ -77,6 +77,11 @@ const nextConfig = {
         destination: "/our-media-services/",
         permanent: true, // 301 Redirect for SEO
       },
+        {
+        source: "/about-us/",
+        destination: "/",
+        permanent: true, // 301 Redirect for SEO
+      },
 
       {
         source: "/email-marketing/",

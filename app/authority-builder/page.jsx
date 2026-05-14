@@ -111,7 +111,7 @@ const CreativeContentPage = () => {
       <div className="relative h-[85vh] md:h-screen w-full">
         <Image
           src="/hero-t.jpg"
-          alt="Creative Content Services - BizGrow Digital"
+          alt="Authority Builder -  BizGrow Media "
           fill
           fetchPriority="high"
           priority
@@ -155,7 +155,7 @@ const CreativeContentPage = () => {
                 <div className="relative h-[450px] md:h-[600px] w-full rounded-[3.5rem] overflow-hidden shadow-2xl">
                   <Image
                     src="/professional-content.jpg" // Suggestion: High-quality image of a writer or digital designer
-                    alt="Professional content creation UK | BizGrow Digital"
+                    alt="Measurable Results by BizGrow Media "
                     fill
                     className="object-cover"
                   />
@@ -203,7 +203,10 @@ const CreativeContentPage = () => {
 
                   <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed italic border-l-4 border-[#997819] pl-6">
                     Authority Builder by{" "}
-                    <b className="text-[#12066a] font-bold">BizGrow Media</b>{" "}
+                    <Link href="/" className="text-[#997819] font-bold">
+                      BizGrow Media
+                    </Link>
+                    {" "}
                     helps founders, startups, and growing businesses build a
                     recognised market presence through strategic content,
                     premium media positioning, and professional brand visibility
@@ -395,7 +398,7 @@ const CreativeContentPage = () => {
                   {[
                     {
                       icon: <Camera size={24} />,
-                      text: "2–4 professionally managed studio sessions each month",
+                      text: <>2–4 professionally managed <Link href="/studio-production" className="text-[#997819] font-bold">studio sessions</Link> each month</>,
                     },
                     {
                       icon: <Mic size={24} />,
@@ -465,7 +468,7 @@ const CreativeContentPage = () => {
               <FadeIn direction="up" delay={0.2}>
                 <div className="border-t-2 border-gray-100 dark:border-white/5 pt-12">
                   <p className="text-2xl font-bold text-[#12066a] dark:text-white mb-12 leading-snug">
-                    Our Content Engine transforms every podcast, interview, or
+                    Our <Link href="/content-engine" className="text-[#997819] font-bold">Content Engine</Link> transforms every podcast, interview, or
                     video into a consistent stream of strategic media designed
                     to increase visibility and strengthen authority.
                   </p>
@@ -633,7 +636,7 @@ const CreativeContentPage = () => {
                     remember.
                   </p>
                   <p className="text-lg text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
-                    Our Growth Engine is designed to ensure your content does
+                    Our <Link href="/growth-engine" className="text-[#997819] font-bold">Growth Engine</Link> is designed to ensure your content does
                     more than generate visibility; it strengthens authority,
                     attracts inbound opportunities, and supports long-term
                     business growth.

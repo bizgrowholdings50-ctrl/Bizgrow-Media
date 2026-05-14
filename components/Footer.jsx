@@ -159,13 +159,16 @@ const Footer = () => {
             </div>
 
             <div className="relative group w-full h-44 rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.850672221615!2d-0.1277583!3d51.5073509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xed10390f77744dc!2sLondon!5e0!3m2!1sen!2suk!4v1700000000000"
-                className="w-full h-full border-0 grayscale invert contrast-[1.2] opacity-60 group-hover:grayscale-0 group-hover:invert-0 group-hover:opacity-100 transition-all duration-700 scale-110 group-hover:scale-100"
-                title="BizGrow Office Location"
-                allowFullScreen
-                loading="lazy"
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.540423055107!2d0.18023637684638787!3d51.5216139718159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a594419967e5%3A0x6b772c91807d4b4!2sCEME%20Campus%2C%20Marsh%20Way%2C%20Rainham%20RM13%208EU%2C%20UK!5e0!3m2!1sen!2s!4v1715000000000!5m2!1sen!2s" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen 
+                loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
+                title="Bizgrow Location"
+                className="relative z-0"
               />
             </div>
 
