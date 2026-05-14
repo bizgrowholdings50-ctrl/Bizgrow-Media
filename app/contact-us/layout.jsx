@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Contact BizGrow Digital | Digital Marketing Agency",
-  description: "Contact BizGrow Digital for SEO, web design, social media, and digital marketing services. Get a free consultation today.",
+  title: "Contact BizGrow Media | Let’s Grow Your Brand",
+  description: "Get in touch with BizGrow Media to discuss your content, branding, and growth needs. We help businesses build visibility, authority, and real results.",
   alternates: {
     canonical: "https://bizgrowmedia.co.uk/contact-us/",
   },

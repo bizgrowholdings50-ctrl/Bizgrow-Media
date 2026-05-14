@@ -78,9 +78,10 @@ const Footer = () => {
             </div>
             <p className="text-gray-400 text-sm leading-relaxed font-medium max-w-sm">
               <span className="text-white font-bold">BizGrow Media</span> is a
-              results-driven media solutions company. We equip businesses with
-              modern web development and data-driven marketing strategies to
-              achieve measurable growth.
+              collection of organised platforms that promote your company with a
+              message to the industry. As a business media connection, we convey
+              the word and advertise your brand with value so that your audience
+              recognises the value that you may bring to the customer you serve.
             </p>
             <div className="text-2xl font-black text-white tracking-tighter uppercase  ">
               BIZGROW <span className="text-[#997819]">MEDIA</span>
@@ -145,7 +146,7 @@ const Footer = () => {
                   </span>
                 </a>
                 <a
-                  href="mailto:info@bizgrow-digital.co.uk"
+                  href="mailto:info@bizgrowstudios.co.uk"
                   className="flex items-center group"
                 >
                   <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-[#997819] transition-all duration-500 mr-4 border border-white/10 group-hover:border-transparent">
@@ -159,13 +160,13 @@ const Footer = () => {
             </div>
 
             <div className="relative group w-full h-44 rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
-                <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.540423055107!2d0.18023637684638787!3d51.5216139718159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a594419967e5%3A0x6b772c91807d4b4!2sCEME%20Campus%2C%20Marsh%20Way%2C%20Rainham%20RM13%208EU%2C%20UK!5e0!3m2!1sen!2s!4v1715000000000!5m2!1sen!2s" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.540423055107!2d0.18023637684638787!3d51.5216139718159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a594419967e5%3A0x6b772c91807d4b4!2sCEME%20Campus%2C%20Marsh%20Way%2C%20Rainham%20RM13%208EU%2C%20UK!5e0!3m2!1sen!2s!4v1715000000000!5m2!1sen!2s"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Bizgrow Location"
                 className="relative z-0"
@@ -191,8 +192,8 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-gray-400 text-[10px] font-black uppercase tracking-[0.4em]">
-            © 2026 BizGrow Media. Crafted for Excellence.
+          <p className="text-gray-400 text-[10px] font-black uppercase tracking-[0.2em]">
+            © 2026 BizGrow Media. Premium Business Media & Brand Growth.
           </p>
           <div className="flex gap-8">
             <Link
