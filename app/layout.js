@@ -88,7 +88,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-body bg-[#FDFCF9] text-[#1f2937] antialiased overflow-x-clip">
+      <body className="font-body bg-[#FDFCF9] text-[#1f2937] antialiased">
         <Providers>
         <CustomCursor />
           <Navbar />
@@ -97,7 +97,7 @@ export default function RootLayout({ children }) {
               {children}
               <Analytics />
             </main>
-            <Footer/>
+            <Footer />
           </SmoothScroll>
           <ChatBot />
         </Providers>

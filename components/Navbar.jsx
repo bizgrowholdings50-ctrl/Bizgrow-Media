@@ -127,7 +127,7 @@ export default function Navbar() {
               <Link href="/">
                 <Image
                   src="/BizGrow Media.png"
-                  alt="Logo"
+                  alt="BizGrow Media Logo"
                   width={scrolled ? 95 : 100}
                   height={40}
                   priority

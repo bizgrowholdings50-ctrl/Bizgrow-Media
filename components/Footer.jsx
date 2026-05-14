@@ -69,7 +69,7 @@ const Footer = () => {
             <div className="relative -mt-10 inline-block">
               <Image
                 src="/footer-logo.png"
-                alt="BizGrow Digital Logo"
+                alt="BizGrow Media Logo"
                 width={150}
                 height={80}
                 className="brightness-110 -ml-4 drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]"

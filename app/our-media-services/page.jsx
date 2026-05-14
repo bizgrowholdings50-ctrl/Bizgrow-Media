@@ -1,8 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import {
- Mic2, Layers, ShieldCheck, Rocket
-} from "lucide-react";
+import { Mic2, Layers, ShieldCheck, Rocket } from "lucide-react";
 import HorizontalProcess from "@components/HorizontalProcess";
 import ShapeChangeSection from "@components/test";
 import VShapeTransition from "@components/test2";
@@ -20,73 +18,71 @@ export const metadata = {
 };
 
 const page = () => {
- const services = [
-  {
-    title: "Studio & Production",
-    path: "/studio-production",
-    desc: "From podcasts and interviews to branded video content, we create professional media that helps your business appear more polished and engaging.",
-    icon: <Mic2 className="w-8 h-8" />, // Mic2 podcast aur studio environment ke liye perfect hai
-    bgColor: "bg-[#997819]/10",
-    hoverIcon: "group-hover:text-white",
-    hoverBg: "group-hover:bg-[#997819]",
-  },
-  {
-    title: "Content Engine",
-    path: "/content-engine",
-    desc: "BizGrow Media creates valuable, well-structured content that helps your brand stay visible, connect with the right audience, and communicate with clarity.",
-    icon: <Layers className="w-8 h-8" />, // Layers structured content aur "engine" vibration ko represent karta hai
-    bgColor: "bg-[#997819]/10",
-    hoverIcon: "group-hover:text-white",
-    hoverBg: "group-hover:bg-[#997819]",
-  },
-  {
-    title: "Authority Builder",
-    path: "/authority-builder",
-    desc: "BizGrow Media helps businesses and personal brands build a stronger presence through professional branding, credibility, and consistent media positioning.",
-    icon: <ShieldCheck className="w-8 h-8" />, // ShieldCheck credibility aur trust/authority ko zahir karta hai
-    bgColor: "bg-[#997819]/10",
-    hoverIcon: "group-hover:text-white",
-    hoverBg: "group-hover:bg-[#997819]",
-  },
-  {
-    title: "Growth Engine",
-    path: "/growth-engine",
-    desc: "Our growth-focused media strategies are designed to help your business reach more people, attract better leads, and create new opportunities.",
-    icon: <Rocket className="w-8 h-8" />, // Rocket fast growth aur new opportunities/scaling ke liye best hai
-    bgColor: "bg-[#997819]/10",
-    hoverIcon: "group-hover:text-white",
-    hoverBg: "group-hover:bg-[#997819]",
-  },
-];
+  const services = [
+    {
+      title: "Studio & Production",
+      path: "/studio-production",
+      desc: "From podcasts and interviews to branded video content, we create professional media that helps your business appear more polished and engaging.",
+      icon: <Mic2 className="w-8 h-8" />,
+      bgColor: "bg-[#997819]/10",
+      hoverIcon: "group-hover:text-white",
+      hoverBg: "group-hover:bg-[#997819]",
+    },
+    {
+      title: "Content Engine",
+      path: "/content-engine",
+      desc: "BizGrow Media creates valuable, well-structured content that helps your brand stay visible, connect with the right audience, and communicate with clarity.",
+      icon: <Layers className="w-8 h-8" />,
+      bgColor: "bg-[#997819]/10",
+      hoverIcon: "group-hover:text-white",
+      hoverBg: "group-hover:bg-[#997819]",
+    },
+    {
+      title: "Authority Builder",
+      path: "/authority-builder",
+      desc: "BizGrow Media helps businesses and personal brands build a stronger presence through professional branding, credibility, and consistent media positioning.",
+      icon: <ShieldCheck className="w-8 h-8" />,
+      bgColor: "bg-[#997819]/10",
+      hoverIcon: "group-hover:text-white",
+      hoverBg: "group-hover:bg-[#997819]",
+    },
+    {
+      title: "Growth Engine",
+      path: "/growth-engine",
+      desc: "Our growth-focused media strategies are designed to help your business reach more people, attract better leads, and create new opportunities.",
+      icon: <Rocket className="w-8 h-8" />,
+      bgColor: "bg-[#997819]/10",
+      hoverIcon: "group-hover:text-white",
+      hoverBg: "group-hover:bg-[#997819]",
+    },
+  ];
 
   return (
-    // Main Section: Isay py-20 ki zarurat Hero mein nahi hoti agar aap h-screen use kar rahe hain
     <section className="relative w-full">
       {/* Hero Container */}
-      <div className="relative  h-[95vh] md:h-screen w-full">
-        {/* Background Image */}
+      <div className="relative h-[95vh] md:h-screen w-full">
         <Image
           src="/services-hr.jpg"
           alt="BizGrow Media Open Bigger Business Opportunities"
           fill
           priority
           fetchPriority="high"
-          className="object-cover object-center" // object-cover image ko stretch hone se bachata hai
+          className="object-cover object-center"
         />
 
-        {/* Overlay: Taaki image ke upar text parha ja sakay */}
         <div
           className="absolute inset-0 w-full bg-black/70 flex flex-col justify-center
          items-center space-y-3"
         >
-          {/* Content wahi hai, sirf FadeIn par 'w-full' add kiya hai */}
           <FadeIn direction="up" delay={0.2} className="w-full">
             <h1
               className="text-white text-4xl mx-auto md:text-6xl text-center 
             font-bold mt-26 max-w-5xl px-4"
             >
               The Right Media Open{" "}
-              <span className="text-[#997819]"> Bigger Business </span>
+              <span className="text-[#997819]">
+                Bigger Business
+              </span>{" "}
               Opportunities
             </h1>
           </FadeIn>
@@ -99,9 +95,7 @@ const page = () => {
             </p>
           </FadeIn>
 
-          {/* 🔹 FIX: Yahan 'flex justify-center' add kiya hai taake button center mein aaye */}
           <FadeIn direction="up" delay={0.6} className="w-full">
-            {/* 🔹 FIX: Button ko is div mein wrap kiya taake alignment force ho sake */}
             <div className="w-full flex justify-center">
               <Link href="/contact-us">
                 <button className="mt-8 px-8 py-4 bg-[#997819] text-white font-semibold rounded-xl hover:scale-105 transition shadow-lg">
@@ -112,20 +106,21 @@ const page = () => {
           </FadeIn>
         </div>
       </div>
-      {/*   */}
-      {/* 🚀 UNIQUE SERVICES GRID: Consistent & Premium */}
-      <section className="py-24 bg-gray-50 dark:bg-black relative overflow-hidden">
-        {/* Background Decorative Blob */}
+
+      {/* SERVICES GRID */}
+      <section className="py-24 bg-gray-50 dark:bg-black relative">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#997819]/5 blur-[120px] rounded-full -z-10" />
 
         <div className="max-w-7xl mx-auto px-6">
-          {/* Header Text */}
           <div className="text-center mb-20">
             <FadeIn direction="up" delay={0.2}>
               <h2 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white leading-[1.1] tracking-tighter">
                 Elite-level services focused on <br />
-                <span className="text-[#997819]">long-term performance</span>
+                <span className="text-[#997819]">
+                  long-term performance
+                </span>
               </h2>
+
               <div className="w-24 h-2 bg-[#997819] mx-auto mt-6 rounded-full" />
             </FadeIn>
 
@@ -134,15 +129,14 @@ const page = () => {
                 <Link href="/" className="text-[#997819] font-bold">
                   BizGrow Media{" "}
                 </Link>
-                provides all-in-one media services designed to
-                help brands build visibility, engage high-intent audiences, and
-                create stronger business opportunities.
+                provides all-in-one media services designed to help brands build
+                visibility, engage high-intent audiences, and create stronger
+                business opportunities.
               </p>
             </FadeIn>
           </div>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2  gap-10 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
             {services.map((service, index) => (
               <FadeIn
                 key={index}
@@ -150,12 +144,9 @@ const page = () => {
                 delay={0.1 * index}
                 className="h-full"
               >
-                {/* 🔹 Consistent Card Styling */}
                 <div className="group relative h-full p-10 bg-white dark:bg-[#001235]/40 backdrop-blur-md rounded-[2.5rem] border-2 border-slate-100 dark:border-white/5 shadow-xl hover:shadow-[#997819]/20 transition-all duration-500 flex flex-col items-start text-left overflow-hidden">
-                  {/* Hover Glow Effect */}
                   <div className="absolute -inset-full bg-gradient-to-br from-[#997819]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
 
-                  {/* Icon Container - Matching Home Style */}
                   <div
                     className={`w-20 h-20 ${service.bgColor} ${service.hoverBg} ${service.hoverIcon} 
               rounded-2xl flex items-center justify-center mb-8 shadow-lg transition-all 
@@ -172,14 +163,12 @@ const page = () => {
                     {service.desc}
                   </p>
 
-                  {/* 🔹 Consistent Arrow/Link for Services */}
                   <Link href={service.path} className="mt-8">
                     <div className="flex items-center gap-2 text-[#997819] font-bold text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 cursor-pointer">
                       Explore More <span>→</span>
                     </div>
                   </Link>
 
-                  {/* 🔹 Bottom Accent Line - Matching Why Choose Us */}
                   <div className="absolute bottom-0 left-0 w-0 h-2 bg-[#997819] group-hover:w-full transition-all duration-500" />
                 </div>
               </FadeIn>
@@ -187,15 +176,14 @@ const page = () => {
           </div>
         </div>
       </section>
-      {/* Our Distinction */}
-      <section className="bg-white dark:bg-[#020410] py-40 transition-colors duration-500 overflow-hidden relative">
-        {/* Architectural Background Detail */}
+
+      {/* OUR DISTINCTION */}
+      <section className="bg-white dark:bg-[#020410] py-40 transition-colors duration-500 relative">
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20 dark:opacity-40">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-gray-200 dark:via-white/10 to-transparent hidden md:block" />
         </div>
 
         <div className="max-w-5xl mx-auto px-6 relative z-10">
-          {/* --- Header Section --- */}
           <div className="mb-32 text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
               <span className="w-2 h-2 rounded-full bg-[#997819] animate-pulse" />
@@ -203,31 +191,35 @@ const page = () => {
                 Our Distinction
               </span>
             </div>
+
             <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] mb-8 italic">
               What Makes <br />
               <span className="text-[#997819] not-italic">
                 Our Process Different
               </span>
             </h2>
+
             <div className="w-24 h-[1px] bg-[#997819] mx-auto opacity-50" />
           </div>
 
-          {/* --- Systematic Flow --- */}
           <div className="relative space-y-24">
             {[
               {
                 label: "Experience",
-                title: "We Pay Attention To How Your Brand Is Experienced",
+                title:
+                  "We Pay Attention To How Your Brand Is Experienced",
                 desc: "People often form an impression of how a brand feels online before any conversation begins. Our process is built around helping your business appear more polished, intentional, and professionally presented through every piece of media.",
               },
               {
                 label: "Quality",
-                title: "We Prioritise Meaningful Content Over Constant Posting",
+                title:
+                  "We Prioritise Meaningful Content Over Constant Posting",
                 desc: "We believe strong brands are built through purposeful content, not endless posting. Every piece of media is created to feel relevant, valuable, and worth paying attention to.",
               },
               {
                 label: "Personalization",
-                title: "Your Business Doesn’t Get Treated Like Another Project",
+                title:
+                  "Your Business Doesn’t Get Treated Like Another Project",
                 desc: "Every business communicates differently, which is why our process is shaped by your brand identity, audience, and growth direction rather than a generic approach.",
               },
               {
@@ -248,47 +240,56 @@ const page = () => {
                   index % 2 !== 0 ? "md:flex-row-reverse" : ""
                 }`}
               >
-                {/* Card Content */}
                 <div className="flex-1 w-full">
                   <div className="p-10 rounded-[2.5rem] bg-gray-50/50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 hover:border-[#997819]/30 transition-all duration-700 group shadow-sm hover:shadow-2xl">
                     <span className="inline-block text-[#997819] font-black uppercase tracking-[0.3em] text-[10px] mb-4">
                       Section // 0{index + 1}
                     </span>
+
                     <h3 className="text-[#12066a] dark:text-white text-2xl font-black uppercase tracking-tight mb-6 group-hover:text-[#997819] transition-colors duration-500 leading-tight">
                       {item.title}
                     </h3>
+
                     <p className="text-gray-500 dark:text-white/40 text-sm leading-relaxed font-medium">
                       {item.desc}
                     </p>
                   </div>
                 </div>
 
-                {/* Central Architectural Marker */}
                 <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white dark:bg-[#020410] border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-xl group-hover:border-[#997819] transition-colors duration-500">
                   <div className="w-2 h-2 rounded-full bg-[#997819]" />
                 </div>
 
-                {/* Spacer for Symmetry */}
                 <div className="flex-1 hidden md:block" />
               </div>
             ))}
           </div>
 
-          {/* Bottom Callout */}
           <div className="mt-32 flex flex-col items-center">
             <div className="h-16 w-px bg-gradient-to-b from-[#997819] to-transparent mb-8" />
+
             <p className="text-[10px] font-black uppercase tracking-[0.6em] text-gray-400">
               End of Methodology
             </p>
           </div>
         </div>
       </section>
-      <HorizontalProcess />
-      <ShapeChangeSection />
-      <VShapeTransition />
 
-      {/* 🚀 PREMIUM CTA SECTION: Services Page */}
-      <section className="dark:bg-black py-24 dark:border-y-2 dark:border-orange-700 overflow-hidden">
+      {/* 🔥 PINNED COMPONENTS FIXED */}
+      <div className="relative z-10">
+        <HorizontalProcess />
+      </div>
+
+      <div className="relative z-10">
+        <ShapeChangeSection />
+      </div>
+
+      <div className="relative z-10">
+        <VShapeTransition />
+      </div>
+
+      {/* CTA */}
+      <section className="dark:bg-black py-24 dark:border-y-2 dark:border-orange-700">
         <div className="max-w-7xl mx-auto px-4 md:px-10">
           <div
             className="relative py-20 md:py-22 rounded-[3.5rem] overflow-hidden text-white text-center shadow-[0_20px_60px_rgba(181,65,24,0.15)] group"
@@ -296,18 +297,15 @@ const page = () => {
               backgroundImage: "url('/services-cta.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
-              backgroundAttachment: "fixed", // Parallax consistent with Home
+              backgroundAttachment: "fixed",
             }}
           >
-            {/* 🔹 Dynamic Overlay: Depth create karne ke liye */}
             <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-[#997819]/30 z-0"></div>
 
-            {/* 🔹 Modern Glass Border */}
             <div className="absolute inset-0 border-2 border-white/10 rounded-[3.5rem] z-10 pointer-events-none group-hover:border-[#997819]/30 transition-all duration-500"></div>
 
             <div className="relative z-20 max-w-4xl mx-auto px-6">
               <FadeIn direction="up">
-                {/* Top Badge */}
                 <span className="px-6 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 border-l-[#997819] border-l-4 text-white text-xs md:text-sm font-black tracking-[0.3em] uppercase">
                   Take the Leap
                 </span>
@@ -331,8 +329,8 @@ const page = () => {
               <FadeIn direction="up" delay={0.4}>
                 <Link href="/contact-us">
                   <button className="relative px-8 py-4 bg-[#997819] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(181,65,24,0.5)]">
-                    {/* Shine Animation Effect */}
                     <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
+
                     <span className="relative z-10 text-lg uppercase tracking-widest">
                       Start building the right way →
                     </span>
@@ -341,7 +339,6 @@ const page = () => {
               </FadeIn>
             </div>
 
-            {/* 🔹 Background Glowing Orbs */}
             <div className="absolute -top-20 -left-20 w-80 h-80 bg-[#997819]/10 blur-[120px] rounded-full"></div>
             <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[#997819]/10 blur-[120px] rounded-full"></div>
           </div>
