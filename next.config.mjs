@@ -110,6 +110,30 @@ const nextConfig = {
         destination: "/how-to-search-multiple-keywords-on-google/",
         permanent: true,
       },
+      {
+        source: "/how-to-do-proper-e-commerce-keyword-research/",
+        destination: "/e-commerce-keyword-research/",
+        permanent: true,
+      },
+      {
+        source:
+          "/on-page-seo-audit-services-boost-your-google-rankings-in-the-uk/",
+        destination: "/on-page-seo-audit-services-improve-uk-google-rankings/",
+        permanent: true,
+      },
+      {
+        source: "/affordable-seo-services-uk-in-2026-the-complete-guide/",
+        destination: "/affordable-seo-services-uk/",
+        permanent: true,
+      },
+      {
+        source:
+          "/how-facebook-marketing-can-accelerate-your-business-growth-efficiently/",
+        destination:
+          "/how-facebook-marketing-can-accelerate-your-business-growth/",
+        permanent: true,
+      },
+
       // 2. SPAM & HACKING PROTECTION (Simplifying for Turbopack)
 
       // WP Folders Fix (Individual rules instead of prefix pattern)
