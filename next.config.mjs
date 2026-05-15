@@ -25,74 +25,73 @@ const nextConfig = {
 
   async redirects() {
     return [
-      // Important SEO Slugs Migration
+      // ==========================================
+      // 1. OLD REDIRECTS (No Changes Here)
+      // ==========================================
       {
         source: "/web-design-services/",
         destination: "/studio-production/",
-        permanent: true, // 301 Redirect for SEO
+        permanent: true,
       },
-
       {
         source: "/digital-marketing-services/",
         destination: "/content-engine/",
-        permanent: true, // 301 Redirect for SEO
+        permanent: true,
       },
       {
         source: "/lead-generation-solutions/",
         destination: "/studio-production/",
-        permanent: true, // 301 Redirect for SEO
+        permanent: true,
       },
       {
         source: "/wordpress-website/",
         destination: "/authority-builder/",
-        permanent: true, // 301 Redirect for SEO
+        permanent: true,
       },
       {
         source: "/facebook-marketing-services/",
         destination: "/content-engine/",
-        permanent: true, // 301 Redirect for SEO
+        permanent: true,
       },
-         {
+      {
         source: "/social-media-marketing/",
         destination: "/authority-builder/",
-        permanent: true, // 301 Redirect for SEO
+        permanent: true,
       },
-       {
+      {
         source: "/graphic-design-services/",
         destination: "/",
-        permanent: true, // 301 Redirect for SEO
+        permanent: true,
       },
       {
         source: "/search-engine-optimisation/",
         destination: "/",
-        permanent: true, // 301 Redirect for SEO
+        permanent: true,
       },
-       {
+      {
         source: "/web-development/",
         destination: "/growth-engine/",
-        permanent: true, // 301 Redirect for SEO
+        permanent: true,
       },
       {
         source: "/our-digital-services/",
         destination: "/our-media-services/",
-        permanent: true, // 301 Redirect for SEO
+        permanent: true,
       },
-        {
+      {
         source: "/about-us/",
         destination: "/",
-        permanent: true, // 301 Redirect for SEO
+        permanent: true,
       },
-
       {
         source: "/email-marketing/",
         destination: "/growth-engine/",
-        permanent: true, // 301 Redirect for SEO
+        permanent: true,
       },
-
       {
         source: "/creative-content",
         destination: "/authority-builder",
-        permanent: true, // 301 Redirect (SEO ke liye permanent change)
+        permanent: true,
       },
       {
         source: "/on-page-seo-audit-services-improve-uk-googleankings/",
@@ -100,14 +99,12 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source:
-          "/why-on-page-seo-matters-for-small-businesses-and-how-to-do-it-right/",
+        source: "/why-on-page-seo-matters-for-small-businesses-and-how-to-do-it-right/",
         destination: "/why-on-page-seo-matters-for-small-businesses/",
         permanent: true,
       },
       {
-        source:
-          "/why-on-page-seo-matters-for-small-businesses-how-to-do-it-right/",
+        source: "/why-on-page-seo-matters-for-small-businesses-how-to-do-it-right/",
         destination: "/why-on-page-seo-matters-for-small-businesses/",
         permanent: true,
       },
@@ -116,6 +113,47 @@ const nextConfig = {
         destination: "/on-page-seo-differ-from-off-page-seo/",
         permanent: true,
       },
+
+      // ==========================================
+      // 2. SPAM & HACKING PROTECTION (Final Fix)
+      // ==========================================
+
+      // Rule for Japanese Query Spam (revisions.php?b=...)
+      {
+        source: '/:path*.php',
+        has: [{ type: 'query', key: 'b' }],
+        destination: '/',
+        permanent: true,
+      },
+      // Generic Numeric Spam (5+ digits like /29599226407)
+      {
+        source: '/:path(\\d{5,})',
+        destination: '/', 
+        permanent: true,
+      },
+      // WordPress System & Hacked Folders (wp-admin, wp-content, wp-includes)
+      {
+        source: '/wp-:path*',
+        destination: '/',
+        permanent: true,
+      },
+      // All other .php hacking attempts
+      {
+        source: '/:path*.php',
+        destination: '/',
+        permanent: true,
+      },
+      // Hacked .html files & Feed Spam (e.g., vintagegame.html)
+      {
+        source: '/:path*.html',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/:path*/feed',
+        destination: '/',
+        permanent: true,
+      }
     ];
   },
 };
