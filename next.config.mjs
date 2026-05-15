@@ -12,7 +12,7 @@ const nextConfig = {
 
   async redirects() {
     return [
-      // 1. OLD REDIRECTS (Maintained)
+      // 1. OLD REDIRECTS (Maintain Rakha Hai)
       { source: "/web-design-services/", destination: "/studio-production/", permanent: true },
       { source: "/digital-marketing-services/", destination: "/content-engine/", permanent: true },
       { source: "/lead-generation-solutions/", destination: "/studio-production/", permanent: true },
@@ -31,45 +31,26 @@ const nextConfig = {
       { source: "/why-on-page-seo-matters-for-small-businesses-how-to-do-it-right/", destination: "/why-on-page-seo-matters-for-small-businesses/", permanent: true },
       { source: "/how-does-on-page-seo-differ-from-off-page-seo/", destination: "/on-page-seo-differ-from-off-page-seo/", permanent: true },
 
-      // 2. SPAM & HACKING PROTECTION
+      // 2. SPAM & HACKING PROTECTION (Simplifying for Turbopack)
+
+      // WP Folders Fix (Individual rules instead of prefix pattern)
+      { source: '/wp-admin/:p*', destination: '/', permanent: true },
+      { source: '/wp-content/:p*', destination: '/', permanent: true },
+      { source: '/wp-includes/:p*', destination: '/', permanent: true },
       
-      // Rule for Japanese Query Spam
-      {
-        source: '/:path*.php',
-        has: [{ type: 'query', key: 'b' }],
-        destination: '/',
-        permanent: true,
-      },
-      // Fixed Numeric Rule (Using catch-all for stability)
+      // Numeric Spam Fix (Catch-all without complex prefix)
       {
         source: '/:path(\\d{5,})', 
         destination: '/',
         permanent: true,
       },
-      // WordPress System & Hacked Folders
-      {
-        source: '/wp-:path*',
-        destination: '/',
-        permanent: true,
-      },
-      // All other .php hacking attempts
-      {
-        source: '/:path*.php',
-        destination: '/',
-        permanent: true,
-      },
-      // Hacked .html files
-      {
-        source: '/:path*.html',
-        destination: '/',
-        permanent: true,
-      },
-      // Feed Spam Fix
-      {
-        source: '/:path*/feed/',
-        destination: '/',
-        permanent: true,
-      }
+
+      // File Extensions (.php aur .html attempts)
+      { source: '/:p1*.php', destination: '/', permanent: true },
+      { source: '/:p2*.html', destination: '/', permanent: true },
+      
+      // Feed Spam
+      { source: '/:p3*/feed/', destination: '/', permanent: true }
     ];
   },
 };
