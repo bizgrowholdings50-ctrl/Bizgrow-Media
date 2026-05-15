@@ -118,7 +118,7 @@ const DigitalMarketingPage = () => {
       <div className="relative h-[80vh]  md:h-screen pt-10 lg:pt-20 w-full flex items-center justify-center overflow-hidden">
         <Image
           src="/content-engine hero.jpg"
-          alt="Digital marketing services by BizGrow Digital"
+          alt="Content Engine - BizGrow Media"
           fill
           fetchPriority="high"
           className="object-cover object-center"
@@ -172,7 +172,7 @@ const DigitalMarketingPage = () => {
                   <div className="space-y-6 text-gray-500 dark:text-white/60 text-lg leading-relaxed">
                     <p>
                       <span className="text-[#12066a] dark:text-white font-bold">
-                        Content Engine by BizGrow Media
+                        Content Engine by <Link href="/" className="text-[#997819] font-bold">BizGrow Media</Link>
                       </span>{" "}
                       helps businesses turn their expertise, insights, and brand
                       message into high-quality content that builds visibility,
@@ -188,13 +188,15 @@ const DigitalMarketingPage = () => {
 
                   {/* Premium CTA */}
                   <div className="pt-8">
-                    <button className="group relative flex items-center gap-8 bg-[#12066a] dark:bg-[#997819] px-10 py-5 rounded-full text-white dark:text-[#12066a] font-black uppercase tracking-[0.2em] text-[10px] hover:scale-105 transition-all shadow-xl">
+                    <Link href="/contact-us/" >
+                    <button className="group relative flex items-center gap-8 bg-[#12066a] dark:bg-[#997819] px-10 py-5 rounded-full text-white dark:text-[#12066a] font-black uppercase tracking-[0.2em] text-[10px]  transition-all shadow-xl">
                       Book Your Strategy Call
                       <ArrowRight
                         size={18}
                         className="group-hover:translate-x-2 transition-transform"
                       />
                     </button>
+                    </Link>
                   </div>
                 </div>
               </FadeIn>
@@ -210,7 +212,7 @@ const DigitalMarketingPage = () => {
                   <div className="relative z-10 aspect-[4/5] rounded-[4rem] overflow-hidden border-[12px] border-gray-100 dark:border-white/5 shadow-2xl">
                     <img
                       src="/frame mockup.jpg"
-                      alt="Content Strategy"
+                      alt="Build a Powerful Digital Presence with BizGrow Media"
                       className="w-full h-full relative object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                     />
                   </div>
@@ -272,7 +274,7 @@ const DigitalMarketingPage = () => {
               },
               {
                 title: "Creative Campaigns",
-                desc: "We create campaign-led content for brand awareness, promotions, launches, engagement, and lead generation.",
+                desc: <>We create <Link href="/studio-production/" className="text-[#997819] font-bold">campaign-led content</Link> for brand awareness, promotions, launches, engagement, and lead generation.</>,
               },
               {
                 title: "Brand-Aligned Visuals",
@@ -324,9 +326,11 @@ const DigitalMarketingPage = () => {
                 Scale <br /> Your <br /> Visibility
               </h3>
               <div className="flex items-center justify-between">
-                <span className="text-white dark:text-[#12066a] text-[10px] font-bold uppercase tracking-widest">
-                  Book Strategy Call
-                </span>
+                <Link href="/contact-us/">
+                  <span className="text-white dark:text-[#12066a] text-[10px] font-bold uppercase tracking-widest">
+                    Book Strategy Call
+                  </span>
+                </Link> 
                 <div className="w-12 h-12 rounded-full border border-white/20 dark:border-[#12066a]/20 flex items-center justify-center group-hover:bg-white dark:group-hover:bg-[#12066a] transition-all">
                   <ArrowUpRight className="text-white dark:text-[#12066a] group-hover:text-[#12066a] dark:group-hover:text-[#997819] transition-all" />
                 </div>
@@ -489,9 +493,11 @@ const DigitalMarketingPage = () => {
           {/* --- Call to Action Footer --- */}
           <FadeIn direction="up">
             <div className="mt-20 flex justify-center">
-              <button className="bg-[#12066a] dark:bg-[#997819] px-12 py-6 rounded-full text-white dark:text-[#12066a] font-black uppercase tracking-[0.3em] text-[10px] hover:scale-105 transition-all shadow-2xl">
-                Transform Your Strategy
-              </button>
+              <Link href="/packages/">
+                <button className="bg-[#12066a] dark:bg-[#997819] px-12 py-6 rounded-full text-white dark:text-[#12066a] font-black uppercase tracking-[0.3em] text-[10px] hover:scale-105 transition-all shadow-2xl">
+                  Transform Your Strategy
+                </button>
+              </Link>
             </div>
           </FadeIn>
         </div>
@@ -632,7 +638,7 @@ const DigitalMarketingPage = () => {
               {
                 icon: <UserCheck size={24} />,
                 title: "Founders & Entrepreneurs",
-                desc: "For business leaders who want to stay visible, share their expertise, and build stronger trust with their audience.",
+                desc: <>For business leaders who want to stay visible, share their expertise, and <Link href="/authority-builder/" className="text-[#997819] font-bold">build stronger trust</Link> with their audience.</>,
               },
               {
                 icon: <Rocket size={24} />,
@@ -723,7 +729,7 @@ const DigitalMarketingPage = () => {
                     visible, communicate with purpose, and turn their ideas into
                     consistent, high-quality content. When you are ready to move
                     beyond random posting, this is where your content becomes
-                    more structured, strategic, and growth-focused.
+                    more structured, strategic, and <Link href="/growth-engine/" className="text-[#997819] font-bold">growth-focused</Link>.
                   </p>
                 </FadeIn>
               </div>
@@ -754,13 +760,15 @@ const DigitalMarketingPage = () => {
 
                 {/* Final Action Button */}
                 <FadeIn direction="up" delay={0.6}>
-                  <button className="w-full group relative flex items-center justify-between bg-[#997819] dark:bg-white px-8 py-6 rounded-2xl text-[#12066a] font-black uppercase tracking-[0.2em] text-xs hover:scale-[1.02] transition-all shadow-xl">
-                    <span>Build Your Content Engine Today</span>
-                    <ArrowRight
-                      className="group-hover:translate-x-2 transition-transform"
-                      size={18}
-                    />
-                  </button>
+                  <Link href="/contact-us/" className="block">
+                    <button className="w-full group relative flex items-center justify-between bg-[#997819] dark:bg-white px-8 py-6 rounded-2xl text-[#12066a] font-black uppercase tracking-[0.2em] text-xs hover:scale-[1.02] transition-all shadow-xl">
+                      <span>Build Your Content Engine Today</span>
+                      <ArrowRight
+                        className="group-hover:translate-x-2 transition-transform"
+                        size={18}
+                      />
+                    </button>
+                  </Link>
                 </FadeIn>
               </div>
             </div>

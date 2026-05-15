@@ -27,7 +27,7 @@ const GrowthEnginePage = () => {
       <div className="relative h-[85vh] md:h-screen w-full">
         <Image
           src="/growth-hero.jpg"
-          alt="Creative Content Services - BizGrow Digital"
+          alt="Growth Engine - BizGrow Media"
           fill
           fetchPriority="high"
           priority
@@ -45,13 +45,13 @@ const GrowthEnginePage = () => {
 
           <FadeIn direction="up" delay={0.4}>
             <div className="w-full flex flex-col items-center">
-              <h1 className="text-white text-4xl md:text-6xl text-center font-bold max-w-5xl leading-tight">
+              <span className="text-white text-4xl md:text-6xl text-center font-bold max-w-5xl leading-tight">
                 Business Growth Feels Different When
                 <span className="text-[#997819] mx-2 text-4xl md:text-6xl  ">
                   The Right System
                 </span>
                 Is Driving It
-              </h1>
+              </span>
             </div>
           </FadeIn>
 
@@ -91,9 +91,9 @@ const GrowthEnginePage = () => {
 
                   <div className="space-y-6 text-gray-500 dark:text-white/60 text-lg leading-relaxed">
                     <p>
-                      <span className="text-[#12066a] dark:text-white font-bold">
+                      <Link href="/" className="text-[#997819] font-bold mr-1">
                         BizGrow Media
-                      </span>{" "}
+                      </Link>
                       provides strategic growth-focused businesses generate
                       qualified leads, strengthen conversions, and build
                       long-term revenue momentum through scalable growth systems
@@ -113,8 +113,8 @@ const GrowthEnginePage = () => {
 
                   {/* Premium CTA */}
                   <div className="pt-2">
-                    <Link href="#contact">
-                      <button className="group relative flex items-center gap-8 bg-[#12066a] dark:bg-[#997819] px-10 py-5 rounded-full text-white dark:text-[#12066a] font-black uppercase tracking-[0.2em] text-[10px] hover:scale-105 transition-all shadow-xl">
+                    <Link href="/contact-us">
+                      <button className="group relative flex items-center gap-8 bg-[#12066a] dark:bg-[#997819] px-10 py-5 rounded-full text-white dark:text-[#12066a] font-black uppercase tracking-[0.2em] text-[10px] transition-all shadow-xl">
                         Schedule Your Growth Call
                         <ArrowRight
                           size={18}
@@ -135,7 +135,7 @@ const GrowthEnginePage = () => {
                     {/* Placeholder for your Growth Image */}
                     <img
                       src="/growth-system-mockup.jpg"
-                      alt="Growth Strategy System"
+                      alt="Growth Engine Strategic System - BizGrow Media"
                       className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                     />
                   </div>
@@ -168,7 +168,9 @@ const GrowthEnginePage = () => {
             <div className="lg:w-1/2 pt-0 lg:pt-10">
               <p className="text-gray-500 dark:text-white/40 text-lg font-medium leading-relaxed italic border-l-4 border-[#997819] pl-8">
                 Strategic systems built to ensure your business doesn't just
-                grow, but scales with predictability and authority.
+                grow, but scales with predictability and <Link href="/authority-builder/" className="text-[#997819] font-bold">
+                  authority
+                </Link>.
               </p>
             </div>
           </div>
@@ -178,7 +180,9 @@ const GrowthEnginePage = () => {
               {
                 title: "More Qualified Leads | Stronger Revenue Growth.",
                 icon: <Target />,
-                desc: "Our Growth Engine is designed to help businesses generate high-quality leads through strategic visibility, audience-focused content, and systems built to turn attention into real business opportunities and long-term revenue growth.",
+                desc: <>Our Growth Engine is designed to help businesses generate high-quality leads through strategic visibility, <Link href="/content-engine/" className="text-[#997819] font-bold">
+                  audience-focused content
+                </Link>, and systems built to turn attention into real business opportunities and long-term revenue growth.</>,
               },
               {
                 title: "Stronger Reputation | Greater Customer Trust.",
@@ -338,13 +342,11 @@ const GrowthEnginePage = () => {
                   Sometimes businesses stay busy online, but the growth still
                   feels inconsistent. You get attention for a while, then things
                   slow down again, and it becomes difficult to build real
-                  momentum.Growth Engine helps bring more direction to that process by
-                  helping your business attract the right people, create
-                  stronger engagement, and turn visibility into better
+                  momentum.Growth Engine helps bring more direction to that
+                  process by helping your business attract the right people,
+                  create stronger engagement, and turn visibility into better
                   opportunities.
                 </p>
-
-              
               </div>
             </FadeIn>
           </div>
@@ -421,7 +423,10 @@ const GrowthEnginePage = () => {
               </h2>
 
               <p className="text-gray-500 dark:text-white/40 text-lg md:text-xl font-medium leading-relaxed italic max-w-2xl mx-auto">
-                Real business growth happens step by step. Growth Engine is
+                Real <Link href="/studio-production/" className="text-[#997819] font-bold">
+                  business growth
+                </Link>{" "}
+                happens step by step. Growth Engine is
                 designed to guide your business through every stage with
                 stronger direction, better momentum, and more meaningful
                 opportunities.
