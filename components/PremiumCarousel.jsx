@@ -9,42 +9,36 @@ const slides = [
     title: "STUDIO",
     sub: "PRODUCTION",
     desc: "Video production, editing & complete content creation support",
-    bgText: "VISION",
     img: "/studio-production.webp",
   },
   {
     title: "CONTENT",
     sub: "ENGINEERING",
     desc: "High-quality, structured content that delivers value",
-    bgText: "ENGINE",
     img: "/content-eng.jpg",
   },
   {
     title: "AUTHORITY",
     sub: "BUILDER",
     desc: "Personal and business branding through media presence",
-    bgText: "LEGACY",
     img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
   },
   {
     title: "GROWTH",
     sub: "ENGINE",
     desc: "Focused on visibility, leads, and long-term business growth",
-    bgText: "SCALER",
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
   },
 ];
 
 export default function LuxuryGridSlider() {
   const [index, setIndex] = useState(0);
-  const [isMounted, setIsMounted] = useState(false); // 🚀 LCP Bypass Feature
 
   const nextSlide = useCallback(() => {
     setIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   }, []);
 
   useEffect(() => {
-    setIsMounted(true); // Page load hone ke BAAD true hoga
     const timer = setInterval(nextSlide, 6000);
     return () => clearInterval(timer);
   }, [nextSlide]);
@@ -53,23 +47,25 @@ export default function LuxuryGridSlider() {
 
   return (
     <section className="relative h-[85vh] md:h-screen w-full bg-[#000B25] flex items-center overflow-hidden">
-      {/* 1. BACKGROUND IMAGES LAYER */}
+      {/* 1. BACKGROUND IMAGES LAYER (Optimized Core LCP) */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 0.3, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.05 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.3 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: "linear" }}
             className="absolute inset-0 w-full h-full"
           >
             <Image
               src={currentSlide.img}
               alt={`${currentSlide.title} ${currentSlide.sub}`}
               fill
+              sizes="100vw"
               className="object-cover object-center contrast-[110%] brightness-[0.9]"
               priority={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
               fetchPriority={index === 0 ? "high" : "low"}
               unoptimized={currentSlide.img.startsWith("http")}
             />
@@ -78,22 +74,7 @@ export default function LuxuryGridSlider() {
         </AnimatePresence>
       </div>
 
-      {/* 2. KINETIC TEXT LAYER (Only mounts after full page hydration) */}
-      <div className="absolute inset-0 z-[1] flex items-center justify-center overflow-hidden pointer-events-none">
-        {isMounted && (
-          <div
-            key={index}
-            data-bg-text={currentSlide.bgText}
-            className="text-[20vw] font-black text-white italic leading-none select-none uppercase transition-all duration-1000 ease-out before:content-[attr(data-bg-text)]"
-            style={{
-              opacity: 0.05,
-              letterSpacing: "0.13em",
-            }}
-          />
-        )}
-      </div>
-
-      {/* 3. MAIN CONTENT GRID */}
+      {/* 2. MAIN CONTENT GRID */}
       <div className="relative z-10 w-full px-6 md:px-24 grid grid-cols-12 h-full items-center">
         {/* Left Indicator */}
         <div className="col-span-1 hidden md:flex flex-col gap-6 items-start justify-center h-full border-l border-white/5 pl-8">
@@ -113,8 +94,7 @@ export default function LuxuryGridSlider() {
               <motion.div
                 animate={{
                   height: index === i ? "48px" : "4px",
-                  backgroundColor:
-                    index === i ? "#997819" : "rgba(255,255,255,0.1)",
+                  backgroundColor: index === i ? "#997819" : "rgba(255,255,255,0.1)",
                   x: 35,
                 }}
                 className="w-[2px] transition-all duration-700"
@@ -128,10 +108,10 @@ export default function LuxuryGridSlider() {
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              exit={{ opacity: 0, x: 10 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <div className="flex items-center gap-4 mt-20 mb-6">
                 <span className="w-10 h-[1px] bg-[#997819]"></span>
