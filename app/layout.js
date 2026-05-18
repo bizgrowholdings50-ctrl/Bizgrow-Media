@@ -6,7 +6,7 @@ import { Providers } from "./providers";
 import SmoothScroll from "@components/SmoothScroll";
 import ChatBot from "@components/ChatBot";
 import { Analytics } from '@vercel/analytics/next';
-import Script from "next/script"; // 1. Ye import add kiya
+import Script from "next/script"; 
 import CustomCursor from "@components/Cursor";
 
 const playfair = Playfair_Display({
@@ -23,8 +23,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "BizGrow Digital | Top Digital Growth & Content Marketing Agency UK",
-  description: "Scale your business with BizGrow Digital. Expert SEO, content strategy, and digital marketing solutions tailored for the UK market.",
+  // metadataBase lagane se sub-pages ke canonical links automatic slash ke sath naye domain par generate honge
+  metadataBase: new URL("https://bizgrowmedia.co.uk/"), 
+  title: "BizGrow Media | Professional Podcast & Business Growth Studio UK",
+  description: "BizGrow Media creates authority-driven podcasts, studio production, and strategic content that builds trust, visibility, and growth.",
   icons: {
     icon: [
       { url: "/site-logo.png", href: "/site-logo.png" },
@@ -36,9 +38,9 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: "https://bizgrow-digital.co.uk",
+    canonical: "https://bizgrowmedia.co.uk/", 
     languages: {
-      "en-GB": "https://bizgrow-digital.co.uk",
+      "en-GB": "https://bizgrowmedia.co.uk/",
     },
   },
   openGraph: {
@@ -50,13 +52,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  // 2. Schema Data Object
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "BizGrow Digital",
-    "image": "https://bizgrow-digital.co.uk/icon.png",
-    "url": "https://bizgrow-digital.co.uk",
+    "image": "https://bizgrowmedia.co.uk/icon.png",
+    "url": "https://bizgrowmedia.co.uk/",
     "telephone": "+44 7903 332433",
     "address": {
       "@type": "PostalAddress",
@@ -81,7 +82,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-GB" className={`${playfair.variable} ${montserrat.variable}`} suppressHydrationWarning={true}>
       <head>
-        {/* 3. Schema Script Injection */}
         <Script
           id="local-business-schema"
           type="application/ld+json"

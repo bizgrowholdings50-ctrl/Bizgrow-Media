@@ -104,7 +104,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="fixed top-4 left-0 right-0 z-[100] flex justify-center px-3 md:px-5">
+      <div className="fixed top-4 left-0 right-0 z-[100] flex justify-center px-3 md:px-14">
         {/* Overlay */}
         {showSearch && searchQuery && (
           <div
@@ -114,7 +114,7 @@ export default function Navbar() {
         )}
 
         <nav
-          className={`relative overflow-visible w-full max-w-7xl rounded-3xl border shadow-lg transition-all duration-300
+          className={`relative overflow-visible w-full max-w-7xl rounded-4xl border shadow-lg transition-all duration-300
           ${
             scrolled
               ? "py-0.5 bg-white/80 dark:bg-gray-900  backdrop-blur-xl scale-[0.98]"
