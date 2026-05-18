@@ -118,17 +118,25 @@ export default function Navbar() {
           <div className="px-3 transition-all duration-300 py-1">
             <div className="flex items-center justify-between">
               {/* LOGO */}
-              <Link href="/">
-                <Image
-                  src="/BizGrow Media.png"
-                  alt="BizGrow Media Logo"
-                  width={100} // 🚀 Hamesha static base width rakhein taake layout shift 0 ho jaye
-                  height={40} // Static height
-                  priority // Render blocking delay fix
-                  className={`transition-all duration-300 ${
-                    scrolled ? "w-[95px]" : "w-[100px]" // ⚡ Tailwind inline classes se scale handle karein
-                  } ${resolvedTheme === "dark" ? "invert brightness-0" : ""}`}
-                />
+              <Link href="/" className="inline-block">
+                <div
+                  className="transition-all duration-300 relative"
+                  style={{
+                    width: scrolled ? "95px" : "100px",
+                    height: "40px",
+                  }}
+                >
+                  <Image
+                    src="/BizGrow Media.png"
+                    alt="BizGrow Media Logo"
+                    width={100}
+                    height={40}
+                    priority
+                    className={`w-full h-full object-contain ${
+                      resolvedTheme === "dark" ? "invert brightness-0" : ""
+                    }`}
+                  />
+                </div>
               </Link>
 
               {/* DESKTOP NAV */}
