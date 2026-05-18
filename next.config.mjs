@@ -219,17 +219,17 @@ const nextConfig = {
         source: "/request-a-quotation/",
         destination: "/contact-us/",
         permanent: true,
-      },  
+      },
       {
         source: "/social-media-advertising/",
         destination: "/growth-engine/",
         permanent: true,
-      },  
+      },
       {
         source: "/social-media-management/",
         destination: "/growth-engine/",
         permanent: true,
-      },  
+      },
       {
         source: "/lead-generation/",
         destination: "/authority-builder/",
@@ -262,6 +262,11 @@ const nextConfig = {
       {
         source: "/discount.php",
         has: [{ type: "query", key: "29399458560" }],
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/\\*/", // Yeh exact "/*/" path ko target karega
         destination: "/",
         permanent: true,
       },
@@ -301,11 +306,6 @@ const nextConfig = {
       // ==========================================
       // 4. THE CATCH-ALL (Absolutely Last Option)
       // ==========================================
-      {
-        source: "/:catchall*",
-        destination: "/",
-        permanent: true,
-      },
     ];
   },
 };
