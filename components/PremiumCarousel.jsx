@@ -86,6 +86,8 @@ export default function LuxuryGridSlider() {
             exit={{ opacity: 0 }}
             transition={{ duration: 1.8 }}
             className="text-[20vw] font-black text-white italic leading-none select-none uppercase"
+            // 👇 Yeh browser ko batayega ke is text ki performance costing ko content paint se alag rakhe
+            style={{ contentVisibility: "auto" }}
           >
             {currentSlide.bgText}
           </motion.div>
