@@ -133,6 +133,13 @@ const nextConfig = {
           "/how-facebook-marketing-can-accelerate-your-business-growth/",
         permanent: true,
       },
+       {
+        source:
+          "/how-to-do-web-design-without-coding-in-2026/",
+        destination:
+          "/web-design-without-coding/",
+        permanent: true,
+      },
 
       // 2. SPAM & HACKING PROTECTION (Simplifying for Turbopack)
 
