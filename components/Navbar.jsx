@@ -122,12 +122,12 @@ export default function Navbar() {
                 <Image
                   src="/BizGrow Media.png"
                   alt="BizGrow Media Logo"
-                  width={scrolled ? 95 : 100}
-                  height={40}
-                  priority
+                  width={100} // 🚀 Hamesha static base width rakhein taake layout shift 0 ho jaye
+                  height={40} // Static height
+                  priority // Render blocking delay fix
                   className={`transition-all duration-300 ${
-                    resolvedTheme === "dark" ? "invert brightness-0" : ""
-                  }`}
+                    scrolled ? "w-[95px]" : "w-[100px]" // ⚡ Tailwind inline classes se scale handle karein
+                  } ${resolvedTheme === "dark" ? "invert brightness-0" : ""}`}
                 />
               </Link>
 
@@ -344,7 +344,8 @@ export default function Navbar() {
                 </span>
 
                 <button
-                  onClick={() => setMobileOpen(false)} aria-label="Close menu"
+                  onClick={() => setMobileOpen(false)}
+                  aria-label="Close menu"
                   className="w-10 h-10 rounded-full border border-[#997819] flex items-center justify-center text-xl text-[#997819]"
                 >
                   ✕
