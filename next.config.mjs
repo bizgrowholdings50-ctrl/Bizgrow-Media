@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: true,
-
+  swcMinify: true,
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "bizgrowmedia.co.uk", pathname: "/**" },

@@ -10,7 +10,7 @@ const slides = [
     sub: "PRODUCTION",
     desc: "Video production, editing & complete content creation support",
     bgText: "VISION",
-    img: "/studio-production.jpg",
+    img: "/studio-production.webp",
   },
   {
     title: "CONTENT",
@@ -38,7 +38,6 @@ const slides = [
 export default function LuxuryGridSlider() {
   const [index, setIndex] = useState(0);
 
-  // Memoized function for safety
   const nextSlide = useCallback(() => {
     setIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   }, []);
@@ -58,18 +57,19 @@ export default function LuxuryGridSlider() {
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 0.3, scale: 1 }} // Opacity thori kam ki for premium feel
+            animate={{ opacity: 0.3, scale: 1 }}
             exit={{ opacity: 0, scale: 1.05 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="absolute inset-0 w-full h-full"
           >
             <Image
               src={currentSlide.img}
-              alt={currentSlide.title}
+              alt={`${currentSlide.title} ${currentSlide.sub}`} // 👈 Accessibility Fix: More descriptive alt text
               fill
               className="object-cover object-center contrast-[110%] brightness-[0.9]"
-              priority
-              unoptimized={currentSlide.img.startsWith("http")} // External images fix
+              priority={index === 0} // 👈 LCP Optimization: Pehli image hamesha priority par load ho
+              fetchPriority={index === 0 ? "high" : "low"} // 👈 LCP Optimization: Browser ko signal dena ke pehli image critical hai
+              unoptimized={currentSlide.img.startsWith("http")}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#000B25] via-[#000B25]/40 to-transparent" />
           </motion.div>
@@ -100,6 +100,8 @@ export default function LuxuryGridSlider() {
             <button
               key={i}
               onClick={() => setIndex(i)}
+              aria-label={`Go to slide ${i + 1}`} // 👈 Accessibility Fix: Buttons must have an accessible name
+              aria-current={index === i ? "true" : "false"} // 👈 UX/SEO Fix: Identifies the active slide for screen readers
               className="relative flex items-center h-12 group transition-all"
             >
               <span
@@ -151,19 +153,20 @@ export default function LuxuryGridSlider() {
                 {currentSlide.desc}
               </p>
 
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="relative overflow-hidden group border border-[#997819]/50 px-12 py-5 rounded-2xl bg-transparent"
-              >
-                <Link href="/our-media-services" >
-                  <span className="relative z-10 text-white text-[11px] font-black tracking-[0.4em]  group-hover:text-white  duration-500">
+              {/* ⚠️ Semantic HTML/Link Fix: Button ke andar Link lagane se HTML validation break hoti hai aur click target kharab hota hai */}
+              <Link href="/our-media-services" passHref legacyBehavior>
+                <motion.a
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-block relative overflow-hidden group border border-[#997819]/50 px-12 py-5 rounded-2xl bg-transparent cursor-pointer"
+                >
+                  <span className="relative z-10 text-white text-[11px] font-black tracking-[0.4em]  group-hover:text-white duration-500">
                     EXPLORE ECOSYSTEM
                   </span>
 
                   <div className="absolute inset-0 bg-[#997819] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
-                </Link>
-              </motion.button>
+                </motion.a>
+              </Link>
             </motion.div>
           </AnimatePresence>
         </div>
