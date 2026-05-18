@@ -6,13 +6,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { FaMoon, FaSun } from "react-icons/fa";
-import {
-  Layers,
-  Search,
-  ShieldCheck,
-  TrendingUp,
-  Video,
-} from "lucide-react";
+import { Layers, Search, ShieldCheck, TrendingUp, Video } from "lucide-react";
 
 import { SITE_PAGES } from "@/constants/search-data";
 
@@ -132,9 +126,7 @@ export default function Navbar() {
                   height={40}
                   priority
                   className={`transition-all duration-300 ${
-                    resolvedTheme === "dark"
-                      ? "invert brightness-0"
-                      : ""
+                    resolvedTheme === "dark" ? "invert brightness-0" : ""
                   }`}
                 />
               </Link>
@@ -159,9 +151,7 @@ export default function Navbar() {
                       Services
                       <span
                         className={
-                          open
-                            ? "rotate-180 transition"
-                            : "transition"
+                          open ? "rotate-180 transition" : "transition"
                         }
                       >
                         ▼
@@ -236,9 +226,7 @@ export default function Navbar() {
                     placeholder="Search..."
                     value={searchQuery}
                     onFocus={() => setShowSearch(true)}
-                    onChange={(e) =>
-                      setSearchQuery(e.target.value)
-                    }
+                    onChange={(e) => setSearchQuery(e.target.value)}
                     className="bg-gray-100 dark:bg-white/10 rounded-full py-1.5 pl-4 pr-10 text-xs outline-none w-32 focus:w-48 transition-all dark:text-white border border-[#997819] focus:border-[#12066a]"
                   />
 
@@ -288,11 +276,13 @@ export default function Navbar() {
                 {/* THEME TOGGLE */}
                 <button
                   onClick={() =>
-                    setTheme(
-                      resolvedTheme === "dark"
-                        ? "light"
-                        : "dark"
-                    )
+                    setTheme(resolvedTheme === "dark" ? "light" : "dark")
+                  }
+                  // Dynamic aria-label: Agar dark mode hai toh 'Switch to light mode' bolega, warna 'Switch to dark mode'
+                  aria-label={
+                    resolvedTheme === "dark"
+                      ? "Switch to light mode"
+                      : "Switch to dark mode"
                   }
                   className="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center text-[#12066a] dark:text-[#997819]"
                 >
@@ -306,6 +296,12 @@ export default function Navbar() {
                 {/* MOBILE MENU BUTTON */}
                 <button
                   onClick={() => setMobileOpen(!mobileOpen)}
+                  // Dynamic aria-label: Agar menu khula hai toh 'Close menu', warna 'Open menu'
+                  aria-label={
+                    mobileOpen
+                      ? "Close navigation menu"
+                      : "Open navigation menu"
+                  }
                   className="lg:hidden text-black dark:text-white text-2xl"
                 >
                   {mobileOpen ? "✕" : "☰"}
@@ -348,7 +344,7 @@ export default function Navbar() {
                 </span>
 
                 <button
-                  onClick={() => setMobileOpen(false)}
+                  onClick={() => setMobileOpen(false)} aria-label="Close menu"
                   className="w-10 h-10 rounded-full border border-[#997819] flex items-center justify-center text-xl text-[#997819]"
                 >
                   ✕
@@ -368,15 +364,10 @@ export default function Navbar() {
                 {/* SERVICES */}
                 <div>
                   <button
-                    onClick={() =>
-                      setMobileServicesOpen(
-                        !mobileServicesOpen
-                      )
-                    }
+                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                     className="text-lg font-medium flex justify-between items-center w-full text-black dark:text-white"
                   >
                     Services
-
                     <span className="text-2xl">
                       {mobileServicesOpen ? "−" : "+"}
                     </span>
@@ -398,9 +389,7 @@ export default function Navbar() {
                             <Link
                               key={i}
                               href={s.href}
-                              onClick={() =>
-                                setMobileOpen(false)
-                              }
+                              onClick={() => setMobileOpen(false)}
                               className="flex items-start gap-3"
                             >
                               <div className="text-[#997819] mt-1">

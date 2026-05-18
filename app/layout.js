@@ -44,8 +44,8 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "BizGrow Digital UK",
-    description: "Expert Digital Growth Services",
+    title: "BizGrow Media UK",
+    description: "Expert Podcast & Business Growth Services",
     images: ["/icon.png"],
     locale: "en_GB",
   },
@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "BizGrow Digital",
+    "name": "BizGrow Media",
     "image": "https://bizgrowmedia.co.uk/icon.png",
     "url": "https://bizgrowmedia.co.uk/",
     "telephone": "+44 7903 332433",

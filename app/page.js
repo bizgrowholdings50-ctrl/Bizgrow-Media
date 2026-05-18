@@ -247,9 +247,9 @@ const HomePage = () => {
               ].map((item, i) => (
                 <FadeIn key={i} direction="up" delay={i * 0.1}>
                   <div className="p-8 bg-slate-50 dark:bg-white/[0.02] border border-slate-100 dark:border-white/5 rounded-3xl hover:border-[#997819]/50 transition-all">
-                    <h4 className="text-[#12066a] dark:text-white font-black uppercase text-sm mb-3 tracking-tight">
+                    <h3 className="text-[#12066a] dark:text-white font-black uppercase text-sm mb-3 tracking-tight">
                       {item.title}
-                    </h4>
+                    </h3>
                     <p className="text-slate-500 dark:text-white/40 text-xs leading-relaxed">
                       {item.desc}
                     </p>
