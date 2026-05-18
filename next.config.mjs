@@ -133,216 +133,152 @@ const nextConfig = {
           "/how-facebook-marketing-can-accelerate-your-business-growth/",
         permanent: true,
       },
-       {
-        source:
-          "/how-to-do-web-design-without-coding-in-2026/",
-        destination:
-          "/web-design-without-coding/",
+      {
+        source: "/how-to-do-web-design-without-coding-in-2026/",
+        destination: "/web-design-without-coding/",
         permanent: true,
       },
       {
-        source:
-          "/download/",
-        destination:
-          "/",
-        permanent: true,
-      },
-        {
-        source:
-          "/cgi-bin/",
-        destination:
-          "/",
-        permanent: true,
-      },
-         {
-        source:
-          "/web-design/",
-        destination:
-          "/studio-production/",
-        permanent: true,
-      },
-       {
-        source:
-          "/tag/leadgeneration/",
-        destination:
-          "/",
+        source: "/download/",
+        destination: "/",
         permanent: true,
       },
       {
-        source:
-          "/tag/contentmarketing/",
-        destination:
-          "/",
-        permanent: true,
-      },
-       {
-        source:
-          "/tag/digitalagency/",
-        destination:
-          "/",
+        source: "/cgi-bin/",
+        destination: "/",
         permanent: true,
       },
       {
-        source:
-          "/tag/seo/",
-        destination:
-          "/",
-        permanent: true,
-      },
-        {
-        source:
-          "/tag/ukbusiness/",
-        destination:
-          "/",
-        permanent: true,
-      },
-        {
-        source:
-          "/7-best-ai-porn-sites-to-watch-ai-generated-porn/",
-        destination:
-          "/",
-        permanent: true,
-      },
-       {
-        source:
-          "/ppc-management/",
-        destination:
-          "/",
-        permanent: true,
-      },
-       {
-        source:
-          "/portfolio/",
-        destination:
-          "/",
-        permanent: true,
-      },
-       {
-        source:
-          "/digital-audit/",
-        destination:
-          "/",
+        source: "/web-design/",
+        destination: "/studio-production/",
         permanent: true,
       },
       {
-        source:
-          "/*/",
-        destination:
-          "/",
-        permanent: true,
-      },
-       {
-        source:
-          "/recruit/",
-        destination:
-          "/",
+        source: "/tag/leadgeneration/",
+        destination: "/",
         permanent: true,
       },
       {
-        source:
-          "/discover-the-joys-of-meeting-fucking-local-singles/",
-        destination:
-          "/",
-        permanent: true,
-      },
-       {
-        source:
-          "/the-appeal-of-port-gamings-an-in-depth-expedition/",
-        destination:
-          "/",
-        permanent: true,
-      },
-       {
-        source:
-          "/discount.php?29399458560",
-        destination:
-          "/",
-        permanent: true,
-      },
-       {
-        source:
-          "/wp-includes/revisions.php?b=37831055529&channel=w4q92j&from=shop.php%26amp;id%3D2192337516&amp;name=【希少モデル】USA製+Carhartt+ミシガン+ブラックデニム+カバーオール",
-        destination:
-          "/",
-        permanent: true,
-      },
-        {
-        source:
-          "/wp-includes/revisions.php?b=37841690170&channel=d823xs&from=shop.php%26amp;id%3D3510486874&amp;name=BIPUR+G+大容量バケツ（モールテックス保護材）参考価格¥59.800-",
-        destination:
-          "/",
+        source: "/tag/contentmarketing/",
+        destination: "/",
         permanent: true,
       },
       {
-        source:
-          "/wp-includes/revisions.php?b=37862733024&channel=yod9ll&from=shop.php%26amp;id%3D5676494634&amp;name=◇++Panasonic+ドアホン+子機+VL-W607+◇",
-        destination:
-          "/",
+        source: "/tag/digitalagency/",
+        destination: "/",
         permanent: true,
       },
-       {
-        source:
-          "/request-a-quotation/",
-        destination:
-          "/contact-us/",
+      {
+        source: "/tag/seo/",
+        destination: "/",
         permanent: true,
-      },  
-       {
-        source:
-          "/social-media-advertising/",
-        destination:
-          "/growth-engine/",
+      },
+      {
+        source: "/tag/ukbusiness/",
+        destination: "/",
         permanent: true,
-      },  
-       {
-        source:
-          "/social-media-management/",
-        destination:
-          "/growth-engine/",
+      },
+      {
+        source: "/7-best-ai-porn-sites-to-watch-ai-generated-porn/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/ppc-management/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/portfolio/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/digital-audit/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/*/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/recruit/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/discover-the-joys-of-meeting-fucking-local-singles/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/the-appeal-of-port-gamings-an-in-depth-expedition/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/request-a-quotation/",
+        destination: "/contact-us/",
         permanent: true,
       },  
       {
-        source:
-          "/lead-generation/",
-        destination:
-          "/authority-builder/",
+        source: "/social-media-advertising/",
+        destination: "/growth-engine/",
+        permanent: true,
+      },  
+      {
+        source: "/social-media-management/",
+        destination: "/growth-engine/",
+        permanent: true,
+      },  
+      {
+        source: "/lead-generation/",
+        destination: "/authority-builder/",
         permanent: true,
       },
       {
-        source:
-          "/search-engine-optimization/",
-        destination:
-          "/authority-builder/",
-        permanent: true,
-      },
-       {
-        source:
-          "/facebook-marketing/",
-        destination:
-          "/content-engine/",
+        source: "/search-engine-optimization/",
+        destination: "/authority-builder/",
         permanent: true,
       },
       {
-        source:
-          "/web-design-and-development/",
-        destination:
-          "/content-engine/",
+        source: "/facebook-marketing/",
+        destination: "/content-engine/",
         permanent: true,
       },
-        {
-        source:
-          "/zhHant/product/surugaya/78565929/?campaign_uid=f64d716db5e979ed2f947dbaf4296895b951ae7f",
-        destination:
-          "/content-engine/",
+      {
+        source: "/web-design-and-development/",
+        destination: "/content-engine/",
         permanent: true,
       },
-       {
-        source:
-          "/blogs/social-media-marketing-advantages-and-disadvantages/",
-        destination:
-          "/social-media-marketing-advantages-and-disadvantages/",
+      {
+        source: "/blogs/social-media-marketing-advantages-and-disadvantages/",
+        destination: "/social-media-marketing-advantages-and-disadvantages/",
         permanent: true,
       },
+
+      // 🛠️ QUERY PARAMETER FIXED RULES (Bina delete kiye standard format mein convert)
+      {
+        source: "/discount.php",
+        has: [{ type: "query", key: "29399458560" }],
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/wp-includes/revisions.php",
+        has: [{ type: "query", key: "b" }],
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/zhHant/product/surugaya/78565929/",
+        has: [{ type: "query", key: "campaign_uid" }],
+        destination: "/content-engine/",
+        permanent: true,
+      },
+
       // 2. SPAM & HACKING PROTECTION (Simplifying for Turbopack)
 
       // WP Folders Fix (Individual rules instead of prefix pattern)
