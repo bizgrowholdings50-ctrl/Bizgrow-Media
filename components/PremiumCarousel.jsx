@@ -37,12 +37,14 @@ const slides = [
 
 export default function LuxuryGridSlider() {
   const [index, setIndex] = useState(0);
+  const [isMounted, setIsMounted] = useState(false); // 🚀 LCP Bypass Feature
 
   const nextSlide = useCallback(() => {
     setIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   }, []);
 
   useEffect(() => {
+    setIsMounted(true); // Page load hone ke BAAD true hoga
     const timer = setInterval(nextSlide, 6000);
     return () => clearInterval(timer);
   }, [nextSlide]);
@@ -76,18 +78,19 @@ export default function LuxuryGridSlider() {
         </AnimatePresence>
       </div>
 
-      {/* 2. KINETIC TEXT LAYER (Optimized: Pseudo-Element + Layout Ignore) */}
+      {/* 2. KINETIC TEXT LAYER (Only mounts after full page hydration) */}
       <div className="absolute inset-0 z-[1] flex items-center justify-center overflow-hidden pointer-events-none">
-        <div
-          key={index}
-          data-bg-text={currentSlide.bgText}
-          className="text-[20vw] font-black text-white italic leading-none select-none uppercase transition-all duration-1000 ease-out before:content-[attr(data-bg-text)]"
-          style={{
-            opacity: 0.05,
-            letterSpacing: "0.13em",
-            contentVisibility: "auto", // 🚀 Browser initial paint me is calculation ko skip kar dega
-          }}
-        />
+        {isMounted && (
+          <div
+            key={index}
+            data-bg-text={currentSlide.bgText}
+            className="text-[20vw] font-black text-white italic leading-none select-none uppercase transition-all duration-1000 ease-out before:content-[attr(data-bg-text)]"
+            style={{
+              opacity: 0.05,
+              letterSpacing: "0.13em",
+            }}
+          />
+        )}
       </div>
 
       {/* 3. MAIN CONTENT GRID */}
@@ -137,7 +140,6 @@ export default function LuxuryGridSlider() {
                 </h2>
               </div>
 
-              {/* Real H1 element - ab browser isay easily track kar ke LCP pass karega */}
               <h1 className="text-5xl md:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
                 {currentSlide.title} <br />
                 <span
