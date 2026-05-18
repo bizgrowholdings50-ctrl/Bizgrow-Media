@@ -140,7 +140,27 @@ const nextConfig = {
           "/web-design-without-coding/",
         permanent: true,
       },
-
+      {
+        source:
+          "/download/",
+        destination:
+          "/",
+        permanent: true,
+      },
+        {
+        source:
+          "/cgi-bin/",
+        destination:
+          "/",
+        permanent: true,
+      },
+         {
+        source:
+          "/web-design/",
+        destination:
+          "/studio-production/",
+        permanent: true,
+      },
       // 2. SPAM & HACKING PROTECTION (Simplifying for Turbopack)
 
       // WP Folders Fix (Individual rules instead of prefix pattern)
