@@ -91,13 +91,17 @@ export default function LuxuryGridSlider() {
               >
                 {`0${i + 1}`}
               </span>
+              {/* 🚀 OPTIMIZED: Using transform scaleY instead of layout-breaking height animation */}
               <motion.div
+                initial={{ scaleY: 0.08 }}
                 animate={{
-                  height: index === i ? "48px" : "4px",
+                  scaleY: index === i ? 1 : 0.08,
                   backgroundColor: index === i ? "#997819" : "rgba(255,255,255,0.1)",
                   x: 35,
                 }}
-                className="w-[2px] transition-all duration-700"
+                transition={{ duration: 0.7, ease: "easeInOut" }}
+                style={{ originY: 0 }}
+                className="w-[2px] h-[48px]"
               />
             </button>
           ))}
@@ -105,16 +109,9 @@ export default function LuxuryGridSlider() {
 
         {/* Center Content */}
         <div className="col-span-12 md:col-span-11 lg:col-span-9 mt-12 md:mt-0">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={index}
-              // 🚀 SMART SOLUTION: Pehli slide load hote waqt dynamic entry band (0ms delay), 
-              // lekin agli slides par transition smooth fade-in karegi!
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.35, ease: "easeInOut" }}
-            >
+          {index === 0 ? (
+            /* 🚀 ULTRA LIGHTWEIGHT FOR MOBILE INITIAL LOAD: Completely static render for First Slide (0ms Delay) */
+            <div>
               <div className="flex items-center gap-4 mt-20 mb-6">
                 <span className="w-10 h-[1px] bg-[#997819]"></span>
                 <h2 className="text-[#997819] text-[9px] md:text-[11px] font-black tracking-[0.4em] uppercase">
@@ -123,17 +120,17 @@ export default function LuxuryGridSlider() {
               </div>
 
               <h1 className="text-5xl md:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
-                {currentSlide.title} <br />
+                {slides[0].title} <br />
                 <span
                   className="text-transparent italic font-serif font-light block mt-2"
                   style={{ WebkitTextStroke: "1px #997819" }}
                 >
-                  {currentSlide.sub}
+                  {slides[0].sub}
                 </span>
               </h1>
 
               <p className="max-w-xl text-white/60 text-base md:text-xl font-medium leading-relaxed mb-12 italic border-l-2 border-[#997819]/30 pl-6">
-                {currentSlide.desc}
+                {slides[0].desc}
               </p>
 
               <Link href="/our-media-services" passHref legacyBehavior>
@@ -148,8 +145,53 @@ export default function LuxuryGridSlider() {
                   <div className="absolute inset-0 bg-[#997819] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
                 </motion.a>
               </Link>
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          ) : (
+            /* 🎭 DYNAMIC ANIMATIONS FOR SUBSEQUENT SLIDES: Carousel fade transitions active on user choice/slides change */
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.35, ease: "easeInOut" }}
+              >
+                <div className="flex items-center gap-4 mt-20 mb-6">
+                  <span className="w-10 h-[1px] bg-[#997819]"></span>
+                  <h2 className="text-[#997819] text-[9px] md:text-[11px] font-black tracking-[0.4em] uppercase">
+                    BIZGROW MEDIA PREMIUM
+                  </h2>
+                </div>
+
+                <h1 className="text-5xl md:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
+                  {currentSlide.title} <br />
+                  <span
+                    className="text-transparent italic font-serif font-light block mt-2"
+                    style={{ WebkitTextStroke: "1px #997819" }}
+                  >
+                    {currentSlide.sub}
+                  </span>
+                </h1>
+
+                <p className="max-w-xl text-white/60 text-base md:text-xl font-medium leading-relaxed mb-12 italic border-l-2 border-[#997819]/30 pl-6">
+                  {currentSlide.desc}
+                </p>
+
+                <Link href="/our-media-services" passHref legacyBehavior>
+                  <motion.a
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="inline-block relative overflow-hidden group border border-[#997819]/50 px-12 py-5 rounded-2xl bg-transparent cursor-pointer"
+                  >
+                    <span className="relative z-10 text-white text-[11px] font-black tracking-[0.4em] group-hover:text-white duration-500">
+                      EXPLORE ECOSYSTEM
+                    </span>
+                    <div className="absolute inset-0 bg-[#997819] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+                  </motion.a>
+                </Link>
+              </motion.div>
+            </AnimatePresence>
+          )}
         </div>
       </div>
     </section>
