@@ -4,7 +4,8 @@ import "./globals.css";
 import Footer from "@components/Footer";
 import { Providers } from "./providers";
 import SmoothScroll from "@components/SmoothScroll";
-import ChatBot from "@components/ChatBot";
+import ChatBotComponent from "@components/WhatsAppWidget";
+import WhatsAppWidget from "@components/WhatsAppWidget"; // 👈 Normal import lagaya
 import { Analytics } from '@vercel/analytics/next';
 import Script from "next/script"; 
 import CustomCursor from "@components/Cursor";
@@ -14,16 +15,17 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
   weight: ["700", "900"],
   style: ['italic', 'normal'],
+  display: "swap",
 });
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
   weight: ["300", "400", "500"],
+  display: "swap",
 });
 
 export const metadata = {
-  // metadataBase lagane se sub-pages ke canonical links automatic slash ke sath naye domain par generate honge
   metadataBase: new URL("https://bizgrowmedia.co.uk/"), 
   title: "BizGrow Media | Professional Podcast & Business Growth Studio UK",
   description: "BizGrow Media creates authority-driven podcasts, studio production, and strategic content that builds trust, visibility, and growth.",
@@ -34,7 +36,7 @@ export const metadata = {
       { url: "/site-logo.png", sizes: "192x192", type: "image/png" },
     ],
     apple: [
-      { url: "/public/site-logo.png", sizes: "180x180", type: "image/png" },
+      { url: "/site-logo.png", sizes: "180x180", type: "image/png" },
     ],
   },
   alternates: {
@@ -90,7 +92,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="font-body bg-[#FDFCF9] text-[#1f2937] antialiased">
         <Providers>
-        <CustomCursor />
+          <CustomCursor />
           <Navbar />
           <SmoothScroll>
             <main>
@@ -99,7 +101,8 @@ export default function RootLayout({ children }) {
             </main>
             <Footer />
           </SmoothScroll>
-          <ChatBot />
+          <ChatBotComponent />
+          <WhatsAppWidget /> {/* 👈 Yahan bina kisi tension ke render hoga */}
         </Providers>
       </body>
     </html>
