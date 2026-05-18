@@ -16,7 +16,9 @@ const nextConfig = {
 
   async redirects() {
     return [
-      // 1. OLD REDIRECTS (Maintain Rakha Hai)
+      // ==========================================
+      // 1. GENUINE PAGES & BLOGS (Top Priority)
+      // ==========================================
       {
         source: "/web-design-services/",
         destination: "/studio-production/",
@@ -199,11 +201,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/*/",
-        destination: "/",
-        permanent: true,
-      },
-      {
         source: "/recruit/",
         destination: "/",
         permanent: true,
@@ -259,7 +256,9 @@ const nextConfig = {
         permanent: true,
       },
 
-      // 🛠️ QUERY PARAMETER FIXED RULES (Bina delete kiye standard format mein convert)
+      // ==========================================
+      // 2. QUERY PARAMETER HACKING LINKS
+      // ==========================================
       {
         source: "/discount.php",
         has: [{ type: "query", key: "29399458560" }],
@@ -279,26 +278,34 @@ const nextConfig = {
         permanent: true,
       },
 
-      // 2. SPAM & HACKING PROTECTION (Simplifying for Turbopack)
-
-      // WP Folders Fix (Individual rules instead of prefix pattern)
+      // ==========================================
+      // 3. SPAM & HACKING PROTECTION (Strict Matches for trailingSlash)
+      // ==========================================
       { source: "/wp-admin/:p*", destination: "/", permanent: true },
       { source: "/wp-content/:p*", destination: "/", permanent: true },
       { source: "/wp-includes/:p*", destination: "/", permanent: true },
 
-      // Numeric Spam Fix (Catch-all without complex prefix)
       {
         source: "/:path(\\d{5,})",
         destination: "/",
         permanent: true,
       },
 
-      // File Extensions (.php aur .html attempts)
+      // Strict trailing slash variations for system scripts
       { source: "/:p1*.php", destination: "/", permanent: true },
+      { source: "/:p1*.php/", destination: "/", permanent: true },
       { source: "/:p2*.html", destination: "/", permanent: true },
-
-      // Feed Spam
+      { source: "/:p2*.html/", destination: "/", permanent: true },
       { source: "/:p3*/feed/", destination: "/", permanent: true },
+
+      // ==========================================
+      // 4. THE CATCH-ALL (Absolutely Last Option)
+      // ==========================================
+      {
+        source: "/:catchall*",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 };
