@@ -78,20 +78,18 @@ export default function LuxuryGridSlider() {
 
       {/* 2. KINETIC TEXT LAYER */}
       <div className="absolute inset-0 z-[1] flex items-center justify-center overflow-hidden pointer-events-none">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, letterSpacing: "-0.05em" }}
-            animate={{ opacity: 0.05, letterSpacing: "0.13em" }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.8 }}
-            className="text-[20vw] font-black text-white italic leading-none select-none uppercase"
-            // 👇 Yeh browser ko batayega ke is text ki performance costing ko content paint se alag rakhe
-            style={{ contentVisibility: "auto" }}
-          >
-            {currentSlide.bgText}
-          </motion.div>
-        </AnimatePresence>
+        {/* AnimatePresence hata diya taake tracking fast ho */}
+        <div
+          key={index}
+          className="text-[20vw] font-black text-white italic leading-none select-none uppercase transition-all duration-1000 ease-out op-text-layer"
+          style={{
+            opacity: 0.05,
+            letterSpacing: "0.13em",
+            willChange: "transform, opacity", // Browser ko optimized path batane ke liye
+          }}
+        >
+          {currentSlide.bgText}
+        </div>
       </div>
 
       {/* 3. MAIN CONTENT GRID */}
