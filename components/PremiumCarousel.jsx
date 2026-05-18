@@ -47,7 +47,7 @@ export default function LuxuryGridSlider() {
 
   return (
     <section className="relative h-[85vh] md:h-screen w-full bg-[#000B25] flex items-center overflow-hidden">
-      {/* 1. BACKGROUND IMAGES LAYER (Optimized Core LCP) */}
+      {/* 1. BACKGROUND IMAGES LAYER */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
           <motion.div
@@ -108,10 +108,12 @@ export default function LuxuryGridSlider() {
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 10 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              // 🚀 SMART SOLUTION: Pehli slide load hote waqt dynamic entry band (0ms delay), 
+              // lekin agli slides par transition smooth fade-in karegi!
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
             >
               <div className="flex items-center gap-4 mt-20 mb-6">
                 <span className="w-10 h-[1px] bg-[#997819]"></span>

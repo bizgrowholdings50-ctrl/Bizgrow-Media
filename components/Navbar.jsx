@@ -123,7 +123,7 @@ export default function Navbar() {
                   className="transition-all duration-300 relative"
                   style={{
                     width: scrolled ? "95px" : "100px",
-                    height: "40px",
+                    height: "60px",
                   }}
                 >
                   <Image
