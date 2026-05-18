@@ -12,6 +12,7 @@ const WhatsAppWidget = () => {
       <a
         href="https://wa.me/447903332433?text=Hi%20BizGrow%20Expert,%20I'm%20interested%20in%20your%20services."
         target="_blank"
+        aria-label="Chat on WhatsApp"
         rel="noopener noreferrer"
         className="relative flex items-center justify-center w-16 h-16 bg-[#997819] text-white rounded-full shadow-[0_8px_30px_rgb(37,211,102,0.4)] hover:scale-110 transition-transform duration-300"
       >
