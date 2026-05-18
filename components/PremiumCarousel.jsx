@@ -64,11 +64,11 @@ export default function LuxuryGridSlider() {
           >
             <Image
               src={currentSlide.img}
-              alt={`${currentSlide.title} ${currentSlide.sub}`} // 👈 Accessibility Fix: More descriptive alt text
+              alt={`${currentSlide.title} ${currentSlide.sub}`}
               fill
               className="object-cover object-center contrast-[110%] brightness-[0.9]"
-              priority={index === 0} // 👈 LCP Optimization: Pehli image hamesha priority par load ho
-              fetchPriority={index === 0 ? "high" : "low"} // 👈 LCP Optimization: Browser ko signal dena ke pehli image critical hai
+              priority={index === 0}
+              fetchPriority={index === 0 ? "high" : "low"}
               unoptimized={currentSlide.img.startsWith("http")}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#000B25] via-[#000B25]/40 to-transparent" />
@@ -76,32 +76,30 @@ export default function LuxuryGridSlider() {
         </AnimatePresence>
       </div>
 
-      {/* 2. KINETIC TEXT LAYER */}
+      {/* 2. KINETIC TEXT LAYER (Optimized: Pseudo-Element + Layout Ignore) */}
       <div className="absolute inset-0 z-[1] flex items-center justify-center overflow-hidden pointer-events-none">
-        {/* AnimatePresence hata diya taake tracking fast ho */}
         <div
           key={index}
-          className="text-[20vw] font-black text-white italic leading-none select-none uppercase transition-all duration-1000 ease-out op-text-layer"
+          data-bg-text={currentSlide.bgText}
+          className="text-[20vw] font-black text-white italic leading-none select-none uppercase transition-all duration-1000 ease-out before:content-[attr(data-bg-text)]"
           style={{
             opacity: 0.05,
             letterSpacing: "0.13em",
-            willChange: "transform, opacity", // Browser ko optimized path batane ke liye
+            contentVisibility: "auto", // 🚀 Browser initial paint me is calculation ko skip kar dega
           }}
-        >
-          {currentSlide.bgText}
-        </div>
+        />
       </div>
 
       {/* 3. MAIN CONTENT GRID */}
       <div className="relative z-10 w-full px-6 md:px-24 grid grid-cols-12 h-full items-center">
-        {/* Left Indicator - Navigation dots/lines */}
+        {/* Left Indicator */}
         <div className="col-span-1 hidden md:flex flex-col gap-6 items-start justify-center h-full border-l border-white/5 pl-8">
           {slides.map((_, i) => (
             <button
               key={i}
               onClick={() => setIndex(i)}
-              aria-label={`Go to slide ${i + 1}`} // 👈 Accessibility Fix: Buttons must have an accessible name
-              aria-current={index === i ? "true" : "false"} // 👈 UX/SEO Fix: Identifies the active slide for screen readers
+              aria-label={`Go to slide ${i + 1}`}
+              aria-current={index === i ? "true" : "false"}
               className="relative flex items-center h-12 group transition-all"
             >
               <span
@@ -134,12 +132,13 @@ export default function LuxuryGridSlider() {
             >
               <div className="flex items-center gap-4 mt-20 mb-6">
                 <span className="w-10 h-[1px] bg-[#997819]"></span>
-                <h2 className="text-[#997819] text-[9px]  md:text-[11px] font-black tracking-[0.4em] uppercase">
+                <h2 className="text-[#997819] text-[9px] md:text-[11px] font-black tracking-[0.4em] uppercase">
                   BIZGROW MEDIA PREMIUM
                 </h2>
               </div>
 
-              <h1 className="text-5xl md:text-[8vw]  font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
+              {/* Real H1 element - ab browser isay easily track kar ke LCP pass karega */}
+              <h1 className="text-5xl md:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
                 {currentSlide.title} <br />
                 <span
                   className="text-transparent italic font-serif font-light block mt-2"
@@ -153,17 +152,15 @@ export default function LuxuryGridSlider() {
                 {currentSlide.desc}
               </p>
 
-              {/* ⚠️ Semantic HTML/Link Fix: Button ke andar Link lagane se HTML validation break hoti hai aur click target kharab hota hai */}
               <Link href="/our-media-services" passHref legacyBehavior>
                 <motion.a
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="inline-block relative overflow-hidden group border border-[#997819]/50 px-12 py-5 rounded-2xl bg-transparent cursor-pointer"
                 >
-                  <span className="relative z-10 text-white text-[11px] font-black tracking-[0.4em]  group-hover:text-white duration-500">
+                  <span className="relative z-10 text-white text-[11px] font-black tracking-[0.4em] group-hover:text-white duration-500">
                     EXPLORE ECOSYSTEM
                   </span>
-
                   <div className="absolute inset-0 bg-[#997819] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
                 </motion.a>
               </Link>
