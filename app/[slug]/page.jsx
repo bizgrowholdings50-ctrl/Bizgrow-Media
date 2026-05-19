@@ -53,10 +53,10 @@ export default async function SingleBlogPost({ params }) {
   return (
     <div className="min-h-screen bg-white dark:bg-[#000B25] dark:border-b-2">
       {/* Professional Header */}
-      <header className="max-w-4xl mt-10 mx-auto px-6 pt-16 pb-10">
+      <header className="max-w-4xl mx-auto px-6 pt-16 pb-10">
         <Link
           href="/blogs"
-          className="text-[#997819] font-bold text-sm tracking-widest uppercase mb-8 inline-block hover:underline"
+          className="text-[#997819] mt-10 font-bold text-sm tracking-widest uppercase mb-8 inline-block hover:underline"
         >
           &larr; Back to Insights
         </Link>
@@ -89,7 +89,7 @@ export default async function SingleBlogPost({ params }) {
       {/* 🚀 Professional Typography & Spacing Section */}
       <article className="max-w-3xl mx-auto px-6 pb-24">
         <div
-          className={`${styles.blogContentFlow} max-w-none`} // 👈 Ab saari rendering CSS module se handle hogi
+          className={`${styles.blogContentFlow} max-w-none`} 
           dangerouslySetInnerHTML={{ __html: post.content.rendered }}
         />
       </article>
