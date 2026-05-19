@@ -1,10 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import FadeIn from "@components/MotionWrapper";
+import Link from "next/link";
 
 export const metadata = {
   title: "Terms & Conditions | BizGrow Digital",
-  description: "Read the Terms & Conditions for BizGrow Digital. Learn about service use, client responsibilities, intellectual property, and legal guidelines.",
+  description:
+    "Read BizGrow Media Terms & Conditions covering our services, client responsibilities, payments, and website usage policies",
   alternates: {
     canonical: "https://bizgrowmedia.co.uk/terms/",
   },
@@ -12,9 +14,10 @@ export const metadata = {
 
 const TermsConditions = () => {
   const services = [
-    "Email Marketing", "Search Engine Optimisation", "Social Media Marketing",
-    "Graphic Design", "Facebook Marketing", "Digital Marketing",
-    "Creative Content", "Web Development", "WordPress", "Lead Generation"
+    "Studio & Production",
+    "Content Engine",
+    "Authority Builders",
+    "Growth Engine",
   ];
 
   return (
@@ -39,7 +42,8 @@ const TermsConditions = () => {
               Terms & <span className="text-[#997819]">Conditions</span>
             </h1>
             <p className="text-gray-300 text-lg md:text-xl font-light">
-              Last Updated: <span className="text-white font-medium">January 2026</span>
+              Last Updated:{" "}
+              <span className="text-white font-medium">January 2026</span>
             </p>
           </FadeIn>
         </div>
@@ -51,8 +55,9 @@ const TermsConditions = () => {
           <FadeIn direction="up" delay={0.2}>
             {/* Intro text with Orange Border */}
             <p className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight mb-20 border-l-8 border-[#997819] pl-8">
-              Thank you for visiting BizGrow Media. By accessing our website or using our services, 
-              you agree to comply with these Terms & Conditions.
+              Thank you for visiting BizGrow Media. By accessing our website or
+              using our services, you agree to comply with these Terms &
+              Conditions.
             </p>
 
             <div className="space-y-20">
@@ -63,13 +68,19 @@ const TermsConditions = () => {
                 </h2>
                 <div className="h-[2px] w-12 bg-[#997819] group-hover:w-24 transition-all duration-500 mb-8" />
                 <p className="text-gray-600 dark:text-gray-400 text-lg mb-8">
-                  BizGrow Media provides professional media services, including but not limited to:
+                  BizGrow Media provides professional business media and content
+                  services, including:
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {services.map((service, i) => (
-                    <div key={i} className="flex items-center gap-3 p-4 rounded-2xl bg-orange-50 hover:bg-orange-100 hover:border hover:border-orange-600 dark:bg-white/5 dark:hover:bg-white/5 cursor-pointer border border-slate-100 dark:border-white/10">
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 p-4 rounded-2xl bg-orange-50 hover:bg-orange-100 hover:border hover:border-[#997819] dark:bg-white/5 dark:hover:bg-white/5 cursor-pointer border border-slate-100 dark:border-white/10"
+                    >
                       <div className="w-2 h-2 rounded-full bg-[#997819]" />
-                      <span className="text-sm font-bold text-slate-800 dark:text-gray-300 uppercase tracking-wider">{service}</span>
+                      <span className="text-sm font-bold text-slate-800 dark:text-gray-300 uppercase tracking-wider">
+                        {service}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -82,63 +93,177 @@ const TermsConditions = () => {
                 </h2>
                 <div className="h-[2px] w-12 bg-[#997819] group-hover:w-24 transition-all duration-500 mb-6" />
                 <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-                  You agree to use this website for lawful purposes only. You must not misuse the website, 
-                  attempt unauthorised access, or engage in any activity that harms the website, its systems, or its users.
+                  You agree to use this website for lawful purposes only. You
+                  must not misuse the website, attempt unauthorised access, or
+                  engage in activities that harm the website, its systems, or
+                  users.
                 </p>
               </div>
 
-              {/* 03. Client Obligations */}
+              {/* 03. Client Responsibilities */}
               <div className="group">
                 <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-4 flex items-center gap-4">
-                  <span className="text-[#997819]">03.</span> Client Obligations
+                  <span className="text-[#997819]">03.</span> Client
+                  Responsibilities
                 </h2>
                 <div className="h-[2px] w-12 bg-[#997819] group-hover:w-24 transition-all duration-500 mb-6" />
-                <ul className="space-y-4 text-gray-600 dark:text-gray-400 text-lg">
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+                  Clients are responsible for:
+                </p>
+                <ul className="space-y-4 text-gray-600 dark:text-gray-400 text-lg mb-6">
                   <li className="flex gap-4">
                     <span className="text-[#997819] font-bold">•</span>
-                    Provide accurate, complete, and timely information necessary for the project&apos;s delivery.
+                    Providing accurate project information
                   </li>
                   <li className="flex gap-4">
                     <span className="text-[#997819] font-bold">•</span>
-                    Respond to communications and approvals within a reasonable timeframe.
+                    Sharing required materials on time
                   </li>
                   <li className="flex gap-4">
                     <span className="text-[#997819] font-bold">•</span>
-                    Ensure provided content does not infringe any third-party rights.
+                    Reviewing deliverables within agreed timelines
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-[#997819] font-bold">•</span>
+                    Ensuring they have legal rights to all provided content and
+                    materials
                   </li>
                 </ul>
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed italic">
+                  Project timelines be affected by delayed communication or
+                  approvals.
+                </p>
               </div>
 
-              {/* Remaining Sections: Intellectual Property, Confidentiality, etc. */}
-              {[
-                { title: "Intellectual Property", content: "All content, designs, graphics, and materials available on this website remain the intellectual property of BizGrow Media. Unauthorised copying or reproduction is strictly prohibited." },
-                { title: "Confidentiality", content: "Any information shared during the course of a project will be treated as confidential and will not be disclosed to third parties, except where required by law." },
-                { title: "Third-Party Links", content: "This website may include links to third-party sites. BizGrow Media is not responsible for their content, policies, or practices." },
-                { title: "Termination", content: "We reserve the right to suspend services if payments are overdue or if these Terms & Conditions are breached. On termination, all outstanding fees become immediately payable." },
-                { title: "Governing Law", content: "These Terms & Conditions are governed by applicable laws. Any disputes will be handled in accordance with the legal regulations of the operating jurisdiction." }
-              ].map((item, idx) => (
-                <div key={idx} className="group">
-                  <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-4 flex items-center gap-4">
-                    <span className="text-[#997819]">0{idx + 4}.</span> {item.title}
-                  </h2>
-                  <div className="h-[2px] w-12 bg-[#997819] group-hover:w-24 transition-all duration-500 mb-6" />
-                  <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-                    {item.content}
-                  </p>
-                </div>
-              ))}
+              {/* 04. Payments and Bookings */}
+              <div className="group">
+                <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-4 flex items-center gap-4">
+                  <span className="text-[#997819]">04.</span> Payments and
+                  Bookings
+                </h2>
+                <div className="h-[2px] w-12 bg-[#997819] group-hover:w-24 transition-all duration-500 mb-6" />
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-4">
+                  Service pricing, project timelines, and payment terms will be
+                  agreed upon before work begins.
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                  BizGrow Media reserves the right to pause services if
+                  agreed-upon payments are not received within the required
+                  timeframe.
+                </p>
+              </div>
+
+              {/* 05. Website Usage */}
+              <div className="group">
+                <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-4 flex items-center gap-4">
+                  <span className="text-[#997819]">05.</span> Website Usage
+                </h2>
+                <div className="h-[2px] w-12 bg-[#997819] group-hover:w-24 transition-all duration-500 mb-6" />
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+                  Users agree not to:
+                </p>
+                <ul className="space-y-4 text-gray-600 dark:text-gray-400 text-lg mb-6">
+                  <li className="flex gap-4">
+                    <span className="text-[#997819] font-bold">•</span>
+                    misuse the website
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-[#997819] font-bold">•</span>
+                    attempt to damage website functionality
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-[#997819] font-bold">•</span>
+                    copy website content without permission
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-[#997819] font-bold">•</span>
+                    submit false or misleading information
+                  </li>
+                </ul>
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                  We reserve the right to restrict access where misuse is
+                  identified.
+                </p>
+              </div>
+
+              {/* 06. Third-Party Platforms */}
+              <div className="group">
+                <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-4 flex items-center gap-4">
+                  <span className="text-[#997819]">06.</span> Third-Party
+                  Platforms
+                </h2>
+                <div className="h-[2px] w-12 bg-[#997819] group-hover:w-24 transition-all duration-500 mb-6" />
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+                  Our services involve platforms such as:
+                </p>
+                <ul className="space-y-4 text-gray-600 dark:text-gray-400 text-lg mb-6">
+                  <li className="flex gap-4">
+                    <span className="text-[#997819] font-bold">•</span>
+                    LinkedIn
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-[#997819] font-bold">•</span>
+                    Instagram
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-[#997819] font-bold">•</span>
+                    Facebook
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-[#997819] font-bold">•</span>
+                    YouTube
+                  </li>
+                </ul>
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                  BizGrow Media is not responsible for platform outages, policy
+                  changes, or technical issues caused by third-party services.
+                </p>
+              </div>
+
+              {/* 07. Changes to Terms */}
+              <div className="group">
+                <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-4 flex items-center gap-4">
+                  <span className="text-[#997819]">07.</span> Changes to Terms
+                </h2>
+                <div className="h-[2px] w-12 bg-[#997819] group-hover:w-24 transition-all duration-500 mb-6" />
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-4">
+                  BizGrow Media updates these Terms and Conditions at any time
+                  to reflect changes in services, legal requirements, or
+                  business operations.
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                  Updated versions will be published on this page.
+                </p>
+              </div>
+
+              {/* 08. Governing Law */}
+              <div className="group">
+                <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-4 flex items-center gap-4">
+                  <span className="text-[#997819]">08.</span> Governing Law
+                </h2>
+                <div className="h-[2px] w-12 bg-[#997819] group-hover:w-24 transition-all duration-500 mb-6" />
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                  These Terms and Conditions are governed by applicable laws
+                  within the United Kingdom.
+                </p>
+              </div>
 
               {/* 09. Final Contact Box */}
-              <div className="mt-24 p-12 rounded-[3rem] bg-gray-100 dark:bg-gray-900 dark:text-white  text-black  border border-[#997819] relative overflow-hidden shadow-2xl">
+              <div className="mt-24 p-12 rounded-[3rem] bg-gray-100 dark:bg-gray-900 dark:text-white text-black border border-[#997819] relative overflow-hidden shadow-2xl">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2" />
-                <h2 className="text-4xl font-black uppercase mb-6">Got Questions?</h2>
+                <h2 className="text-4xl font-black uppercase mb-6">
+                  Got Questions?
+                </h2>
                 <p className="text-gray-600 dark:text-white text-xl mb-8 font-light">
-                  If you have any questions about these terms, we’re happy to help.
+                  For questions regarding these Terms and Conditions, please
+                  visit:
                 </p>
-                <div className="space-y-2">
-                  <p className="font-bold text-2xl uppercase tracking-tighter">BizGrow Media</p>
-                  <p className="opacity-80 underline underline-offset-4 decoration-white/30">Visit our contact page for more details.</p>
-                </div>
+
+                <Link href="/">
+                  <p className="font-bold text-2xl text-[#997819] underline uppercase tracking-tighter">
+                    BizGrow Media
+                  </p>
+                </Link>
               </div>
             </div>
           </FadeIn>
