@@ -9,8 +9,8 @@ const BRAND_BLUE = "#12066a";
 const WP_FIELDS = "_fields=id,slug,title,yoast_head_json";
 
 export const metadata = {
-  title: "Insights & Tips for Digital Growth | BizGrow Digital Blogs",
-  description: "Explore expert tips on SEO, web design, and digital growth.",
+  title: "Business Growth Insights Hub | BizGrow Media",
+  description: "Explore real business insights, branding ideas, podcasts, and content strategies designed to help businesses build trust and grow.",
 };
 
 async function getData(page = 1, catSlug = null) {

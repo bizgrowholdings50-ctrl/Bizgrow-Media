@@ -19,9 +19,9 @@ import FadeIn from "@components/MotionWrapper"; // Aapka custom wrapper
 import Link from "next/link";
 
 export const metadata = {
-  title: "Business Growth Insights Hub | BizGrow Media",
+  title: "BizGrow Media Packages | Professional Media Support",
   description:
-    "Explore real business insights, branding ideas, podcasts, and content strategies designed to help businesses build trust and grow.",
+    "Want to launch your podcast professionally? Explore BizGrow Media packages built for production, branding, editing, and podcast growth.",
 };
 const PremiumPackagesPage = () => {
   const steps = [
