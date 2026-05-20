@@ -191,24 +191,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-center items-center gap-6">
           <p className="text-gray-400 text-[10px] font-black uppercase tracking-[0.2em]">
             © 2026 BizGrow Media. Premium Business Media & Brand Growth.
           </p>
-          <div className="flex gap-8">
-            <Link
-              href="/privacy-policy"
-              className="text-gray-400 hover:text-white text-[10px] font-black uppercase tracking-widest transition-colors"
-            >
-              Privacy
-            </Link>
-            <Link
-              href="/terms"
-              className="text-gray-400 hover:text-white text-[10px] font-black uppercase tracking-widest transition-colors"
-            >
-              Terms
-            </Link>
-          </div>
+        
         </div>
       </div>
     </footer>
