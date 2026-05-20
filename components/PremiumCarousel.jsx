@@ -114,9 +114,9 @@ export default function LuxuryGridSlider() {
             <div>
               <div className="flex items-center gap-4 mt-20 mb-6">
                 <span className="w-10 h-[1px] bg-[#997819]"></span>
-                <h2 className="text-[#997819] text-[9px] md:text-[11px] font-black tracking-[0.4em] uppercase">
+                <span className="text-[#997819] text-[9px] md:text-[11px] font-black tracking-[0.4em] uppercase">
                   BIZGROW MEDIA PREMIUM
-                </h2>
+                </span>
               </div>
 
               <h1 className="text-5xl md:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">

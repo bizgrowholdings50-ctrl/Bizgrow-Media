@@ -362,9 +362,9 @@ const CreativeContentPage = () => {
                       Pillar One: Production
                     </span>
                   </div>
-                  <h4 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase leading-none mb-8">
+                  <h3 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase leading-none mb-8">
                     Content <br /> Production
-                  </h4>
+                  </h3>
                   <div className="w-20 h-2 bg-[#12066a] dark:bg-[#997819]" />
                 </div>
 
@@ -389,10 +389,10 @@ const CreativeContentPage = () => {
             {/* Right: Detailed Breakdown (The "This Includes" part) */}
             <div className="bg-gray-50 dark:bg-white/[0.02] p-10 md:p-16 rounded-[3rem] border border-gray-100 dark:border-white/5">
               <FadeIn direction="up" delay={0.2}>
-                <h5 className="text-[#12066a] dark:text-white font-black uppercase tracking-widest text-lg mb-10 flex items-center gap-3">
+                <h4 className="text-[#12066a] dark:text-white font-black uppercase tracking-widest text-lg mb-10 flex items-center gap-3">
                   This includes{" "}
                   <ArrowRight className="text-[#997819]" size={20} />
-                </h5>
+                </h4>
 
                 <div className="space-y-10">
                   {[
@@ -533,9 +533,9 @@ const CreativeContentPage = () => {
                     </span>
                   </div>
 
-                  <h4 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase leading-none mb-8">
+                  <h3 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase leading-none mb-8">
                     Authority <br /> System
-                  </h4>
+                  </h3>
                   <div className="w-20 h-2 bg-[#12066a] dark:bg-[#997819]" />
                 </div>
 
@@ -560,10 +560,10 @@ const CreativeContentPage = () => {
             {/* Right: Detailed Breakdown (BizGrow Media helps...) */}
             <div className="bg-gray-50 dark:bg-white/[0.02] p-10 md:p-16 rounded-[3rem] border border-gray-100 dark:border-white/5">
               <FadeIn direction="up" delay={0.2}>
-                <h5 className="text-[#12066a] dark:text-white font-black uppercase tracking-widest text-lg mb-10 flex items-center gap-3">
+                <h4 className="text-[#12066a] dark:text-white font-black uppercase tracking-widest text-lg mb-10 flex items-center gap-3">
                   BizGrow Media helps strengthen credibility through:{" "}
                   <ArrowRight className="text-[#997819]" size={20} />
-                </h5>
+                </h4>
 
                 <div className="space-y-10">
                   {[

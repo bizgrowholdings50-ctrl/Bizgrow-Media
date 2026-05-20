@@ -36,7 +36,7 @@ const Footer = () => {
     },
     {
       Icon: FaTiktok,
-      href: "https://www.tiktok.com/@bizgrowholdings",
+      href: "https://www.tiktok.com/@bizgrow.media",
       label: "TikTok",
     },
     {
@@ -57,7 +57,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-[#12066a] text-white pt-24 pb-12 px-6 md:px-12 overflow-hidden">
+    <footer className="relative bg-[#12066a] dark:bg-gray-800 text-white pt-24 pb-12 px-6 md:px-12 overflow-hidden">
       {/* Decorative Background Glows */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#997819]/10 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />

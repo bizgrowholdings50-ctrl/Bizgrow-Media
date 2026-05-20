@@ -16,18 +16,20 @@ import {
   ArrowRight,
 } from "lucide-react";
 import FadeIn from "@components/MotionWrapper"; // Aapka custom wrapper
+import Link from "next/link";
 
 export const metadata = {
-    title: "BizGrow Media Packages | Professional Media Support",   
-    description: "Want to launch your podcast professionally? Explore BizGrow Media packages built for production, branding, editing, and podcast growth.",
-}
+  title: "Business Growth Insights Hub | BizGrow Media",
+  description:
+    "Explore real business insights, branding ideas, podcasts, and content strategies designed to help businesses build trust and grow.",
+};
 const PremiumPackagesPage = () => {
   const steps = [
     {
       label: "Phase 01",
       icon: <Target size={20} />,
       title: "Podcast Direction",
-      desc: "BizGrow Media helps shape the style, structure, and direction of your podcast around your brand and the audience you want to reach.",
+      desc: <><Link href="/our-media-services/" className="text-[#997819] hover:underline font-bold">BizGrow Media</Link> helps shape the style, structure, and direction of your podcast around your brand and the audience you want to reach.</>,
     },
     {
       label: "Phase 02",
@@ -109,14 +111,21 @@ const PremiumPackagesPage = () => {
           <FadeIn direction="up" delay={0.4}>
             <div className="flex flex-col items-center justify-center gap-8 mt-12">
               <p className="max-w-xl text-center md:text-left text-sm md:text-lg text-gray-300 dark:text-white/60 border-l-0 md:border-l md:border-[#997819] md:pl-6 leading-relaxed font-medium">
-                We take care of the production, branding, recording, editing,
-                and setup so you can focus on sharing your ideas with
-                confidence.
+                We take care of the{" "}
+                <Link
+                  href="/studio-production/"
+                  className="text-[#997819] hover:underline"
+                >
+                  production
+                </Link>
+                , branding, recording, editing, and setup so you can focus on
+                sharing your ideas with confidence.
               </p>
-
-              <button className="h-16 px-12 bg-[#12066A] dark:bg-white text-white dark:text-black font-black uppercase tracking-tighter text-sm flex items-center gap-3 hover:bg-[#997819] dark:hover:bg-[#997819] hover:text-white transition-all duration-500 rounded-full shadow-2xl">
-                Launch Your Podcast <ArrowUpRight className="w-5 h-5" />
-              </button>
+              <Link href="/contact-us">
+                <button className="h-16 px-12 bg-[#12066A] dark:bg-white text-white dark:text-black font-black uppercase tracking-tighter text-sm flex items-center gap-3 hover:bg-[#997819] dark:hover:bg-[#997819] hover:text-white transition-all duration-500 rounded-full shadow-2xl">
+                  Launch Your Podcast <ArrowUpRight className="w-5 h-5" />
+                </button>
+              </Link>
             </div>
           </FadeIn>
         </div>
@@ -157,16 +166,14 @@ const PremiumPackagesPage = () => {
 
                   <p className="text-gray-500 dark:text-white/40 text-lg leading-relaxed">
                     Most businesses already know what they want to say. The
-                    challenge is usually turning those ideas into a podcast that
-                    feels{" "}
-                    <span className="text-[#997819] font-bold">
-                      clear, professional,
-                    </span>{" "}
-                    and ready for people to take seriously.
+                    challenge is usually turning those ideas into a <Link href="/podcast-recording-studios/" className="text-[#997819] hover:underline font-bold">podcast</Link> that
+                    feels clear, professional, and ready for people to take
+                    seriously.
                   </p>
                 </div>
 
                 <div className="mt-12">
+                  <Link href="/contact-us/">
                   <div className="inline-flex items-center gap-4 group cursor-pointer">
                     <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#12066a] dark:text-white group-hover:text-[#997819] transition-colors">
                       Let's bridge the gap
@@ -178,6 +185,7 @@ const PremiumPackagesPage = () => {
                       />
                     </div>
                   </div>
+                  </Link>
                 </div>
               </FadeIn>
             </div>
@@ -305,7 +313,7 @@ const PremiumPackagesPage = () => {
                 </span>
               </div>
               <h2 className="text-[#12066a]  dark:text-white text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
-                How It {" "}
+                How It{" "}
                 <span className="text-[#997819] italic font-light">Works</span>
               </h2>
               <p className="text-gray-500 mx-auto dark:text-white/40 text-lg font-medium max-w-xl leading-relaxed">
@@ -357,7 +365,7 @@ const PremiumPackagesPage = () => {
 
                   {/* Icon Box */}
                   <div
-                    className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-12 shadow-lg transition-transform duration-500 group-hover:rotate-[10deg] ${index === 2 ? "bg-[#997819] text-[#12066a]" : "bg-white dark:bg-[#080808] text-[#997819]"}`}
+                    className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-12 shadow-lg transition-transform duration-500 group-hover:rotate-[10deg] ${index === 2 ? "bg-[#997819] text-white" : "bg-white dark:bg-[#080808] text-[#997819]"}`}
                   >
                     {step.icon}
                   </div>
@@ -395,8 +403,8 @@ const PremiumPackagesPage = () => {
                 <span className="w-12 h-[1px] bg-[#997819]" />
               </div>
               <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
-                Who This Is <br />{" "}
-                <span className="text-[#997819] italic font-light">For</span>
+                Who This Is 
+                <span className="text-[#997819] italic font-light ml-2">For</span>
               </h2>
               <p className="text-gray-500 dark:text-white/40 text-lg font-medium max-w-3xl mx-auto leading-relaxed italic">
                 Designed For Businesses And Professionals Ready To Build A More
@@ -414,7 +422,7 @@ const PremiumPackagesPage = () => {
               },
               {
                 title: "Growing Businesses",
-                desc: "Growing businesses want a stronger content presence and more established industry positioning.",
+                desc: <>Growing businesses want a stronger <Link href="/content-engine/" className="text-[#997819] hover:underline font-bold">content</Link> presence and more established industry positioning.</>,
               },
               {
                 title: "Experts & Speakers",
@@ -509,16 +517,18 @@ const PremiumPackagesPage = () => {
               </p>
 
               {/* CTA Button Style from image_39649c.jpg */}
-              <button className="group relative px-14 py-6 bg-[#997819] text-white font-black uppercase tracking-[0.2em] text-xs rounded-2xl overflow-hidden transition-all hover:shadow-[0_20px_50px_rgba(153,120,25,0.4)]">
-                <span className="relative z-10 flex items-center gap-3">
-                  Start Building The Right Way{" "}
-                  <ArrowRight
-                    size={16}
-                    className="group-hover:translate-x-2 transition-transform"
-                  />
-                </span>
-                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </button>
+              <Link href="/contact-us/">
+                <button className="group relative px-14 py-6 bg-[#997819] text-white font-black uppercase tracking-[0.2em] text-xs rounded-2xl overflow-hidden transition-all hover:shadow-[0_20px_50px_rgba(153,120,25,0.4)]">
+                  <span className="relative z-10 flex items-center gap-3">
+                    Start Building The Right Way{" "}
+                    <ArrowRight
+                      size={16}
+                      className="group-hover:translate-x-2 transition-transform"
+                    />
+                  </span>
+                  <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </button>
+              </Link>
             </FadeIn>
           </div>
         </div>

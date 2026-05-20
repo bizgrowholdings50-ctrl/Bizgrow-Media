@@ -76,9 +76,9 @@ const StudioProductionPage = () => {
                     <p className="text-sm uppercase tracking-widest font-bold text-[#997819] mb-2">
                       Credibility First
                     </p>
-                    <h3 className="text-2xl font-bold leading-tight">
+                    <h2 className="text-2xl font-bold leading-tight">
                       Your brand deserves more than ordinary visuals.
-                    </h3>
+                    </h2>
                   </div>
                 </div>
               </FadeIn>
@@ -253,9 +253,9 @@ const StudioProductionPage = () => {
                       <CheckCircle2 size={20} />
                     </div>
                   </div>
-                  <h4 className="text-3xl font-black text-[#12066a] dark:text-white uppercase mb-4">
+                  <h3 className="text-3xl font-black text-[#12066a] dark:text-white uppercase mb-4">
                     {step.t}
-                  </h4>
+                  </h3>
                   <p className="text-gray-500 dark:text-gray-400 font-medium mb-8">
                     {step.d}
                   </p>
@@ -346,9 +346,9 @@ const StudioProductionPage = () => {
                         <Check size={20} strokeWidth={3} />
                       </div>
                       <div>
-                        <h4 className="text-[#12066a] dark:text-white font-black uppercase text-sm tracking-tight">
+                        <h3 className="text-[#12066a] dark:text-white font-black uppercase text-sm tracking-tight">
                           {item.t}
-                        </h4>
+                        </h3>
                         <p className="text-gray-500 text-xs mt-1">{item.d}</p>
                       </div>
                     </div>
@@ -406,7 +406,7 @@ const StudioProductionPage = () => {
                     size={24}
                     strokeWidth={3}
                   />
-                  <h4 className="font-bold uppercase text-sm mb-2">{item.t}</h4>
+                  <h3 className="font-bold uppercase text-sm mb-2">{item.t}</h3>
                   <p className="text-gray-400 text-xs leading-relaxed">
                     {item.d}
                   </p>

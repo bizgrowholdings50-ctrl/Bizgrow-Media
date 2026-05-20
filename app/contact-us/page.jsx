@@ -151,9 +151,9 @@ const ContactPage = () => {
                     <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">
                       {item.label}
                     </p>
-                    <h4 className="text-lg font-bold text-[#12066a] dark:text-white">
+                    <h3 className="text-lg font-bold text-[#12066a] dark:text-white">
                       {item.val}
-                    </h4>
+                    </h3>
                   </div>
                 </div>
               ))}

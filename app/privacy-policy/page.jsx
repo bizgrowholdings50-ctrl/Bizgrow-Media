@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
   return (
     <main className="w-full bg-white dark:bg-black overflow-hidden">
       {/* --- HERO SECTION: Consistent Premium Theme --- */}
-      <div className="relative h-[60vh] md:h-[70vh] w-full flex items-center justify-center overflow-hidden">
+      <div className="relative h-[60vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
         <Image
           src="/privacy-hero-s.png"
           alt="BizGrow Privacy Policy"
