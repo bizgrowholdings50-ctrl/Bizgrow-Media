@@ -22,8 +22,8 @@ export async function POST(req) {
 
     const data = await resend.emails.send({
       // 🚨 Make sure this domain is verified in Resend Dashboard
-      from: 'BizGrow Media <info@bizgrowmedia.co.uk>', 
-      to: ['info@bizgrow-digital.co.uk'],
+      from: 'BizGrow Media <info@bizgrowstudios.co.uk>', 
+      to: ['info@bizgrowstudios.co.uk'],
       reply_to: email, // Is se 'Reply' dabane par direct customer ko email jayegi
       subject: `New Lead: ${name} - ${finalService}`,
       html: `

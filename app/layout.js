@@ -9,6 +9,7 @@ import WhatsAppWidget from "@components/WhatsAppWidget"; // 👈 Normal import l
 import { Analytics } from '@vercel/analytics/next';
 import Script from "next/script"; 
 import CustomCursor from "@components/Cursor";
+import { Toaster } from "sonner";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -103,6 +104,9 @@ export default function RootLayout({ children }) {
           </SmoothScroll>
           <ChatBotComponent />
           <WhatsAppWidget /> {/* 👈 Yahan bina kisi tension ke render hoga */}
+
+          {/* 🎯 Sonner Toaster yahan add karein */}
+     <Toaster richColors position="top-right" />
         </Providers>
       </body>
     </html>

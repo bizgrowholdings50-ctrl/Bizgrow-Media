@@ -1,22 +1,20 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   Mail,
   Phone,
   MapPin,
-  Send,
   ArrowRight,
   CheckCircle,
   Loader2,
   Calendar,
-  Globe,
 } from "lucide-react";
 import FadeIn from "@components/MotionWrapper";
 import { motion, AnimatePresence } from "framer-motion";
+import { toast } from "sonner"; // Imported sonner toast
 
 const ContactPage = () => {
-  // Logic: Updated key from 'subject' to 'service' to match the <select> name
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -35,12 +33,24 @@ const ContactPage = () => {
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
+  // UK Phone Validation Regex (Handles +44, 07, spaces, etc.)
+  const validateUKPhone = (phone) => {
+    const cleaned = phone.replace(/\s+/g, "");
+    return /^(\+44|0)7\d{9}$/.test(cleaned) || /^\+?\d{10,13}$/.test(cleaned);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Logic: Validation if appointment is toggled but date/time missing
+    // 1. Phone Validation Check
+    if (!validateUKPhone(formData.phone)) {
+      toast.error("Please enter a valid phone number.");
+      return;
+    }
+
+    // 2. Appointment Details Check
     if (apptOn && (!selDate || !selTime)) {
-      alert("Please select a date and time for your discovery call.");
+      toast.error("Please select a date and time for your discovery call.");
       return;
     }
 
@@ -52,7 +62,6 @@ const ContactPage = () => {
     };
 
     try {
-      // 1. Send to your Resend API
       const res = await fetch("/api/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -60,18 +69,18 @@ const ContactPage = () => {
       });
 
       if (res.ok) {
-        // Logic: WhatsApp Message with proper line breaks and data mapping
+        toast.success("Inquiry sent successfully!");
+
         const waMsg = `*New Lead from Website*%0A%0A*Name:* ${payload.name}%0A*Service:* ${payload.service}${
           apptOn ? `%0A*Meeting:* ${selDate} @ ${selTime}` : ""
         }%0A*Message:* ${payload.message}`;
 
         window.open(
-          `https://wa.me/447903332433?text=${waMsg}`, // Updated to match displayed UK number
+          `https://wa.me/447903332433?text=${waMsg}`,
           "_blank"
         );
 
         setStatus("success");
-        // Logic: Clear state after successful submission
         setFormData({ name: "", email: "", phone: "", service: "", message: "" });
         setSelDate("");
         setSelTime("");
@@ -80,7 +89,7 @@ const ContactPage = () => {
         throw new Error("Failed to send");
       }
     } catch (err) {
-      alert("Something went wrong. Please try again.");
+      toast.error("Something went wrong. Please try again.");
       setStatus("idle");
     }
   };
@@ -296,7 +305,7 @@ const ContactPage = () => {
                                 type="date"
                                 required={apptOn}
                                 value={selDate}
-                                min={new Date().toISOString().split("T")[0]} // Logic: Block past dates
+                                min={new Date().toISOString().split("T")[0]}
                                 onChange={(e) => setSelDate(e.target.value)}
                                 className="w-full bg-transparent text-xs font-bold dark:text-white outline-none"
                               />
