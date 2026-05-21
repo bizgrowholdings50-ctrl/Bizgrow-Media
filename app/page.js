@@ -191,13 +191,15 @@ const HomePage = () => {
           </div>
 
           <div className="text-center mt-16">
+            <Link href="/our-media-services">
             <button className="text-[#12066a] dark:text-[#997819] font-black uppercase tracking-widest text-[10px] flex items-center gap-2 mx-auto group">
-              See How We Build Brands{" "}
+              See More About Our Services
               <ArrowRight
                 size={14}
                 className="group-hover:translate-x-2 transition-transform"
               />
             </button>
+            </Link>
           </div>
         </div>
       </section>

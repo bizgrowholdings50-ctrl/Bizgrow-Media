@@ -12,7 +12,7 @@ export default async function sitemap() {
     if (response.ok) {
       const posts = await response.json();
       blogUrls = posts.map((post) => ({
-        url: `${baseUrl}/blogs/${post.slug}/`, // Aapka folder 'blogs' hai
+        url: `${baseUrl}/${post.slug}/`, // Aapka folder 'blogs' hai
         lastModified: new Date(post.modified),
         changeFrequency: 'weekly',
         priority: 0.7,
