@@ -60,16 +60,17 @@ const HomePage = () => {
 
                 <div className="relative mb-10">
                   <p className="text-slate-600 dark:text-white/80 text-md md:text-md font-medium leading-relaxed pl-8 border-l-4 border-[#997819]">
-                    BizGrow Media is not a conventional marketing platform. It
-                    is a structured network of interconnected media platforms
-                    that positions your brand with a clear and purposeful
-                    message within the industry.
+                    BizGrow Media is a collection of organised platforms that
+                    promote your company with a message to the industry. As a
+                    business media connection, we convey the word and advertise
+                    your brand with value so that your audience recognizes the
+                    value that you may bring to the customer you serve.
                     <br />
                     <br />
-                    Acting as a business media connector, we shape and
-                    communicate your brand through value-led presence, ensuring
-                    your audience clearly recognises the impact and value you
-                    deliver to the people you serve.
+                    At Bizgrow, we believe every business has valuable knowledge
+                    worth sharing. Through the CEO’s diaries podcast, video
+                    content, and strategic digital campaigns, we transform that
+                    knowledge into a powerful business asset.
                   </p>
                 </div>
 
@@ -156,22 +157,70 @@ const HomePage = () => {
               {
                 name: "Studio & Production",
                 icon: <Video />,
-                desc: <>A professionally curated <Link href="/studio-production/" className="text-[#997819] font-bold">production</Link> environment engineered for podcasts, executive interviews, visual storytelling, and premium media execution.</>,
+                desc: (
+                  <>
+                    A professionally curated{" "}
+                    <Link
+                      href="/studio-production/"
+                      className="text-[#997819] font-bold"
+                    >
+                      production
+                    </Link>{" "}
+                    environment engineered for podcasts, executive interviews,
+                    visual storytelling, and premium media execution.
+                  </>
+                ),
               },
               {
                 name: "Content Engine",
                 icon: <Zap />,
-                desc: <>High-quality, value-driven <Link href="/content-engine/" className="text-[#997819] font-bold">content</Link> crafted to strengthen audience engagement, elevate brand perception, and deliver meaningful communication.</>,
+                desc: (
+                  <>
+                    High-quality, value-driven{" "}
+                    <Link
+                      href="/content-engine/"
+                      className="text-[#997819] font-bold"
+                    >
+                      content
+                    </Link>{" "}
+                    crafted to strengthen audience engagement, elevate brand
+                    perception, and deliver meaningful communication.
+                  </>
+                ),
               },
               {
                 name: "Authority Builder",
                 icon: <ShieldCheck />,
-                desc: <>Strategic personal and company branding designed to <Link href="/authority-builder/" className="text-[#997819] font-bold">establish credibility</Link>, strengthen industry presence, and position brands as recognised voices.</>,
+                desc: (
+                  <>
+                    Strategic personal and company branding designed to{" "}
+                    <Link
+                      href="/authority-builder/"
+                      className="text-[#997819] font-bold"
+                    >
+                      establish credibility
+                    </Link>
+                    , strengthen industry presence, and position brands as
+                    recognised voices.
+                  </>
+                ),
               },
               {
                 name: "Growth Engine",
                 icon: <TrendingUp />,
-                desc: <>Growth-focused media execution built to generate qualified leads, <Link href="/growth-engine/" className="text-[#997819] font-bold">increase revenue potential</Link>, and create long-term business momentum.</>,
+                desc: (
+                  <>
+                    Growth-focused media execution built to generate qualified
+                    leads,{" "}
+                    <Link
+                      href="/growth-engine/"
+                      className="text-[#997819] font-bold"
+                    >
+                      increase revenue potential
+                    </Link>
+                    , and create long-term business momentum.
+                  </>
+                ),
               },
             ].map((item, idx) => (
               <FadeIn key={idx} direction="up" delay={idx * 0.1}>
@@ -192,13 +241,13 @@ const HomePage = () => {
 
           <div className="text-center mt-16">
             <Link href="/our-media-services">
-            <button className="text-[#12066a] dark:text-[#997819] font-black uppercase tracking-widest text-[10px] flex items-center gap-2 mx-auto group">
-              See More About Our Services
-              <ArrowRight
-                size={14}
-                className="group-hover:translate-x-2 transition-transform"
-              />
-            </button>
+              <button className="text-[#12066a] dark:text-[#997819] font-black uppercase tracking-widest text-[10px] flex items-center gap-2 mx-auto group">
+                See More About Our Services
+                <ArrowRight
+                  size={14}
+                  className="group-hover:translate-x-2 transition-transform"
+                />
+              </button>
             </Link>
           </div>
         </div>
@@ -304,7 +353,8 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <FadeIn direction="up">
             <h2 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white uppercase mb-20 tracking-tighter">
-              The BizGrow Media <span className="text-[#997819]">Ecosystem</span>
+              The BizGrow Media{" "}
+              <span className="text-[#997819]">Ecosystem</span>
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
               {[
