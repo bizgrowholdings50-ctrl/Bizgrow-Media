@@ -95,7 +95,7 @@ const ContactPage = () => {
   };
 
   return (
-    <section className="w-full bg-[#fcfcfc] dark:bg-[#02040a] antialiased">
+    <section className="w-full bg-[#fcfcfc] dark:bg-gray-900 antialiased">
       {/* --- 1. HERO SECTION --- */}
       <div className="relative h-[85vh] md:h-screen w-full flex items-center justify-center overflow-hidden bg-[#12066a]">
         <div className="absolute inset-0 z-0">
@@ -151,7 +151,7 @@ const ContactPage = () => {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-6 p-6 rounded-[2rem] bg-white dark:bg-[#12066a]/10 border border-gray-100 dark:border-white/5 shadow-sm"
+                  className="flex items-center gap-6 p-6 rounded-[2rem] bg-white dark:bg-gray-800 border border-gray-100 dark:border-white/5 shadow-sm"
                 >
                   <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#12066a] text-white">
                     {item.icon}
@@ -172,7 +172,7 @@ const ContactPage = () => {
           {/* RIGHT: The Interactive Form */}
           <div className="lg:col-span-7 relative">
             <FadeIn direction="up">
-              <div className="bg-white dark:bg-[#050814] rounded-[3.5rem] p-8 md:p-12 border border-gray-200 dark:border-white/10 shadow-2xl">
+              <div className="bg-white dark:bg-gray-800 rounded-[3.5rem] p-8 md:p-12 border border-gray-200 dark:border-white/10 shadow-2xl">
                 {status === "success" ? (
                   <motion.div
                     initial={{ scale: 0.9 }}

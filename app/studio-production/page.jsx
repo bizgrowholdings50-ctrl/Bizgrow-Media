@@ -59,7 +59,7 @@ const StudioProductionPage = () => {
       </div>
 
       {/* 🚀 2 INTRODUCTION: PREMIUM POSITIONING */}
-      <section className="py-32 bg-white dark:bg-black">
+      <section className="py-32 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2 relative">
@@ -121,7 +121,7 @@ const StudioProductionPage = () => {
       </section>
 
       {/* 🚀 3 MEDIA ASSETS: THE SERVICES GRID */}
-      <section className="py-24 bg-gray-50 dark:bg-[#080808]">
+      <section className="py-24 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <FadeIn direction="up">
@@ -129,7 +129,7 @@ const StudioProductionPage = () => {
                 Media <span className="text-[#997819] mr-1">Assets</span>
                 Designed to Capture Attention & Build Trust
               </h2>
-              <p className="text-gray-500 font-medium">
+              <p className="text-gray-500 dark:text-gray-300 font-medium">
                 Your brand needs visual content that feels intentional, refined,
                 and aligned with the way you want to be recognised. At BizGrow
                 Media, we produce high-quality media assets that help your
@@ -174,7 +174,7 @@ const StudioProductionPage = () => {
             ].map((item, i) => (
               <FadeIn key={i} direction="up" delay={i * 0.1}>
                 <div className="group p-10 bg-white dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-[2.5rem] hover:shadow-xl transition-all">
-                  <div className="w-14 h-14 bg-[#12066a] text-white rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#997819] transition-colors">
+                  <div className="w-14 h-14 bg-[#12066a] dark:bg-gray-800 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#997819] transition-colors">
                     {React.cloneElement(item.icon, { size: 28 })}
                   </div>
                   <h3 className="text-xl font-black text-[#12066a] dark:text-white uppercase mb-3">
@@ -191,7 +191,7 @@ const StudioProductionPage = () => {
       </section>
 
       {/* 🏛️ 4 THE PROCESS */}
-      <section className="py-32 relative bg-white dark:bg-black overflow-hidden">
+      <section className="py-32 relative bg-white dark:bg-gray-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mb-24">
             <FadeIn direction="up">
@@ -206,7 +206,7 @@ const StudioProductionPage = () => {
                 <span className="text-[#997819] ml-1">Produced Media</span>
               </h2>
 
-              <p className="text-gray-500 pt-8 font-medium">
+              <p className="text-gray-500 dark:text-gray-300 pt-8 font-medium">
                 We turn your ideas into polished visual content through a
                 complete production experience built around clarity, creativity,
                 and brand impact. Every stage is handled with intention, so your
@@ -249,14 +249,14 @@ const StudioProductionPage = () => {
                     <span className="text-5xl font-black text-[#997819]/20 group-hover:text-[#997819] transition-colors">
                       {step.id}
                     </span>
-                    <div className="w-12 h-12 bg-[#12066a] rounded-2xl flex items-center justify-center text-white">
+                    <div className="w-12 h-12 bg-[#12066a] dark:bg-gray-900 rounded-2xl flex items-center justify-center text-white">
                       <CheckCircle2 size={20} />
                     </div>
                   </div>
                   <h3 className="text-3xl font-black text-[#12066a] dark:text-white uppercase mb-4">
                     {step.t}
                   </h3>
-                  <p className="text-gray-500 dark:text-gray-400 font-medium mb-8">
+                  <p className="text-gray-500 dark:text-gray-300 font-medium mb-8">
                     {step.d}
                   </p>
                   <div className="flex flex-wrap gap-3">
@@ -277,7 +277,7 @@ const StudioProductionPage = () => {
       </section>
 
       {/* 🚀 6 THE IMPACT OF PREMIUM PRODUCTION */}
-      <section className="py-32 bg-white dark:bg-black overflow-hidden">
+      <section className="py-32 bg-white dark:bg-gray-900 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-start gap-20">
             {/* Left Side: Strategic Text */}
@@ -293,14 +293,14 @@ const StudioProductionPage = () => {
                   The Impact of <br />
                   <span className="text-[#997819]">Premium Production</span>
                 </h2>
-                <p className="text-gray-600 dark:text-gray-400 text-xl font-medium leading-relaxed mb-6">
+                <p className="text-gray-600 dark:text-gray-300 text-xl font-medium leading-relaxed mb-6">
                   Professional production is more than creating content that
                   looks good; it shapes how your brand is experienced,
                   remembered, and trusted. The quality of your visuals, sound,
                   editing, and creative direction all influence the way your
                   audience perceives your business.
                 </p>
-                <p className="text-gray-500 dark:text-gray-500 text-lg leading-relaxed">
+                <p className="text-gray-500 dark:text-gray-300 text-lg leading-relaxed">
                   At{" "}
                   <span className="text-[#12066a] dark:text-white font-bold">
                     BizGrow Media
@@ -340,9 +340,9 @@ const StudioProductionPage = () => {
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className="group flex items-center gap-6 p-6 rounded-[2rem] border border-gray-100 dark:border-white/5 bg-gray-50 dark:bg-white/[0.02] hover:border-[#997819]/30 transition-all"
+                      className="group flex items-center gap-6 p-6 rounded-[2rem] border border-gray-100 dark:border-white/5 bg-gray-50 dark:bg-gray-800 hover:border-[#997819]/30 transition-all"
                     >
-                      <div className="w-12 h-12 rounded-2xl bg-[#12066a] group-hover:bg-[#997819] flex items-center justify-center text-white shrink-0 transition-colors">
+                      <div className="w-12 h-12 rounded-2xl bg-[#12066a] dark:bg-gray-900 group-hover:bg-[#997819] flex items-center justify-center text-white shrink-0 transition-colors">
                         <Check size={20} strokeWidth={3} />
                       </div>
                       <div>
@@ -361,7 +361,7 @@ const StudioProductionPage = () => {
       </section>
 
       {/* 🚀 5 PRODUCTION SUPPORT SECTION (The Missing Piece) */}
-      <section className="py-24 bg-[#12066a] dark:bg-[#0a0a0a] text-white">
+      <section className="py-24 bg-[#12066a] dark:bg-gray-800 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="right">
@@ -418,7 +418,7 @@ const StudioProductionPage = () => {
       </section>
 
       {/* 🎯 FINAL CTA - PARALLAX BOX EDITION */}
-      <section className="py-32 px-6 relative">
+      <section className="py-32 px-6 dark:bg-gray-900 relative">
         <div className="max-w-6xl mx-auto relative rounded-[4rem] overflow-hidden shadow-2xl border-2 border-[#997819]/30">
           <div
             className="absolute inset-0 w-full h-full bg-cover bg-center bg-fixed bg-no-repeat"

@@ -22,7 +22,7 @@ export const metadata = {
 
 const GrowthEnginePage = () => {
   return (
-    <main className="bg-white dark:bg-[#12066a] overflow-hidden">
+    <main className="bg-white overflow-hidden">
       {/* 1 --- HERO SECTION --- */}
       <div className="relative h-[85vh] md:h-screen w-full">
         <Image
@@ -45,9 +45,9 @@ const GrowthEnginePage = () => {
 
           <FadeIn direction="up" delay={0.4}>
             <div className="w-full flex flex-col items-center">
-              <span className="text-white text-4xl md:text-6xl text-center font-bold max-w-5xl leading-tight">
+              <span className="text-white text-4xl md:text-5xl text-center font-bold max-w-5xl leading-tight">
                 Business Growth Feels Different When
-                <span className="text-[#997819] mx-2 text-4xl md:text-6xl  ">
+                <span className="text-[#997819] mx-2 text-4xl md:text-5xl  ">
                   The Right System
                 </span>
                 Is Driving It
@@ -61,7 +61,7 @@ const GrowthEnginePage = () => {
         </div>
       </div>
       {/* 🚀\ PREMIUM SPLIT (Inspired by Content Engine) */}
-      <section className="relative py-24 lg:py-32 transition-colors duration-500 overflow-hidden">
+      <section className="relative dark:bg-gray-800 py-24 lg:py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
             {/* --- Left Column: Content --- */}
@@ -114,7 +114,7 @@ const GrowthEnginePage = () => {
                   {/* Premium CTA */}
                   <div className="pt-2">
                     <Link href="/contact-us">
-                      <button className="group relative flex items-center gap-8 bg-[#12066a] dark:bg-[#997819] px-10 py-5 rounded-full text-white dark:text-[#12066a] font-black uppercase tracking-[0.2em] text-[10px] transition-all shadow-xl">
+                      <button className="group relative flex items-center gap-8 bg-[#12066a] dark:bg-[#997819] dark:text-white px-10 py-5 rounded-full text-white dark:text-[#12066a] font-black uppercase tracking-[0.2em] text-[10px] transition-all shadow-xl">
                         Schedule Your Growth Call
                         <ArrowRight
                           size={18}
@@ -131,7 +131,7 @@ const GrowthEnginePage = () => {
             <div className="lg:col-span-5 relative mt-20 lg:mt-0">
               <FadeIn direction="left">
                 <div className="relative">
-                  <div className="relative z-10 aspect-[4/5] rounded-[4rem] overflow-hidden border-[12px] border-gray-100 dark:border-white/5 shadow-2xl bg-slate-200">
+                  <div className="relative z-10 aspect-[4/5] rounded-[4rem] overflow-hidden border-[12px] border-gray-100 dark:border-gray-800 shadow-2xl bg-slate-200">
                     {/* Placeholder for your Growth Image */}
                     <img
                       src="/growth-system-mockup.jpg"
@@ -150,7 +150,7 @@ const GrowthEnginePage = () => {
       </section>
 
       {/* 🏛️ 2. THE FOUNDATION: SMARTER GROWTH */}
-      <section className="bg-gray-50 dark:bg-[#020410] py-40 transition-colors duration-500 overflow-hidden">
+      <section className="bg-gray-50 dark:bg-gray-900 py-40 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row justify-between items-start mb-20 gap-10">
             <div className="lg:w-2/3">
@@ -199,13 +199,13 @@ const GrowthEnginePage = () => {
                 key={index}
                 className="group relative bg-white dark:bg-white/[0.02] p-10 rounded-[3.5rem] border border-transparent hover:border-[#997819]/30 transition-all duration-700 shadow-sm hover:shadow-2xl"
               >
-                <div className="w-16 h-16 bg-[#12066a] dark:bg-[#997819] rounded-2xl flex items-center justify-center text-white dark:text-[#12066a] mb-10 group-hover:rotate-6 transition-transform">
+                <div className="w-16 h-16 bg-[#12066a] dark:bg-[#997819] dark:text-white rounded-2xl flex items-center justify-center text-white dark:text-[#12066a] mb-10 group-hover:rotate-6 transition-transform">
                   {service.icon}
                 </div>
                 <h3 className="text-[#12066a] dark:text-white text-2xl font-black uppercase tracking-tight mb-6 leading-none">
                   {service.title}
                 </h3>
-                <p className="text-gray-500 dark:text-white/40 text-sm leading-relaxed italic">
+                <p className="text-gray-500 dark:text-white/60 text-sm leading-relaxed italic">
                   {service.desc}
                 </p>
                 <div className="mt-10 pt-6 border-t border-gray-100 dark:border-white/5 flex justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-700">
@@ -218,7 +218,7 @@ const GrowthEnginePage = () => {
       </section>
 
       {/* 🔄 THE STRATEGIC DIFFERENCE: COMPARISON SECTION */}
-      <section className="bg-white dark:bg-[#020410] py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-800 py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           {/* Section Header */}
           <div className="text-center mb-24">
@@ -245,7 +245,7 @@ const GrowthEnginePage = () => {
             <FadeIn direction="right">
               <div className="h-full p-12 md:p-16 rounded-[4rem] bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 relative overflow-hidden group">
                 <div className="relative z-10">
-                  <h3 className="text-[#12066a] dark:text-white/30 text-3xl font-black uppercase tracking-tighter mb-12 italic">
+                  <h3 className="text-[#12066a] dark:text-white/40 text-3xl font-black uppercase tracking-tighter mb-12 italic">
                     Temporary Growth
                   </h3>
                   <ul className="space-y-6">
@@ -259,9 +259,9 @@ const GrowthEnginePage = () => {
                     ].map((item, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-4 text-gray-600 dark:text-white/20 font-medium text-lg leading-tight"
+                        className="flex items-start gap-4 text-gray-600 dark:text-white/30 font-medium text-lg leading-tight"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#997819] dark:bg-white/10 mt-2.5 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#997819] dark:bg-white/30 mt-2.5 flex-shrink-0" />
                         {item}
                       </li>
                     ))}
@@ -274,7 +274,7 @@ const GrowthEnginePage = () => {
 
             {/* ✅ Right Column: Long-Term Stability (The Solution) */}
             <FadeIn direction="left">
-              <div className="h-full p-12 md:p-16 rounded-[4rem] bg-[#12066a] border border-[#997819]/30 relative overflow-hidden group shadow-2xl shadow-[#12066a]/40">
+              <div className="h-full p-12 md:p-16 rounded-[4rem] bg-[#12066a] dark:bg-gray-900 border border-[#997819]/30 relative overflow-hidden group shadow-2xl shadow-[#12066a]/40">
                 {/* Top Decorative Sparkle */}
                 <div className="absolute top-10 right-10">
                   <Sparkles
@@ -318,7 +318,7 @@ const GrowthEnginePage = () => {
         </div>
       </section>
       {/* 🎯 WHEN GROWTH STARTS MAKING SENSE: REFINED CENTERED LAYOUT */}
-      <section className="bg-[#f8f9fa] dark:bg-[#020410] py-24 lg:py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-[#f8f9fa] dark:bg-gray-900 py-24 lg:py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Top Section: Compact Heading & Lead Text --- */}
           <div className="text-center max-w-5xl mx-auto mb-20">
@@ -404,7 +404,7 @@ const GrowthEnginePage = () => {
       </section>
 
       {/* 🛣️ GROWTH ENGINE ROADMAP SECTION */}
-      <section className="bg-white dark:bg-[#020410] py-24 lg:py-32 transition-colors duration-500">
+      <section className="bg-white dark:bg-gray-800 py-24 lg:py-32 transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header Section --- */}
           <div className="text-center max-w-4xl mx-auto mb-20">
@@ -477,7 +477,7 @@ const GrowthEnginePage = () => {
                       </div>
 
                       {/* Central Connector Circle */}
-                      <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#f8f9fa] dark:bg-[#12066a] border-4 border-white dark:border-[#020410] flex items-center justify-center z-10 shadow-lg">
+                      <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#f8f9fa] dark:bg-gray-800 border-4 border-white dark:border-gray-700 flex items-center justify-center z-10 shadow-lg">
                         <div className="w-2 h-2 rounded-full bg-[#997819] group-hover:scale-150 transition-transform duration-500" />
                       </div>
                     </div>
@@ -489,7 +489,7 @@ const GrowthEnginePage = () => {
         </div>
       </section>
       {/* 🚀 CTA Section: Refined Spacing & Rounded Design */}
-      <section className="relative w-full py-20 bg-white dark:bg-[#000B25] overflow-hidden">
+      <section className="relative w-full py-20 bg-white dark:bg-gray-900 overflow-hidden">
         <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12">
           <div
             className="relative py-24 md:py-32 rounded-[4rem] overflow-hidden text-white text-center shadow-[0_40px_100px_-15px_rgba(0,0,0,0.3)] group"

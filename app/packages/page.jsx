@@ -134,7 +134,7 @@ const PremiumPackagesPage = () => {
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[1px] h-20 bg-gradient-to-b from-[#997819] to-transparent animate-bounce" />
       </section>
       {/* Section 2 */}
-      <section className="bg-white dark:bg-[#020410] py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-800 py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
             {/* --- Left Side: Content --- */}
@@ -209,7 +209,7 @@ const PremiumPackagesPage = () => {
                   <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-[#12066a]/5 rounded-full blur-3xl" />
 
                   {/* Floating Badge */}
-                  <div className="absolute bottom-12 left-5 bg-white dark:bg-[#080808] p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-white/5 z-20 hidden md:block">
+                  <div className="absolute bottom-12 left-5 bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-white/5 z-20 hidden md:block">
                     <p className="text-[#997819] font-black text-xs uppercase tracking-widest mb-1">
                       Status
                     </p>
@@ -224,7 +224,7 @@ const PremiumPackagesPage = () => {
         </div>
       </section>
       {/* Section 3 */}
-      <section className="bg-white dark:bg-[#020410] py-32 transition-colors duration-500 overflow-hidden font-sans">
+      <section className="bg-white dark:bg-gray-900 py-32 transition-colors duration-500 overflow-hidden font-sans">
         <div className="max-w-5xl mx-auto px-6">
           {/* --- Header Section --- */}
           <div className="mb-24 text-center">
@@ -278,7 +278,7 @@ const PremiumPackagesPage = () => {
                   </div>
 
                   {/* Central Icon / Anchor */}
-                  <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-2xl bg-[#12066a] dark:bg-[#997819] flex items-center justify-center text-white dark:text-[#12066a] shadow-xl shadow-[#12066a]/20 dark:shadow-[#997819]/20 transform transition-transform group-hover:rotate-12 group-hover:scale-110">
+                  <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-2xl bg-[#12066a] dark:bg-[#997819] flex items-center justify-center text-white dark:text-white shadow-xl shadow-[#12066a]/20 dark:shadow-[#997819]/20 transform transition-transform group-hover:rotate-12 group-hover:scale-110">
                     {step.icon}
                   </div>
 
@@ -301,7 +301,7 @@ const PremiumPackagesPage = () => {
         </div>
       </section>
       {/* Section 4 */}
-      <section className="bg-white dark:bg-[#030303] py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-800 py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header Section --- */}
           <div className="mb-24 text-center">
@@ -365,7 +365,7 @@ const PremiumPackagesPage = () => {
 
                   {/* Icon Box */}
                   <div
-                    className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-12 shadow-lg transition-transform duration-500 group-hover:rotate-[10deg] ${index === 2 ? "bg-[#997819] text-white" : "bg-white dark:bg-[#080808] text-[#997819]"}`}
+                    className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-12 shadow-lg transition-transform duration-500 group-hover:rotate-[10deg] ${index === 2 ? "bg-[#997819] text-white" : "bg-white dark:bg-gray-900 text-white"}`}
                   >
                     {step.icon}
                   </div>
@@ -390,7 +390,7 @@ const PremiumPackagesPage = () => {
         </div>
       </section>
       {/* Section 5 */}
-      <section className="bg-white dark:bg-[#030303] py-32 transition-colors duration-500">
+      <section className="bg-white dark:bg-gray-900 py-32 transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header Section (Centered) --- */}
           <div className="mb-24 text-center">
@@ -469,7 +469,7 @@ const PremiumPackagesPage = () => {
           {/* --- Bottom Trust Line --- */}
           <div className="mt-20 flex justify-center">
             <FadeIn direction="up">
-              <p className="text-[10px] text-center font-black uppercase tracking-[0.5em] text-[#997819]/80">
+              <p className="text-[10px] text-center font-black uppercase tracking-[0.5em] text-[#997819]/80 dark:text-white">
                 Built for growth • Built for authority
               </p>
             </FadeIn>
@@ -477,7 +477,7 @@ const PremiumPackagesPage = () => {
         </div>
       </section>
       {/* CTA */}
-      <section className="bg-white dark:bg-[#030303] py-24 px-6 md:px-20 lg:px-40 transition-colors duration-500">
+      <section className="bg-white dark:bg-gray-900 py-24 px-6 md:px-20 lg:px-40 transition-colors duration-500">
         {/* --- The Floating Card Container --- */}
         <div className="relative w-full rounded-[3rem] md:rounded-[4rem] overflow-hidden min-h-[650px] flex items-center justify-center shadow-2xl group">
           {/* --- Parallax Background --- */}

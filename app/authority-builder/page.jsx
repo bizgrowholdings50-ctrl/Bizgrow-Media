@@ -146,7 +146,7 @@ const CreativeContentPage = () => {
       </div>
 
       {/* 🚀 2 NEW SECTION:  PROFESSIONAL CONTENT CREATION (Business Growth Focus) */}
-      <section className="py-24 bg-white dark:bg-black overflow-hidden">
+      <section className="py-24 bg-white dark:bg-gray-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             {/* Left Column: Image/Visual with Floating Elements */}
@@ -231,11 +231,11 @@ const CreativeContentPage = () => {
       </section>
 
       {/* 🚀 3 THE SHIFT: How Authority Changes Brand Perception */}
-      <section className="dark:bg-black py-24 relative overflow-hidden dark:border-t-2 dark:border-[#997819]">
+      <section className="dark:bg-gray-900 py-24 relative overflow-hidden">
         {/* Background Glow Effect - Golden Hue */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#997819]/5 blur-[120px] rounded-full -z-10" />
 
-        <div className="relative py-20 bg-[#12066a] dark:bg-[#12066a]/10 backdrop-blur-xl border-2 border-white/5 dark:border-white/10 text-white rounded-[3.5rem] mx-4 md:mx-10 shadow-2xl overflow-hidden">
+        <div className="relative py-20 bg-[#12066a] dark:bg-gray-800 backdrop-blur-xl border-2 border-white/5 dark:border-white/10 text-white rounded-[3.5rem] mx-4 md:mx-10 shadow-2xl overflow-hidden">
           <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
             <FadeIn direction="up">
               <h2 className="text-4xl md:text-7xl font-black mb-6 tracking-tighter uppercase leading-none">
@@ -321,7 +321,7 @@ const CreativeContentPage = () => {
         </div>
       </section>
       {/* 🏛️ 4 PILLAR ONE: ELITE CORPORATE EDITION */}
-      <section className="bg-white dark:bg-[#050505] py-32 relative overflow-hidden">
+      <section className="bg-white dark:bg-gray-800 py-32 relative overflow-hidden">
         {/* Minimalist Watermark */}
         <div className="absolute top-10 left-10 text-[20rem] font-black text-black/[0.02] dark:text-white/[0.01] select-none leading-none -z-10">
           01
@@ -339,7 +339,7 @@ const CreativeContentPage = () => {
               </div>
               <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85]">
                 Four Pillars. <br />
-                <span className="text-[#997819] dark:text-[#997819]/20">
+                <span className="text-[#997819] dark:text-[#997819]/60">
                   One Authority System.
                 </span>
               </h2>
@@ -428,7 +428,7 @@ const CreativeContentPage = () => {
       </section>
 
       {/* 🏛️ 5 PILLAR TWO: MINIMALIST CORPORATE EDITION */}
-      <section className="bg-white dark:bg-[#050505] py-32 relative">
+      <section className="bg-white dark:bg-gray-900 py-32 relative">
         <div className="max-w-7xl mx-auto px-6">
           {/* Upper Label */}
           <div className="flex items-center gap-4 mb-16 overflow-hidden">
@@ -447,7 +447,7 @@ const CreativeContentPage = () => {
               <FadeIn direction="up">
                 <h2 className="text-[#12066a] dark:text-white text-6xl md:text-8xl font-black leading-[0.85] uppercase tracking-tighter mb-12">
                   Content <br />
-                  <span className="text-gray-300 dark:text-[#997819]/20">
+                  <span className="text-gray-300 dark:text-[#997819]/60">
                     Engine
                   </span>
                 </h2>
@@ -509,7 +509,7 @@ const CreativeContentPage = () => {
       </section>
 
       {/* 🏛️ 6 PILLAR THREE: ELITE CORPORATE EDITION (CONSISTENT LAYOUT) */}
-      <section className="bg-white dark:bg-[#050505] py-32 relative overflow-hidden">
+      <section className="bg-white dark:bg-gray-800 py-32 relative overflow-hidden">
         {/* Minimalist Watermark */}
         <div className="absolute top-10 left-10 text-[20rem] font-black text-black/[0.02] dark:text-white/[0.01] select-none leading-none -z-10">
           03
@@ -599,7 +599,7 @@ const CreativeContentPage = () => {
       </section>
 
       {/* 🏛️ 7 PILLAR FOUR: ELITE CORPORATE EDITION (CONSISTENT LAYOUT) */}
-      <section className="bg-white dark:bg-[#050505] py-32 relative overflow-hidden">
+      <section className="bg-white dark:bg-gray-900 py-32 relative overflow-hidden">
         {/* Minimalist Watermark */}
         <div className="absolute top-10 left-10 text-[20rem] font-black text-black/[0.02] dark:text-white/[0.01] select-none leading-none -z-10">
           04
@@ -691,7 +691,7 @@ const CreativeContentPage = () => {
       </section>
 
       {/* 🎯 8 WHO THIS IS FOR: AUTHORITY TARGET SECTION */}
-      <section className="bg-white dark:bg-[#050505] py-32 relative">
+      <section className="bg-white dark:bg-gray-800 py-32 relative">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header: Different from Pillars --- */}
           <div className="text-center max-w-4xl mx-auto mb-20">
@@ -720,7 +720,7 @@ const CreativeContentPage = () => {
             <FadeIn direction="up" delay={0.1}>
               <div className="group h-full p-10 bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 rounded-[2.5rem] hover:border-[#997819] transition-all duration-500">
                 <div className="flex items-center gap-5 mb-8">
-                  <div className="w-14 h-14 bg-white dark:bg-[#12066a] rounded-2xl flex items-center justify-center shadow-lg text-[#997819]">
+                  <div className="w-14 h-14 bg-white dark:bg-[#12066a] rounded-2xl flex items-center justify-center shadow-lg text-[#997819] dark:text-white">
                     <Users size={28} />
                   </div>
                   <h3 className="text-2xl font-black uppercase text-[#12066a] dark:text-white">
@@ -738,7 +738,7 @@ const CreativeContentPage = () => {
             <FadeIn direction="up" delay={0.2}>
               <div className="group h-full p-10 bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 rounded-[2.5rem] hover:border-[#997819] transition-all duration-500">
                 <div className="flex items-center gap-5 mb-8">
-                  <div className="w-14 h-14 bg-white dark:bg-[#12066a] rounded-2xl flex items-center justify-center shadow-lg text-[#997819]">
+                  <div className="w-14 h-14 bg-white dark:bg-[#12066a] rounded-2xl flex items-center justify-center shadow-lg text-[#997819] dark:text-white">
                     <Briefcase size={28} />
                   </div>
                   <h3 className="text-2xl font-black uppercase text-[#12066a] dark:text-white">
@@ -756,7 +756,7 @@ const CreativeContentPage = () => {
             <FadeIn direction="up" delay={0.3}>
               <div className="group h-full p-10 bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 rounded-[2.5rem] hover:border-[#997819] transition-all duration-500">
                 <div className="flex items-center gap-5 mb-8">
-                  <div className="w-14 h-14 bg-white dark:bg-[#12066a] rounded-2xl flex items-center justify-center shadow-lg text-[#997819]">
+                  <div className="w-14 h-14 bg-white dark:bg-[#12066a] rounded-2xl flex items-center justify-center shadow-lg text-[#997819] dark:text-white">
                     <UserCheck size={28} />
                   </div>
                   <h3 className="text-2xl font-black uppercase text-[#12066a] dark:text-white">
@@ -775,7 +775,7 @@ const CreativeContentPage = () => {
             <FadeIn direction="up" delay={0.4}>
               <div className="group h-full p-10 bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 rounded-[2.5rem] hover:border-[#997819] transition-all duration-500">
                 <div className="flex items-center gap-5 mb-8">
-                  <div className="w-14 h-14 bg-white dark:bg-[#12066a] rounded-2xl flex items-center justify-center shadow-lg text-[#997819]">
+                  <div className="w-14 h-14 bg-white dark:bg-[#12066a] rounded-2xl flex items-center justify-center shadow-lg text-[#997819] dark:text-white">
                     <ShieldCheck size={28} />
                   </div>
                   <h3 className="text-2xl font-black uppercase text-[#12066a] dark:text-white">
@@ -793,7 +793,7 @@ const CreativeContentPage = () => {
         </div>
       </section>
       {/* 🏛️ 9 THE BIZGROW ECOSYSTEM: ULTRA-STAGGERED EDITION */}
-      <section className="bg-white dark:bg-[#020410] py-40 relative transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-900 py-40 relative transition-colors duration-500 overflow-hidden">
         {/* Decorative Branding Background Element */}
         <div className="absolute top-20 right-[-5%] text-[20rem] font-black text-[#12066a]/[0.02] dark:text-white/[0.02] select-none pointer-events-none tracking-tighter">
           GROW
@@ -818,7 +818,7 @@ const CreativeContentPage = () => {
             </div>
             <div className="lg:w-1/3 lg:pt-24">
               <FadeIn direction="left" delay={0.2}>
-                <p className="text-[#12066a]/60 dark:text-white/40 text-lg font-medium leading-relaxed italic border-l-4 border-[#997819] pl-8">
+                <p className="text-[#12066a]/60 dark:text-white/60 text-lg font-medium leading-relaxed italic border-l-4 border-[#997819] pl-8">
                   "Where Authority Fits Into Your Growth Journey"
                 </p>
               </FadeIn>
@@ -882,7 +882,7 @@ const CreativeContentPage = () => {
       </section>
 
       {/* 🚀 CTA Section: Refined Spacing & Rounded Design */}
-      <section className="relative w-full py-20 bg-white dark:bg-[#000B25] overflow-hidden">
+      <section className="relative w-full py-20 bg-white dark:bg-gray-900 overflow-hidden">
         <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12">
           <div
             className="relative py-24 md:py-32 rounded-[4rem] overflow-hidden text-white text-center shadow-[0_40px_100px_-15px_rgba(0,0,0,0.3)] group"

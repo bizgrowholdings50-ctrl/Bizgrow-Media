@@ -26,7 +26,7 @@ export default function BizGrowWhySection() {
   ];
 
   return (
-    <div ref={containerRef} className="h-[150vh] md:h-[250vh] bg-white dark:bg-black relative">
+    <div ref={containerRef} className="h-[150vh] md:h-[250vh] bg-white dark:bg-gray-900 relative">
       {/* Sticky Container */}
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
         <motion.div

@@ -19,9 +19,10 @@ const HorizontalProcess = () => {
   const progress = useMotionValue(0);
 
   useEffect(() => {
-    if (!containerRef.current) return;
-
     const update = () => {
+      // ✅ SAFE CHECK: Component mount hone se pehle error nahi aayega
+      if (!containerRef.current) return;
+
       const rect = containerRef.current.getBoundingClientRect();
       const sectionHeight = containerRef.current.offsetHeight;
       const pinnedDistance = sectionHeight - window.innerHeight;
@@ -31,19 +32,23 @@ const HorizontalProcess = () => {
     };
 
     update();
-    window.addEventListener("resize", update);
-    window.addEventListener("scroll", update);
-    window.addEventListener("lenisScroll", update);
+    
+    // Performance optimization: Using requestAnimationFrame
+    const handleEvent = () => requestAnimationFrame(update);
+
+    window.addEventListener("resize", handleEvent);
+    window.addEventListener("scroll", handleEvent);
+    window.addEventListener("lenisScroll", handleEvent);
 
     return () => {
-      window.removeEventListener("resize", update);
-      window.removeEventListener("scroll", update);
-      window.removeEventListener("lenisScroll", update);
+      window.removeEventListener("resize", handleEvent);
+      window.removeEventListener("scroll", handleEvent);
+      window.removeEventListener("lenisScroll", handleEvent);
     };
   }, [progress]);
 
   const smooth = useSpring(progress, {
-    stiffness: 80, // Thoda slow stiffness taake transitions premium lagein
+    stiffness: 80,
     damping: 25,
   });
 
@@ -91,36 +96,22 @@ const HorizontalProcess = () => {
   ];
 
   const totalSlides = sections.length;
-  const sectionHeightVh = isVertical ? "auto" : totalSlides * 120; // Thodi extra height scroll smooth karne ke liye
+  const sectionHeightVh = isVertical ? "auto" : totalSlides * 120;
   const trackWidth = totalSlides * 100 + "vw";
 
-  // 🔥 PAUSE & SLIDE LOGIC: Har section 0.2 gap mein se aadha rukega aur aadha slide karega
-const x = useTransform(
+  const x = useTransform(
     smooth,
-    // Humne numbers ko thoda piche shift kiya hai taake 1 (end) tak pahunchne se pehle 5th slide settle ho jaye
     [0, 0.12, 0.22, 0.34, 0.44, 0.56, 0.66, 0.78, 0.88, 1],
-    [
-      "0vw",    // Step 1 Start
-      "0vw",    // Step 1 Stay
-      "-100vw", // Move to 2
-      "-100vw", // Step 2 Stay
-      "-200vw", // Move to 3
-      "-200vw", // Step 3 Stay
-      "-300vw", // Move to 4
-      "-300vw", // Step 4 Stay
-      "-400vw", // Step 5 Stay (Ab yahan rukega)
-      "-400vw"  // End
-    ]
+    ["0vw", "0vw", "-100vw", "-100vw", "-200vw", "-200vw", "-300vw", "-300vw", "-400vw", "-400vw"]
   );
+
   return (
     <section
       ref={containerRef}
       style={{ height: isVertical ? "auto" : sectionHeightVh + "vh" }}
-      className="relative bg-white dark:bg-black overflow-visible py-16 lg:py-0"
+      className="relative bg-white dark:bg-gray-800 overflow-visible py-16 lg:py-0"
     >
       <div className={`${isVertical ? "relative" : "sticky top-0 h-screen w-full flex items-center overflow-hidden"}`}>
-        
-        {/* Main Heading */}
         <div className={`${isVertical ? "relative mb-16" : "absolute top-20 left-0 w-full z-20 pointer-events-none"}`}>
           <div className="text-center px-4">
             <FadeIn direction="up">
@@ -135,7 +126,6 @@ const x = useTransform(
           </div>
         </div>
 
-        {/* Content Wrapper */}
         <div className="relative h-full w-full overflow-hidden">
           <motion.div
             style={{ x: isVertical ? 0 : x, width: isVertical ? "auto" : trackWidth }}
@@ -147,7 +137,6 @@ const x = useTransform(
                 className={`relative flex-shrink-0 flex flex-col lg:flex-row items-center justify-between 
                 ${isVertical ? "w-full max-w-4xl mx-auto" : "h-screen w-screen p-10 lg:pt-40"}`}
               >
-                {/* Text Side */}
                 <div className="z-10 w-full lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
                   <FadeIn direction={isVertical ? "up" : "right"}>
                     <span className="text-[#997819] font-bold tracking-[0.3em] uppercase text-sm md:text-base">
@@ -166,7 +155,6 @@ const x = useTransform(
                   </FadeIn>
                 </div>
 
-                {/* Image Side */}
                 <div className="w-full lg:w-1/2 h-[35vh] sm:h-[45vh] lg:h-[60vh] relative group">
                   <img
                     src={item.img}

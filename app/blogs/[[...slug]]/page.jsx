@@ -69,7 +69,7 @@ export default async function BlogPage({ params }) {
   const getPageLink = (p) => `/blogs/${activeCat ? `category/${activeCat}/` : ""}${p === 1 ? "" : `page/${p}/`}`;
 
   return (
-    <section className="w-full bg-white dark:bg-black py-8 md:py-20 overflow-x-hidden transition-colors">
+    <section className="w-full bg-white dark:bg-gray-900 py-8 md:py-20 overflow-x-hidden transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 mt-20 md:mt-10">
         
         {/* Header Section */}
@@ -89,7 +89,7 @@ export default async function BlogPage({ params }) {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {Array.isArray(posts) && posts.map((post) => (
-            <article key={post.id} className="group bg-white dark:bg-[#000B25] rounded-2xl shadow-sm border border-gray-100 dark:border-white/5 flex flex-col overflow-hidden hover:shadow-2xl hover:shadow-[#997819]/10 transition-all duration-500">
+            <article key={post.id} className="group bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-white/5 flex flex-col overflow-hidden hover:shadow-2xl hover:shadow-[#997819]/10 transition-all duration-500">
               <div className="relative h-60 w-full overflow-hidden">
                 <Image 
                   src={post.yoast_head_json?.og_image?.[0]?.url || "/placeholder.jpg"} 

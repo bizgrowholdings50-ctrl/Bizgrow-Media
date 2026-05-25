@@ -141,7 +141,7 @@ const DigitalMarketingPage = () => {
       </div>
 
       {/* 🚀 CONTENT ENGINE: PREMIUM SPLIT SECTION */}
-      <section className="bg-white dark:bg-[#12066a] py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-800 py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
             {/* --- Left Column: High-Impact Content --- */}
@@ -189,7 +189,7 @@ const DigitalMarketingPage = () => {
                   {/* Premium CTA */}
                   <div className="pt-8">
                     <Link href="/contact-us/" >
-                    <button className="group relative flex items-center gap-8 bg-[#12066a] dark:bg-[#997819] px-10 py-5 rounded-full text-white dark:text-[#12066a] font-black uppercase tracking-[0.2em] text-[10px]  transition-all shadow-xl">
+                    <button className="group relative flex items-center gap-8 bg-[#12066a] dark:bg-[#997819] px-10 py-5 rounded-full text-white dark:text-white font-black uppercase tracking-[0.2em] text-[10px]  transition-all shadow-xl">
                       Book Your Strategy Call
                       <ArrowRight
                         size={18}
@@ -227,7 +227,7 @@ const DigitalMarketingPage = () => {
         </div>
       </section>
       {/* 🏛️ PURPOSE-LED CONTENT: THE CONTENT MATRIX */}
-      <section className="bg-white dark:bg-[#020410] py-40 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-900 py-40 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header Section (Exact Wording) --- */}
           <div className="flex flex-col  justify-between items-start mb-20">
@@ -244,7 +244,7 @@ const DigitalMarketingPage = () => {
               </h2>
             </div>
             <div className="lg:w-1/2 pt-10">
-              <p className="text-gray-500 dark:text-white/40 text-lg font-medium leading-relaxed italic border-l-4 border-[#997819] pl-8">
+              <p className="text-gray-500 dark:text-white/60 text-lg font-medium leading-relaxed italic border-l-4 border-[#997819] pl-8">
                 Your brand deserves more than content created simply to fill a
                 feed. It needs a clear, strategic content system that expresses
                 your value, reflects your identity, and keeps your audience
@@ -293,7 +293,7 @@ const DigitalMarketingPage = () => {
                 <div className="flex justify-between items-start mb-12">
                   <div className="w-12 h-12 bg-[#12066a] dark:bg-[#997819] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-xl">
                     <Check
-                      className="text-white dark:text-[#12066a]"
+                      className="text-white dark:text-white"
                       size={20}
                       strokeWidth={4}
                     />
@@ -308,7 +308,7 @@ const DigitalMarketingPage = () => {
                   <h3 className="text-[#12066a] dark:text-white text-2xl font-black uppercase tracking-tight mb-6 leading-none">
                     {service.title}
                   </h3>
-                  <p className="text-gray-500 dark:text-white/40 text-sm leading-relaxed group-hover:text-gray-700 dark:group-hover:text-white/70 transition-colors">
+                  <p className="text-gray-500 dark:text-white/60 text-sm leading-relaxed group-hover:text-gray-700 dark:group-hover:text-white/70 transition-colors">
                     {service.desc}
                   </p>
                 </div>
@@ -322,17 +322,17 @@ const DigitalMarketingPage = () => {
 
             {/* --- CTA Box (To balance the grid) --- */}
             <div className="bg-[#12066a] dark:bg-[#997819] p-10 rounded-[3rem] flex flex-col justify-between group cursor-pointer hover:shadow-2xl transition-all shadow-[#12066a]/20">
-              <h3 className="text-white dark:text-[#12066a] text-4xl font-black uppercase leading-[0.9]">
+              <h3 className="text-white dark:text-white text-4xl font-black uppercase leading-[0.9]">
                 Scale <br /> Your <br /> Visibility
               </h3>
               <div className="flex items-center justify-between">
                 <Link href="/contact-us/">
-                  <span className="text-white dark:text-[#12066a] text-[10px] font-bold uppercase tracking-widest">
+                  <span className="text-white dark:text-white text-[10px] font-bold uppercase tracking-widest">
                     Book Strategy Call
                   </span>
                 </Link> 
                 <div className="w-12 h-12 rounded-full border border-white/20 dark:border-[#12066a]/20 flex items-center justify-center group-hover:bg-white dark:group-hover:bg-[#12066a] transition-all">
-                  <ArrowUpRight className="text-white dark:text-[#12066a] group-hover:text-[#12066a] dark:group-hover:text-[#997819] transition-all" />
+                  <ArrowUpRight className="text-white dark:group-hover:text-white group-hover:text-[#12066a] dark:group-hover:text-[#997819] transition-all" />
                 </div>
               </div>
             </div>
@@ -341,7 +341,7 @@ const DigitalMarketingPage = () => {
       </section>
 
       {/* 💎 THE VALUE OF CONSISTENCY: STACKING IMPACT SECTION */}
-      <section className="bg-white dark:bg-[#020410] py-20 transition-colors duration-500">
+      <section className="bg-white dark:bg-gray-800 py-20 transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header: Clean & Centered --- */}
           <div className="text-center mb-32">
@@ -420,7 +420,7 @@ const DigitalMarketingPage = () => {
           {/* --- Final Statement --- */}
           <div className="mt-32 text-center">
             <FadeIn direction="up">
-              <p className="text-[#12066a]/40 dark:text-white/20 font-bold uppercase tracking-[0.5em] text-[10px]">
+              <p className="text-[#12066a]/40 dark:text-white/60 font-bold uppercase tracking-[0.5em] text-[10px]">
                 Consistency is the new Currency
               </p>
             </FadeIn>
@@ -429,7 +429,7 @@ const DigitalMarketingPage = () => {
       </section>
 
       {/* 🔄 THE STRATEGIC SHIFT: COLUMN-WISE REFINED */}
-      <section className="bg-white dark:bg-[#020410] py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-900 py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-4xl mx-auto px-6">
           {/* --- Top Header (Exact Wording) --- */}
           <div className="mb-20">
@@ -494,7 +494,7 @@ const DigitalMarketingPage = () => {
           <FadeIn direction="up">
             <div className="mt-20 flex justify-center">
               <Link href="/packages/">
-                <button className="bg-[#12066a] dark:bg-[#997819] px-12 py-6 rounded-full text-white dark:text-[#12066a] font-black uppercase tracking-[0.3em] text-[10px] hover:scale-105 transition-all shadow-2xl">
+                <button className="bg-[#12066a] dark:text-white dark:bg-[#997819] px-12 py-6 rounded-full text-white dark:text-[#12066a] font-black uppercase tracking-[0.3em] text-[10px] hover:scale-105 transition-all shadow-2xl">
                   Transform Your Strategy
                 </button>
               </Link>
@@ -504,7 +504,7 @@ const DigitalMarketingPage = () => {
       </section>
 
       {/* 🔄 THE SEAMLESS CONTENT SYSTEM: ARCHITECTURAL FLOW */}
-      <section className="bg-white dark:bg-[#020410] py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-800 py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-5xl mx-auto px-6">
           {/* --- Header Section --- */}
           <div className="mb-24 text-center">
@@ -582,7 +582,7 @@ const DigitalMarketingPage = () => {
                   </div>
 
                   {/* Central Icon / Anchor */}
-                  <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-2xl bg-[#12066a] dark:bg-[#997819] flex items-center justify-center text-white dark:text-[#12066a] shadow-xl shadow-[#12066a]/20 dark:shadow-[#997819]/20 transform transition-transform group-hover:rotate-12">
+                  <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-2xl bg-[#12066a] dark:bg-[#997819] dark:text-white flex items-center justify-center text-white dark:text-[#12066a] shadow-xl shadow-[#12066a]/20 dark:shadow-[#997819]/20 transform transition-transform group-hover:rotate-12">
                     {step.icon}
                   </div>
 
@@ -606,7 +606,7 @@ const DigitalMarketingPage = () => {
       </section>
 
       {/* 🎯 TARGET AUDIENCE: THE REFINED PROFILE MATRIX */}
-      <section className="bg-white dark:bg-[#020410] py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-900 py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header Section (Exact Wording) --- */}
           <div className="mb-24">
@@ -623,7 +623,7 @@ const DigitalMarketingPage = () => {
                 Service Is <span className="text-[#997819]">Designed For</span>
               </h2>
 
-              <p className="text-gray-500 dark:text-white/40 text-lg md:text-xl font-medium leading-relaxed max-w-3xl border-l-4 border-[#997819] pl-10 italic">
+              <p className="text-gray-500 dark:text-white/60 text-lg md:text-xl font-medium leading-relaxed max-w-3xl border-l-4 border-[#997819] pl-10 italic">
                 Content Engine is created for businesses that understand the
                 value of showing up online, but need the right structure,
                 creativity, and consistency to turn their ideas into meaningful
@@ -665,7 +665,7 @@ const DigitalMarketingPage = () => {
                 <div className="group relative bg-gray-50/50 dark:bg-white/[0.02] p-10 md:p-12 rounded-[3.5rem] border border-gray-100 dark:border-white/5 hover:border-[#997819]/30 transition-all duration-700 h-full overflow-hidden">
                   <div className="flex flex-col lg:flex-row items-start gap-8 relative z-10">
                     {/* Icon Container - Matching your 'Gold Ring' style */}
-                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-white dark:bg-[#12066a] border border-gray-100 dark:border-white/10 flex items-center justify-center text-[#997819] shadow-sm group-hover:bg-[#997819] group-hover:text-white transition-all duration-500 group-hover:rotate-6">
+                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-white dark:bg-[#12066a] dark:text-white border border-gray-100 dark:border-white/10 flex items-center justify-center text-[#997819] shadow-sm group-hover:bg-[#997819] group-hover:text-white transition-all duration-500 group-hover:rotate-6">
                       {profile.icon}
                     </div>
 
@@ -695,7 +695,7 @@ const DigitalMarketingPage = () => {
           <div className="mt-24 text-center">
             <FadeIn direction="up">
               <div className="inline-block relative">
-                <button className="bg-[#12066a] dark:bg-[#997819] text-white dark:text-[#12066a] px-14 py-6 rounded-full font-black uppercase tracking-[0.3em] text-[10px] hover:scale-105 hover:shadow-2xl transition-all shadow-xl shadow-[#12066a]/20 dark:shadow-[#997819]/20">
+                <button className="bg-[#12066a] dark:text-white dark:bg-[#997819] text-white dark:text-[#12066a] px-14 py-6 rounded-full font-black uppercase tracking-[0.3em] text-[10px] hover:scale-105 hover:shadow-2xl transition-all shadow-xl shadow-[#12066a]/20 dark:shadow-[#997819]/20">
                   Book Your Strategy Call
                 </button>
                 <div className="absolute -z-10 inset-0 bg-[#997819] blur-2xl opacity-0 group-hover:opacity-20 transition-opacity" />
@@ -706,9 +706,9 @@ const DigitalMarketingPage = () => {
       </section>
 
       {/* 🚀 FINAL CTA: THE GROWTH ASSET SECTION */}
-      <section className="bg-white dark:bg-[#020410] py-40 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-900 py-40 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="relative bg-[#12066a] dark:bg-[#997819]/10 rounded-[4rem] p-12 md:p-24 overflow-hidden border border-[#997819]/20 shadow-2xl">
+          <div className="relative bg-[#12066a] dark:bg-gray-800 rounded-[4rem] p-12 md:p-24 overflow-hidden border border-[#997819]/20 shadow-2xl">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#997819]/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 blur-[80px] rounded-full translate-y-1/2 -translate-x-1/2" />
@@ -761,7 +761,7 @@ const DigitalMarketingPage = () => {
                 {/* Final Action Button */}
                 <FadeIn direction="up" delay={0.6}>
                   <Link href="/contact-us/" className="block">
-                    <button className="w-full group relative flex items-center justify-between bg-[#997819] dark:bg-white px-8 py-6 rounded-2xl text-[#12066a] font-black uppercase tracking-[0.2em] text-xs hover:scale-[1.02] transition-all shadow-xl">
+                    <button className="w-full group relative flex items-center justify-between bg-[#997819] dark:bg-white dark:text-[#997819] px-8 py-6 rounded-2xl text-[#12066a] font-black uppercase tracking-[0.2em] text-xs hover:scale-[1.02] transition-all shadow-xl">
                       <span>Build Your Content Engine Today</span>
                       <ArrowRight
                         className="group-hover:translate-x-2 transition-transform"
@@ -776,7 +776,7 @@ const DigitalMarketingPage = () => {
 
           {/* Subtle Trust Line */}
           <div className="mt-12 text-center">
-            <p className="text-[#12066a]/30 dark:text-white/10 text-[10px] font-black uppercase tracking-[0.6em]">
+            <p className="text-[#12066a]/30 dark:text-white/60 text-[10px] font-black uppercase tracking-[0.6em]">
               BizGrow Media • Strategic Excellence • 2026
             </p>
           </div>

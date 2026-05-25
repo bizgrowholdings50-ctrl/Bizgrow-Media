@@ -108,7 +108,7 @@ const page = () => {
       </div>
 
       {/* SERVICES GRID */}
-      <section className="py-24 bg-gray-50 dark:bg-black relative">
+      <section className="py-24 bg-gray-50 dark:bg-gray-800 relative">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#997819]/5 blur-[120px] rounded-full -z-10" />
 
         <div className="max-w-7xl mx-auto px-6">
@@ -144,13 +144,13 @@ const page = () => {
                 delay={0.1 * index}
                 className="h-full"
               >
-                <div className="group relative h-full p-10 bg-white dark:bg-[#001235]/40 backdrop-blur-md rounded-[2.5rem] border-2 border-slate-100 dark:border-white/5 shadow-xl hover:shadow-[#997819]/20 transition-all duration-500 flex flex-col items-start text-left overflow-hidden">
+                <div className="group relative h-full p-10 bg-white dark:bg-[#001235]/60 backdrop-blur-md rounded-[2.5rem] border-2 border-slate-100 dark:border-white/5 shadow-xl hover:shadow-[#997819]/20 transition-all duration-500 flex flex-col items-start text-left overflow-hidden">
                   <div className="absolute -inset-full bg-gradient-to-br from-[#997819]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
 
                   <div
                     className={`w-20 h-20 ${service.bgColor} ${service.hoverBg} ${service.hoverIcon} 
               rounded-2xl flex items-center justify-center mb-8 shadow-lg transition-all 
-              duration-500 group-hover:rotate-[15deg] group-hover:scale-110 shrink-0 text-3xl`}
+              duration-500 group-hover:rotate-[15deg] dark:text-white group-hover:scale-110 shrink-0 text-3xl`}
                   >
                     {service.icon}
                   </div>
@@ -178,7 +178,7 @@ const page = () => {
       </section>
 
       {/* OUR DISTINCTION */}
-      <section className="bg-white dark:bg-[#020410] py-40 transition-colors duration-500 relative">
+      <section className="bg-white dark:bg-gray-900 py-40 transition-colors duration-500 relative">
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20 dark:opacity-40">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-gray-200 dark:via-white/10 to-transparent hidden md:block" />
         </div>
@@ -256,7 +256,7 @@ const page = () => {
                   </div>
                 </div>
 
-                <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white dark:bg-[#020410] border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-xl group-hover:border-[#997819] transition-colors duration-500">
+                <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-xl group-hover:border-[#997819] transition-colors duration-500">
                   <div className="w-2 h-2 rounded-full bg-[#997819]" />
                 </div>
 
@@ -289,7 +289,7 @@ const page = () => {
       </div>
 
       {/* CTA */}
-      <section className="dark:bg-black py-24 dark:border-y-2 dark:border-orange-700">
+      <section className="dark:bg-gray-900 py-24 dark:border-y-2 ">
         <div className="max-w-7xl mx-auto px-4 md:px-10">
           <div
             className="relative py-20 md:py-22 rounded-[3.5rem] overflow-hidden text-white text-center shadow-[0_20px_60px_rgba(181,65,24,0.15)] group"

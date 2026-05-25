@@ -51,7 +51,7 @@ export default async function SingleBlogPost({ params }) {
   if (!post) return notFound();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#000B25] dark:border-b-2">
+    <div className="min-h-screen bg-white dark:bg-gray-900 dark:border-b-2">
       {/* Professional Header */}
       <header className="max-w-4xl mx-auto px-6 pt-16 pb-10">
         <Link

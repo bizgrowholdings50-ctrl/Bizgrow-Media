@@ -21,7 +21,7 @@ const TermsConditions = () => {
   ];
 
   return (
-    <main className="w-full bg-white dark:bg-black overflow-hidden">
+    <main className="w-full bg-white dark:bg-gray-900 overflow-hidden">
       {/* --- HERO SECTION --- */}
       <div className="relative h-[60vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
         <Image
@@ -50,7 +50,7 @@ const TermsConditions = () => {
       </div>
 
       {/* --- CONTENT SECTION --- */}
-      <section className="py-24 bg-white dark:bg-[#020817]">
+      <section className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-4xl mx-auto px-6">
           <FadeIn direction="up" delay={0.2}>
             {/* Intro text with Orange Border */}

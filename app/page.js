@@ -111,7 +111,7 @@ const HomePage = () => {
                     <span className="relative z-10 flex items-center gap-3">
                       Book Your Production Session <ArrowRight size={16} />
                     </span>
-                    <div className="absolute inset-0 bg-[#997819] dark:bg-[#12066a] translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-[#997819] dark:bg-gray-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                   </button>
                 </Link>
               </FadeIn>

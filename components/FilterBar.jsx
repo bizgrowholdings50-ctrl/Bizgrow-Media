@@ -55,7 +55,7 @@ export default function FilterBar({ categories }) {
           className={`flex-shrink-0 px-6 py-2.5 rounded-full text-[10px] md:text-[11px] font-black uppercase border-2 transition-all duration-300
             ${!activeCatSlug 
               ? `active-cat bg-[${BRAND_ORANGE}] text-white border-[${BRAND_ORANGE}] shadow-lg shadow-[#B54118]/20` 
-              : 'bg-white dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 text-black dark:text-white active:scale-95'}`}
+              : 'bg-white dark:bg-gray-900 border-gray-200 dark:border-[#997819] text-black dark:text-white active:scale-95'}`}
           style={!activeCatSlug ? { backgroundColor: BRAND_ORANGE, borderColor: BRAND_ORANGE } : {}}
         >
           All
@@ -74,7 +74,7 @@ export default function FilterBar({ categories }) {
               className={`flex-shrink-0 px-6 py-2.5 rounded-full text-[10px] md:text-[11px] font-black uppercase border-2 transition-all relative duration-300
                 ${isActive 
                   ? `active-cat bg-[${BRAND_ORANGE}] text-white border-[${BRAND_ORANGE}] shadow-lg shadow-[#B54118]/20` 
-                  : `bg-white dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 text-black dark:text-white hover:border-[${BRAND_ORANGE}]/40 active:scale-95`}`}
+                  : `bg-white dark:bg-gray-900 border-gray-200 dark:border-[#997819]/40 text-black dark:text-white hover:border-[${BRAND_ORANGE}]/40 active:scale-95`}`}
               style={isActive ? { backgroundColor: BRAND_ORANGE, borderColor: BRAND_ORANGE } : {}}
             >
               <span className={isThisLoading ? "opacity-0" : "opacity-100"}>
