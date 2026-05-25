@@ -63,7 +63,7 @@ const HomePage = () => {
                     BizGrow Media is a collection of organised platforms that
                     promote your company with a message to the industry. As a
                     business media connection, we convey the word and advertise
-                    your brand with value so that your audience recognizes the
+                    your brand with value so that your audience recognises the
                     value that you may bring to the customer you serve.
                     <br />
                     <br />
