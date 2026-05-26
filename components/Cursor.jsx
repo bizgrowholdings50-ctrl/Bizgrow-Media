@@ -8,8 +8,12 @@ export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
+    // 🔹 Mobile/Touch devices par animation ko bypass karein
+    if (window.matchMedia("(pointer: coarse)").matches) return;
+
     const dot = dotRef.current;
     const ring = ringRef.current;
+    if (!dot || !ring) return;
 
     const xDotSetter = gsap.quickSetter(dot, "x", "px");
     const yDotSetter = gsap.quickSetter(dot, "y", "px");
@@ -20,28 +24,24 @@ export default function CustomCursor() {
       const { clientX, clientY } = e;
       xDotSetter(clientX);
       yDotSetter(clientY);
-
+      
       gsap.to(ring, {
         x: clientX,
         y: clientY,
-        duration: 0.6,
+        duration: 0.5,
         ease: "power3.out",
-        overwrite: "auto",
       });
     };
 
     const onMouseEnter = () => {
       setIsHovering(true);
       gsap.to(ring, { 
-        scale: 2, // 🔹 Sirf halka sa expand hoga (Elegant)
-        backgroundColor: "rgba(181, 65, 24, 0.02)", 
-        borderColor: "#997819",
-        borderWidth: "1px",
-        duration: 0.4,
-        ease: "expo.out",
-        overwrite: true 
+        scale: 2.5, 
+        backgroundColor: "rgba(153, 120, 25, 0.1)",
+        borderColor: "transparent",
+        duration: 0.3 
       });
-      gsap.to(dot, { scale: 0, opacity: 0, duration: 0.2, overwrite: true });
+      gsap.to(dot, { scale: 0, duration: 0.2 });
     };
 
     const onMouseLeave = () => {
@@ -50,53 +50,50 @@ export default function CustomCursor() {
         scale: 1, 
         backgroundColor: "transparent", 
         borderColor: "#997819", 
-        borderWidth: "1.5px",
-        duration: 0.4,
-        ease: "power2.out",
-        overwrite: true 
+        duration: 0.3 
       });
-      gsap.to(dot, { scale: 1, opacity: 1, duration: 0.3, overwrite: true });
+      gsap.to(dot, { scale: 1, duration: 0.2 });
     };
 
     window.addEventListener("mousemove", moveCursor);
 
-    const refreshElements = () => {
-      const interactive = document.querySelectorAll('a, button, .cursor-pointer, input, select');
-      interactive.forEach((el) => {
-        el.addEventListener("mouseenter", onMouseEnter);
-        el.addEventListener("mouseleave", onMouseLeave);
-      });
-    };
-
-    refreshElements();
-    const observer = new MutationObserver(refreshElements);
-    observer.observe(document.body, { childList: true, subtree: true });
+    // Interactive Elements setup
+    const interactiveElements = document.querySelectorAll('a, button, .cursor-pointer, .project-card');
+    interactiveElements.forEach((el) => {
+      el.addEventListener("mouseenter", onMouseEnter);
+      el.addEventListener("mouseleave", onMouseLeave);
+    });
 
     return () => {
       window.removeEventListener("mousemove", moveCursor);
-      observer.disconnect();
+      interactiveElements.forEach((el) => {
+        el.removeEventListener("mouseenter", onMouseEnter);
+        el.removeEventListener("mouseleave", onMouseLeave);
+      });
     };
   }, []);
 
   return (
     <>
-      {/* 🔹 Precision Core */}
+      {/* 🔹 hidden lg:block se ye sirf desktop par dikhega */}
+      
+      {/* Small Core Dot */}
       <div
         ref={dotRef}
-        className="fixed top-0 left-0 w-1 h-1 bg-[#997819] rounded-full pointer-events-none z-[10001]"
+        className="hidden lg:block fixed top-0 left-0 w-2 h-2 bg-[#997819] rounded-full pointer-events-none z-[10000]"
         style={{ transform: "translate(-50%, -50%)" }}
       />
       
-      {/* 🔹 Floating Ring (Slightly smaller base size: w-6 h-6) */}
+      {/* Main Interactive Ring */}
       <div
         ref={ringRef}
-        className="fixed top-0 left-0 w-6 h-6 border-[1.5px] border-[#997819] bg-transparent rounded-full pointer-events-none z-[10000] flex items-center justify-center"
+        className="hidden lg:block fixed top-0 left-0 w-7 h-7 border-2 border-[#997819] rounded-full pointer-events-none z-[9999] flex items-center justify-center"
         style={{ transform: "translate(-50%, -50%)" }}
       >
         {isHovering && (
-          <span className="text-[4px] font-black text-white uppercase tracking-tighter leading-none mix-blend-difference">
-            View
-          </span>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-[4px] font-black text-white uppercase tracking-tighter leading-none text-center align-middle">View</span>
+          </div>
         )}
       </div>
     </>

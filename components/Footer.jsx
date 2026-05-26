@@ -41,7 +41,7 @@ const Footer = () => {
     },
     {
       Icon: FaInstagram,
-      href: "https://www.instagram.com/bizgrowdigital_uk/",
+      href: "https://www.instagram.com/bizgrowmedia_uk/",
       label: "Instagram",
     },
     {
