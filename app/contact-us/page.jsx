@@ -28,6 +28,7 @@ const ContactPage = () => {
   const [selTime, setSelTime] = useState("");
   const [timezone, setTimezone] = useState("Europe/London");
   const [status, setStatus] = useState("idle");
+  const [lastSubmittedData, setLastSubmittedData] = useState(null);
   const [captchaToken, setCaptchaToken] = useState(null);
 
   const slots = ["09:00", "10:30", "12:00", "14:00", "15:30", "17:00"];
@@ -47,12 +48,10 @@ const ContactPage = () => {
       toast.error("Please complete the security check.");
       return;
     }
-
     if (!validateUKPhone(formData.phone)) {
       toast.error("Please enter a valid phone number.");
       return;
     }
-
     if (apptOn && (!selDate || !selTime)) {
       toast.error("Please select a date and time for your discovery call.");
       return;
@@ -73,31 +72,22 @@ const ContactPage = () => {
         body: JSON.stringify(payload),
       });
 
-      if (res.ok) {
-        toast.success("Inquiry sent successfully!");
+      if (!res.ok) throw new Error("Failed to send");
 
-        const waMsg = `*New Lead from Website*%0A%0A*Name:* ${payload.name}%0A*Service:* ${payload.service}${
-          apptOn ? `%0A*Meeting:* ${selDate} @ ${selTime}` : ""
-        }%0A*Message:* ${payload.message}`;
+      toast.success("Inquiry sent successfully!");
 
-        window.open(`https://wa.me/447903332433?text=${waMsg}`, "_blank");
+      // Data save kar rahe hain taake WhatsApp button access kar sake
+      setLastSubmittedData({ ...formData, date: selDate, time: selTime });
+      setStatus("success");
 
-        setStatus("success");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          service: "",
-          message: "",
-        });
-        setSelDate("");
-        setSelTime("");
-        setApptOn(false);
-        setCaptchaToken(null);
-      } else {
-        throw new Error("Failed to send");
-      }
+      // Form reset - explicitly state clear kar rahe hain
+      setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+      setSelDate("");
+      setSelTime("");
+      setApptOn(false);
+      setCaptchaToken(null);
     } catch (err) {
+      console.error(err);
       toast.error("Something went wrong. Please try again.");
       setStatus("idle");
     }
@@ -195,11 +185,27 @@ const ContactPage = () => {
                     <p className="text-gray-500 mt-4">
                       Thank you! Our team will contact you shortly.
                     </p>
+
+                    {/* WhatsApp Button */}
+                    <button
+                      onClick={() => {
+                        // lastSubmittedData ka use yahan safe hai
+                        const waMsg = `*New Lead from Website*%0A%0A*Name:* ${lastSubmittedData?.name || "Customer"}%0A*Service:* ${lastSubmittedData?.service || "N/A"}`;
+                        window.open(
+                          `https://wa.me/447903332433?text=${waMsg}`,
+                          "_blank",
+                        );
+                      }}
+                      className="mt-8 flex items-center justify-center gap-2 w-full py-4 bg-[#25D366] text-white font-bold rounded-2xl hover:bg-[#128C7E] transition-all"
+                    >
+                      Send Inquiry on WhatsApp for Faster Response
+                    </button>
+
                     <button
                       onClick={() => setStatus("idle")}
-                      className="mt-8 text-[#997819] font-black text-xs uppercase border-b-2 border-[#997819]"
+                      className="mt-6 text-[#997819] font-black text-xs uppercase border-b-2 border-[#997819]"
                     >
-                      Send Another
+                      Send Another Inquiry
                     </button>
                   </motion.div>
                 ) : (
@@ -242,7 +248,7 @@ const ContactPage = () => {
                           value={formData.phone}
                           required
                           onChange={handleChange}
-                           className="w-full bg-gray-50 dark:bg-white/5 border-b-2 border-gray-200 dark:border-white/10 p-3 outline-none focus:border-[#997819] transition-all dark:text-white font-bold"
+                          className="w-full bg-gray-50 dark:bg-white/5 border-b-2 border-gray-200 dark:border-white/10 p-3 outline-none focus:border-[#997819] transition-all dark:text-white font-bold"
                         />
                       </div>
                       <div className="space-y-2">
@@ -256,17 +262,31 @@ const ContactPage = () => {
                           onChange={handleChange}
                           className="w-full bg-gray-50 dark:bg-white/5 border-b-2 border-gray-200 dark:border-white/10 p-3 outline-none focus:border-[#997819] transition-all dark:text-white font-bold appearance-none"
                         >
-                          <option value="" className="dark:bg-gray-800">Select Service...</option>
-                          <option value="Studio Production" className="dark:bg-gray-800">
+                          <option value="" className="dark:bg-gray-800">
+                            Select Service...
+                          </option>
+                          <option
+                            value="Studio Production"
+                            className="dark:bg-gray-800"
+                          >
                             Studio Production
                           </option>
-                          <option value="Authority Builder" className="dark:bg-gray-800">
+                          <option
+                            value="Authority Builder"
+                            className="dark:bg-gray-800"
+                          >
                             Authority Builder
                           </option>
-                          <option value="Content Engine" className="dark:bg-gray-800">
+                          <option
+                            value="Content Engine"
+                            className="dark:bg-gray-800"
+                          >
                             Content Engine
                           </option>
-                          <option value="Growth Engine" className="dark:bg-gray-800">
+                          <option
+                            value="Growth Engine"
+                            className="dark:bg-gray-800"
+                          >
                             Growth Engine
                           </option>
                         </select>
@@ -418,7 +438,7 @@ const ContactPage = () => {
         </div>
       </div>
 
-      {/* --- 3. MINIMAL MAP SECTION --- */}
+    {/* --- 3. MINIMAL MAP SECTION --- */}
       <section className="px-6 pb-24">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[3.5rem] overflow-hidden h-[500px] border border-gray-200 dark:border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000 group">
