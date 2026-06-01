@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@marsidev/react-turnstile": "^1.5.2",
     "@vercel/analytics": "^1.6.1",
     "ai": "^6.0.31",
     "framer-motion": "^12.26.1",

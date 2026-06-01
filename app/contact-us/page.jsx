@@ -12,7 +12,8 @@ import {
 } from "lucide-react";
 import FadeIn from "@components/MotionWrapper";
 import { motion, AnimatePresence } from "framer-motion";
-import { toast } from "sonner"; // Imported sonner toast
+import { toast } from "sonner";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -27,13 +28,13 @@ const ContactPage = () => {
   const [selTime, setSelTime] = useState("");
   const [timezone, setTimezone] = useState("Europe/London");
   const [status, setStatus] = useState("idle");
+  const [captchaToken, setCaptchaToken] = useState(null);
 
   const slots = ["09:00", "10:30", "12:00", "14:00", "15:30", "17:00"];
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  // UK Phone Validation Regex (Handles +44, 07, spaces, etc.)
   const validateUKPhone = (phone) => {
     const cleaned = phone.replace(/\s+/g, "");
     return /^(\+44|0)7\d{9}$/.test(cleaned) || /^\+?\d{10,13}$/.test(cleaned);
@@ -42,13 +43,16 @@ const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // 1. Phone Validation Check
+    if (!captchaToken) {
+      toast.error("Please complete the security check.");
+      return;
+    }
+
     if (!validateUKPhone(formData.phone)) {
       toast.error("Please enter a valid phone number.");
       return;
     }
 
-    // 2. Appointment Details Check
     if (apptOn && (!selDate || !selTime)) {
       toast.error("Please select a date and time for your discovery call.");
       return;
@@ -59,6 +63,7 @@ const ContactPage = () => {
     const payload = {
       ...formData,
       appointment: apptOn ? { date: selDate, time: selTime, timezone } : null,
+      token: captchaToken,
     };
 
     try {
@@ -75,16 +80,20 @@ const ContactPage = () => {
           apptOn ? `%0A*Meeting:* ${selDate} @ ${selTime}` : ""
         }%0A*Message:* ${payload.message}`;
 
-        window.open(
-          `https://wa.me/447903332433?text=${waMsg}`,
-          "_blank"
-        );
+        window.open(`https://wa.me/447903332433?text=${waMsg}`, "_blank");
 
         setStatus("success");
-        setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
         setSelDate("");
         setSelTime("");
         setApptOn(false);
+        setCaptchaToken(null);
       } else {
         throw new Error("Failed to send");
       }
@@ -233,7 +242,7 @@ const ContactPage = () => {
                           value={formData.phone}
                           required
                           onChange={handleChange}
-                          className="w-full bg-gray-50 dark:bg-white/5 border-b-2 border-gray-200 dark:border-white/10 p-3 outline-none focus:border-[#997819] transition-all dark:text-white font-bold"
+                           className="w-full bg-gray-50 dark:bg-white/5 border-b-2 border-gray-200 dark:border-white/10 p-3 outline-none focus:border-[#997819] transition-all dark:text-white font-bold"
                         />
                       </div>
                       <div className="space-y-2">
@@ -247,11 +256,19 @@ const ContactPage = () => {
                           onChange={handleChange}
                           className="w-full bg-gray-50 dark:bg-white/5 border-b-2 border-gray-200 dark:border-white/10 p-3 outline-none focus:border-[#997819] transition-all dark:text-white font-bold appearance-none"
                         >
-                          <option value="">Select Service...</option>
-                          <option value="Studio Production">Studio Production</option>
-                          <option value="Authority Builder">Authority Builder</option>
-                          <option value="Content Engine">Content Engine</option>
-                          <option value="Growth Engine">Growth Engine</option>
+                          <option value="" className="dark:bg-gray-800">Select Service...</option>
+                          <option value="Studio Production" className="dark:bg-gray-800">
+                            Studio Production
+                          </option>
+                          <option value="Authority Builder" className="dark:bg-gray-800">
+                            Authority Builder
+                          </option>
+                          <option value="Content Engine" className="dark:bg-gray-800">
+                            Content Engine
+                          </option>
+                          <option value="Growth Engine" className="dark:bg-gray-800">
+                            Growth Engine
+                          </option>
                         </select>
                       </div>
                     </div>
@@ -259,15 +276,21 @@ const ContactPage = () => {
                     <div
                       onClick={() => setApptOn(!apptOn)}
                       className={`flex items-center gap-4 p-5 rounded-2xl border-2 cursor-pointer transition-all ${
-                        apptOn ? "border-[#997819] bg-[#997819]/5" : "border-gray-100 dark:border-white/5"
+                        apptOn
+                          ? "border-[#997819] bg-[#997819]/5"
+                          : "border-gray-100 dark:border-white/5"
                       }`}
                     >
                       <div
                         className={`w-5 h-5 rounded border flex items-center justify-center ${
-                          apptOn ? "bg-[#997819] border-[#997819]" : "border-gray-400"
+                          apptOn
+                            ? "bg-[#997819] border-[#997819]"
+                            : "border-gray-400"
                         }`}
                       >
-                        {apptOn && <div className="w-2 h-2 bg-white rounded-full" />}
+                        {apptOn && (
+                          <div className="w-2 h-2 bg-white rounded-full" />
+                        )}
                       </div>
                       <div className="flex-1">
                         <p className="text-xs font-black text-[#12066a] dark:text-white uppercase tracking-tighter">
@@ -277,7 +300,10 @@ const ContactPage = () => {
                           Select a date & time for a meeting
                         </p>
                       </div>
-                      <Calendar className={apptOn ? "text-[#997819]" : "text-gray-400"} size={20} />
+                      <Calendar
+                        className={apptOn ? "text-[#997819]" : "text-gray-400"}
+                        size={20}
+                      />
                     </div>
 
                     <AnimatePresence>
@@ -290,17 +316,23 @@ const ContactPage = () => {
                         >
                           <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-1">
-                              <label className="text-[9px] font-bold uppercase text-gray-400">Timezone</label>
+                              <label className="text-[9px] font-bold uppercase text-gray-400">
+                                Timezone
+                              </label>
                               <select
                                 onChange={(e) => setTimezone(e.target.value)}
                                 value={timezone}
                                 className="w-full bg-transparent text-xs font-bold dark:text-white outline-none"
                               >
-                                <option value="Europe/London">UK (GMT/BST)</option>
+                                <option value="Europe/London">
+                                  UK (GMT/BST)
+                                </option>
                               </select>
                             </div>
                             <div className="space-y-1">
-                              <label className="text-[9px] font-bold uppercase text-gray-400">Select Date</label>
+                              <label className="text-[9px] font-bold uppercase text-gray-400">
+                                Select Date
+                              </label>
                               <input
                                 type="date"
                                 required={apptOn}
@@ -345,19 +377,38 @@ const ContactPage = () => {
                       />
                     </div>
 
+                    <Turnstile
+                      siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                      onSuccess={(token) => setCaptchaToken(token)}
+                      theme="dark"
+                    />
+
+                    {/* Submit Button with Disabled State */}
                     <button
-                      disabled={status === "sending"}
-                      className="group relative w-full py-6 bg-[#12066a] text-white font-black rounded-2xl overflow-hidden transition-all shadow-xl active:scale-[0.98]"
+                      disabled={!captchaToken || status === "sending"}
+                      className={`group relative w-full py-6 text-white font-black rounded-2xl overflow-hidden transition-all shadow-xl active:scale-[0.98] ${
+                        !captchaToken
+                          ? "bg-gray-400 cursor-not-allowed opacity-70"
+                          : "bg-[#12066a]"
+                      }`}
                     >
                       <div className="relative z-10 flex items-center justify-center gap-4 uppercase tracking-[0.3em] text-[10px]">
                         {status === "sending" ? (
                           <Loader2 className="animate-spin w-4 h-4" />
+                        ) : !captchaToken ? (
+                          "Complete Security Check"
                         ) : (
                           "Initiate Conversation"
                         )}
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                        <ArrowRight
+                          className={`w-4 h-4 ${!captchaToken ? "hidden" : "group-hover:translate-x-2"} transition-transform`}
+                        />
                       </div>
-                      <div className="absolute inset-0 bg-[#997819] translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+
+                      {/* Hover effect only active if button is enabled */}
+                      {captchaToken && (
+                        <div className="absolute inset-0 bg-[#997819] translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                      )}
                     </button>
                   </form>
                 )}
