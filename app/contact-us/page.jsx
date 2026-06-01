@@ -438,21 +438,19 @@ const ContactPage = () => {
         </div>
       </div>
 
-    {/* --- 3. MINIMAL MAP SECTION --- */}
+      {/* --- 3. MINIMAL MAP SECTION --- */}
       <section className="px-6 pb-24">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[3.5rem] overflow-hidden h-[500px] border border-gray-200 dark:border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000 group">
             <div className="absolute inset-0 bg-[#12066a]/5 pointer-events-none group-hover:bg-transparent transition-all duration-1000 z-10" />
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.90566371754!2d0.1582236!3d51.5149363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a5940e79391b%3A0xe543f053538c8f0f!2sCEME!5e0!3m2!1sen!2suk!4v1715000000000!5m2!1sen!2suk"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.720514101587!2d0.1692750758114704!3d51.51834330990489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a559375c3235%3A0xd4e3f499e51befee!2sCEME%20Campus!5e0!3m2!1sen!2suk!4v1780320429794!5m2!1sen!2suk"
+              width="100%" // Container ki width ke hisaab se 100% rakhein
+              height="500" // CSS height match karein
+              style={{ border: 0 }} // camelCase aur object syntax
+              allowFullScreen={true} // React attribute
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Bizgrow Location"
-              className="relative z-0"
+              referrerPolicy="no-referrer-when-downgrade" // camelCase attribute
             />
           </div>
         </div>
