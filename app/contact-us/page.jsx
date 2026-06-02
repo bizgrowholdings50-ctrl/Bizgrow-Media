@@ -191,10 +191,10 @@ const ContactPage = () => {
                     <button
                       onClick={() => {
                         const waMsg = `*New Inquiry from Website*%0A%0A
-                      *Name:* ${lastSubmittedData?.name || "Customer"}%0A
-                      *Email:* ${lastSubmittedData?.email || "N/A"}%0A
-                      *Service:* ${lastSubmittedData?.service || "N/A"}%0A
-                      *Message:* ${lastSubmittedData?.message || "N/A"}`;
+*Name:* ${lastSubmittedData?.name || "Customer"}%0A
+*Email:* ${lastSubmittedData?.email || "N/A"}%0A
+*Service:* ${lastSubmittedData?.service || "N/A"}%0A
+*Message:* ${lastSubmittedData?.message || "N/A"}`;
 
                         window.open(
                           `https://wa.me/447903332433?text=${waMsg}`,
