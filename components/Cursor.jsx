@@ -92,7 +92,7 @@ export default function CustomCursor() {
       >
         {isHovering && (
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-[4px] font-black text-white uppercase tracking-tighter leading-none text-center align-middle">View</span>
+            <span className="text-[4px] font-black text-white uppercase tracking-tighter leading-none text-center align-middle"></span>
           </div>
         )}
       </div>

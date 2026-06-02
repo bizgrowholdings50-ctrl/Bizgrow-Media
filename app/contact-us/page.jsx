@@ -134,38 +134,39 @@ const ContactPage = () => {
               </h2>
               <div className="w-20 h-1.5 bg-[#997819] mt-6 rounded-full" />
             </div>
-            <div className="space-y-6">
-              {[
-                { icon: <Phone />, label: "Call Us", val: "+44 7903 332433" },
-                {
-                  icon: <Mail />,
-                  label: "Email",
-                  val: "info@bizgrowstudios.co.uk",
-                },
-                {
-                  icon: <MapPin />,
-                  label: "Location",
-                  val: "CEME Campus, Marsh Way, RM13 8EU",
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-6 p-6 rounded-[2rem] bg-white dark:bg-gray-800 border border-gray-100 dark:border-white/5 shadow-sm"
-                >
-                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#12066a] text-white">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">
-                      {item.label}
-                    </p>
-                    <h3 className="text-lg font-bold text-[#12066a] dark:text-white">
-                      {item.val}
-                    </h3>
-                  </div>
-                </div>
-              ))}
-            </div>
+           <div className="space-y-6">
+    {[
+      { icon: <Phone />, label: "Call Us", val: "+44 7903 332433" },
+      {
+        icon: <Mail />,
+        label: "Email",
+        val: "info@bizgrowstudios.co.uk", // Aapka original email format
+      },
+      {
+        icon: <MapPin />,
+        label: "Location",
+        val: "CEME Campus, Marsh Way, RM13 8EU",
+      },
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="flex items-center gap-6 p-6 rounded-[2rem] bg-white dark:bg-gray-800 border border-gray-100 dark:border-white/5 shadow-sm"
+      >
+        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#12066a] text-white">
+          {item.icon}
+        </div>
+        <div>
+          <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">
+            {item.label}
+          </p>
+          {/* Yahan 'normal-case' add kiya hai taake email aur text preserve rahe */}
+          <h3 className="text-lg font-bold text-[#12066a] dark:text-white normal-case">
+            {item.val}
+          </h3>
+        </div>
+      </div>
+    ))}
+  </div>
           </div>
 
           {/* RIGHT: The Interactive Form */}
@@ -444,7 +445,7 @@ const ContactPage = () => {
           <div className="relative rounded-[3.5rem] overflow-hidden h-[500px] border border-gray-200 dark:border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000 group">
             <div className="absolute inset-0 bg-[#12066a]/5 pointer-events-none group-hover:bg-transparent transition-all duration-1000 z-10" />
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.720514101587!2d0.1692750758114704!3d51.51834330990489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a559375c3235%3A0xd4e3f499e51befee!2sCEME%20Campus!5e0!3m2!1sen!2suk!4v1780320429794!5m2!1sen!2suk"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.7385686960124!2d0.1708505!3d51.5180121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2626302fbca6426d%3A0xa6c4efa34f098259!2sBizGrow%20Media!5e0!3m2!1sen!2s!4v1780390185082!5m2!1sen!2s"
               width="100%" // Container ki width ke hisaab se 100% rakhein
               height="500" // CSS height match karein
               style={{ border: 0 }} // camelCase aur object syntax

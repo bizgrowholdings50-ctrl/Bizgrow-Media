@@ -48,7 +48,7 @@ const HomePage = () => {
                   </span>
                 </div>
 
-                <h2 className="text-5xl md:text-5xl font-black text-[#12066a] dark:text-white mb-8 leading-[0.85] tracking-tighter uppercase">
+                <h2 className="text-5xl md:text-5xl font-black text-[#12066a] dark:text-white mb-8  tracking-normal uppercase">
                   Where Businesses <br />
                   <span
                     className="text-[#997819] bg-clip-text "

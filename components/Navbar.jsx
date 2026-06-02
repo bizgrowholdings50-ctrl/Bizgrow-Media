@@ -111,7 +111,7 @@ export default function Navbar() {
           className={`relative overflow-visible w-full max-w-7xl rounded-4xl border shadow-lg transition-all duration-300
           ${
             scrolled
-              ? "py-0.5 bg-white/80 dark:bg-gray-900  backdrop-blur-xl scale-[0.98]"
+              ? "py-0.5 bg-white dark:bg-gray-900  backdrop-blur-xl scale-[0.98]"
               : "py-2 md:py-1 bg-white dark:bg-gray-900 backdrop-blur-md"
           } border-[#12066a] dark:border-[#997819]`}
         >
@@ -173,7 +173,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 15 }}
-                        className="absolute left-40 -translate-x-1/2 mt-3 w-[720px] rounded-2xl bg-white/95 dark:bg-black/95 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-2xl"
+                        className="absolute left-40 -translate-x-1/2 mt-3 w-[720px] rounded-2xl bg-white dark:bg-black backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-2xl"
                       >
                         <div className="grid grid-cols-2 gap-2 p-4">
                           {services.map((s, i) => (
@@ -214,7 +214,7 @@ export default function Navbar() {
                   href="/blogs"
                   className="text-[#12066a] dark:text-white dark:hover:text-[#997819] hover:text-[#997819] transition"
                 >
-                  CaseStudies
+                  Blogs
                 </Link>
 
                 <Link
@@ -435,7 +435,7 @@ export default function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   className="text-lg font-medium text-black dark:text-white"
                 >
-                  CaseStudies
+                  Blogs
                 </Link>
 
                 <Link
