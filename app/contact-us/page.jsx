@@ -134,39 +134,39 @@ const ContactPage = () => {
               </h2>
               <div className="w-20 h-1.5 bg-[#997819] mt-6 rounded-full" />
             </div>
-           <div className="space-y-6">
-    {[
-      { icon: <Phone />, label: "Call Us", val: "+44 7903 332433" },
-      {
-        icon: <Mail />,
-        label: "Email",
-        val: "info@bizgrowstudios.co.uk", // Aapka original email format
-      },
-      {
-        icon: <MapPin />,
-        label: "Location",
-        val: "CEME Campus, Marsh Way, RM13 8EU",
-      },
-    ].map((item, i) => (
-      <div
-        key={i}
-        className="flex items-center gap-6 p-6 rounded-[2rem] bg-white dark:bg-gray-800 border border-gray-100 dark:border-white/5 shadow-sm"
-      >
-        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#12066a] text-white">
-          {item.icon}
-        </div>
-        <div>
-          <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">
-            {item.label}
-          </p>
-          {/* Yahan 'normal-case' add kiya hai taake email aur text preserve rahe */}
-          <h3 className="text-lg font-bold text-[#12066a] dark:text-white normal-case">
-            {item.val}
-          </h3>
-        </div>
-      </div>
-    ))}
-  </div>
+            <div className="space-y-6">
+              {[
+                { icon: <Phone />, label: "Call Us", val: "+44 7903 332433" },
+                {
+                  icon: <Mail />,
+                  label: "Email",
+                  val: "info@bizgrowstudios.co.uk", // Aapka original email format
+                },
+                {
+                  icon: <MapPin />,
+                  label: "Location",
+                  val: "CEME Campus, Marsh Way, RM13 8EU",
+                },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-6 p-6 rounded-[2rem] bg-white dark:bg-gray-800 border border-gray-100 dark:border-white/5 shadow-sm"
+                >
+                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#12066a] text-white">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">
+                      {item.label}
+                    </p>
+                    {/* Yahan 'normal-case' add kiya hai taake email aur text preserve rahe */}
+                    <h3 className="text-lg font-bold text-[#12066a] dark:text-white normal-case">
+                      {item.val}
+                    </h3>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* RIGHT: The Interactive Form */}
@@ -190,8 +190,12 @@ const ContactPage = () => {
                     {/* WhatsApp Button */}
                     <button
                       onClick={() => {
-                        // lastSubmittedData ka use yahan safe hai
-                        const waMsg = `*New Lead from Website*%0A%0A*Name:* ${lastSubmittedData?.name || "Customer"}%0A*Service:* ${lastSubmittedData?.service || "N/A"}`;
+                        const waMsg = `*New Inquiry from Website*%0A%0A
+                      *Name:* ${lastSubmittedData?.name || "Customer"}%0A
+                      *Email:* ${lastSubmittedData?.email || "N/A"}%0A
+                      *Service:* ${lastSubmittedData?.service || "N/A"}%0A
+                      *Message:* ${lastSubmittedData?.message || "N/A"}`;
+
                         window.open(
                           `https://wa.me/447903332433?text=${waMsg}`,
                           "_blank",
