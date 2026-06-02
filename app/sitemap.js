@@ -33,7 +33,7 @@ export default async function sitemap() {
     { url: `${baseUrl}/social-media-marketing/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/web-development/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/growth-engine/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-     { url: `${baseUrl}/our-media-services/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+     { url: `${baseUrl}/our-services/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
       { url: `${baseUrl}/packages/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/facebook-marketing-services/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/graphic-design-services/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },

@@ -154,7 +154,7 @@ export default function Navbar() {
                   onMouseEnter={() => setOpen(true)}
                   onMouseLeave={() => setOpen(false)}
                 >
-                  <Link href="/our-media-services">
+                  <Link href="/our-services">
                     <button className="flex items-center gap-1 text-[#12066a] dark:text-white dark:hover:text-[#997819] hover:text-[#997819]">
                       Services
                       <span
