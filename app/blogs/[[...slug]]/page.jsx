@@ -75,7 +75,7 @@ export default async function BlogPage({ params }) {
         {/* Header Section */}
         <header className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-black text-[#12066a] dark:text-white mb-4 uppercase tracking-tight">
-            {activeCat ? activeCat.replace(/-/g, " ") : "Digital Marketing"}{" "}
+            {activeCat ? activeCat.replace(/-/g, " ") : "Bizgrow Media"}{" "}
             <span className="text-[#997819]">Insights</span>
           </h1>
           <div className="w-16 h-1.5 bg-[#997819] mx-auto rounded-full" />
