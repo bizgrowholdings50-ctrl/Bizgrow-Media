@@ -112,7 +112,7 @@ const ContactPage = () => {
             <span className="inline-block px-4 py-1.5 mb-6 rounded-full border border-[#997819] text-[#997819] text-[10px] font-black uppercase tracking-[0.4em] backdrop-blur-md">
               Get in Touch
             </span>
-            <h1 className="text-white text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] uppercase">
+            <h1 className="text-white text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] uppercase">
               Let's Start a <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#997819] via-[#d4af37] to-[#997819]">
                 Conversation
@@ -446,16 +446,15 @@ const ContactPage = () => {
       {/* --- 3. MINIMAL MAP SECTION --- */}
       <section className="px-6 pb-24">
         <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-[3.5rem] overflow-hidden h-[500px] border border-gray-200 dark:border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000 group">
-            <div className="absolute inset-0 bg-[#12066a]/5 pointer-events-none group-hover:bg-transparent transition-all duration-1000 z-10" />
+          <div className="relative rounded-[3.5rem] overflow-hidden h-[500px] border border-gray-200 dark:border-white/10 shadow-2xl">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.7385686960124!2d0.1708505!3d51.5180121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2626302fbca6426d%3A0xa6c4efa34f098259!2sBizGrow%20Media!5e0!3m2!1sen!2s!4v1780390185082!5m2!1sen!2s"
-              width="100%" // Container ki width ke hisaab se 100% rakhein
-              height="500" // CSS height match karein
-              style={{ border: 0 }} // camelCase aur object syntax
-              allowFullScreen={true} // React attribute
+              width="100%"
+              height="500"
+              style={{ border: 0, display: "block" }}
+              allowFullScreen={true}
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade" // camelCase attribute
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>

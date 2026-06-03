@@ -17,10 +17,13 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [showSearch, setShowSearch] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+// 1. State for all searchable items
+  const [allSearchItems, setAllSearchItems] = useState(SITE_PAGES);
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+
+  
   useEffect(() => setMounted(true), []);
 
   // Scroll Detection
@@ -74,19 +77,48 @@ export default function Navbar() {
     },
   ];
 
-  // Search Logic
-  const globalResults = useMemo(() => {
-    const query = searchQuery.toLowerCase().trim();
+// 2. Fetch Blogs from CMS
+useEffect(() => {
+  const fetchBlogs = async () => {
+    try {
+      // Use the direct WordPress REST API URL instead of /api/blogs
+      const response = await fetch('https://cms.bizgrow-digital.co.uk/wp-json/wp/v2/posts?_fields=title,slug&per_page=20');
+      
+      if (!response.ok) throw new Error("Failed to fetch blogs");
+      
+      const cmsBlogs = await response.json();
+      
+      // Map the data correctly (WordPress titles are often objects)
+      const blogItems = cmsBlogs.map(blog => ({
+        title: typeof blog.title === 'object' ? blog.title.rendered : blog.title,
+        href: `/${blog.slug}`,
+        category: "Blog"
+      }));
 
-    if (!query) return [];
+      // Merge with your existing static pages
+      setAllSearchItems([...SITE_PAGES, ...blogItems]);
+    } catch (error) {
+      console.error("Error fetching blogs for search:", error);
+      // Keep only static pages if fetch fails
+      setAllSearchItems(SITE_PAGES);
+    }
+  };
 
-    return SITE_PAGES.filter((page) => {
-      const matchTitle = page.title.toLowerCase().includes(query);
-      const matchCategory = page.category.toLowerCase().includes(query);
+  fetchBlogs();
+}, []);
 
-      return matchTitle || matchCategory;
-    }).slice(0, 6);
-  }, [searchQuery]);
+// 3. Updated Search Logic
+const globalResults = useMemo(() => {
+  const query = searchQuery.toLowerCase().trim();
+  // Only search if the user has typed at least 2 characters
+  if (query.length < 2) return [];
+
+  return allSearchItems.filter((page) => {
+    const title = (page.title || "").toLowerCase();
+    const category = (page.category || "").toLowerCase();
+    return title.includes(query) || category.includes(query);
+  }).slice(0, 6); // Limit results to 6
+}, [searchQuery, allSearchItems]);
 
   useEffect(() => {
     if (searchQuery.length > 0) {

@@ -365,7 +365,7 @@ const PremiumPackagesPage = () => {
 
                   {/* Icon Box */}
                   <div
-                    className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-12 shadow-lg transition-transform duration-500 group-hover:rotate-[10deg] ${index === 2 ? "bg-[#997819] text-white" : "bg-white dark:bg-gray-900 text-white"}`}
+                    className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-12 shadow-lg transition-transform duration-500 group-hover:rotate-[10deg] ${index === 2 ? "bg-[#997819] text-white" : "bg-white dark:bg-gray-900 text-[#997819]"}`}
                   >
                     {step.icon}
                   </div>
