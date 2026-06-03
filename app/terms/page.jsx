@@ -4,7 +4,7 @@ import FadeIn from "@components/MotionWrapper";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Terms & Conditions | BizGrow Digital",
+  title: "Terms & Conditions | BizGrow Media",
   description:
     "Read BizGrow Media Terms & Conditions covering our services, client responsibilities, payments, and website usage policies",
   alternates: {
