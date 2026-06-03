@@ -7,10 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { Layers, Search, ShieldCheck, TrendingUp, Video } from "lucide-react";
-
+import { usePathname } from "next/navigation";
 import { SITE_PAGES } from "@/constants/search-data";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -19,6 +20,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 // 1. State for all searchable items
   const [allSearchItems, setAllSearchItems] = useState(SITE_PAGES);
+  
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -36,6 +38,21 @@ export default function Navbar() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // ... baqi code ke baad
+  useEffect(() => {
+    if (searchQuery.length > 0) {
+      setShowSearch(true);
+    }
+  }, [searchQuery]);
+
+  // YAHAN ADD KAREIN:
+  useEffect(() => {
+    setSearchQuery("");
+    setShowSearch(false);
+  }, [pathname]);
+
+  
 
   // Prevent Body Scroll on Mobile Menu Open
   useEffect(() => {
@@ -293,7 +310,7 @@ const globalResults = useMemo(() => {
                                 }}
                                 className="p-3 hover:bg-black/5 dark:hover:bg-white/10 rounded-xl transition group text-left"
                               >
-                                <p className="text-xs font-semibold text-black dark:text-white group-hover:text-orange-500">
+                                <p className="text-xs font-semibold text-black dark:text-white group-hover:text-[#12066a]">
                                   {result.title}
                                 </p>
 

@@ -96,7 +96,8 @@ export default function LuxuryGridSlider() {
                 initial={{ scaleY: 0.08 }}
                 animate={{
                   scaleY: index === i ? 1 : 0.08,
-                  backgroundColor: index === i ? "#997819" : "rgba(255,255,255,0.1)",
+                  backgroundColor:
+                    index === i ? "#997819" : "rgba(255,255,255,0.1)",
                   x: 35,
                 }}
                 transition={{ duration: 0.7, ease: "easeInOut" }}
@@ -133,17 +134,17 @@ export default function LuxuryGridSlider() {
                 {slides[0].desc}
               </p>
 
-              <Link href="/our-media-services" passHref legacyBehavior>
-                <motion.a
+              <Link href="/our-services" className="inline-block">
+                <motion.div
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-block relative overflow-hidden group border border-[#997819]/50 px-12 py-5 rounded-2xl bg-transparent cursor-pointer"
+                  className="relative overflow-hidden group border border-[#997819]/50 px-12 py-5 rounded-2xl bg-transparent cursor-pointer"
                 >
                   <span className="relative z-10 text-white text-[11px] font-black tracking-[0.4em] group-hover:text-white duration-500">
                     EXPLORE ECOSYSTEM
                   </span>
                   <div className="absolute inset-0 bg-[#997819] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
-                </motion.a>
+                </motion.div>
               </Link>
             </div>
           ) : (
