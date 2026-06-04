@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import styles from "./BlogContent.module.css"; // 👈 Sahi folder structure ke mutabiq import kiya
+import styles from "./BlogContent.module.css"; 
 
 // 1. Fetch Post Function
 async function getPost(slug) {

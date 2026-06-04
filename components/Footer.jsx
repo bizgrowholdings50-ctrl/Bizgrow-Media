@@ -14,7 +14,7 @@ import {
 const Footer = () => {
   const importantLinks = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/our-services" },
+    { name: "Services", href: "/our-media-services" },
     { name: "Blogs", href: "/blogs" },
     { name: "Booking", href: "/contact-us" },
     { name: "Privacy Policy", href: "/privacy-policy" },

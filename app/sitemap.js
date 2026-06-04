@@ -30,7 +30,7 @@ export default async function sitemap() {
     { url: `${baseUrl}/blogs/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/content-engine/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/growth-engine/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/our-services/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/our-media-services/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/packages/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/studio-production/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/authority-builder/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
