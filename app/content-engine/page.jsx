@@ -131,7 +131,7 @@ const DigitalMarketingPage = () => {
             <span className="text-[#997819] font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-4 block">
               Boost Your Online Presence
             </span>
-            <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-black leading-[1.1] mb-6 uppercase">
+            <h1 className="text-white text-2xl md:text-6xl font-black leading-[1.1] mb-6 uppercase">
               Build a Powerful{" "}
               <span className="text-[#997819]">Digital Presence </span> Through
               Strategic, Purpose-Led Content
@@ -140,8 +140,8 @@ const DigitalMarketingPage = () => {
         </div>
       </div>
 
-      {/* 🚀 CONTENT ENGINE: PREMIUM SPLIT SECTION */}
-      <section className="bg-white dark:bg-gray-800 py-32 transition-colors duration-500 overflow-hidden">
+      {/* 🚀 2 CONTENT ENGINE: PREMIUM SPLIT SECTION */}
+      <section className="bg-white dark:bg-gray-800 py-14 md:py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
             {/* --- Left Column: High-Impact Content --- */}
@@ -154,7 +154,7 @@ const DigitalMarketingPage = () => {
                   </span>
                 </div>
 
-                <h2 className="text-[#12066a] dark:text-white text-5xl  font-black uppercase tracking-tighter leading-[0.9] mb-10">
+                <h2 className="text-[#12066a] dark:text-white text-3xl md:text-5xl font-black uppercase tracking-tighter leading-[0.98] mb-10">
                   Your Ideas
                   <span className="text-transparent ml-1 bg-clip-text bg-gradient-to-r from-[#997819] to-[#997819]/60">
                     Deserve More
@@ -226,8 +226,8 @@ const DigitalMarketingPage = () => {
           </div>
         </div>
       </section>
-      {/* 🏛️ PURPOSE-LED CONTENT: THE CONTENT MATRIX */}
-      <section className="bg-white dark:bg-gray-900 py-40 transition-colors duration-500 overflow-hidden">
+      {/* 🏛️ 3 PURPOSE-LED CONTENT: THE CONTENT MATRIX */}
+      <section className="bg-white dark:bg-gray-900 py-14 md:py-40 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header Section (Exact Wording) --- */}
           <div className="flex flex-col  justify-between items-start mb-20">
@@ -238,8 +238,8 @@ const DigitalMarketingPage = () => {
                   Purpose-Led
                 </span>
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-6xl font-black uppercase tracking-tighter leading-[0.85]">
-                Content That Brings <br />
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black uppercase tracking-tighter leading-[0.98]">
+                Content That Brings <br className="hidden md:block" />
                 Your <span className="text-[#997819]">Brand to Life</span>
               </h2>
             </div>
@@ -340,8 +340,8 @@ const DigitalMarketingPage = () => {
         </div>
       </section>
 
-      {/* 💎 THE VALUE OF CONSISTENCY: STACKING IMPACT SECTION */}
-      <section className="bg-white dark:bg-gray-800 py-20 transition-colors duration-500">
+      {/* 💎 4 THE VALUE OF CONSISTENCY: STACKING IMPACT SECTION */}
+      <section className="bg-white dark:bg-gray-800 py-14 md:py-20 transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header: Clean & Centered --- */}
           <div className="text-center mb-32">
@@ -352,14 +352,14 @@ const DigitalMarketingPage = () => {
                   Strategic Value
                 </span>
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none ">
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black uppercase tracking-tighter leading-none ">
                 The Value of a <br />
                 <span className="text-[#997819]">Consistent</span> Brand
                 Presence
               </h2>
               <div className="flex justify-center">
                 <ArrowDown
-                  className="text-gray-300 animate-bounce mt-4"
+                  className="text-[#997819] animate-bounce mt-4"
                   size={52}
                   strokeWidth={1}
                 />
@@ -428,8 +428,8 @@ const DigitalMarketingPage = () => {
         </div>
       </section>
 
-      {/* 🔄 THE STRATEGIC SHIFT: COLUMN-WISE REFINED */}
-      <section className="bg-white dark:bg-gray-900 py-32 transition-colors duration-500 overflow-hidden">
+      {/* 🔄 5 THE STRATEGIC SHIFT: COLUMN-WISE REFINED */}
+      <section className="bg-white dark:bg-gray-900 py-14 md:py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-4xl mx-auto px-6">
           {/* --- Top Header (Exact Wording) --- */}
           <div className="mb-20">
@@ -441,7 +441,7 @@ const DigitalMarketingPage = () => {
                 </span>
               </div>
 
-              <h2 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase tracking-tighter leading-[0.9] mb-8">
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black uppercase tracking-tighter leading-[0.98] mb-8">
                 A Strategic Shift <br />
                 Towards a <span className="text-[#997819]">Smarter</span> <br />
                 Content System
@@ -466,7 +466,7 @@ const DigitalMarketingPage = () => {
               "No more struggling to maintain online visibility",
             ].map((text, index) => (
               <FadeIn key={index} direction="up" delay={index * 0.05}>
-                <div className="group relative flex items-center justify-between p-8 md:p-10 rounded-[2rem] bg-gray-50/50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 hover:border-[#997819]/30 hover:bg-white dark:hover:bg-white/[0.05] transition-all duration-500 shadow-sm">
+                <div className="group relative flex items-center justify-between  p-4 md:p-10 rounded-[2rem] bg-gray-50/50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 hover:border-[#997819]/30 hover:bg-white dark:hover:bg-white/[0.05] transition-all duration-500 shadow-sm">
                   <div className="flex items-center gap-8 relative z-10">
                     {/* Gold Ring Icon (As per Image) */}
                     <div className="w-6 h-6 rounded-full border-2 border-[#997819] flex items-center justify-center flex-shrink-0">
@@ -503,8 +503,8 @@ const DigitalMarketingPage = () => {
         </div>
       </section>
 
-      {/* 🔄 THE SEAMLESS CONTENT SYSTEM: ARCHITECTURAL FLOW */}
-      <section className="bg-white dark:bg-gray-800 py-32 transition-colors duration-500 overflow-hidden">
+      {/* 🔄 6 THE SEAMLESS CONTENT SYSTEM: ARCHITECTURAL FLOW */}
+      <section className="bg-white dark:bg-gray-800 py-14 md:py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-5xl mx-auto px-6">
           {/* --- Header Section --- */}
           <div className="mb-24 text-center">
@@ -515,7 +515,7 @@ const DigitalMarketingPage = () => {
                   The Ecosystem
                 </span>
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase tracking-tighter leading-[0.9] mb-8">
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black uppercase tracking-tighter leading-[0.98] mb-8">
                 A Seamless <br />
                 <span className="text-[#997819] mr-1">Content System</span>{" "}
                 Built Around Your Brand
@@ -605,7 +605,7 @@ const DigitalMarketingPage = () => {
         </div>
       </section>
 
-      {/* 🎯 TARGET AUDIENCE: THE REFINED PROFILE MATRIX */}
+      {/* 🎯 7 TARGET AUDIENCE: THE REFINED PROFILE MATRIX */}
       <section className="bg-white dark:bg-gray-900 py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header Section (Exact Wording) --- */}
@@ -618,7 +618,7 @@ const DigitalMarketingPage = () => {
                 </span>
               </div>
 
-              <h2 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase tracking-tighter leading-[0.9] mb-8">
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black uppercase tracking-tighter leading-[0.98] mb-8">
                 Who This
                 Service Is <span className="text-[#997819]">Designed For</span>
               </h2>
@@ -692,7 +692,7 @@ const DigitalMarketingPage = () => {
           </div>
 
           {/* --- Final CTA Section --- */}
-          <div className="mt-24 text-center">
+          <div className="md:mt-24 text-center">
             <FadeIn direction="up">
               <div className="inline-block relative">
                 <button className="bg-[#12066a] dark:text-white dark:bg-[#997819] text-white dark:text-[#12066a] px-14 py-6 rounded-full font-black uppercase tracking-[0.3em] text-[10px] hover:scale-105 hover:shadow-2xl transition-all shadow-xl shadow-[#12066a]/20 dark:shadow-[#997819]/20">
@@ -706,82 +706,65 @@ const DigitalMarketingPage = () => {
       </section>
 
       {/* 🚀 FINAL CTA: THE GROWTH ASSET SECTION */}
-      <section className="bg-white dark:bg-gray-900 py-40 transition-colors duration-500 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="relative bg-[#12066a] dark:bg-gray-800 rounded-[4rem] p-12 md:p-24 overflow-hidden border border-[#997819]/20 shadow-2xl">
-            {/* Background Decorative Elements */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#997819]/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 blur-[80px] rounded-full translate-y-1/2 -translate-x-1/2" />
+   <section className="bg-white dark:bg-gray-900 py-10 md:py-40 transition-colors duration-500 overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4 md:px-6">
+    {/* Container: Mobile par padding kam ki */}
+    <div className="relative bg-[#12066a] dark:bg-gray-800 rounded-[2rem] md:rounded-[4rem] p-6 md:p-24 overflow-hidden border border-[#997819]/20 shadow-2xl">
+      
+      {/* Background Elements (Mobile par chote) */}
+      <div className="absolute top-0 right-0 w-48 h-48 md:w-96 md:h-96 bg-[#997819]/10 blur-[80px] rounded-full -translate-y-1/2 translate-x-1/2" />
 
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-              {/* --- Left Side: The Hook --- */}
-              <div className="lg:col-span-7">
-                <FadeIn direction="right">
-                  <h2 className="text-white dark:text-[#997819] text-5xl md:text-6xl font-black uppercase tracking-tighter leading-[0.9] mb-10">
-                    Ready to Turn <br />
-                    Your Content Into a 
-                    <span className="text-[#997819] ml-1 dark:text-white">
-                      Growth Asset?
-                    </span>
-                  </h2>
-                  <p className="text-white/70 dark:text-white/60 text-lg md:text-xl font-medium leading-relaxed max-w-xl border-l-2 border-[#997819] pl-8 italic">
-                    Content Engine is designed for brands that want to stay
-                    visible, communicate with purpose, and turn their ideas into
-                    consistent, high-quality content. When you are ready to move
-                    beyond random posting, this is where your content becomes
-                    more structured, strategic, and <Link href="/growth-engine/" className="text-[#997819] font-bold">growth-focused</Link>.
-                  </p>
-                </FadeIn>
-              </div>
-
-              {/* --- Right Side: The Benefits List --- */}
-              <div className="lg:col-span-5 bg-white/5 dark:bg-white/[0.02] p-10 rounded-[3rem] backdrop-blur-md border border-white/10">
-                <div className="space-y-6 mb-12">
-                  {[
-                    "Build a consistent online presence",
-                    "Turn ideas into publish-ready content",
-                    "Stay visible across key platforms",
-                    "Communicate your value with clarity",
-                    "Create content that supports business growth",
-                  ].map((benefit, index) => (
-                    <FadeIn key={index} direction="up" delay={index * 0.1}>
-                      <div className="flex items-center gap-4 group">
-                        <CheckCircle2
-                          size={20}
-                          className="text-[#997819] flex-shrink-0"
-                        />
-                        <span className="text-white dark:text-white/80 text-sm md:text-base font-bold uppercase tracking-tight group-hover:text-[#997819] transition-colors">
-                          {benefit}
-                        </span>
-                      </div>
-                    </FadeIn>
-                  ))}
-                </div>
-
-                {/* Final Action Button */}
-                <FadeIn direction="up" delay={0.6}>
-                  <Link href="/contact-us/" className="block">
-                    <button className="w-full group relative flex items-center justify-between bg-[#997819] dark:bg-white dark:text-[#997819] px-8 py-6 rounded-2xl text-[#12066a] font-black uppercase tracking-[0.2em] text-xs hover:scale-[1.02] transition-all shadow-xl">
-                      <span>Build Your Content Engine Today</span>
-                      <ArrowRight
-                        className="group-hover:translate-x-2 transition-transform"
-                        size={18}
-                      />
-                    </button>
-                  </Link>
-                </FadeIn>
-              </div>
-            </div>
-          </div>
-
-          {/* Subtle Trust Line */}
-          <div className="mt-12 text-center">
-            <p className="text-[#12066a]/30 dark:text-white/60 text-[10px] font-black uppercase tracking-[0.6em]">
-              BizGrow Media • Strategic Excellence • 2026
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
+        
+        {/* --- Left Side: The Hook --- */}
+        <div className="lg:col-span-7 text-center lg:text-left">
+          <FadeIn direction="right">
+            {/* Mobile par Heading size balance kiya */}
+            <h2 className="text-white dark:text-[#997819] text-3xl md:text-6xl font-black uppercase tracking-normal leading-[1.1] mb-6">
+              Ready to Turn Your Content Into a <br className="hidden md:block"/>
+              <span className="text-[#997819] ml-1 dark:text-white">Growth Asset?</span>
+            </h2>
+            <p className="text-white/70 dark:text-white/60 text-base md:text-xl font-medium leading-relaxed max-w-xl mx-auto lg:mx-0 border-l-2 border-[#997819] pl-6 md:pl-8 italic">
+              Content Engine is designed for brands that want to stay visible, communicate with purpose, and turn their ideas into consistent, high-quality content.
             </p>
-          </div>
+          </FadeIn>
         </div>
-      </section>
+
+        {/* --- Right Side: The Benefits List --- */}
+        <div className="lg:col-span-5 bg-white/5 dark:bg-white/[0.02] p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] backdrop-blur-md border border-white/10">
+          <div className="space-y-5 mb-8">
+            {[
+              "Build a consistent online presence",
+              "Turn ideas into publish-ready content",
+              "Stay visible across key platforms",
+              "Communicate your value with clarity",
+              "Create content that supports business growth",
+            ].map((benefit, index) => (
+              <FadeIn key={index} direction="up" delay={index * 0.1}>
+                <div className="flex items-center gap-4">
+                  <CheckCircle2 size={20} className="text-[#997819] flex-shrink-0" />
+                  <span className="text-white text-xs md:text-sm font-bold uppercase tracking-wider">
+                    {benefit}
+                  </span>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn direction="up" delay={0.6}>
+            <Link href="/contact-us/" className="block">
+              {/* Button: Mobile par padding thodi adjust ki */}
+              <button className="w-full flex items-center justify-center gap-3 bg-[#997819] dark:bg-white px-6 py-4 rounded-xl text-white font-black uppercase tracking-[0.1em] text-[10px] md:text-xs hover:scale-[1.02] transition-all">
+                <span>Build Your Content Engine Today</span>
+                <ArrowRight size={16} />
+              </button>
+            </Link>
+          </FadeIn>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     </section>
   );
 };

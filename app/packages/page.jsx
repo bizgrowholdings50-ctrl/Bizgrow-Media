@@ -66,7 +66,7 @@ const PremiumPackagesPage = () => {
   return (
     <div className="bg-white dark:bg-[#030303] text-[#12066A] dark:text-white font-sans selection:bg-[#997819]/30">
       {/* --- 1 HERO: Ultra-Premium with Background Image --- */}
-      <section className="relative min-h-[90vh] md:h-screen flex items-center justify-center px-6 pt-20 overflow-hidden bg-black">
+      <section className="relative min-h-[90vh] lg:h-screen flex items-center justify-center px-6 pt-20 overflow-hidden bg-black">
         {/* --- Background Image Layer --- */}
         <div className="absolute inset-0 z-0">
           {/* Main Image with subtle zoom effect */}
@@ -100,9 +100,9 @@ const PremiumPackagesPage = () => {
           </FadeIn>
 
           <FadeIn direction="up" delay={0.2}>
-            <h1 className="text-6xl max-w-4xl font-black uppercase tracking-tighter leading-[0.9] mb-10 text-white dark:text-white">
+            <h1 className="text-4xl md:text-6xl max-w-4xl font-black uppercase tracking-tighter leading-[0.9] mb-10 text-white dark:text-white">
               Build A Podcast Presence That Feels
-              <span className="text-[#997819] italic font-light drop-shadow-xl">
+              <span className="text-[#997819] italic font-light drop-shadow-xl ml-2">
                 More Established.
               </span>
             </h1>
@@ -110,7 +110,7 @@ const PremiumPackagesPage = () => {
 
           <FadeIn direction="up" delay={0.4}>
             <div className="flex flex-col items-center justify-center gap-8 mt-12">
-              <p className="max-w-xl text-center md:text-left text-sm md:text-lg text-gray-300 dark:text-white/60 border-l-0 md:border-l md:border-[#997819] md:pl-6 leading-relaxed font-medium">
+              <p className="max-w-xl text-center md:text-left text-sm md:text-xl text-gray-300 dark:text-white/60 border-l-0 md:border-l md:border-[#997819] md:pl-6 leading-relaxed font-medium">
                 We take care of the{" "}
                 <Link
                   href="/studio-production/"
@@ -134,9 +134,9 @@ const PremiumPackagesPage = () => {
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[1px] h-20 bg-gradient-to-b from-[#997819] to-transparent animate-bounce" />
       </section>
       {/* Section 2 */}
-      <section className="bg-white dark:bg-gray-800 py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-800 py-14 md:py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+          <div className="flex flex-col flex-col-reverse  lg:flex-row items-center gap-16 lg:gap-24">
             {/* --- Left Side: Content --- */}
             <div className="flex-1 order-2 lg:order-1">
               <FadeIn direction="right">
@@ -164,7 +164,7 @@ const PremiumPackagesPage = () => {
 
                   <div className="h-px w-20 bg-[#997819]/30" />
 
-                  <p className="text-gray-500 dark:text-white/40 text-lg leading-relaxed">
+                  <p className="text-gray-500 dark:text-white/40 text-lg md:text-xl leading-relaxed">
                     Most businesses already know what they want to say. The
                     challenge is usually turning those ideas into a <Link href="/podcast-recording-studios/" className="text-[#997819] hover:underline font-bold">podcast</Link> that
                     feels clear, professional, and ready for people to take
@@ -224,7 +224,7 @@ const PremiumPackagesPage = () => {
         </div>
       </section>
       {/* Section 3 */}
-      <section className="bg-white dark:bg-gray-900 py-32 transition-colors duration-500 overflow-hidden font-sans">
+      <section className="bg-white dark:bg-gray-900 py-14 md:py-32 transition-colors duration-500 overflow-hidden font-sans">
         <div className="max-w-5xl mx-auto px-6">
           {/* --- Header Section --- */}
           <div className="mb-24 text-center">
@@ -235,12 +235,12 @@ const PremiumPackagesPage = () => {
                   What’s Included
                 </span>
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase tracking-tighter leading-[0.9] mb-8">
-                Everything You Need <br />
-                <span className="text-[#997819] mr-1">To Launch</span>{" "}
+              <h2 className="text-[#12066a] dark:text-white text-4xl md:text-6xl font-black uppercase md:tracking-tighter leading-[0.9] mb-8">
+                Everything You Need <br  className="md:block hidden"/>
+                <span className="text-[#997819] mr-1">To Launch</span>
                 Professionally
               </h2>
-              <p className="text-gray-500 dark:text-white/40 text-lg font-medium max-w-2xl mx-auto leading-relaxed italic">
+              <p className="text-gray-500 dark:text-white/40 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed italic">
                 A seamless flow designed to take your podcast from idea to
                 reality without the stress.
               </p>
@@ -271,7 +271,7 @@ const PremiumPackagesPage = () => {
                       <h3 className="text-[#12066a] dark:text-white text-2xl font-black uppercase tracking-tight mb-4 group-hover:text-[#997819] transition-colors">
                         {step.title}
                       </h3>
-                      <p className="text-gray-500 dark:text-white/50 text-sm leading-relaxed">
+                      <p className="text-gray-500 dark:text-white/50 text-sm md:text-lg leading-relaxed">
                         {step.desc}
                       </p>
                     </div>
@@ -301,7 +301,7 @@ const PremiumPackagesPage = () => {
         </div>
       </section>
       {/* Section 4 */}
-      <section className="bg-white dark:bg-gray-800 py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-800 py-14 md:py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header Section --- */}
           <div className="mb-24 text-center">
@@ -312,11 +312,11 @@ const PremiumPackagesPage = () => {
                   The Blueprint
                 </span>
               </div>
-              <h2 className="text-[#12066a]  dark:text-white text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
+              <h2 className="text-[#12066a]  dark:text-white text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
                 How It{" "}
                 <span className="text-[#997819] italic font-light">Works</span>
               </h2>
-              <p className="text-gray-500 mx-auto dark:text-white/40 text-lg font-medium max-w-xl leading-relaxed">
+              <p className="text-gray-500 mx-auto dark:text-white/40 text-lg md:text-xl font-medium max-w-xl leading-relaxed">
                 A Clear And Professional Process From Start To Launch
               </p>
             </FadeIn>
@@ -375,7 +375,7 @@ const PremiumPackagesPage = () => {
                       {step.title}
                     </h3>
                     <p
-                      className={`text-sm leading-relaxed ${index === 2 ? "text-white/60" : "text-gray-500 dark:text-white/40"}`}
+                      className={`text-sm md:text-xl lg:text-sm leading-relaxed ${index === 2 ? "text-white/60" : "text-gray-500 dark:text-white/40"}`}
                     >
                       {step.desc}
                     </p>
@@ -390,7 +390,7 @@ const PremiumPackagesPage = () => {
         </div>
       </section>
       {/* Section 5 */}
-      <section className="bg-white dark:bg-gray-900 py-32 transition-colors duration-500">
+      <section className="bg-white dark:bg-gray-900 py-14 md:py-32 transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header Section (Centered) --- */}
           <div className="mb-24 text-center">
@@ -402,11 +402,11 @@ const PremiumPackagesPage = () => {
                 </span>
                 <span className="w-12 h-[1px] bg-[#997819]" />
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
+              <h2 className="text-[#12066a] dark:text-white text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
                 Who This Is 
                 <span className="text-[#997819] italic font-light ml-2">For</span>
               </h2>
-              <p className="text-gray-500 dark:text-white/40 text-lg font-medium max-w-3xl mx-auto leading-relaxed italic">
+              <p className="text-gray-500 dark:text-white/40 text-lg md:text-xl  font-medium max-w-3xl mx-auto leading-relaxed italic">
                 Designed For Businesses And Professionals Ready To Build A More
                 Recognisable Voice
               </p>
@@ -453,7 +453,7 @@ const PremiumPackagesPage = () => {
                     {item.title}
                   </h3>
 
-                  <p className="text-sm leading-relaxed text-gray-500 dark:text-white/40 font-medium">
+                  <p className="text-sm md:text-xl lg:text-lg leading-relaxed text-gray-500 dark:text-white/40 font-medium">
                     {item.desc}
                   </p>
 
@@ -504,8 +504,8 @@ const PremiumPackagesPage = () => {
                 </span>
               </div>
 
-              <h2 className="text-white text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-10 drop-shadow-lg">
-                Launch is only <br />
+              <h2 className="text-white text-5xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-10 drop-shadow-lg">
+                Launch is only <br  className="md:block hidden"/>
                 <span className="text-[#997819] italic font-light">
                   the beginning.
                 </span>
@@ -518,7 +518,7 @@ const PremiumPackagesPage = () => {
 
               {/* CTA Button Style from image_39649c.jpg */}
               <Link href="/contact-us/">
-                <button className="group relative px-14 py-6 bg-[#997819] text-white font-black uppercase tracking-[0.2em] text-xs rounded-2xl overflow-hidden transition-all hover:shadow-[0_20px_50px_rgba(153,120,25,0.4)]">
+                <button className="group relative px-6 md:px-14 py-6 bg-[#997819] text-white font-black uppercase tracking-[0.2em] text-xs rounded-2xl overflow-hidden transition-all hover:shadow-[0_20px_50px_rgba(153,120,25,0.4)]">
                   <span className="relative z-10 flex items-center gap-3">
                     Start Building The Right Way{" "}
                     <ArrowRight

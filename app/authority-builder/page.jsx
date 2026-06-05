@@ -148,7 +148,7 @@ const CreativeContentPage = () => {
       {/* 🚀 2 NEW SECTION:  PROFESSIONAL CONTENT CREATION (Business Growth Focus) */}
       <section className="py-24 bg-white dark:bg-gray-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-16">
             {/* Left Column: Image/Visual with Floating Elements */}
             <div className="w-full lg:w-1/2 relative">
               <FadeIn direction="right">
@@ -205,8 +205,7 @@ const CreativeContentPage = () => {
                     Authority Builder by{" "}
                     <Link href="/" className="text-[#997819] font-bold">
                       BizGrow Media
-                    </Link>
-                    {" "}
+                    </Link>{" "}
                     helps founders, startups, and growing businesses build a
                     recognised market presence through strategic content,
                     premium media positioning, and professional brand visibility
@@ -287,7 +286,7 @@ const CreativeContentPage = () => {
                     The Authority Standard
                   </div>
 
-                  <h3 className="text-3xl font-black mb-10 text-[#997819] uppercase tracking-tight">
+                  <h3 className="text-3xl font-black mt-10 mb-10 text-[#997819] uppercase tracking-tight">
                     After
                   </h3>
 
@@ -321,7 +320,7 @@ const CreativeContentPage = () => {
         </div>
       </section>
       {/* 🏛️ 4 PILLAR ONE: ELITE CORPORATE EDITION */}
-      <section className="bg-white dark:bg-gray-800 py-32 relative overflow-hidden">
+      <section className="bg-white dark:bg-gray-800 py-14 md:py-32 relative overflow-hidden">
         {/* Minimalist Watermark */}
         <div className="absolute top-10 left-10 text-[20rem] font-black text-black/[0.02] dark:text-white/[0.01] select-none leading-none -z-10">
           01
@@ -337,7 +336,7 @@ const CreativeContentPage = () => {
                   The Framework
                 </span>
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85]">
+              <h2 className="text-[#12066a] dark:text-white text-4xl md:text-7xl font-black tracking-tighter uppercase leading-[0.98]">
                 Four Pillars. <br />
                 <span className="text-[#997819] dark:text-[#997819]/60">
                   One Authority System.
@@ -362,10 +361,11 @@ const CreativeContentPage = () => {
                       Pillar One: Production
                     </span>
                   </div>
-                  <h3 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase leading-none mb-8">
-                    Content <br /> Production
+                  <h3 className="text-[#12066a] dark:text-white text-4xl md:text-6xl font-black uppercase leading-none mb-3">
+                    Content <br />{" "}
+                    <span className="text-[#997819]">Production</span>
                   </h3>
-                  <div className="w-20 h-2 bg-[#12066a] dark:bg-[#997819]" />
+                  <div className="w-20 h-2 bg-[#12066a] dark:bg-[#997819] mb-3" />
                 </div>
 
                 <div className="space-y-6">
@@ -398,7 +398,18 @@ const CreativeContentPage = () => {
                   {[
                     {
                       icon: <Camera size={24} />,
-                      text: <>2–4 professionally managed <Link href="/studio-production" className="text-[#997819] font-bold">studio sessions</Link> each month</>,
+                      text: (
+                        <>
+                          2–4 professionally managed{" "}
+                          <Link
+                            href="/studio-production"
+                            className="text-[#997819] font-bold"
+                          >
+                            studio sessions
+                          </Link>{" "}
+                          each month
+                        </>
+                      ),
                     },
                     {
                       icon: <Mic size={24} />,
@@ -428,7 +439,7 @@ const CreativeContentPage = () => {
       </section>
 
       {/* 🏛️ 5 PILLAR TWO: MINIMALIST CORPORATE EDITION */}
-      <section className="bg-white dark:bg-gray-900 py-32 relative">
+      <section className="bg-white dark:bg-gray-900 py-14 md:py-32 relative">
         <div className="max-w-7xl mx-auto px-6">
           {/* Upper Label */}
           <div className="flex items-center gap-4 mb-16 overflow-hidden">
@@ -445,12 +456,13 @@ const CreativeContentPage = () => {
             {/* Left: The Statement */}
             <div>
               <FadeIn direction="up">
-                <h2 className="text-[#12066a] dark:text-white text-6xl md:text-8xl font-black leading-[0.85] uppercase tracking-tighter mb-12">
+                <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black leading-[0.85] uppercase tracking-tighter mb-3">
                   Content <br />
-                  <span className="text-gray-300 dark:text-[#997819]/60">
+                  <span className="text-[#997819] dark:text-[#997819]/60">
                     Engine
                   </span>
                 </h2>
+                <div className="w-20 h-2 bg-[#12066a] dark:bg-[#997819] mb-3" />
 
                 <div className="max-w-md">
                   <p className="text-xl md:text-2xl font-light leading-relaxed text-gray-500 dark:text-gray-400 mb-8">
@@ -468,9 +480,16 @@ const CreativeContentPage = () => {
               <FadeIn direction="up" delay={0.2}>
                 <div className="border-t-2 border-gray-100 dark:border-white/5 pt-12">
                   <p className="text-2xl font-bold text-[#12066a] dark:text-white mb-12 leading-snug">
-                    Our <Link href="/content-engine" className="text-[#997819] font-bold">Content Engine</Link> transforms every podcast, interview, or
-                    video into a consistent stream of strategic media designed
-                    to increase visibility and strengthen authority.
+                    Our{" "}
+                    <Link
+                      href="/content-engine"
+                      className="text-[#997819] font-bold"
+                    >
+                      Content Engine
+                    </Link>{" "}
+                    transforms every podcast, interview, or video into a
+                    consistent stream of strategic media designed to increase
+                    visibility and strengthen authority.
                   </p>
 
                   {/* Clean List */}
@@ -509,7 +528,7 @@ const CreativeContentPage = () => {
       </section>
 
       {/* 🏛️ 6 PILLAR THREE: ELITE CORPORATE EDITION (CONSISTENT LAYOUT) */}
-      <section className="bg-white dark:bg-gray-800 py-32 relative overflow-hidden">
+      <section className="bg-white dark:bg-gray-800 py-14 md:py-32 relative overflow-hidden">
         {/* Minimalist Watermark */}
         <div className="absolute top-10 left-10 text-[20rem] font-black text-black/[0.02] dark:text-white/[0.01] select-none leading-none -z-10">
           03
@@ -533,10 +552,11 @@ const CreativeContentPage = () => {
                     </span>
                   </div>
 
-                  <h3 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase leading-none mb-8">
-                    Authority <br /> System
+                  <h3 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase leading-none mb-2">
+                    Authority <br />{" "}
+                    <span className="text-[#997819]">System</span>
                   </h3>
-                  <div className="w-20 h-2 bg-[#12066a] dark:bg-[#997819]" />
+                  <div className="w-20 h-2 bg-[#12066a] dark:bg-[#997819] mb-2" />
                 </div>
 
                 <div className="space-y-6">
@@ -599,7 +619,7 @@ const CreativeContentPage = () => {
       </section>
 
       {/* 🏛️ 7 PILLAR FOUR: ELITE CORPORATE EDITION (CONSISTENT LAYOUT) */}
-      <section className="bg-white dark:bg-gray-900 py-32 relative overflow-hidden">
+      <section className="bg-white dark:bg-gray-900 py-14 md:py-32 relative overflow-hidden">
         {/* Minimalist Watermark */}
         <div className="absolute top-10 left-10 text-[20rem] font-black text-black/[0.02] dark:text-white/[0.01] select-none leading-none -z-10">
           04
@@ -623,10 +643,10 @@ const CreativeContentPage = () => {
                     </span>
                   </div>
 
-                  <h4 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase leading-none mb-8">
-                    Growth <br /> Engine
+                  <h4 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase leading-none mb-2">
+                    Growth <br /> <span className="text-[#997819]">Engine</span>
                   </h4>
-                  <div className="w-20 h-2 bg-[#12066a] dark:bg-[#997819]" />
+                  <div className="w-20 h-2 bg-[#12066a] dark:bg-[#997819] mb-2" />
                 </div>
 
                 <div className="space-y-6">
@@ -636,10 +656,16 @@ const CreativeContentPage = () => {
                     remember.
                   </p>
                   <p className="text-lg text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
-                    Our <Link href="/growth-engine" className="text-[#997819] font-bold">Growth Engine</Link> is designed to ensure your content does
-                    more than generate visibility; it strengthens authority,
-                    attracts inbound opportunities, and supports long-term
-                    business growth.
+                    Our{" "}
+                    <Link
+                      href="/growth-engine"
+                      className="text-[#997819] font-bold"
+                    >
+                      Growth Engine
+                    </Link>{" "}
+                    is designed to ensure your content does more than generate
+                    visibility; it strengthens authority, attracts inbound
+                    opportunities, and supports long-term business growth.
                   </p>
                   <p className="text-lg font-bold text-[#12066a] dark:text-[#997819] italic border-l-2 border-[#997819] pl-6">
                     As your authority grows, your business becomes easier to
@@ -678,7 +704,7 @@ const CreativeContentPage = () => {
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-6 group">
                       <div className="mt-1 text-[#997819]">{item.icon}</div>
-                      <p className="text-lg font-bold text-gray-700 dark:text-gray-200 leading-snug uppercase tracking-tight">
+                      <p className="text-lg md:text-xl font-bold text-gray-700 dark:text-gray-200 leading-snug uppercase tracking-tight md:tracking-normal break-words hyphens-auto">
                         {item.text}
                       </p>
                     </div>
@@ -691,7 +717,7 @@ const CreativeContentPage = () => {
       </section>
 
       {/* 🎯 8 WHO THIS IS FOR: AUTHORITY TARGET SECTION */}
-      <section className="bg-white dark:bg-gray-800 py-32 relative">
+      <section className="bg-white dark:bg-gray-800 py-14 md:py-32 relative">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header: Different from Pillars --- */}
           <div className="text-center max-w-4xl mx-auto mb-20">
@@ -699,7 +725,7 @@ const CreativeContentPage = () => {
               <span className="text-[#997819] font-bold uppercase tracking-[0.4em] text-xs mb-6 block">
                 Strategic Alignment
               </span>
-              <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-8">
+              <h2 className="text-[#12066a] dark:text-white text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-8">
                 Who This Is For
               </h2>
               <p className="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6 italic leading-tight">
@@ -793,7 +819,7 @@ const CreativeContentPage = () => {
         </div>
       </section>
       {/* 🏛️ 9 THE BIZGROW ECOSYSTEM: ULTRA-STAGGERED EDITION */}
-      <section className="bg-white dark:bg-gray-900 py-40 relative transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-900 py-14 md:py-40 relative transition-colors duration-500 overflow-hidden">
         {/* Decorative Branding Background Element */}
         <div className="absolute top-20 right-[-5%] text-[20rem] font-black text-[#12066a]/[0.02] dark:text-white/[0.02] select-none pointer-events-none tracking-tighter">
           GROW
@@ -810,7 +836,7 @@ const CreativeContentPage = () => {
                     Strategic Evolution
                   </span>
                 </div>
-                <h2 className="text-[#12066a] dark:text-white text-7xl  font-black uppercase tracking-[ -0.05em] leading-[0.8] mb-0">
+                <h2 className="text-[#12066a] dark:text-white text-4xl md:text-7xl  font-black uppercase tracking-[ -0.05em] leading-[0.8] mb-0">
                   Bizgrow Media <br />{" "}
                   <span className="dark:text-[#997819]">Ecosystem</span>
                 </h2>
@@ -909,10 +935,7 @@ const CreativeContentPage = () => {
 
                 <h2 className="text-4xl md:text-6xl font-black mb-8 leading-[0.9] tracking-tighter uppercase">
                   Ready to become the <br />
-                  <span
-                    className="text-transparent italic font-serif"
-                    style={{ WebkitTextStroke: "2px #997819" }}
-                  >
+                  <span className="text-[#997819] italic font-serif">
                     Recognised Authority
                   </span>{" "}
                   <br />
@@ -931,7 +954,7 @@ const CreativeContentPage = () => {
               <FadeIn direction="up" delay={0.4}>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                   <Link href="/contact-us">
-                    <button className="group relative px-12 py-5 bg-[#12066a] text-white font-black uppercase tracking-widest text-[11px] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_rgba(181,65,24,0.4)]">
+                    <button className="group relative px-3 md:px-12 py-5 bg-[#12066a] text-white font-black uppercase tracking-widest text-[11px] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_rgba(181,65,24,0.4)]">
                       <span className="relative z-10 flex items-center gap-3">
                         Book your strategy call <ArrowRight size={16} />
                       </span>

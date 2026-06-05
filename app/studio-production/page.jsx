@@ -45,7 +45,7 @@ const StudioProductionPage = () => {
               <span className="text-[#997819] font-bold tracking-[0.4em] uppercase text-xs mb-6">
                 Premium Visual Content
               </span>
-              <h1 className="text-white text-5xl md:text-7xl text-center font-black max-w-5xl leading-[0.9] uppercase tracking-tighter">
+              <h1 className="text-white text-4xl md:text-7xl text-center font-black max-w-5xl leading-[0.9] uppercase tracking-tighter">
                 High-Quality Media <br />
                 <span className="text-[#997819]">Production</span> for Brands
               </h1>
@@ -59,9 +59,9 @@ const StudioProductionPage = () => {
       </div>
 
       {/* 🚀 2 INTRODUCTION: PREMIUM POSITIONING */}
-      <section className="py-32 bg-white dark:bg-gray-800">
+      <section className="py-14 md:py-32 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="flex flex-col flex-col-reverse lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2 relative">
               <FadeIn direction="right">
                 <div className="relative h-[500px] md:h-[650px] w-full rounded-[3.5rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-white/5">
@@ -89,7 +89,7 @@ const StudioProductionPage = () => {
                 <span className="text-[#997819] font-black uppercase tracking-[0.3em] text-xs">
                   Premium Visual Content
                 </span>
-                <h2 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white leading-[1] uppercase tracking-tighter mt-4">
+                <h2 className="text-3xl md:text-6xl font-black text-[#12066a] dark:text-white leading-[1] uppercase tracking-tighter mt-4">
                   Bring Your Brand <br />
                   <span className="text-[#997819]">Story </span> To Life Through
                   Premium Visual Content
@@ -121,11 +121,11 @@ const StudioProductionPage = () => {
       </section>
 
       {/* 🚀 3 MEDIA ASSETS: THE SERVICES GRID */}
-      <section className="py-24 bg-gray-50 dark:bg-gray-900">
+      <section className="py-14 md:py-24 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <FadeIn direction="up">
-              <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter uppercase text-[#12066a] dark:text-white">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 tracking-tighter uppercase text-[#12066a] dark:text-white">
                 Media <span className="text-[#997819] mr-1">Assets</span>
                 Designed to Capture Attention & Build Trust
               </h2>
@@ -191,7 +191,7 @@ const StudioProductionPage = () => {
       </section>
 
       {/* 🏛️ 4 THE PROCESS */}
-      <section className="py-32 relative bg-white dark:bg-gray-800 overflow-hidden">
+      <section className="py-14 md:py-32 relative bg-white dark:bg-gray-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mb-24">
             <FadeIn direction="up">
@@ -201,7 +201,7 @@ const StudioProductionPage = () => {
                   The Experience
                 </span>
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black tracking-tighter uppercase leading-[0.85]">
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black tracking-tighter uppercase leading-[0.98]">
                 From Creative Vision To
                 <span className="text-[#997819] ml-1">Produced Media</span>
               </h2>
@@ -277,7 +277,7 @@ const StudioProductionPage = () => {
       </section>
 
       {/* 🚀 6 THE IMPACT OF PREMIUM PRODUCTION */}
-      <section className="py-32 bg-white dark:bg-gray-900 overflow-hidden">
+      <section className="py-14 md:py-32 bg-white dark:bg-gray-900 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-start gap-20">
             {/* Left Side: Strategic Text */}
@@ -289,7 +289,7 @@ const StudioProductionPage = () => {
                     The Difference
                   </span>
                 </div>
-                <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85] mb-8">
+                <h2 className="text-[#12066a] dark:text-white text-4xl md:text-7xl font-black tracking-tighter uppercase leading-[0.98] mb-8">
                   The Impact of <br />
                   <span className="text-[#997819]">Premium Production</span>
                 </h2>
@@ -361,7 +361,7 @@ const StudioProductionPage = () => {
       </section>
 
       {/* 🚀 5 PRODUCTION SUPPORT SECTION (The Missing Piece) */}
-      <section className="py-24 bg-[#12066a] dark:bg-gray-800 text-white">
+      <section className="py-14 md:py-24 bg-[#12066a] dark:bg-gray-800 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="right">
@@ -418,14 +418,14 @@ const StudioProductionPage = () => {
       </section>
 
       {/* 🎯 FINAL CTA - PARALLAX BOX EDITION */}
-      <section className="py-32 px-6 dark:bg-gray-900 relative">
+      <section className="py-14 md:py-32 px-6 dark:bg-gray-900 relative">
         <div className="max-w-6xl mx-auto relative rounded-[4rem] overflow-hidden shadow-2xl border-2 border-[#997819]/30">
           <div
             className="absolute inset-0 w-full h-full bg-cover bg-center bg-fixed bg-no-repeat"
             style={{ backgroundImage: "url('/cta-bg.jpg')" }}
           />
           <div className="absolute inset-0 bg-[#000B25]/85" />
-          <div className="relative z-10 p-16 md:p-24 text-center">
+          <div className="relative z-10 p-10 md:p-24 text-center">
             <FadeIn direction="up">
               <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter mb-8 leading-none">
                 Give Your Brand The <br />
@@ -438,7 +438,7 @@ const StudioProductionPage = () => {
                 platform.
               </p>
               <Link href="/contact-us">
-                <button className="bg-[#997819] text-white px-12 py-6 rounded-2xl font-black uppercase tracking-[0.2em] text-sm hover:scale-105 transition-transform shadow-2xl">
+                <button className="bg-[#997819] text-white  md:px-12 py-6 rounded-2xl font-black uppercase tracking-[0.2em] text-xs hover:scale-105 transition-transform shadow-2xl">
                   Create Premium Brand Media
                 </button>
               </Link>

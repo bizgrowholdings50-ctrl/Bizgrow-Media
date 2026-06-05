@@ -45,9 +45,9 @@ const GrowthEnginePage = () => {
 
           <FadeIn direction="up" delay={0.4}>
             <div className="w-full flex flex-col items-center">
-              <span className="text-white text-4xl md:text-5xl text-center font-bold max-w-5xl leading-tight">
+              <span className="text-white text-3xl md:text-7xl text-center font-bold max-w-5xl leading-tight">
                 Business Growth Feels Different When
-                <span className="text-[#997819] mx-2 text-4xl md:text-5xl  ">
+                <span className="text-[#997819] mx-2 ">
                   The Right System
                 </span>
                 Is Driving It
@@ -61,7 +61,7 @@ const GrowthEnginePage = () => {
         </div>
       </div>
       {/* 🚀\ PREMIUM SPLIT (Inspired by Content Engine) */}
-      <section className="relative dark:bg-gray-800 py-24 lg:py-32 transition-colors duration-500 overflow-hidden">
+      <section className="relative dark:bg-gray-800 py-14 lg:py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
             {/* --- Left Column: Content --- */}
@@ -74,7 +74,7 @@ const GrowthEnginePage = () => {
                   </span>
                 </div>
 
-                <h1 className="text-[#12066a] dark:text-white text-5xl font-black uppercase tracking-tighter leading-[0.9] mb-10">
+                <h1 className="text-[#12066a] dark:text-white text-3xl md:text-5xl font-black uppercase tracking-tighter leading-[0.98] mb-10">
                   Growth Works <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#997819] to-[#997819]/60">
                     Better
@@ -149,8 +149,8 @@ const GrowthEnginePage = () => {
         </div>
       </section>
 
-      {/* 🏛️ 2. THE FOUNDATION: SMARTER GROWTH */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-40 transition-colors duration-500 overflow-hidden">
+      {/* 🏛️ . THE FOUNDATION: SMARTER GROWTH */}
+      <section className="bg-gray-50 dark:bg-gray-900 py-14 md:py-40 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row justify-between items-start mb-20 gap-10">
             <div className="lg:w-2/3">
@@ -160,7 +160,7 @@ const GrowthEnginePage = () => {
                   The Foundation Behind
                 </span>
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-6xl font-black uppercase tracking-tighter leading-[0.85]">
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black uppercase tracking-tighter leading-[0.98]">
                 Smarter Business <br />
                 <span className="text-[#997819]">Growth</span> Systems
               </h2>
@@ -218,7 +218,7 @@ const GrowthEnginePage = () => {
       </section>
 
       {/* 🔄 THE STRATEGIC DIFFERENCE: COMPARISON SECTION */}
-      <section className="bg-white dark:bg-gray-800 py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-800 py-14 md:py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           {/* Section Header */}
           <div className="text-center mb-24">
@@ -229,11 +229,11 @@ const GrowthEnginePage = () => {
                   The Strategic Shift
                 </span>
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none">
-                The Difference Between <br />
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black uppercase tracking-tighter leading-[0.98]">
+                The Difference Between <br  className="hidden md:block"/>
                 <span className="text-[#997819]">
                   Temporary Growth
-                </span> And <br />
+                </span> And <br className="hidden md:block"/>
                 Long-Term Stability
               </h2>
             </FadeIn>
@@ -318,7 +318,7 @@ const GrowthEnginePage = () => {
         </div>
       </section>
       {/* 🎯 WHEN GROWTH STARTS MAKING SENSE: REFINED CENTERED LAYOUT */}
-      <section className="bg-[#f8f9fa] dark:bg-gray-900 py-24 lg:py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-[#f8f9fa] dark:bg-gray-900 py-14 lg:py-32 transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Top Section: Compact Heading & Lead Text --- */}
           <div className="text-center max-w-5xl mx-auto mb-20">
@@ -331,7 +331,7 @@ const GrowthEnginePage = () => {
                 <div className="w-8 h-[1px] bg-[#997819]" />
               </div>
 
-              <h2 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase tracking-tighter leading-[0.8] mb-10">
+              <h2 className="text-[#12066a] dark:text-white text-4xl md:text-6xl font-black uppercase tracking-tighter leading-[0.98] md:mb-10">
                 When Growth <br />
                 Finally Starts <br />
                 <span className="text-[#997819]">Making Sense</span>
@@ -404,7 +404,7 @@ const GrowthEnginePage = () => {
       </section>
 
       {/* 🛣️ GROWTH ENGINE ROADMAP SECTION */}
-      <section className="bg-white dark:bg-gray-800 py-24 lg:py-32 transition-colors duration-500">
+      <section className="bg-white dark:bg-gray-800 py-14 lg:py-32 transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header Section --- */}
           <div className="text-center max-w-4xl mx-auto mb-20">
@@ -417,7 +417,7 @@ const GrowthEnginePage = () => {
                 <div className="w-8 h-[1px] bg-[#997819]" />
               </div>
 
-              <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.8] mb-10">
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-7xl font-black uppercase tracking-tighter leading-[0.98] mb-10">
                 Growth Engine <br />
                 <span className="text-[#997819]">Roadmap</span>
               </h2>
@@ -477,7 +477,7 @@ const GrowthEnginePage = () => {
                       </div>
 
                       {/* Central Connector Circle */}
-                      <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#f8f9fa] dark:bg-gray-800 border-4 border-white dark:border-gray-700 flex items-center justify-center z-10 shadow-lg">
+                      <div className="absolute left-1/2 md:block hidden -translate-x-1/2 w-10 h-10 rounded-full bg-[#f8f9fa] dark:bg-gray-800 border-4 border-white dark:border-gray-700 flex items-center justify-center z-10 shadow-lg">
                         <div className="w-2 h-2 rounded-full bg-[#997819] group-hover:scale-150 transition-transform duration-500" />
                       </div>
                     </div>
@@ -517,8 +517,8 @@ const GrowthEnginePage = () => {
                 <h2 className="text-4xl md:text-6xl font-black mb-8 leading-[0.9] tracking-tighter uppercase">
                   Sometimes Growth <br />
                   <span
-                    className="text-transparent italic font-serif"
-                    style={{ WebkitTextStroke: "2px #997819" }}
+                    className="text-[#997819] italic font-serif"
+                    
                   >
                     Just Needs
                   </span>{" "}

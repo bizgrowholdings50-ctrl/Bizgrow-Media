@@ -75,7 +75,7 @@ export default function LuxuryGridSlider() {
       </div>
 
       {/* 2. MAIN CONTENT GRID */}
-      <div className="relative z-10 w-full px-6 md:px-24 grid grid-cols-12 h-full items-center">
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-24 grid grid-cols-12 h-full items-center">
         {/* Left Indicator */}
         <div className="col-span-1 hidden md:flex flex-col gap-6 items-start justify-center h-full border-l border-white/5 pl-8">
           {slides.map((_, i) => (
@@ -91,7 +91,6 @@ export default function LuxuryGridSlider() {
               >
                 {`0${i + 1}`}
               </span>
-              {/* 🚀 OPTIMIZED: Using transform scaleY instead of layout-breaking height animation */}
               <motion.div
                 initial={{ scaleY: 0.08 }}
                 animate={{
@@ -109,9 +108,8 @@ export default function LuxuryGridSlider() {
         </div>
 
         {/* Center Content */}
-        <div className="col-span-12 md:col-span-11 lg:col-span-9 mt-12 md:mt-0">
+        <div className="col-span-12 md:col-span-11 lg:col-span-9 md:px-12 lg:px-0">
           {index === 0 ? (
-            /* 🚀 ULTRA LIGHTWEIGHT FOR MOBILE INITIAL LOAD: Completely static render for First Slide (0ms Delay) */
             <div>
               <div className="flex items-center gap-4 mt-20 mb-6">
                 <span className="w-10 h-[1px] bg-[#997819]"></span>
@@ -120,7 +118,7 @@ export default function LuxuryGridSlider() {
                 </span>
               </div>
 
-              <h1 className="text-5xl md:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
+              <h1 className="text-5xl md:text-[7vw] lg:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
                 {slides[0].title} <br />
                 <span
                   className="text-transparent italic font-serif font-light block mt-2"
@@ -130,7 +128,7 @@ export default function LuxuryGridSlider() {
                 </span>
               </h1>
 
-              <p className="max-w-xl text-white/60 text-base md:text-xl font-medium leading-relaxed mb-12 italic border-l-2 border-[#997819]/30 pl-6">
+              <p className="max-w-xl text-white/60 text-base md:text-lg lg:text-xl font-medium leading-relaxed mb-12 italic border-l-2 border-[#997819]/30 pl-6">
                 {slides[0].desc}
               </p>
 
@@ -148,7 +146,6 @@ export default function LuxuryGridSlider() {
               </Link>
             </div>
           ) : (
-            /* 🎭 DYNAMIC ANIMATIONS FOR SUBSEQUENT SLIDES: Carousel fade transitions active on user choice/slides change */
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
@@ -164,7 +161,7 @@ export default function LuxuryGridSlider() {
                   </h2>
                 </div>
 
-                <h1 className="text-5xl md:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
+                <h1 className="text-5xl md:text-[7vw] lg:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
                   {currentSlide.title} <br />
                   <span
                     className="text-transparent italic font-serif font-light block mt-2"
@@ -174,7 +171,7 @@ export default function LuxuryGridSlider() {
                   </span>
                 </h1>
 
-                <p className="max-w-xl text-white/60 text-base md:text-xl font-medium leading-relaxed mb-12 italic border-l-2 border-[#997819]/30 pl-6">
+                <p className="max-w-xl text-white/60 text-base md:text-lg lg:text-xl font-medium leading-relaxed mb-12 italic border-l-2 border-[#997819]/30 pl-6">
                   {currentSlide.desc}
                 </p>
 

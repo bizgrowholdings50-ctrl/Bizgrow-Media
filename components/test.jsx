@@ -31,7 +31,8 @@ export default function BizGrowWhySection() {
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
         <motion.div
           style={{ width, borderRadius, scale }}
-          className="relative h-[90vh] md:h-screen bg-[#050505] flex flex-col items-center justify-center overflow-hidden shadow-2xl"
+          // md:rounded-[40px] desktop pe apply hoga, w-full h-full mobile pe fill karega
+          className="relative w-full h-full md:h-[90vh] mt-40 md:mt-0 lg:h-screen bg-[#050505] flex flex-col items-center justify-center overflow-hidden shadow-2xl md:rounded-[40px]"
         >
           {/* Background Video with Overlay */}
           <video
@@ -44,31 +45,33 @@ export default function BizGrowWhySection() {
           {/* Content Layer */}
           <div className="relative z-10 w-full max-w-6xl px-6">
             <motion.div 
-               initial={{ opacity: 0, y: 50 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               className="text-center mb-16"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              // mobile pe mb-8, desktop pe mb-16
+              className="text-center mb-8 md:mb-16"
             >
-              <span className="text-[#997819] font-black uppercase tracking-[0.5em] text-[10px] mb-4 block">
+              <span className="text-[#997819] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-[9px] md:text-[10px] mb-4 block">
                 The Partnership Advantage
               </span>
-              <h2 className="text-white text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none">
-                Why Businesses Work With <br/>
+              <h2 className="text-white text-3xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9]">
+                Why Businesses Work With <br className="hidden md:block"/>
                 <span className="text-[#997819] italic">BizGrow Media</span>
               </h2>
             </motion.div>
 
-            {/* Grid for Points */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+            {/* Grid for Points: Mobile pe 1 column, Desktop pe 2 columns */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 md:gap-y-6">
               {points.map((point, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
+                  // mobile pe text-xs, desktop pe text-base
                   className="flex items-center gap-4 border-l border-[#997819]/30 pl-4 py-2 hover:bg-white/5 transition-colors"
                 >
                   <div className="w-1.5 h-1.5 bg-[#997819] rounded-full shrink-0" />
-                  <p className="text-white/80 text-sm md:text-base font-medium tracking-tight">
+                  <p className="text-white/80 text-xs md:text-base font-medium tracking-tight">
                     {point}
                   </p>
                 </motion.div>

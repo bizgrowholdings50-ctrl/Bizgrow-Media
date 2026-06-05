@@ -33,7 +33,7 @@ const HomePage = () => {
       </section>
 
       {/* 2. BRAND STORY: THE POWER OF BUSINESS MEDIA */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-white dark:bg-gray-800 ">
+      <section className="relative py-14 md:py-32 overflow-hidden bg-white dark:bg-gray-800 ">
         <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-[#997819]/10 blur-[150px] rounded-full pointer-events-none opacity-50" />
         <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-[#12066a]/5 dark:bg-white/5 blur-[100px] rounded-full pointer-events-none" />
 
@@ -48,7 +48,7 @@ const HomePage = () => {
                   </span>
                 </div>
 
-                <h2 className="text-5xl md:text-5xl font-black text-[#12066a] dark:text-white mb-8  tracking-normal uppercase">
+                <h2 className="text-3xl md:text-5xl font-black text-[#12066a] dark:text-white mb-8  tracking-normal uppercase">
                   Where Businesses <br />
                   <span
                     className="text-[#997819] bg-clip-text "
@@ -119,7 +119,7 @@ const HomePage = () => {
             </div>
 
             {/* Right Content (Image) */}
-            <div className="relative group order-2 lg:order-2 mt-12 lg:mt-0">
+            <div className="relative group order-2 lg:order-2 mt-6 lg:mt-0">
               <FadeIn direction="left" delay={0.4}>
                 <div className="relative z-10 p-4 border border-[#997819]/10 dark:border-white/5 rounded-[3rem] backdrop-blur-sm">
                   <div className="relative aspect-[4/5] md:aspect-square overflow-hidden rounded-[2.5rem] shadow-2xl">
@@ -139,14 +139,14 @@ const HomePage = () => {
       </section>
 
       {/* 3. CORE SERVICES: OUR MEDIA SERVICES */}
-      <section className="relative py-32 bg-slate-50 dark:bg-gray-900">
+      <section className="relative py-14 md:py-32 bg-slate-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <FadeIn direction="up">
               <h2 className="text-[#997819] font-black tracking-[0.4em] uppercase text-xs mb-4">
                 Our Media Services
               </h2>
-              <h3 className="text-5xl md:text-6xl font-black text-[#12066a] dark:text-white uppercase tracking-tighter">
+              <h3 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white uppercase tracking-tighter">
                 The Future Of Business Media
               </h3>
             </FadeIn>
@@ -254,7 +254,7 @@ const HomePage = () => {
       </section>
 
       {/* 4. WHY GROWING BRANDS CHOOSE BIZGROW MEDIA */}
-      <section className="py-32 bg-white dark:bg-gray-800 overflow-hidden">
+      <section className="py-14 md:py-32 bg-white dark:bg-gray-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-5">
@@ -348,65 +348,72 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 6. THE BIZGROW MEDIA ECOSYSTEM */}
-      <section className="py-32 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <FadeIn direction="up">
-            <h2 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white uppercase mb-20 tracking-tighter">
-              The BizGrow Media{" "}
-              <span className="text-[#997819]">Ecosystem</span>
-            </h2>
-            <div className="flex flex-wrap justify-center gap-4">
-              {[
-                "Studio Hire",
-                "Launch Package",
-                "Content Engine",
-                "Authority Builder",
-                "Media Partner",
-              ].map((step, i) => (
-                <div
-                  key={i}
-                  className="px-10 py-6 border border-slate-200 dark:border-white/10 rounded-full flex items-center gap-4 bg-slate-50 dark:bg-white/[0.02] hover:border-[#997819] transition-all"
-                >
-                  <span className="text-[#997819] font-black text-sm">
-                    Step {i + 1}
-                  </span>
-                  <span className="text-[#12066a] dark:text-white font-black uppercase tracking-widest text-xs">
-                    — {step}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* 7. FINAL IMPACT CTA */}
-      <section className="py-24 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="relative py-24 rounded-[4rem] overflow-hidden text-center text-white bg-[#12066a] shadow-2xl">
-            <div className="absolute inset-0 bg-[url('/hero-cta.webp')] bg-cover bg-center bg-fixed opacity-30" />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-[#12066a]/80" />
-            <div className="relative z-10 px-6 max-w-3xl mx-auto">
-              <FadeIn direction="up">
-                <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-none">
-                  Working With Brands <br /> That Aim Higher
-                </h2>
-                <p className="text-gray-200 mb-12 text-lg  font-light italic">
-                  BizGrow Media helps businesses grow through premium media
-                  production, strategic content, authority positioning, and
-                  growth-focused exposure.
-                </p>
-                <Link href="/contact-us">
-                  <button className="px-12 py-6 bg-[#997819] text-white font-black rounded-2xl uppercase tracking-[0.3em] text-sm hover:scale-110 transition-transform shadow-xl">
-                    Step Into Professional Media
-                  </button>
-                </Link>
-              </FadeIn>
-            </div>
+     {/* 6. THE BIZGROW MEDIA ECOSYSTEM */}
+<section className="py-14 md:py-32 bg-white dark:bg-gray-800">
+  <div className="max-w-7xl mx-auto px-6 text-center">
+    <FadeIn direction="up">
+      <h2 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white uppercase mb-20 tracking-tighter">
+        The BizGrow Media
+        <span className="text-[#997819] ml-2">Ecosystem</span>
+      </h2>
+      
+      {/* Responsive Wrapper: Mobile pe column, Desktop pe flex-row wrap */}
+      <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-4 w-full">
+        {[
+          "Studio Hire",
+          "Launch Package",
+          "Content Engine",
+          "Authority Builder",
+          "Media Partner",
+        ].map((step, i) => (
+          <div
+            key={i}
+            // w-full mobile ke liye, md:w-auto desktop ke liye taake wo apni asli width le sakein
+            className="px-6 py-5 border border-slate-200 dark:border-white/10 rounded-full flex items-center justify-start gap-4 bg-slate-50 dark:bg-white/[0.02] hover:border-[#997819] transition-all w-full md:w-auto"
+          >
+            <span className="text-[#997819] font-black text-sm w-16 shrink-0 text-right">
+              Step {i + 1}
+            </span>
+            <span className="text-[#12066a] dark:text-white font-black uppercase tracking-widest text-xs truncate">
+              — {step}
+            </span>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </FadeIn>
+  </div>
+</section>
+
+    {/* 7. FINAL IMPACT CTA */}
+<section className="py-12 md:py-24 bg-white dark:bg-gray-900">
+  <div className="max-w-7xl mx-auto px-4 md:px-6">
+    <div className="relative py-16 md:py-24 rounded-[2rem] md:rounded-[4rem] overflow-hidden text-center text-white bg-[#12066a] shadow-2xl">
+      {/* Parallax logic: bg-fixed sirf desktop/tablet ke liye, mobile ke liye bg-scroll */}
+      <div className="absolute inset-0 bg-[url('/hero-cta.webp')] bg-cover bg-center bg-scroll md:bg-fixed opacity-30" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-[#12066a]/80" />
+
+      <div className="relative z-10 px-6 max-w-2xl mx-auto">
+        <FadeIn direction="up">
+          <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tight mb-6 leading-tight">
+            Working With Brands That Aim Higher
+          </h2>
+
+          <p className="text-gray-200 mb-10 text-base md:text-lg font-light italic px-2">
+            BizGrow Media helps businesses grow through premium media
+            production, strategic content, authority positioning, and
+            growth-focused exposure.
+          </p>
+
+          <Link href="/contact-us">
+            <button className="w-full md:w-auto px-8 py-4 bg-[#997819] text-white font-black rounded-xl uppercase tracking-widest text-xs hover:scale-105 transition-transform shadow-xl">
+              Step Into Professional Media
+            </button>
+          </Link>
+        </FadeIn>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
   );
 };

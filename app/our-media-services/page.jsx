@@ -108,13 +108,13 @@ const page = () => {
       </div>
 
       {/* SERVICES GRID */}
-      <section className="py-24 bg-gray-50 dark:bg-gray-800 relative">
+      <section className="py-14 md:py-24 bg-gray-50 dark:bg-gray-800 relative">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#997819]/5 blur-[120px] rounded-full -z-10" />
 
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <FadeIn direction="up" delay={0.2}>
-              <h2 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white leading-[1.1] tracking-tighter">
+              <h2 className="text-3xl md:text-6xl font-black text-[#12066a] dark:text-white leading-[1.1] tracking-tighter">
                 Elite-level services focused on <br />
                 <span className="text-[#997819]">
                   long-term performance
@@ -178,7 +178,7 @@ const page = () => {
       </section>
 
       {/* OUR DISTINCTION */}
-      <section className="bg-white dark:bg-gray-900 py-40 transition-colors duration-500 relative">
+      <section className="bg-white dark:bg-gray-900 py-14 md:py-40 transition-colors duration-500 relative">
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20 dark:opacity-40">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-gray-200 dark:via-white/10 to-transparent hidden md:block" />
         </div>
@@ -192,7 +192,7 @@ const page = () => {
               </span>
             </div>
 
-            <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] mb-8 italic">
+            <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] -mb-12 md:mb-8 italic">
               What Makes <br />
               <span className="text-[#997819] not-italic">
                 Our Process Different
@@ -331,7 +331,7 @@ const page = () => {
                   <button className="relative px-8 py-4 bg-[#997819] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(181,65,24,0.5)]">
                     <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
 
-                    <span className="relative z-10 text-lg uppercase tracking-widest">
+                    <span className="relative z-10 md:text-lg uppercase tracking-widest">
                       Start building the right way →
                     </span>
                   </button>

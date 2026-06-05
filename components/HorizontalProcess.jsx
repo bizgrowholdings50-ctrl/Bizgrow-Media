@@ -144,7 +144,7 @@ const HorizontalProcess = () => {
                     </span>
                   </FadeIn>
                   <FadeIn direction={isVertical ? "up" : "right"} delay={0.2}>
-                    <h3 className="text-5xl sm:text-6xl font-black dark:text-white text-[#12066A] leading-none mt-4 uppercase">
+                    <h3 className="text-4xl sm:text-6xl font-black dark:text-white text-[#12066A] leading-none mt-4 uppercase">
                       {item.title}
                     </h3>
                   </FadeIn>
