@@ -155,45 +155,44 @@ export default async function BlogPage({ params }) {
 
         {/* Enhanced Pagination */}
         {totalPages > 1 && (
-  <nav className="flex flex-col sm:flex-row justify-center items-center gap-8 mt-20 pt-10 border-t border-gray-100 dark:border-white/5">
-    
-    {/* Previous Page Button (Sirf tab jab page > 1 ho) */}
-    {currentPage > 1 && (
-      <Link
-        href={getPageLink(currentPage - 1)}
-        className="px-8 py-4 rounded-full border-2 border-gray-200 dark:border-white/10 text-gray-500 font-black text-xs uppercase tracking-widest hover:border-[#997819] hover:text-[#997819] transition-all duration-300"
-      >
-        Previous
-      </Link>
-    )}
+          <nav className="flex flex-col sm:flex-row justify-center items-center gap-8 mt-20 pt-10 border-t border-gray-100 dark:border-white/5">
+            {/* Previous Page Button (Sirf tab jab page > 1 ho) */}
+            {currentPage > 1 && (
+              <Link
+                href={getPageLink(currentPage - 1)}
+                className="px-8 py-4 rounded-full border-2 border-gray-200 dark:border-white/10 text-gray-500 font-black text-xs uppercase tracking-widest hover:border-[#997819] hover:text-[#997819] transition-all duration-300"
+              >
+                Previous
+              </Link>
+            )}
 
-    <div className="flex flex-wrap justify-center gap-3 items-center">
-      {getPaginationRange(currentPage, totalPages).map((page) => (
-        <Link
-          key={page}
-          href={getPageLink(page)}
-          className={`w-11 h-11 flex items-center justify-center rounded-full text-sm font-black transition-all ${
-            currentPage === page
-              ? "bg-[#997819] text-white shadow-lg shadow-[#997819]/30"
-              : "text-gray-400 dark:text-gray-500 hover:bg-gray-100 dark:hover:bg-white/5"
-          }`}
-        >
-          {page}
-        </Link>
-      ))}
-    </div>
+            <div className="flex flex-wrap justify-center gap-3 items-center">
+              {getPaginationRange(currentPage, totalPages).map((page) => (
+                <Link
+                  key={page}
+                  href={getPageLink(page)}
+                  className={`w-11 h-11 flex items-center justify-center rounded-full text-sm font-black transition-all ${
+                    currentPage === page
+                      ? "bg-[#997819] text-white shadow-lg shadow-[#997819]/30"
+                      : "text-gray-400 dark:text-gray-500 hover:bg-gray-100 dark:hover:bg-white/5"
+                  }`}
+                >
+                  {page}
+                </Link>
+              ))}
+            </div>
 
-    {/* Next Page Button (Sirf tab jab page < totalPages ho) */}
-    {currentPage < totalPages && (
-      <Link
-        href={getPageLink(currentPage + 1)}
-        className="px-8 py-4 rounded-full border-2 border-[#997819] text-[#997819] font-black text-xs uppercase tracking-widest hover:bg-[#997819] hover:text-white transition-all duration-300 shadow-sm"
-      >
-        Next Page
-      </Link>
-    )}
-  </nav>
-)}
+            {/* Next Page Button (Sirf tab jab page < totalPages ho) */}
+            {currentPage < totalPages && (
+              <Link
+                href={getPageLink(currentPage + 1)}
+                className="px-8 py-4 rounded-full border-2 border-[#997819] text-[#997819] font-black text-xs uppercase tracking-widest hover:bg-[#997819] hover:text-white transition-all duration-300 shadow-sm"
+              >
+                Next Page
+              </Link>
+            )}
+          </nav>
+        )}
       </div>
     </section>
   );
