@@ -251,6 +251,31 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/why-email-marketing-service/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/how-to-write-an-seo-optimised-blog-in-2026/",
+        destination: "/",
+        permanent: true,
+      },
+       {
+        source: "/the-ultimate-guide-to-creating-scroll-stopping-content-in-the-uk/",
+        destination: "/",
+        permanent: true,
+      },
+       {
+        source: "/how-do-i-start-marketing-on-facebook-a-complete-guide-2026/",
+        destination: "/",
+        permanent: true,
+      },
+       {
+        source: "/wordpress-on-page-seo-checklist/",
+        destination: "/",
+        permanent: true,
+      },
+      {
         source: "/blogs/social-media-marketing-advantages-and-disadvantages/",
         destination: "/social-media-marketing-advantages-and-disadvantages/",
         permanent: true,
