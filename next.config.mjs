@@ -26,7 +26,7 @@ const nextConfig = {
       },
       {
         source: "/digital-marketing-services/",
-        destination: "/content-engine/",
+        destination: "/our-media-services/",
         permanent: true,
       },
       {
@@ -272,6 +272,31 @@ const nextConfig = {
       },
        {
         source: "/wordpress-on-page-seo-checklist/",
+        destination: "/",
+        permanent: true,
+      },
+       {
+        source: "/15-of-the-most-important-on-page-seo-tactics-in-the-uk/",
+        destination: "/",
+        permanent: true,
+      },
+       {
+        source: "/10-creative-content-techniques-to-improve-seo-results/",
+        destination: "/",
+        permanent: true,
+      },
+       {
+        source: "/social-media-marketing-advantages-and-disadvantages/",
+        destination: "/",
+        permanent: true,
+      },
+       {
+        source: "/local-seo-for-small-businesses-in-the-uk/",
+        destination: "/",
+        permanent: true,
+      },
+       {
+        source: "/will-ai-replace-graphic-designers-in-2026/ ",
         destination: "/",
         permanent: true,
       },
