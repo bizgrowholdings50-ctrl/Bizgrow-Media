@@ -3,6 +3,17 @@ import Image from "next/image";
 import FilterBar from "@/components/FilterBar.jsx"; // Digital site wala FilterBar
 import { notFound } from "next/navigation";
 
+const YoastSchema = ({ schema }) => {
+  if (!schema) return null;
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+};
+
 // Digital site ki branding colors
 const BRAND_ORANGE = "#997819";
 const BRAND_BLUE = "#12066a";
@@ -119,6 +130,8 @@ export default async function BlogPage({ params }) {
                 key={post.id}
                 className="group bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-white/5 flex flex-col overflow-hidden hover:shadow-2xl hover:shadow-[#997819]/10 transition-all duration-500"
               >
+                <YoastSchema schema={post.yoast_head_json?.schema} />
+
                 <div className="relative h-60 w-full overflow-hidden">
                   <Image
                     src={
