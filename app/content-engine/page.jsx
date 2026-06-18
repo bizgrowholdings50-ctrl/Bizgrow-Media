@@ -25,6 +25,8 @@ import {
 } from "lucide-react";
 import FadeIn from "@components/MotionWrapper";
 import Link from "next/link";
+import StructuredData from "@components/StructuredData";
+import { contentEngineSchema } from "@lib/jsonSchemas";
 
 export const metadata = {
   title: "Content Engine Service | BizGrow Media ",
@@ -114,6 +116,7 @@ const DigitalMarketingPage = () => {
 
   return (
     <section className="w-full bg-white ">
+      <StructuredData schema={contentEngineSchema} />
       {/* --- 1 HERO SECTION: Responsive & Centered --- */}
       <div className="relative h-[80vh]  md:h-screen pt-10 lg:pt-20 w-full flex items-center justify-center overflow-hidden">
         <Image

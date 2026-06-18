@@ -28,6 +28,8 @@ import {
 
 import Link from "next/link";
 import FadeIn from "@components/MotionWrapper";
+import StructuredData from "@components/StructuredData";
+import { authorityBuilderSchema } from "@lib/jsonSchemas";
 
 export const metadata = {
   title: "Authority Builders Service | BizGrow Media ",
@@ -107,6 +109,7 @@ const CreativeContentPage = () => {
 
   return (
     <section className="relative w-full">
+      <StructuredData schema={authorityBuilderSchema} />
       {/* 1 --- HERO SECTION --- */}
       <div className="relative h-[85vh] md:h-screen w-full">
         <Image

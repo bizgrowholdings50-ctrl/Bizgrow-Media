@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import FadeIn from "@components/MotionWrapper";
+import StructuredData from "@components/StructuredData";
+import { studioProductionSchema } from "@lib/jsonSchemas";
 
 export const metadata = {
   title: "Studio & Production Service | BizGrow Media ",
@@ -29,6 +31,7 @@ export const metadata = {
 const StudioProductionPage = () => {
   return (
     <section className="relative w-full bg-white dark:bg-black">
+      <StructuredData schema={studioProductionSchema} />
       {/* 1 --- HERO SECTION --- */}
       <div className="relative h-[85vh] md:h-screen w-full">
         <Image

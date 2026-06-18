@@ -7,7 +7,6 @@ import SmoothScroll from "@components/SmoothScroll";
 import ChatBotComponent from "@components/WhatsAppWidget";
 import WhatsAppWidget from "@components/WhatsAppWidget"; // 👈 Normal import lagaya
 import { Analytics } from '@vercel/analytics/next';
-import Script from "next/script"; 
 import CustomCursor from "@components/Cursor";
 import { Toaster } from "sonner";
 
@@ -55,42 +54,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "BizGrow Media",
-    "image": "https://bizgrowmedia.co.uk/icon.png",
-    "url": "https://bizgrowmedia.co.uk/",
-    "telephone": "+44 7903 332433",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "CEME Campus, Marsh Way",
-      "addressLocality": "Rainham",
-      "postalCode": "RM13 8EU",
-      "addressCountry": "GB"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 51.5284,
-      "longitude": 0.1775
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "18:00"
-    }
-  };
-
   return (
     <html lang="en-GB" className={`${playfair.variable} ${montserrat.variable}`} suppressHydrationWarning={true}>
-      <head>
-        <Script
-          id="local-business-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
       <body className="font-body bg-[#FDFCF9] text-[#1f2937] antialiased">
         <Providers>
           <CustomCursor />

@@ -13,6 +13,8 @@ import {
 import FadeIn from "@components/MotionWrapper";
 import Link from "next/link";
 import Image from "next/image";
+import StructuredData from "@components/StructuredData";
+import { growthEngineSchema } from "@lib/jsonSchemas";
 
 export const metadata = {
   title: "Growth Engine Service | BizGrow Media ",
@@ -23,6 +25,7 @@ export const metadata = {
 const GrowthEnginePage = () => {
   return (
     <main className="bg-white overflow-hidden">
+      <StructuredData schema={growthEngineSchema} />
       {/* 1 --- HERO SECTION --- */}
       <div className="relative h-[85vh] md:h-screen w-full">
         <Image

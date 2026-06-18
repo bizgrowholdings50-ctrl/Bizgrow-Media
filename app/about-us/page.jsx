@@ -2,6 +2,8 @@
 import FadeIn from "@components/MotionWrapper";
 import Image from "next/image";
 import Link from "next/link";
+import StructuredData from "@components/StructuredData";
+import { aboutPageSchema } from "@lib/jsonSchemas";
 import {
   FaBullseye,
   FaCheckCircle,
@@ -24,6 +26,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="w-full">
+      <StructuredData schema={aboutPageSchema} />
       {/* Hero Section */}
       <section className="relative h-[85vh] md:h-screen w-full">
         <Image
