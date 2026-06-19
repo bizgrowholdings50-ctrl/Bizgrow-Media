@@ -29,6 +29,12 @@ const nextConfig = {
         destination: "/our-media-services/",
         permanent: true,
       },
+       {
+        source: "/our-services/",
+        destination: "/our-media-services/",
+        permanent: true,
+      },
+     
       {
         source: "/lead-generation-solutions/",
         destination: "/studio-production/",
@@ -121,6 +127,11 @@ const nextConfig = {
         source:
           "/on-page-seo-audit-services-boost-your-google-rankings-in-the-uk/",
         destination: "/on-page-seo-audit-services-improve-uk-google-rankings/",
+        permanent: true,
+      },
+        {
+        source: "/video-production-guides/",
+        destination: "/video-production-tips-guides/",
         permanent: true,
       },
       {
