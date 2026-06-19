@@ -132,7 +132,7 @@ export default function LuxuryGridSlider() {
                 {slides[0].desc}
               </p>
 
-              <Link href="/our-services" className="inline-block">
+              <Link href="/our-media-services" className="inline-block">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
