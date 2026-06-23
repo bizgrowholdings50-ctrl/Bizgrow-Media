@@ -121,8 +121,8 @@ export default function LuxuryGridSlider() {
               <h1 className="text-5xl md:text-[7vw] lg:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
                 {slides[0].title} <br />
                 <span
-                  className="text-transparent italic font-serif font-light block mt-2"
-                  style={{ WebkitTextStroke: "1px #997819" }}
+                  className="text-[#997819] italic font-serif tracking-normal font-light block mt-2"
+                  
                 >
                   {slides[0].sub}
                 </span>
@@ -164,8 +164,8 @@ export default function LuxuryGridSlider() {
                 <h1 className="text-5xl md:text-[7vw] lg:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
                   {currentSlide.title} <br />
                   <span
-                    className="text-transparent italic font-serif font-light block mt-2"
-                    style={{ WebkitTextStroke: "1px #997819" }}
+                    className="text-[#997819] italic tracking-normal font-serif font-light block mt-2"
+                  
                   >
                     {currentSlide.sub}
                   </span>
