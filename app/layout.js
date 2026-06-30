@@ -1,4 +1,5 @@
 import { Playfair_Display, Montserrat } from "next/font/google";
+import Script from "next/script";
 import Navbar from "@components/Navbar";
 import "./globals.css";
 import Footer from "@components/Footer";
@@ -9,8 +10,6 @@ import WhatsAppWidget from "@components/WhatsAppWidget";
 import { Analytics } from '@vercel/analytics/next';
 import CustomCursor from "@components/Cursor";
 import { Toaster } from "sonner";
-// 1. Official Google Analytics Component Import Karein
-import { GoogleAnalytics } from '@next/third-parties/google';
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -58,6 +57,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en-GB" className={`${playfair.variable} ${montserrat.variable}`} suppressHydrationWarning={true}>
+      <head>
+        <link rel="preconnect" href="https://cms.bizgrow-digital.co.uk" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+      </head>
       <body className="font-body bg-[#FDFCF9] text-[#1f2937] antialiased">
         <Providers>
           <CustomCursor />
@@ -74,9 +77,22 @@ export default function RootLayout({ children }) {
 
           <Toaster richColors position="top-right" />
         </Providers>
-        
-        {/* 🎯 2 Tracking ID */}
-        <GoogleAnalytics gaId="G-L8DY157W82" />
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-L8DY157W82"
+          strategy="lazyOnload"
+        />
+        <Script
+          id="google-analytics"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+
+gtag('js', new Date());
+gtag('config', 'G-L8DY157W82');`,
+          }}
+        />
       </body>
     </html>
   );

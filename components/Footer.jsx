@@ -73,7 +73,6 @@ const Footer = () => {
                 width={230}
                 height={90}
                 className="brightness-110 -ml-7 text-center drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]"
-                priority
               />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed font-medium max-w-sm -mt-10">
