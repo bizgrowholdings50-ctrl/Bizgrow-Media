@@ -5,10 +5,12 @@ import Footer from "@components/Footer";
 import { Providers } from "./providers";
 import SmoothScroll from "@components/SmoothScroll";
 import ChatBotComponent from "@components/WhatsAppWidget";
-import WhatsAppWidget from "@components/WhatsAppWidget"; // 👈 Normal import lagaya
+import WhatsAppWidget from "@components/WhatsAppWidget"; 
 import { Analytics } from '@vercel/analytics/next';
 import CustomCursor from "@components/Cursor";
 import { Toaster } from "sonner";
+// 1. Official Google Analytics Component Import Karein
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -68,11 +70,13 @@ export default function RootLayout({ children }) {
             <Footer />
           </SmoothScroll>
           <ChatBotComponent />
-          <WhatsAppWidget /> {/* 👈 Yahan bina kisi tension ke render hoga */}
+          <WhatsAppWidget /> 
 
-          {/* 🎯 Sonner Toaster yahan add karein */}
-     <Toaster richColors position="top-right" />
+          <Toaster richColors position="top-right" />
         </Providers>
+        
+        {/* 🎯 2 Tracking ID */}
+        <GoogleAnalytics gaId="G-L8DY157W82" />
       </body>
     </html>
   );

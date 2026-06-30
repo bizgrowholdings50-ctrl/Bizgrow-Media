@@ -123,7 +123,7 @@ const ContactPage = () => {
       </div>
 
       {/* --- 2. MAIN CONTENT --- */}
-      <div className="max-w-7xl mx-auto px-6 py-24">
+      <div id="main-content" className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           {/* LEFT: Info Panel */}
           <div className="lg:col-span-5 space-y-12">
