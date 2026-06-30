@@ -58,7 +58,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-GB" className={`${playfair.variable} ${montserrat.variable}`} suppressHydrationWarning={true}>
       <head>
-        <link rel="preconnect" href="https://cms.bizgrow-digital.co.uk" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
       </head>
       <body className="font-body bg-[#FDFCF9] text-[#1f2937] antialiased">
