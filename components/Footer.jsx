@@ -75,7 +75,7 @@ const Footer = () => {
                 className="brightness-110 -ml-7 text-center drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]"
               />
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed font-medium max-w-sm -mt-10">
+            <p className="text-gray-200 text-sm leading-relaxed font-medium max-w-sm -mt-10">
               <span className="text-white font-bold ">BizGrow Media</span> is a
               collection of organised platforms that promote your company with a
               message to the industry. As a business media connection, we convey
@@ -108,7 +108,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-all duration-300 text-sm font-bold uppercase tracking-widest flex items-center group"
+                    className="text-gray-300 hover:text-white transition-all duration-300 text-sm font-bold  tracking-widest flex items-center group"
                   >
                     <span className="w-0 group-hover:w-4 h-[2px] bg-[#997819] mr-0 group-hover:mr-2 transition-all duration-300"></span>
                     {link.name}
@@ -129,7 +129,7 @@ const Footer = () => {
                   <Link
                     href={link.href}
                     // Column 2 wali classes apply kar di hain
-                    className="text-gray-300 hover:text-white transition-all duration-300 text-sm font-bold uppercase tracking-widest flex items-center group"
+                    className="text-gray-300 hover:text-white transition-all duration-300 text-sm font-bold tracking-widest flex items-center group"
                   >
                     {/* Consistency ke liye wahi span structure */}
                     <span className="w-0 group-hover:w-4 h-[2px] bg-[#997819] mr-0 group-hover:mr-2 transition-all duration-300"></span>

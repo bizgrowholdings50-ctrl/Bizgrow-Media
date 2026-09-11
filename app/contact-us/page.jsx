@@ -109,11 +109,11 @@ const ContactPage = () => {
         </div>
         <div className="relative z-10 max-w-5xl px-6 text-center">
           <FadeIn direction="up">
-            <span className="inline-block px-4 py-1.5 mb-6 rounded-full border border-[#997819] text-[#997819] text-[10px] font-black uppercase tracking-[0.4em] backdrop-blur-md">
+            <span className="inline-block px-4 py-1.5 mb-6 rounded-full border border-white/70 text-white text-[10px] font-black uppercase tracking-[0.4em] backdrop-blur-md">
               Get in Touch
             </span>
-            <h1 className="text-white text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] uppercase">
-              Let's Start a <br />
+            <h1 className="text-white text-5xl md:text-9xl font-black tracking-tighter leading-[0.9] ">
+              Let's Start A <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#997819] via-[#d4af37] to-[#997819]">
                 Conversation
               </span>
@@ -128,7 +128,7 @@ const ContactPage = () => {
           {/* LEFT: Info Panel */}
           <div className="lg:col-span-5 space-y-12">
             <div>
-              <h2 className="text-[#12066a] dark:text-white text-4xl font-black uppercase tracking-tighter">
+              <h2 className="text-[#12066a] dark:text-white text-5xl font-black tracking-tighter">
                 Ready to Scale <br />
                 Your Business?
               </h2>
@@ -417,13 +417,13 @@ const ContactPage = () => {
                           : "bg-[#12066a]"
                       }`}
                     >
-                      <div className="relative z-10 flex items-center justify-center gap-4 uppercase tracking-[0.3em] text-[10px]">
+                      <div className="relative z-10 flex items-center justify-center gap-4 uppercase tracking-[0.2em] text-[10px]">
                         {status === "sending" ? (
                           <Loader2 className="animate-spin w-4 h-4" />
                         ) : !captchaToken ? (
                           "Complete Security Check"
                         ) : (
-                          "Initiate Conversation"
+                          "Submit Inquiry"
                         )}
                         <ArrowRight
                           className={`w-4 h-4 ${!captchaToken ? "hidden" : "group-hover:translate-x-2"} transition-transform`}

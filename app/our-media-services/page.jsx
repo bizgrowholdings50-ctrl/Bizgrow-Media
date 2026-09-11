@@ -192,10 +192,10 @@ const page = () => {
               </span>
             </div>
 
-            <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] -mb-12 md:mb-8 italic">
-              What Makes <br />
-              <span className="text-[#997819] not-italic">
-                Our Process Different
+            <h2 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black  tracking-tighter leading-[0.9] -mb-12 md:mb-8 ">
+              What Makes Our 
+              <span className="text-[#997819] not-italic ml-1">
+                 Process Different
               </span>
             </h2>
 
@@ -246,11 +246,11 @@ const page = () => {
                       Section // 0{index + 1}
                     </span>
 
-                    <h3 className="text-[#12066a] dark:text-white text-2xl font-black uppercase tracking-tight mb-6 group-hover:text-[#997819] transition-colors duration-500 leading-tight">
+                    <h3 className="text-[#12066a] dark:text-white text-2xl font-black  tracking-tight mb-6 group-hover:text-[#997819] transition-colors duration-500 leading-tight">
                       {item.title}
                     </h3>
 
-                    <p className="text-gray-500 dark:text-white/40 text-sm leading-relaxed font-medium">
+                    <p className="text-slate-800 dark:text-white/40 text-sm leading-relaxed font-medium">
                       {item.desc}
                     </p>
                   </div>
@@ -268,7 +268,7 @@ const page = () => {
           <div className="mt-32 flex flex-col items-center">
             <div className="h-16 w-px bg-gradient-to-b from-[#997819] to-transparent mb-8" />
 
-            <p className="text-[10px] font-black uppercase tracking-[0.6em] text-gray-400">
+            <p className="text-[10px] font-black uppercase tracking-[0.6em] text-gray-600">
               End of Methodology
             </p>
           </div>
@@ -310,7 +310,7 @@ const page = () => {
                   Take the Leap
                 </span>
 
-                <h2 className="text-4xl md:text-5xl mt-8 font-black mb-8 leading-[1.1] tracking-tighter uppercase">
+                <h2 className="text-4xl md:text-6xl mt-8 font-black mb-8 leading-[1.1] tracking-tighter ">
                   Develop your presence in the
                   <span className="text-transparent ml-1 bg-clip-text bg-gradient-to-r from-[#997819] to-orange-400">
                     right way,
@@ -320,7 +320,7 @@ const page = () => {
               </FadeIn>
 
               <FadeIn direction="up" delay={0.2}>
-                <p className="mx-auto mb-12 text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl italic">
+                <p className="mx-auto mb-12 text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl">
                   "BizGrow Media is a trusted name that helps you establish a
                   clear, confident presence from the very beginning "
                 </p>
@@ -331,8 +331,8 @@ const page = () => {
                   <button className="relative px-8 py-4 bg-[#997819] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(181,65,24,0.5)]">
                     <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shine" />
 
-                    <span className="relative z-10 md:text-lg uppercase tracking-widest">
-                      Start building the right way →
+                    <span className="relative z-10 md:text-lg tracking-widest">
+                      Start Building The Right Way →
                     </span>
                   </button>
                 </Link>

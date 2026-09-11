@@ -24,6 +24,7 @@ import {
   ShieldCheck,
   Plus,
   Calendar,
+  ArrowUpRight,
 } from "lucide-react";
 
 import Link from "next/link";
@@ -111,30 +112,45 @@ const CreativeContentPage = () => {
     <section className="relative w-full">
       <StructuredData schema={authorityBuilderSchema} />
       {/* 1 --- HERO SECTION --- */}
-      <div className="relative h-[85vh] md:h-screen w-full">
+      <div className="relative  h-[85vh] md:h-screen w-full overflow-hidden">
         <Image
           src="/hero-t.jpg"
-          alt="Authority Builder -  BizGrow Media "
+          alt="Authority Builder - BizGrow Media"
           fill
           fetchPriority="high"
           priority
-          className="object-cover object-center"
+          className="object-cover object-center scale-[1.02]"
         />
-        <div className="absolute inset-0 w-full mx-auto bg-black/70 flex flex-col pt-12 justify-center items-center px-6">
+
+        {/* Dark luxury overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000000]/50 via-[#000000]/65 to-[#000B25]/95" />
+
+        {/* Subtle side vignette */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#000B25]/50 via-transparent to-[#000B25]/50" />
+
+        {/* Decorative frame */}
+        <div className="absolute inset-6 md:inset-10 border border-white/10 pointer-events-none" />
+
+        <div className="absolute inset-0 flex flex-col justify-center items-center px-6 pt-8">
+          {/* Eyebrow */}
           <FadeIn direction="up" delay={0.2}>
-            {/* 🔹 FIX: Wrapper div inside FadeIn to force centering */}
-            <div className="w-full flex flex-col items-center">
-              <span className="text-[#997819] font-bold tracking-widest uppercase text-sm mb-4 block text-center">
+            <div className="flex justify-center gap-4 mb-7">
+              <span className="w-12 h-[1px] bg-[#997819]" />
+
+              <span className="text-[#D4AF37] -mt-2 font-bold tracking-[0.35em] uppercase text-[10px] md:text-xs">
                 Authority Builder
               </span>
+
+              <span className="w-12 h-[1px] bg-[#997819]" />
             </div>
           </FadeIn>
 
+          {/* Main Heading */}
           <FadeIn direction="up" delay={0.4}>
             <div className="w-full flex flex-col items-center">
-              <h1 className="text-white text-4xl md:text-6xl text-center font-bold max-w-5xl leading-tight">
+              <h1 className="text-white text-4xl md:text-6xl lg:text-7xl text-center font-black max-w-5xl leading-[0.95] tracking-tight">
                 Stop Letting Lesser Brands Take
-                <span className="text-[#997819] mx-2 text-4xl md:text-6xl  ">
+                <span className="text-[#997819] mx-2 text-4xl md:text-6xl lg:text-7xl italic font-serif font-light">
                   The Attention
                 </span>
                 You Deserve
@@ -142,9 +158,29 @@ const CreativeContentPage = () => {
             </div>
           </FadeIn>
 
+          {/* CTA */}
           <FadeIn direction="up" delay={0.6}>
-            <div className="w-full flex flex-col items-center"></div>
+            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+              <Link href="/contact-us">
+                <button className="group relative h-14 px-9 overflow-hidden rounded-full bg-[#997819] text-white font-semibold tracking-tight flex items-center gap-3 transition-all duration-500 hover:shadow-[0_0_35px_rgba(153,120,25,0.35)]">
+                  <span className="relative z-10">Build Your Authority</span>
+
+                  <ArrowUpRight className="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+
+                  <span className="absolute inset-0 bg-[#b8952f] translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                </button>
+              </Link>
+            </div>
           </FadeIn>
+        </div>
+
+        {/* Bottom scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
+          <span className="text-white/40 text-[9px] uppercase tracking-[0.35em]">
+            Scroll to explore
+          </span>
+
+          <div className="w-[1px] h-10 bg-gradient-to-b from-[#997819] to-transparent" />
         </div>
       </div>
 
@@ -191,20 +227,20 @@ const CreativeContentPage = () => {
                 <span className="text-[#997819] font-black uppercase tracking-[0.3em] text-xs">
                   Measurable Results
                 </span>
-                <h2 className="text-4xl md:text-5xl font-black text-[#12066a] dark:text-white leading-[1.1] uppercase tracking-tighter mt-4">
-                  Your Brand <br />
-                  <span className="text-[#997819]">Deserves </span> To Be Seen
-                  Differently
+                <h2 className="text-4xl md:text-5xl font-black text-[#12066a] dark:text-white leading-[1.1]  tracking-tighter mt-4">
+                  Your Brand
+                  <span className="text-[#997819] ml-1">Deserves </span> To Be
+                  Seen Differently
                 </h2>
 
                 <div className="space-y-6 mt-8">
-                  <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed font-medium">
+                  <p className="text-gray-800 dark:text-gray-400 text-lg leading-relaxed font-medium">
                     The problem is not your expertise. What you need is the
                     visibility, credibility, and authority that make people
                     trust your brand before the first conversation even happens.
                   </p>
 
-                  <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed italic border-l-4 border-[#997819] pl-6">
+                  <p className="text-gray-700 dark:text-gray-400 text-base leading-relaxed border-l-4 border-[#997819] pl-6">
                     Authority Builder by{" "}
                     <Link href="/" className="text-[#997819] font-bold">
                       BizGrow Media
@@ -219,7 +255,7 @@ const CreativeContentPage = () => {
                       <button className="relative px-8 py-4 bg-[#12066a] text-white font-black rounded-2xl overflow-hidden group transition-all duration-300 ">
                         {/* Shine Animation Effect */}
                         <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-[#12066a] to-transparent group-hover:animate-shine" />
-                        <span className="relative z-10 text-md uppercase tracking-widest">
+                        <span className="relative z-10 text-md  tracking-widest">
                           Book Your Strategy Call →
                         </span>
                       </button>
@@ -240,10 +276,10 @@ const CreativeContentPage = () => {
         <div className="relative py-20 bg-[#12066a] dark:bg-gray-800 backdrop-blur-xl border-2 border-white/5 dark:border-white/10 text-white rounded-[3.5rem] mx-4 md:mx-10 shadow-2xl overflow-hidden">
           <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
             <FadeIn direction="up">
-              <h2 className="text-4xl md:text-7xl font-black mb-6 tracking-tighter uppercase leading-none">
+              <h2 className="text-4xl md:text-7xl font-black mb-6 tracking-tighter  leading-none">
                 The <span className="text-[#997819]">Shift</span>
               </h2>
-              <p className="text-lg md:text-xl font-medium text-gray-400 mb-16 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl font-medium text-gray-200 mb-16 max-w-2xl mx-auto">
                 How Authority Changes The Way Your Brand Is Perceived
               </p>
             </FadeIn>
@@ -254,7 +290,7 @@ const CreativeContentPage = () => {
                 <div className="h-full p-10 border border-white/10 rounded-[2.5rem] bg-white/5 hover:bg-white/[0.08] transition-all duration-500 group relative overflow-hidden">
                   <div className="absolute -top-10 -left-10 w-32 h-32 bg-red-500/5 blur-3xl rounded-full" />
 
-                  <h3 className="text-3xl font-bold mb-10 text-gray-500 tracking-wide uppercase">
+                  <h3 className="text-3xl font-bold mb-10 text-gray-500 tracking-wide ">
                     Before
                   </h3>
 
@@ -289,7 +325,7 @@ const CreativeContentPage = () => {
                     The Authority Standard
                   </div>
 
-                  <h3 className="text-3xl font-black mt-10 mb-10 text-[#997819] uppercase tracking-tight">
+                  <h3 className="text-3xl font-black mt-10 mb-10 text-[#997819] tracking-tight">
                     After
                   </h3>
 
@@ -339,9 +375,9 @@ const CreativeContentPage = () => {
                   The Framework
                 </span>
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-4xl md:text-7xl font-black tracking-tighter uppercase leading-[0.98]">
-                Four Pillars. <br />
-                <span className="text-[#997819] dark:text-[#997819]/60">
+              <h2 className="text-[#12066a] dark:text-white text-4xl md:text-7xl font-black tracking-tighter leading-[0.98]">
+                Four Pillars
+                <span className="text-[#997819] dark:text-[#997819]/60 ml-2">
                   One Authority System.
                 </span>
               </h2>
@@ -364,11 +400,9 @@ const CreativeContentPage = () => {
                       Pillar One: Production
                     </span>
                   </div>
-                  <h3 className="text-[#12066a] dark:text-white text-4xl md:text-6xl font-black uppercase leading-none mb-3">
-                    Content <br />{" "}
-                    <span className="text-[#997819]">Production</span>
+                  <h3 className="text-[#12066a] dark:text-white text-4xl md:text-6xl font-black  leading-none mb-3">
+                    Content <span className="text-[#997819]">Production</span>
                   </h3>
-                  <div className="w-20 h-2 bg-[#12066a] dark:bg-[#997819] mb-3" />
                 </div>
 
                 <div className="space-y-6">
@@ -392,8 +426,8 @@ const CreativeContentPage = () => {
             {/* Right: Detailed Breakdown (The "This Includes" part) */}
             <div className="bg-gray-50 dark:bg-white/[0.02] p-10 md:p-16 rounded-[3rem] border border-gray-100 dark:border-white/5">
               <FadeIn direction="up" delay={0.2}>
-                <h4 className="text-[#12066a] dark:text-white font-black uppercase tracking-widest text-lg mb-10 flex items-center gap-3">
-                  This includes{" "}
+                <h4 className="text-[#12066a] dark:text-white font-black  tracking-widest text-lg mb-10 flex items-center gap-3">
+                  This Includes{" "}
                   <ArrowRight className="text-[#997819]" size={20} />
                 </h4>
 
@@ -429,7 +463,7 @@ const CreativeContentPage = () => {
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-6 group">
                       <div className="mt-1 text-[#997819]">{item.icon}</div>
-                      <p className="text-lg font-bold text-gray-700 dark:text-gray-200 leading-snug uppercase tracking-tight">
+                      <p className="text-lg font-bold text-gray-700 dark:text-gray-200 leading-snug  tracking-tight">
                         {item.text}
                       </p>
                     </div>
@@ -459,16 +493,15 @@ const CreativeContentPage = () => {
             {/* Left: The Statement */}
             <div>
               <FadeIn direction="up">
-                <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black leading-[0.85] uppercase tracking-tighter mb-3">
-                  Content <br />
-                  <span className="text-[#997819] dark:text-[#997819]/60">
+                <h2 className="text-[#12066a] dark:text-white text-5xl md:text-7xl font-black leading-[0.85] tracking-tighter mb-3">
+                  Content
+                  <span className="text-[#997819] dark:text-[#997819]/60 ml-2">
                     Engine
                   </span>
                 </h2>
-                <div className="w-20 h-2 bg-[#12066a] dark:bg-[#997819] mb-3" />
 
                 <div className="max-w-md">
-                  <p className="text-xl md:text-2xl font-light leading-relaxed text-gray-500 dark:text-gray-400 mb-8">
+                  <p className="text-xl font-light leading-relaxed text-gray-500 dark:text-gray-400 mb-8">
                     One studio session creates a scalable content ecosystem
                     designed to keep your brand visible, relevant, and
                     consistently recognised.
@@ -482,7 +515,7 @@ const CreativeContentPage = () => {
             <div className="flex flex-col justify-center">
               <FadeIn direction="up" delay={0.2}>
                 <div className="border-t-2 border-gray-100 dark:border-white/5 pt-12">
-                  <p className="text-2xl font-bold text-[#12066a] dark:text-white mb-12 leading-snug">
+                  <p className="text-2xl font-bold text-black dark:text-white mb-12 leading-snug">
                     Our{" "}
                     <Link
                       href="/content-engine"
@@ -555,11 +588,9 @@ const CreativeContentPage = () => {
                     </span>
                   </div>
 
-                  <h3 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase leading-none mb-2">
-                    Authority <br />{" "}
-                    <span className="text-[#997819]">System</span>
+                  <h3 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black  leading-none mb-2">
+                    Authority <span className="text-[#997819]">System</span>
                   </h3>
-                  <div className="w-20 h-2 bg-[#12066a] dark:bg-[#997819] mb-2" />
                 </div>
 
                 <div className="space-y-6">
@@ -567,12 +598,12 @@ const CreativeContentPage = () => {
                     Anyone can be visible. Very few brands become trusted
                     authorities.
                   </p>
-                  <p className="text-lg text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
+                  <p className="text-lg text-gray-800 dark:text-gray-400 font-medium leading-relaxed">
                     Businesses with strong authority are perceived differently.
                     They appear more professional, more established, and more
                     reliable before conversations even begin.
                   </p>
-                  <p className="text-lg font-bold text-[#12066a] dark:text-[#997819] italic border-l-2 border-[#997819] pl-6">
+                  <p className="text-lg font-bold text-[#12066a] dark:text-[#997819]  border-l-2 border-[#997819] pl-6">
                     The goal is simple: to position your business as a trusted
                     and respected industry name.
                   </p>
@@ -583,7 +614,7 @@ const CreativeContentPage = () => {
             {/* Right: Detailed Breakdown (BizGrow Media helps...) */}
             <div className="bg-gray-50 dark:bg-white/[0.02] p-10 md:p-16 rounded-[3rem] border border-gray-100 dark:border-white/5">
               <FadeIn direction="up" delay={0.2}>
-                <h4 className="text-[#12066a] dark:text-white font-black uppercase tracking-widest text-lg mb-10 flex items-center gap-3">
+                <h4 className="text-[#12066a] dark:text-white font-black  tracking-widest text-lg mb-10 flex items-center gap-3">
                   BizGrow Media helps strengthen credibility through:{" "}
                   <ArrowRight className="text-[#997819]" size={20} />
                 </h4>
@@ -609,7 +640,7 @@ const CreativeContentPage = () => {
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-6 group">
                       <div className="mt-1 text-[#997819]">{item.icon}</div>
-                      <p className="text-lg font-bold text-gray-700 dark:text-gray-200 leading-snug uppercase tracking-tight">
+                      <p className="text-lg font-bold text-gray-700 dark:text-gray-200 leading-snug  tracking-tight">
                         {item.text}
                       </p>
                     </div>
@@ -646,10 +677,9 @@ const CreativeContentPage = () => {
                     </span>
                   </div>
 
-                  <h4 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black uppercase leading-none mb-2">
-                    Growth <br /> <span className="text-[#997819]">Engine</span>
+                  <h4 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black  leading-none mb-2">
+                    Growth <span className="text-[#997819]">Engine</span>
                   </h4>
-                  <div className="w-20 h-2 bg-[#12066a] dark:bg-[#997819] mb-2" />
                 </div>
 
                 <div className="space-y-6">
@@ -658,7 +688,7 @@ const CreativeContentPage = () => {
                     are the ones people consistently recognise, trust, and
                     remember.
                   </p>
-                  <p className="text-lg text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
+                  <p className="text-lg text-gray-800 dark:text-gray-400 font-medium leading-relaxed">
                     Our{" "}
                     <Link
                       href="/growth-engine"
@@ -670,7 +700,7 @@ const CreativeContentPage = () => {
                     visibility; it strengthens authority, attracts inbound
                     opportunities, and supports long-term business growth.
                   </p>
-                  <p className="text-lg font-bold text-[#12066a] dark:text-[#997819] italic border-l-2 border-[#997819] pl-6">
+                  <p className="text-lg font-bold text-[#12066a] dark:text-[#997819]  border-l-2 border-[#997819] pl-6">
                     As your authority grows, your business becomes easier to
                     trust, easier to recognise, and harder to ignore.
                   </p>
@@ -681,8 +711,8 @@ const CreativeContentPage = () => {
             {/* Right: Detailed Breakdown (This includes...) */}
             <div className="bg-gray-50 dark:bg-white/[0.02] p-10 md:p-16 rounded-[3rem] border border-gray-100 dark:border-white/5">
               <FadeIn direction="up" delay={0.2}>
-                <h5 className="text-[#12066a] dark:text-white font-black uppercase tracking-widest text-lg mb-10 flex items-center gap-3">
-                  This includes:{" "}
+                <h5 className="text-[#12066a] dark:text-white font-black tracking-widest text-lg mb-10 flex items-center gap-3">
+                  This Includes:{" "}
                   <ArrowRight className="text-[#997819]" size={20} />
                 </h5>
 
@@ -707,7 +737,7 @@ const CreativeContentPage = () => {
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-6 group">
                       <div className="mt-1 text-[#997819]">{item.icon}</div>
-                      <p className="text-lg md:text-xl font-bold text-gray-700 dark:text-gray-200 leading-snug uppercase tracking-tight md:tracking-normal break-words hyphens-auto">
+                      <p className="text-lg md:text-xl font-bold text-gray-700 dark:text-gray-200 leading-snug  tracking-tight md:tracking-normal break-words hyphens-auto">
                         {item.text}
                       </p>
                     </div>
@@ -728,13 +758,13 @@ const CreativeContentPage = () => {
               <span className="text-[#997819] font-bold uppercase tracking-[0.4em] text-xs mb-6 block">
                 Strategic Alignment
               </span>
-              <h2 className="text-[#12066a] dark:text-white text-4xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-8">
+              <h2 className="text-[#12066a] dark:text-white text-4xl md:text-7xl font-black tracking-tighter leading-none mb-8">
                 Who This Is For
               </h2>
               <p className="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6 italic leading-tight">
                 Built for businesses that want more than just visibility.
               </p>
-              <p className="text-lg text-gray-500 dark:text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg text-gray-800 dark:text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">
                 This is not built for vanity metrics or temporary attention. It
                 is designed for serious business owners who want credible
                 visibility, stronger market positioning, and authority that
@@ -752,11 +782,11 @@ const CreativeContentPage = () => {
                   <div className="w-14 h-14 bg-white dark:bg-[#12066a] rounded-2xl flex items-center justify-center shadow-lg text-[#997819] dark:text-white">
                     <Users size={28} />
                   </div>
-                  <h3 className="text-2xl font-black uppercase text-[#12066a] dark:text-white">
-                    Coaches & <br /> Consultants
+                  <h3 className="text-2xl font-black  text-[#12066a] dark:text-white">
+                    Coaches & Consultants
                   </h3>
                 </div>
-                <p className="text-lg text-gray-600 dark:text-gray-400 font-medium leading-relaxed border-l-2 border-[#997819]/30 pl-6">
+                <p className="text-lg text-gray-800 dark:text-gray-400 font-medium leading-relaxed border-l-2 border-[#997819]/30 pl-6">
                   Build a respected personal brand that positions you as the
                   authority clients confidently choose within your industry.
                 </p>
@@ -770,11 +800,11 @@ const CreativeContentPage = () => {
                   <div className="w-14 h-14 bg-white dark:bg-[#12066a] rounded-2xl flex items-center justify-center shadow-lg text-[#997819] dark:text-white">
                     <Briefcase size={28} />
                   </div>
-                  <h3 className="text-2xl font-black uppercase text-[#12066a] dark:text-white">
-                    Service-Based <br /> Businesses
+                  <h3 className="text-2xl font-black text-[#12066a] dark:text-white">
+                    Service-Based Businesses
                   </h3>
                 </div>
-                <p className="text-lg text-gray-600 dark:text-gray-400 font-medium leading-relaxed border-l-2 border-[#997819]/30 pl-6">
+                <p className="text-lg text-gray-800 dark:text-gray-400 font-medium leading-relaxed border-l-2 border-[#997819]/30 pl-6">
                   Create the kind of market presence that makes your business
                   instantly recognisable, trusted, and difficult to overlook.
                 </p>
@@ -788,11 +818,11 @@ const CreativeContentPage = () => {
                   <div className="w-14 h-14 bg-white dark:bg-[#12066a] rounded-2xl flex items-center justify-center shadow-lg text-[#997819] dark:text-white">
                     <UserCheck size={28} />
                   </div>
-                  <h3 className="text-2xl font-black uppercase text-[#12066a] dark:text-white">
-                    Founders & <br /> CEOs
+                  <h3 className="text-2xl font-black  text-[#12066a] dark:text-white">
+                    Founders & CEOs
                   </h3>
                 </div>
-                <p className="text-lg text-gray-600 dark:text-gray-400 font-medium leading-relaxed border-l-2 border-[#997819]/30 pl-6">
+                <p className="text-lg text-gray-800 dark:text-gray-400 font-medium leading-relaxed border-l-2 border-[#997819]/30 pl-6">
                   Develop a credible public profile that attracts clients,
                   strategic partnerships, media opportunities, and long-term
                   business growth.
@@ -807,11 +837,11 @@ const CreativeContentPage = () => {
                   <div className="w-14 h-14 bg-white dark:bg-[#12066a] rounded-2xl flex items-center justify-center shadow-lg text-[#997819] dark:text-white">
                     <ShieldCheck size={28} />
                   </div>
-                  <h3 className="text-2xl font-black uppercase text-[#12066a] dark:text-white">
-                    Agencies & <br /> Industry Experts
+                  <h3 className="text-2xl font-black  text-[#12066a] dark:text-white">
+                    Agencies & Industry Experts
                   </h3>
                 </div>
-                <p className="text-lg text-gray-600 dark:text-gray-400 font-medium leading-relaxed border-l-2 border-[#997819]/30 pl-6">
+                <p className="text-lg text-gray-800 dark:text-gray-400 font-medium leading-relaxed border-l-2 border-[#997819]/30 pl-6">
                   Elevate your positioning through authority-driven visibility
                   designed to attract premium clients, stronger opportunities,
                   and higher-value growth.
@@ -839,7 +869,7 @@ const CreativeContentPage = () => {
                     Strategic Evolution
                   </span>
                 </div>
-                <h2 className="text-[#12066a] dark:text-white text-4xl md:text-7xl  font-black uppercase tracking-[ -0.05em] leading-[0.8] mb-0">
+                <h2 className="text-[#12066a] dark:text-white text-4xl md:text-6xl  font-black tracking-[ -0.05em] leading-[0.8] mb-0">
                   Bizgrow Media <br />{" "}
                   <span className="dark:text-[#997819]">Ecosystem</span>
                 </h2>
@@ -847,7 +877,7 @@ const CreativeContentPage = () => {
             </div>
             <div className="lg:w-1/3 lg:pt-24">
               <FadeIn direction="left" delay={0.2}>
-                <p className="text-[#12066a]/60 dark:text-white/60 text-lg font-medium leading-relaxed italic border-l-4 border-[#997819] pl-8">
+                <p className="text-slate-800 dark:text-white/60 text-lg font-medium leading-relaxed  border-l-4 border-[#997819] pl-8">
                   "Where Authority Fits Into Your Growth Journey"
                 </p>
               </FadeIn>
@@ -877,7 +907,7 @@ const CreativeContentPage = () => {
 
                   {/* Title & Interaction */}
                   <div>
-                    <h3 className="text-white dark:text-[#997819] group-hover:text-white text-3xl font-black uppercase tracking-tighter leading-none mb-6 transition-colors">
+                    <h3 className="text-white dark:text-[#997819] group-hover:text-white text-3xl font-black  tracking-tighter leading-none mb-6 transition-colors">
                       {item.title}
                     </h3>
                     <div className="h-1 w-0 group-hover:w-full bg-[#997819] dark:bg-white transition-all duration-700" />
@@ -898,7 +928,7 @@ const CreativeContentPage = () => {
           {/* --- Narrative & High-Impact CTA --- */}
           <div className="mt-24 flex flex-col items-center text-center">
             <FadeIn direction="up">
-              <p className="text-2xl md:text-4xl max-w-5xl mx-auto text-[#12066a] dark:text-white/80 font-black uppercase tracking-tighter mb-16 leading-none">
+              <p className="text-2xl md:text-4xl max-w-5xl mx-auto text-[#12066a] dark:text-white/80 font-black  tracking-tighter mb-16 leading-tighter">
                 Each stage is designed to strengthen{" "}
                 <span className="text-[#997819]">
                   visibility, credibility, and long-term brand growth.
@@ -923,49 +953,54 @@ const CreativeContentPage = () => {
             }}
           >
             {/* 🔹 Dynamic Deep Navy & Rust Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#000B25]/95 via-[#000B25]/80 to-[#B54118]/40 z-0 transition-opacity duration-700 group-hover:opacity-90"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#000B25]/100 via-[#000B25]/80 to-[#B54118]/40 z-0 transition-opacity duration-700 group-hover:opacity-90"></div>
 
             {/* 🔹 Refined Content Layer */}
             <div className="relative z-20 max-w-4xl mx-auto px-8">
               <FadeIn direction="up">
                 <div className="flex justify-center items-center gap-4 mb-8">
                   <span className="w-8 h-[1px] bg-[#997819]"></span>
-                  <span className="text-[#997819] font-black tracking-[0.5em] uppercase text-[10px] md:text-xs">
+                  <span className="text-[#D4AF37] font-black tracking-[0.5em] uppercase text-[10px] md:text-xs">
                     Start Your Journey
                   </span>
                   <span className="w-8 h-[1px] bg-[#997819]"></span>
                 </div>
 
-                <h2 className="text-4xl md:text-6xl font-black mb-8 leading-[0.9] tracking-tighter uppercase">
-                  Ready to become the <br />
+                <h2 className="text-4xl md:text-6xl font-black mb-8 leading-[0.9] tracking-tighter ">
+                  Ready To Become The <br />
                   <span className="text-[#997819] italic font-serif">
                     Recognised Authority
                   </span>{" "}
                   <br />
-                  your industry remembers?
+                  Your Industry Remembers?
                 </h2>
               </FadeIn>
 
               <FadeIn direction="up" delay={0.2}>
-                <p className="mx-auto mb-12 text-lg md:text-xl text-white/70 leading-relaxed font-light italic max-w-2xl">
+                <p className="mx-auto mb-12 text-lg md:text-xl text-white/80 leading-relaxed font-light  max-w-2xl">
                   We work closely with each client to understand what they need.
                   Our solutions are designed to establish your legacy and get
                   real results in the UK market.
                 </p>
               </FadeIn>
 
-              <FadeIn direction="up" delay={0.4}>
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                  <Link href="/contact-us">
-                    <button className="group relative px-3 md:px-12 py-5 bg-[#12066a] text-white font-black uppercase tracking-widest text-[11px] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_rgba(181,65,24,0.4)]">
-                      <span className="relative z-10 flex items-center gap-3">
-                        Book your strategy call <ArrowRight size={16} />
-                      </span>
-                      <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 opacity-10" />
-                    </button>
-                  </Link>
-                </div>
-              </FadeIn>
+             <FadeIn direction="up" delay={0.4}>
+  <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+    <Link href="/contact-us">
+      <button className="group relative z-40 px-6 md:px-12 py-5 bg-[#997819] text-white font-black uppercase tracking-widest text-[11px] rounded-2xl overflow-hidden border border-[#997819]/40 transition-all duration-500 hover:bg-[#12066a]  hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(153,120,25,0.25)]">
+        
+        <span className="relative z-10 flex items-center gap-3">
+          Book your strategy call
+          <ArrowRight
+            size={16}
+            className="transition-transform duration-300 group-hover:translate-x-1"
+          />
+        </span>
+
+      </button>
+    </Link>
+  </div>
+</FadeIn>
             </div>
 
             {/* 🔹 Decorative Elements */}

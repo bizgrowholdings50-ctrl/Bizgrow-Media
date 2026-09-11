@@ -92,7 +92,7 @@ const PremiumPackagesPage = () => {
           <FadeIn direction="up">
             <div className="mb-6 flex items-center justify-center gap-4">
               <div className="h-[1px] w-12 bg-[#997819]" />
-              <span className="text-[#997819] text-[11px] font-black uppercase tracking-[0.5em] drop-shadow-md">
+              <span className="text-[#d4af37] text-[11px] font-black uppercase tracking-[0.5em] drop-shadow-md">
                 The Standard in Media
               </span>
               <div className="h-[1px] w-12 bg-[#997819]" />
@@ -100,9 +100,9 @@ const PremiumPackagesPage = () => {
           </FadeIn>
 
           <FadeIn direction="up" delay={0.2}>
-            <h1 className="text-4xl md:text-6xl max-w-4xl font-black uppercase tracking-tighter leading-[0.9] mb-10 text-white dark:text-white">
+            <h1 className="text-4xl md:text-7xl max-w-4xl font-black  tracking-tighter leading-[0.9] mb-10 text-white dark:text-white">
               Build A Podcast Presence That Feels
-              <span className="text-[#997819] italic font-light drop-shadow-xl ml-2">
+              <span className="text-[#d4af37] font-light drop-shadow-xl ml-2">
                 More Established.
               </span>
             </h1>
@@ -110,11 +110,11 @@ const PremiumPackagesPage = () => {
 
           <FadeIn direction="up" delay={0.4}>
             <div className="flex flex-col items-center justify-center gap-8 mt-12">
-              <p className="max-w-xl text-center md:text-left text-sm md:text-xl text-gray-300 dark:text-white/60 border-l-0 md:border-l md:border-[#997819] md:pl-6 leading-relaxed font-medium">
+              <p className="max-w-xl text-center md:text-left text-sm md:text-xl text-gray-200 dark:text-white/60 border-l-0 md:border-l md:border-[#997819] md:pl-6 leading-relaxed font-medium">
                 We take care of the{" "}
                 <Link
                   href="/studio-production/"
-                  className="text-[#997819] hover:underline"
+                  className="text-[#d4af37] hover:underline"
                 >
                   production
                 </Link>
@@ -122,8 +122,8 @@ const PremiumPackagesPage = () => {
                 sharing your ideas with confidence.
               </p>
               <Link href="/contact-us">
-                <button className="h-16 px-12 bg-[#12066A] dark:bg-white text-white dark:text-black font-black uppercase tracking-tighter text-sm flex items-center gap-3 hover:bg-[#997819] dark:hover:bg-[#997819] hover:text-white transition-all duration-500 rounded-full shadow-2xl">
-                  Launch Your Podcast <ArrowUpRight className="w-5 h-5" />
+                <button className="h-16 px-12 bg-[#12066A] dark:bg-white text-white dark:text-black font-normal tracking-tighter text-md flex items-center gap-3 hover:bg-[#997819] dark:hover:bg-[#997819] hover:text-white transition-all duration-500 rounded-full shadow-2xl">
+                  Start Your Podcast Today <ArrowUpRight className="w-5 h-5" />
                 </button>
               </Link>
             </div>
@@ -147,24 +147,24 @@ const PremiumPackagesPage = () => {
                   </span>
                 </div>
 
-                <h2 className="text-[#12066a] dark:text-white text-4xl md:text-6xl font-black uppercase tracking-tighter leading-[0.9] mb-10">
+                <h2 className="text-[#12066a] dark:text-white text-4xl md:text-5xl font-black  tracking-tighter leading-[0.9] mb-10">
                   The Hardest Part
-                  <span className="text-[#997819] italic font-light ml-1">
+                  <span className="text-[#997819] font-bold ml-2">
                     Of Starting
                   </span>{" "}
-                  <br />
+                  
                   Is The Execution
                 </h2>
 
                 <div className="space-y-6 max-w-xl">
-                  <p className="text-xl md:text-2xl font-bold text-[#12066a] dark:text-white leading-tight">
+                  <p className="text-xl md:text-2xl font-bold text-black dark:text-white leading-tight">
                     The hardest part of starting a podcast is knowing how to
                     bring everything together professionally.
                   </p>
 
                   <div className="h-px w-20 bg-[#997819]/30" />
 
-                  <p className="text-gray-500 dark:text-white/40 text-lg md:text-xl leading-relaxed">
+                  <p className="text-gray-800 dark:text-white/40 text-lg md:text-xl leading-relaxed">
                     Most businesses already know what they want to say. The
                     challenge is usually turning those ideas into a <Link href="/podcast-recording-studios/" className="text-[#997819] hover:underline font-bold">podcast</Link> that
                     feels clear, professional, and ready for people to take
@@ -235,12 +235,12 @@ const PremiumPackagesPage = () => {
                   What’s Included
                 </span>
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-4xl md:text-6xl font-black uppercase md:tracking-tighter leading-[0.9] mb-8">
+              <h2 className="text-[#12066a] dark:text-white text-4xl md:text-6xl font-black md:tracking-tighter leading-[0.9] mb-8">
                 Everything You Need <br  className="md:block hidden"/>
-                <span className="text-[#997819] mr-1">To Launch</span>
+                <span className="text-[#997819] mr-2">To Launch</span>
                 Professionally
               </h2>
-              <p className="text-gray-500 dark:text-white/40 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed italic">
+              <p className="text-gray-800 dark:text-white/40 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
                 A seamless flow designed to take your podcast from idea to
                 reality without the stress.
               </p>
@@ -268,10 +268,10 @@ const PremiumPackagesPage = () => {
                       <span className="inline-block text-[#997819] font-black uppercase tracking-[0.3em] text-[10px] mb-4">
                         {step.label}
                       </span>
-                      <h3 className="text-[#12066a] dark:text-white text-2xl font-black uppercase tracking-tight mb-4 group-hover:text-[#997819] transition-colors">
+                      <h3 className="text-[#12066a] dark:text-white text-2xl font-black  tracking-tight mb-4 group-hover:text-[#997819] transition-colors">
                         {step.title}
                       </h3>
-                      <p className="text-gray-500 dark:text-white/50 text-sm md:text-lg leading-relaxed">
+                      <p className="text-gray-800 dark:text-white/50 text-sm md:text-lg leading-relaxed">
                         {step.desc}
                       </p>
                     </div>
@@ -291,9 +291,9 @@ const PremiumPackagesPage = () => {
 
           {/* --- Trust Badge --- */}
           <div className="mt-32 flex justify-center">
-            <div className="inline-flex items-center gap-4 bg-gray-50 dark:bg-white/[0.02] px-8 py-4 rounded-full border border-gray-100 dark:border-white/5">
+            <div className="inline-flex items-center gap-4 bg-gray-50 dark:bg-white/[0.02] px-8 py-4 rounded-full border border-[#12066a] dark:border-white/5">
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-gray-800">
                 System Optimized for Excellence
               </span>
             </div>
@@ -312,11 +312,11 @@ const PremiumPackagesPage = () => {
                   The Blueprint
                 </span>
               </div>
-              <h2 className="text-[#12066a]  dark:text-white text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
-                How It{" "}
-                <span className="text-[#997819] italic font-light">Works</span>
+              <h2 className="text-[#12066a]  dark:text-white text-4xl md:text-7xl font-black  tracking-tighter leading-[0.85] mb-8">
+                How It's{" "}
+                <span className="text-[#997819]  font-light">Works</span>
               </h2>
-              <p className="text-gray-500 mx-auto dark:text-white/40 text-lg md:text-xl font-medium max-w-xl leading-relaxed">
+              <p className="text-gray-800 mx-auto dark:text-white/40 text-lg md:text-xl font-medium max-w-xl leading-relaxed">
                 A Clear And Professional Process From Start To Launch
               </p>
             </FadeIn>
@@ -371,11 +371,11 @@ const PremiumPackagesPage = () => {
                   </div>
 
                   <div className="relative z-10">
-                    <h3 className="text-xl font-black uppercase tracking-tight mb-4 group-hover:text-[#997819] transition-colors">
+                    <h3 className="text-xl font-black tracking-tight mb-4 group-hover:text-[#997819] transition-colors">
                       {step.title}
                     </h3>
                     <p
-                      className={`text-sm md:text-xl lg:text-sm leading-relaxed ${index === 2 ? "text-white/60" : "text-gray-500 dark:text-white/40"}`}
+                      className={`text-sm md:text-xl lg:text-sm leading-relaxed ${index === 2 ? "text-white/60" : "text-gray-800 dark:text-white/40"}`}
                     >
                       {step.desc}
                     </p>
@@ -402,11 +402,11 @@ const PremiumPackagesPage = () => {
                 </span>
                 <span className="w-12 h-[1px] bg-[#997819]" />
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
-                Who This Is 
-                <span className="text-[#997819] italic font-light ml-2">For</span>
+              <h2 className="text-[#12066a] dark:text-white text-4xl md:text-7xl font-black tracking-tighter leading-[0.85] mb-8">
+                We Work 
+                <span className="text-[#997819]  font-bold ml-2">With</span>
               </h2>
-              <p className="text-gray-500 dark:text-white/40 text-lg md:text-xl  font-medium max-w-3xl mx-auto leading-relaxed italic">
+              <p className="text-gray-800 dark:text-white/40 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
                 Designed For Businesses And Professionals Ready To Build A More
                 Recognisable Voice
               </p>
@@ -449,11 +449,11 @@ const PremiumPackagesPage = () => {
                     <div className="h-[1px] w-8 bg-gray-200 dark:bg-white/10 group-hover:w-16 transition-all duration-500" />
                   </div>
 
-                  <h3 className="text-xl font-black uppercase tracking-tight text-[#12066a] dark:text-white mb-4 transition-colors group-hover:text-[#997819]">
+                  <h3 className="text-2xl font-black tracking-tight text-[#12066a] dark:text-white mb-4 transition-colors group-hover:text-[#997819]">
                     {item.title}
                   </h3>
 
-                  <p className="text-sm md:text-xl lg:text-lg leading-relaxed text-gray-500 dark:text-white/40 font-medium">
+                  <p className="text-sm md:text-xl lg:text-lg leading-relaxed text-gray-800 dark:text-white/40 font-medium">
                     {item.desc}
                   </p>
 
@@ -469,7 +469,7 @@ const PremiumPackagesPage = () => {
           {/* --- Bottom Trust Line --- */}
           <div className="mt-20 flex justify-center">
             <FadeIn direction="up">
-              <p className="text-[10px] text-center font-black uppercase tracking-[0.5em] text-[#997819]/80 dark:text-white">
+              <p className="text-[10px] text-center font-black uppercase tracking-[0.3em] text-[#997819]/80 dark:text-white">
                 Built for growth • Built for authority
               </p>
             </FadeIn>
@@ -497,21 +497,21 @@ const PremiumPackagesPage = () => {
           <div className="relative z-20 max-w-4xl mx-auto px-8 py-24 text-center">
             <FadeIn direction="up">
               {/* Aesthetic Badge */}
-              <div className="inline-flex items-center gap-3 px-6 py-2 border border-[#997819]/40 rounded-full mb-12 backdrop-blur-md bg-black/20">
+              <div className="inline-flex items-center gap-3 px-6 py-2 border border-[#997819]/90 rounded-full mb-12 backdrop-blur-md bg-black/20">
                 <span className="w-2 h-2 rounded-full bg-[#997819] animate-pulse" />
-                <span className="text-[#997819] font-black uppercase tracking-[0.5em] text-[10px]">
+                <span className="text-white font-black uppercase tracking-[0.5em] text-[10px]">
                   Take The Leap
                 </span>
               </div>
 
-              <h2 className="text-white text-5xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-10 drop-shadow-lg">
-                Launch is only <br  className="md:block hidden"/>
-                <span className="text-[#997819] italic font-light">
-                  the beginning.
+              <h2 className="text-white text-5xl md:text-6xl lg:text-8xl font-black tracking-tighter leading-[0.85] mb-10 drop-shadow-lg">
+                Launch Is Only <br  className="md:block hidden"/>
+                <span className="text-[#997819]  font-bold">
+                  The Beginning.
                 </span>
               </h2>
 
-              <p className="text-white/60 text-lg md:text-xl mb-14 max-w-2xl mx-auto leading-relaxed font-medium italic">
+              <p className="text-white/80 text-lg md:text-xl mb-14 max-w-2xl mx-auto leading-relaxed font-medium ">
                 "BizGrow Media is a trusted name that helps you establish a
                 clear, confident presence from the very beginning."
               </p>

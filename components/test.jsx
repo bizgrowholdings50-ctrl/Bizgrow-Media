@@ -53,9 +53,9 @@ export default function BizGrowWhySection() {
               <span className="text-[#997819] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-[9px] md:text-[10px] mb-4 block">
                 The Partnership Advantage
               </span>
-              <h2 className="text-white text-3xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9]">
+              <h2 className="text-white text-3xl md:text-7xl font-black  tracking-tighter leading-[0.9]">
                 Why Businesses Work With <br className="hidden md:block"/>
-                <span className="text-[#997819] italic">BizGrow Media</span>
+                <span className="text-[#997819] ">BizGrow Media</span>
               </h2>
             </motion.div>
 

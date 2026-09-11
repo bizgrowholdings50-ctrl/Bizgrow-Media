@@ -51,18 +51,15 @@ const HomePage = () => {
                   </span>
                 </div>
 
-                <h2 className="text-3xl md:text-5xl font-black text-[#12066a] dark:text-white mb-8  tracking-normal uppercase">
-                  Where Businesses <br />
-                  <span
-                    className="text-[#997819] bg-clip-text "
-                    style={{ WebkitTextStroke: "1px #997819" }}
-                  >
-                    Become Industry Voices
+                <h2 className="text-3xl md:text-5xl font-black text-[#12066a] dark:text-white mb-8 tracking-normal">
+                  Where Businesses Become  <br />
+                  <span className="text-[#997819] bg-clip-text ">
+                    Industry Voices
                   </span>
                 </h2>
 
                 <div className="relative mb-10">
-                  <p className="text-slate-600 dark:text-white/80 text-md md:text-md font-medium leading-relaxed pl-8 border-l-4 border-[#997819]">
+                  <p className="text-slate-800 dark:text-white/80 text-md md:text-lg font-medium leading-relaxed pl-8 border-l-4 border-[#997819]">
                     BizGrow Media is a collection of organised platforms that
                     promote your company with a message to the industry. As a
                     business media connection, we convey the word and advertise
@@ -149,7 +146,7 @@ const HomePage = () => {
               <h2 className="text-[#997819] font-black tracking-[0.4em] uppercase text-xs mb-4">
                 Our Media Services
               </h2>
-              <h3 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white uppercase tracking-tighter">
+              <h3 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white  tracking-tighter">
                 The Future Of Business Media
               </h3>
             </FadeIn>
@@ -231,7 +228,7 @@ const HomePage = () => {
                   <div className="text-[#997819] mb-6 group-hover:scale-125 transition-transform duration-500">
                     {item.icon}
                   </div>
-                  <h3 className="text-[#12066a] dark:text-white font-black text-lg tracking-tight mb-4 uppercase">
+                  <h3 className="text-[#12066a] dark:text-white font-black text-lg tracking-tight mb-4 ">
                     {item.name}
                   </h3>
                   <p className="text-slate-500 dark:text-white/40 text-sm leading-relaxed">
@@ -262,17 +259,17 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-5">
               <FadeIn direction="right">
-                <h2 className="text-4xl md:text-5xl font-black text-[#12066a] dark:text-white mb-8 uppercase leading-[0.9] tracking-tighter">
+                <h2 className="text-4xl md:text-5xl font-black text-[#12066a] dark:text-white mb-8 leading-[0.9] tracking-tighter">
                   Why Growing Brands Choose{" "}
                   <span className="text-[#997819]">BizGrow Media?</span>
                 </h2>
-                <p className="text-slate-600 dark:text-white/70 text-md leading-relaxed mb-6">
+                <p className="text-slate-800 dark:text-white/70 text-md leading-normal mb-6">
                   Brands choose BizGrow Media because we go beyond creating
                   content; we build strategic media systems that help businesses
                   become more visible, credible, and consistent across the
                   platforms where their audience is already paying attention.
                 </p>
-                <p className="text-slate-500 dark:text-white/40 italic">
+                <p className="text-slate-800 dark:text-white/40 ">
                   Our approach brings together creative production, brand
                   positioning, content strategy, and growth-led marketing to
                   help your business show up with clarity, confidence, and
@@ -301,10 +298,10 @@ const HomePage = () => {
               ].map((item, i) => (
                 <FadeIn key={i} direction="up" delay={i * 0.1}>
                   <div className="p-8 bg-slate-50 dark:bg-white/[0.02] border border-slate-100 dark:border-white/5 rounded-3xl hover:border-[#997819]/50 transition-all">
-                    <h3 className="text-[#12066a] dark:text-white font-black uppercase text-sm mb-3 tracking-tight">
+                    <h3 className="text-[#12066a] dark:text-white font-black  text-md mb-3 tracking-tight">
                       {item.title}
                     </h3>
-                    <p className="text-slate-500 dark:text-white/40 text-xs leading-relaxed">
+                    <p className="text-slate-800 dark:text-white/40 text-xs leading-normal">
                       {item.desc}
                     </p>
                   </div>
@@ -320,10 +317,10 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="right">
-              <h2 className="text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-none">
-                Results You <br /> Can Expect
+              <h2 className="text-white text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-none">
+                Results You  Can Expect
               </h2>
-              <p className="text-white/70 text-lg  font-medium italic">
+              <p className="text-white/80 text-lg font-medium ">
                 At BizGrow Media, we shape every strategy, content piece, and
                 campaign to help your business build a stronger presence,
                 communicate with purpose, and create more growth opportunities.
@@ -331,16 +328,16 @@ const HomePage = () => {
             </FadeIn>
             <div className="space-y-4">
               {[
-                "Greater visibility across key platforms",
-                "Stronger trust through consistent communication",
-                "Clearer messaging with professional intent",
-                "More meaningful audience engagement",
-                "Better opportunities for enquiries and growth",
+                "Greater Visibility Across Key Platforms",
+                "Stronger Trust Through Consistent Communication",
+                "Clearer Messaging With Professional Intent",
+                "More Meaningful Audience Engagement",
+                "Better Opportunities For Enquiries And Growth",
               ].map((text, idx) => (
                 <FadeIn key={idx} direction="up" delay={idx * 0.1}>
                   <div className="flex items-center gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 group hover:bg-white transition-all duration-500">
                     <CheckCircle2 size={24} className="text-[#997819]" />
-                    <span className="text-white group-hover:text-[#12066a] font-black uppercase tracking-tight text-sm md:text-base transition-colors">
+                    <span className="text-white group-hover:text-[#12066a] font-black  tracking-normal text-sm md:text-base transition-colors">
                       {text}
                     </span>
                   </div>
@@ -355,7 +352,7 @@ const HomePage = () => {
       <section className="py-14 md:py-32 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <FadeIn direction="up">
-            <h2 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white uppercase mb-20 tracking-tighter">
+            <h2 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white  mb-20 tracking-tighter">
               The BizGrow Media
               <span className="text-[#997819] ml-2">Ecosystem</span>
             </h2>
@@ -397,11 +394,11 @@ const HomePage = () => {
 
             <div className="relative z-10 px-6 max-w-2xl mx-auto">
               <FadeIn direction="up">
-                <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tight mb-6 leading-tight">
+                <h2 className="text-3xl md:text-6xl font-black tracking-tight mb-6 leading-tight">
                   Working With Brands That Aim Higher
                 </h2>
 
-                <p className="text-gray-200 mb-10 text-base md:text-lg font-light italic px-2">
+                <p className="text-gray-200 mb-10 text-base md:text-lg font-light  px-2">
                   BizGrow Media helps businesses grow through premium media
                   production, strategic content, authority positioning, and
                   growth-focused exposure.

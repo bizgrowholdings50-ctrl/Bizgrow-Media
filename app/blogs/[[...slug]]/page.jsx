@@ -122,7 +122,7 @@ export default async function BlogPage({ params }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 mt-20 md:mt-10">
         {/* Header Section */}
         <header className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-black text-[#12066a] dark:text-white mb-4 uppercase tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-black text-[#12066a] dark:text-white mb-4 tracking-tight">
             {activeCat ? activeCat.replace(/-/g, " ") : "Bizgrow Media"}{" "}
             <span className="text-[#997819]">Insights</span>
           </h1>

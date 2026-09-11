@@ -15,6 +15,7 @@ import {
   Monitor,
   Radio,
   FileVideo,
+  ArrowUpRight,
 } from "lucide-react";
 import Link from "next/link";
 import FadeIn from "@components/MotionWrapper";
@@ -42,15 +43,15 @@ const StudioProductionPage = () => {
           priority
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 w-full mx-auto bg-black/55 flex flex-col pt-12 justify-center items-center px-6">
+        <div className="absolute inset-0 w-full mx-auto bg-black/65 flex flex-col pt-12 justify-center items-center px-6">
           <FadeIn direction="up" delay={0.2}>
             <div className="w-full flex flex-col items-center text-center">
-              <span className="text-[#997819] font-bold tracking-[0.4em] uppercase text-xs mb-6">
+              <span className="text-[#D4AF37] font-bold tracking-[0.4em] uppercase text-xs mb-6">
                 Premium Visual Content
               </span>
-              <h1 className="text-white text-4xl md:text-7xl text-center font-black max-w-5xl leading-[0.9] uppercase tracking-tighter">
+              <h1 className="text-white text-4xl md:text-8xl text-center font-black max-w-5xl leading-[0.9]  tracking-tighter">
                 High-Quality Media <br />
-                <span className="text-[#997819]">Production</span> for Brands
+                <span className="text-[#997819]">Production</span> For Brands
               </h1>
               <p className="text-gray-300 mt-8 text-lg md:text-xl max-w-2xl font-medium">
                 Bring Your Brand Story to Life Through Premium Visual Content
@@ -58,6 +59,11 @@ const StudioProductionPage = () => {
               </p>
             </div>
           </FadeIn>
+           <Link href="/contact-us">
+                <button className="h-16 px-12 mt-10 group bg-[#997819] dark:bg-white text-white dark:text-black font-normal tracking-tighter text-md flex items-center gap-3 hover:bg-[#997819] dark:hover:bg-[#997819] hover:text-white transition-all duration-500 rounded-full shadow-2xl">
+                  Start Your Podcast Today <ArrowUpRight className="w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" />
+                </button>
+              </Link>
         </div>
       </div>
 
@@ -74,9 +80,9 @@ const StudioProductionPage = () => {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
                   <div className="absolute bottom-10 left-10 right-10 bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl text-white">
-                    <p className="text-sm uppercase tracking-widest font-bold text-[#997819] mb-2">
+                    <p className="text-sm uppercase tracking-widest font-bold text-[#D4AF37] mb-2">
                       Credibility First
                     </p>
                     <h2 className="text-2xl font-bold leading-tight">
@@ -92,27 +98,27 @@ const StudioProductionPage = () => {
                 <span className="text-[#997819] font-black uppercase tracking-[0.3em] text-xs">
                   Premium Visual Content
                 </span>
-                <h2 className="text-3xl md:text-6xl font-black text-[#12066a] dark:text-white leading-[1] uppercase tracking-tighter mt-4">
+                <h2 className="text-3xl md:text-6xl font-black text-[#12066a] dark:text-white leading-[1]  tracking-tighter mt-4">
                   Bring Your Brand <br />
                   <span className="text-[#997819]">Story </span> To Life Through
                   Premium Visual Content
                 </h2>
 
                 <div className="space-y-6 mt-8">
-                  <p className="text-gray-600 dark:text-gray-400 text-xl leading-relaxed font-medium">
+                  <p className="text-gray-600 dark:text-gray-800 text-xl leading-relaxed font-medium">
                     Your brand deserves more than ordinary visuals. It needs
                     content that captures attention, communicates your message
                     with clarity, and presents your business with the quality,
                     confidence, and credibility your audience expects.
                   </p>
-                  <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed italic border-l-4 border-[#997819] pl-6">
+                  <p className="text-gray-800 dark:text-gray-400 text-lg leading-relaxed italic border-l-4 border-[#997819] pl-6">
                      <Link href="/" className="text-[#997819] font-bold">BizGrow Media</Link> helps founders, startups, and growing
                     businesses create premium visual content that brings their
                     brand story, services, and message to life more engagingly
                     and memorably.
                   </p>
                   <Link href="/contact-us" className="inline-block pt-6">
-                    <button className="px-10 py-5 bg-[#12066a] text-white font-black rounded-2xl uppercase tracking-widest text-sm hover:bg-[#997819] transition-all duration-500">
+                    <button className="px-10 py-5 bg-[#12066a] text-white font-black rounded-2xl tracking-widest text-sm hover:bg-[#997819] transition-all duration-500">
                       Start Your Production Journey →
                     </button>
                   </Link>
@@ -128,11 +134,11 @@ const StudioProductionPage = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <FadeIn direction="up">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 tracking-tighter uppercase text-[#12066a] dark:text-white">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 tracking-tighter text-[#12066a] dark:text-white">
                 Media <span className="text-[#997819] mr-1">Assets</span>
                 Designed to Capture Attention & Build Trust
               </h2>
-              <p className="text-gray-500 dark:text-gray-300 font-medium">
+              <p className="text-gray-800 text-md dark:text-gray-300 font-medium">
                 Your brand needs visual content that feels intentional, refined,
                 and aligned with the way you want to be recognised. At BizGrow
                 Media, we produce high-quality media assets that help your
@@ -180,7 +186,7 @@ const StudioProductionPage = () => {
                   <div className="w-14 h-14 bg-[#12066a] dark:bg-gray-800 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#997819] transition-colors">
                     {React.cloneElement(item.icon, { size: 28 })}
                   </div>
-                  <h3 className="text-xl font-black text-[#12066a] dark:text-white uppercase mb-3">
+                  <h3 className="text-xl font-black text-[#12066a] dark:text-white mb-3">
                     {item.t}
                   </h3>
                   <p className="text-gray-500 text-sm leading-relaxed">
@@ -204,12 +210,12 @@ const StudioProductionPage = () => {
                   The Experience
                 </span>
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black tracking-tighter uppercase leading-[0.98]">
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black tracking-tighter  leading-[0.98]">
                 From Creative Vision To
                 <span className="text-[#997819] ml-1">Produced Media</span>
               </h2>
 
-              <p className="text-gray-500 dark:text-gray-300 pt-8 font-medium">
+              <p className="text-gray-800 dark:text-gray-300 pt-8 font-medium">
                 We turn your ideas into polished visual content through a
                 complete production experience built around clarity, creativity,
                 and brand impact. Every stage is handled with intention, so your
@@ -223,25 +229,25 @@ const StudioProductionPage = () => {
             {[
               {
                 id: "01",
-                t: "Concept shaped with purpose",
+                t: "Concept Shaped With Purpose",
                 d: "Your idea is developed into a clear, creative direction that reflects your brand message.",
                 list: ["Message Strategy", "Visual Moodboards"],
               },
               {
                 id: "02",
-                t: "Production planned with precision",
+                t: "Production Planned With Precision",
                 d: "Every shoot detail is organised in advance to ensure a smooth, professional process.",
                 list: ["Studio Setup", "Directing & Filming"],
               },
               {
                 id: "03",
-                t: "Content captured with quality",
+                t: "Content Captured With Quality",
                 d: "We capture and produce high-quality visuals, audio, and brand moments through a refined, professional production approach.",
                 list: ["Colour Grading", "Sound Design"],
               },
               {
                 id: "04",
-                t: "Final assets refined for impact",
+                t: "Final Assets Refined for Impact",
                 d: "Your content is edited, polished, and prepared for use across social media, websites, campaigns, and digital platforms.",
                 list: ["Aspect Ratios", "Thumbnail Design"],
               },
@@ -256,7 +262,7 @@ const StudioProductionPage = () => {
                       <CheckCircle2 size={20} />
                     </div>
                   </div>
-                  <h3 className="text-3xl font-black text-[#12066a] dark:text-white uppercase mb-4">
+                  <h3 className="text-3xl font-black text-[#12066a] dark:text-white mb-4">
                     {step.t}
                   </h3>
                   <p className="text-gray-500 dark:text-gray-300 font-medium mb-8">
@@ -292,18 +298,18 @@ const StudioProductionPage = () => {
                     The Difference
                   </span>
                 </div>
-                <h2 className="text-[#12066a] dark:text-white text-4xl md:text-7xl font-black tracking-tighter uppercase leading-[0.98] mb-8">
+                <h2 className="text-[#12066a] dark:text-white text-4xl md:text-6xl font-black tracking-tighter leading-[0.98] mb-8">
                   The Impact of <br />
                   <span className="text-[#997819]">Premium Production</span>
                 </h2>
-                <p className="text-gray-600 dark:text-gray-300 text-xl font-medium leading-relaxed mb-6">
+                <p className="text-gray-800 dark:text-gray-300 text-xl font-medium leading-relaxed mb-6">
                   Professional production is more than creating content that
                   looks good; it shapes how your brand is experienced,
                   remembered, and trusted. The quality of your visuals, sound,
                   editing, and creative direction all influence the way your
                   audience perceives your business.
                 </p>
-                <p className="text-gray-500 dark:text-gray-300 text-lg leading-relaxed">
+                <p className="text-gray-800 dark:text-gray-300 text-lg leading-relaxed">
                   At{" "}
                   <span className="text-[#12066a] dark:text-white font-bold">
                     BizGrow Media
@@ -352,7 +358,7 @@ const StudioProductionPage = () => {
                         <h3 className="text-[#12066a] dark:text-white font-black uppercase text-sm tracking-tight">
                           {item.t}
                         </h3>
-                        <p className="text-gray-500 text-xs mt-1">{item.d}</p>
+                        <p className="text-gray-800 text-xs mt-1">{item.d}</p>
                       </div>
                     </div>
                   ))}
@@ -368,7 +374,7 @@ const StudioProductionPage = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="right">
-              <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">
+              <h2 className="text-4xl md:text-6xl font-black  tracking-tighter leading-none">
                 Production Support Built <br />
                 <span className="text-[#997819]">Around Your Brand</span>
               </h2>
@@ -409,7 +415,7 @@ const StudioProductionPage = () => {
                     size={24}
                     strokeWidth={3}
                   />
-                  <h3 className="font-bold uppercase text-sm mb-2">{item.t}</h3>
+                  <h3 className="font-bold text-md leading-normal mb-2">{item.t}</h3>
                   <p className="text-gray-400 text-xs leading-relaxed">
                     {item.d}
                   </p>
@@ -430,11 +436,11 @@ const StudioProductionPage = () => {
           <div className="absolute inset-0 bg-[#000B25]/85" />
           <div className="relative z-10 p-10 md:p-24 text-center">
             <FadeIn direction="up">
-              <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter mb-8 leading-none">
+              <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter mb-8 leading-none">
                 Give Your Brand The <br />
                 <span className="text-[#997819]">Quality It Deserves</span>
               </h2>
-              <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-12 italic">
+              <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-12">
                 With Studio & Production by BizGrow Media, we create polished
                 visual content that helps your brand look credible, communicate
                 clearly, and connect with your audience across every digital

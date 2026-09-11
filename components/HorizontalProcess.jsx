@@ -56,7 +56,7 @@ const HorizontalProcess = () => {
     {
       id: "Step 1",
       title: "Studio Hire",
-      tag: "ENVIRONMENTS",
+      tag: "Environments",
       img: "/with people.jpeg",
       altText: "Studio hire - BizGrow Media",
       description: <>Step into a professionally designed <Link href="/studio-production" className="text-[#997819] font-bold">studio</Link> space created for podcasts, interviews, and high-quality business content.</>,
@@ -64,7 +64,7 @@ const HorizontalProcess = () => {
     {
       id: "Step 2",
       title: "Launch Package",
-      tag: "FOUNDATION",
+      tag: "Foundation",
       img: "/pakages.jpg",
       altText: "Launch package - BizGrow Media",
       description: <>BizGrow Media helps your brand start with professionally structured launch <Link href="/packages" className="text-[#997819] font-bold">packages</Link> and content designed to create a clear media presence.</>,
@@ -72,7 +72,7 @@ const HorizontalProcess = () => {
     {
       id: "Step 3",
       title: "Content Engine",
-      tag: "CONSISTENCY",
+      tag: "Consistency",
       img: "/content.jpg",
       altText: "Content engine - BizGrow Media",
       description: <>BizGrow Media keeps your brand active with regular <Link href="/content-engine" className="text-[#997819] font-bold">content</Link> that feels natural and keeps people connected to your brand.</>,
@@ -80,7 +80,7 @@ const HorizontalProcess = () => {
     {
       id: "Step 4",
       title: "Authority Builder",
-      tag: "POSITIONING",
+      tag: "Position",
       img: "/authority-builder.jpg",
       altText: "Authority builder - BizGrow Media",
       description: <>Develop a <Link href="/authority-builder" className="text-[#997819] font-bold">stronger market presence</Link> through professional positioning and strategic media exposure.</>,
@@ -88,7 +88,7 @@ const HorizontalProcess = () => {
     {
       id: "Step 5",
       title: "Media Partner",
-      tag: "GROWTH",
+      tag: "Growth",
       img: "/camera behind.jpeg",
       altText: "BizGrow Media Partner",
       description: <>BizGrow Media stays with you for the long run, supporting your <Link href="/growth-engine" className="text-[#997819] font-bold">brand</Link> as it grows with ongoing media support.</>,
@@ -118,7 +118,7 @@ const HorizontalProcess = () => {
               <h3 className="text-[#997819] mt-4 font-bold tracking-[0.5em] text-xs md:text-sm mb-2">OUR APPROACH</h3>
             </FadeIn>
             <FadeIn direction="up" delay={0.2}>
-              <h2 className="text-3xl md:text-5xl lg:text-5xl dark:text-white font-black text-[#12066A] uppercase">
+              <h2 className="text-3xl md:text-5xl lg:text-5xl dark:text-white font-black text-[#12066A]">
                 The BizGrow Media Ecosystem
               </h2>
             </FadeIn>
@@ -139,12 +139,12 @@ const HorizontalProcess = () => {
               >
                 <div className="z-10 w-full lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
                   <FadeIn direction={isVertical ? "up" : "right"}>
-                    <span className="text-[#997819] font-bold tracking-[0.3em] uppercase text-sm md:text-base">
+                    <span className="text-[#997819] font-bold tracking-[0.3em] text-sm md:text-base">
                       {item.id} {item.tag}
                     </span>
                   </FadeIn>
                   <FadeIn direction={isVertical ? "up" : "right"} delay={0.2}>
-                    <h3 className="text-4xl sm:text-6xl font-black dark:text-white text-[#12066A] leading-none mt-4 uppercase">
+                    <h3 className="text-4xl sm:text-6xl font-black dark:text-white text-[#12066A] leading-none mt-4">
                       {item.title}
                     </h3>
                   </FadeIn>

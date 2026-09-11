@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -6,26 +7,26 @@ import Link from "next/link";
 
 const slides = [
   {
-    title: "STUDIO",
-    sub: "PRODUCTION",
+    title: "Studio",
+    sub: "Production",
     desc: "Video production, editing & complete content creation support",
     img: "/studio-production.webp",
   },
   {
-    title: "CONTENT",
-    sub: "ENGINEERING",
+    title: "Content",
+    sub: "Engineering",
     desc: "High-quality, structured content that delivers value",
     img: "/content-eng.jpg",
   },
   {
-    title: "AUTHORITY",
-    sub: "BUILDER",
+    title: "Authority",
+    sub: "Builder",
     desc: "Personal and business branding through media presence",
     img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
   },
   {
-    title: "GROWTH",
-    sub: "ENGINE",
+    title: "Growth",
+    sub: "Engine",
     desc: "Focused on visibility, leads, and long-term business growth",
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
   },
@@ -40,6 +41,7 @@ export default function LuxuryGridSlider() {
 
   useEffect(() => {
     const timer = setInterval(nextSlide, 6000);
+
     return () => clearInterval(timer);
   }, [nextSlide]);
 
@@ -69,6 +71,7 @@ export default function LuxuryGridSlider() {
               fetchPriority={index === 0 ? "high" : "low"}
               unoptimized={currentSlide.img.startsWith("http")}
             />
+
             <div className="absolute inset-0 bg-gradient-to-r from-[#000B25] via-[#000B25]/40 to-transparent" />
           </motion.div>
         </AnimatePresence>
@@ -87,10 +90,15 @@ export default function LuxuryGridSlider() {
               className="relative flex items-center h-12 group transition-all"
             >
               <span
-                className={`text-[10px] font-black tracking-widest absolute -left-2 transition-colors duration-500 ${index === i ? "text-[#997819]" : "text-white/20 group-hover:text-white"}`}
+                className={`text-[10px] font-black tracking-widest absolute -left-2 transition-colors duration-500 ${
+                  index === i
+                    ? "text-[#997819]"
+                    : "text-white/20 group-hover:text-white"
+                }`}
               >
                 {`0${i + 1}`}
               </span>
+
               <motion.div
                 initial={{ scaleY: 0.08 }}
                 animate={{
@@ -109,27 +117,33 @@ export default function LuxuryGridSlider() {
 
         {/* Center Content */}
         <div className="col-span-12 md:col-span-11 lg:col-span-9 md:px-12 lg:px-0">
-          {index === 0 ? (
-            <div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+            >
               <div className="flex items-center gap-4 mt-20 mb-6">
                 <span className="w-10 h-[1px] bg-[#997819]"></span>
+
                 <span className="text-[#997819] text-[9px] md:text-[11px] font-black tracking-[0.4em] uppercase">
-                  BIZGROW MEDIA PREMIUM
+                  BIZGROW MEDIA 
                 </span>
+                <span className="w-10 h-[1px] bg-[#997819]"></span>
               </div>
 
-              <h1 className="text-5xl md:text-[7vw] lg:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
-                {slides[0].title} <br />
-                <span
-                  className="text-[#997819] italic font-serif tracking-normal font-light block mt-2"
-                  
-                >
-                  {slides[0].sub}
+              <h1 className="text-5xl md:text-[7vw] lg:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 capitalize">
+                {currentSlide.title} <br />
+
+                <span className="text-[#997819]  font-serif tracking-normal font-light block mt-2 capitalize">
+                  {currentSlide.sub}
                 </span>
               </h1>
 
-              <p className="max-w-xl text-white/60 text-base md:text-lg lg:text-xl font-medium leading-relaxed mb-12 italic border-l-2 border-[#997819]/30 pl-6">
-                {slides[0].desc}
+              <p className="max-w-xl text-white/80 text-base md:text-lg lg:text-xl font-medium leading-relaxed mb-12  border-l-4 border-[#997819]/70 pl-6">
+                {currentSlide.desc}
               </p>
 
               <Link href="/our-media-services" className="inline-block">
@@ -141,55 +155,12 @@ export default function LuxuryGridSlider() {
                   <span className="relative z-10 text-white text-[11px] font-black tracking-[0.4em] group-hover:text-white duration-500">
                     EXPLORE ECOSYSTEM
                   </span>
+
                   <div className="absolute inset-0 bg-[#997819] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
                 </motion.div>
               </Link>
-            </div>
-          ) : (
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={index}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.35, ease: "easeInOut" }}
-              >
-                <div className="flex items-center gap-4 mt-20 mb-6">
-                  <span className="w-10 h-[1px] bg-[#997819]"></span>
-                  <h2 className="text-[#997819] text-[9px] md:text-[11px] font-black tracking-[0.4em] uppercase">
-                    BIZGROW MEDIA PREMIUM
-                  </h2>
-                </div>
-
-                <h1 className="text-5xl md:text-[7vw] lg:text-[8vw] font-black leading-[0.85] text-white tracking-tighter mb-8 uppercase">
-                  {currentSlide.title} <br />
-                  <span
-                    className="text-[#997819] italic tracking-normal font-serif font-light block mt-2"
-                  
-                  >
-                    {currentSlide.sub}
-                  </span>
-                </h1>
-
-                <p className="max-w-xl text-white/60 text-base md:text-lg lg:text-xl font-medium leading-relaxed mb-12 italic border-l-2 border-[#997819]/30 pl-6">
-                  {currentSlide.desc}
-                </p>
-
-                <Link href="/our-media-services" passHref legacyBehavior>
-                  <motion.a
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="inline-block relative overflow-hidden group border border-[#997819]/50 px-12 py-5 rounded-2xl bg-transparent cursor-pointer"
-                  >
-                    <span className="relative z-10 text-white text-[11px] font-black tracking-[0.4em] group-hover:text-white duration-500">
-                      EXPLORE ECOSYSTEM
-                    </span>
-                    <div className="absolute inset-0 bg-[#997819] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
-                  </motion.a>
-                </Link>
-              </motion.div>
-            </AnimatePresence>
-          )}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>
