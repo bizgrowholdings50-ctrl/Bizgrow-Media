@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Mic2, Layers, ShieldCheck, Rocket } from "lucide-react";
+import { Mic2, Layers, ShieldCheck, Rocket, ArrowRight } from "lucide-react";
 import HorizontalProcess from "@components/HorizontalProcess";
 import ShapeChangeSection from "@components/test";
 import VShapeTransition from "@components/test2";
@@ -80,9 +80,7 @@ const page = () => {
             font-bold mt-26 max-w-5xl px-4"
             >
               The Right Media Open{" "}
-              <span className="text-[#997819]">
-                Bigger Business
-              </span>{" "}
+              <span className="text-[#997819]">Bigger Business</span>{" "}
               Opportunities
             </h1>
           </FadeIn>
@@ -107,18 +105,18 @@ const page = () => {
         </div>
       </div>
 
-      {/* SERVICES GRID */}
-      <section className="py-14 md:py-24 bg-gray-50 dark:bg-gray-800 relative">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#997819]/5 blur-[120px] rounded-full -z-10" />
+      {/* 🔹 3. SERVICES GRID (Compact Luxury with Continuous Icon Spin) */}
+      <section className="relative py-10 pb-20 bg-white overflow-hidden">
+        {/* Decorative Glow */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#997819]/5 blur-[120px] rounded-full -z-10 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6">
+          {/* Heading */}
           <div className="text-center mb-20">
             <FadeIn direction="up" delay={0.2}>
               <h2 className="text-3xl md:text-6xl font-black text-[#12066a] dark:text-white leading-[1.1] tracking-tighter">
                 Elite-level services focused on <br />
-                <span className="text-[#997819]">
-                  long-term performance
-                </span>
+                <span className="text-[#997819]">long-term performance</span>
               </h2>
 
               <div className="w-24 h-2 bg-[#997819] mx-auto mt-6 rounded-full" />
@@ -136,41 +134,81 @@ const page = () => {
             </FadeIn>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
-            {services.map((service, index) => (
-              <FadeIn
-                key={index}
-                direction="up"
-                delay={0.1 * index}
-                className="h-full"
-              >
-                <div className="group relative h-full p-10 bg-white dark:bg-[#001235]/60 backdrop-blur-md rounded-[2.5rem] border-2 border-slate-100 dark:border-white/5 shadow-xl hover:shadow-[#997819]/20 transition-all duration-500 flex flex-col items-start text-left overflow-hidden">
-                  <div className="absolute -inset-full bg-gradient-to-br from-[#997819]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, i) => (
+              <FadeIn key={i} direction="up" delay={0} duration={0.6}>
+                <Link href={service.path || "#"}>
+                  <div className="group relative h-[450px] md:h-[420px] rounded-[3rem] overflow-hidden bg-[#12066a] transition-all duration-700 lg:hover:-translate-y-3 lg:hover:shadow-[0_40px_80px_-20px_rgba(18,6,106,0.4)] active:scale-[0.98]">
+                    {/* 1. Background Image */}
+                    <div
+                      className="absolute inset-0 z-0 bg-cover bg-center transition-all duration-[1.5s] ease-in-out lg:group-hover:scale-125 lg:group-hover:rotate-2 opacity-40 lg:opacity-50 lg:group-hover:opacity-30"
+                      style={{
+                        backgroundImage: `url(${
+                          service.bgImage || "/service-bg.jpg"
+                        })`,
+                      }}
+                    />
 
-                  <div
-                    className={`w-20 h-20 ${service.bgColor} ${service.hoverBg} ${service.hoverIcon} 
-              rounded-2xl flex items-center justify-center mb-8 shadow-lg transition-all 
-              duration-500 group-hover:rotate-[15deg] dark:text-white group-hover:scale-110 shrink-0 text-3xl`}
-                  >
-                    {service.icon}
-                  </div>
-
-                  <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 tracking-tight group-hover:text-[#997819] transition-colors">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed flex-grow text-base font-medium">
-                    {service.desc}
-                  </p>
-
-                  <Link href={service.path} className="mt-8">
-                    <div className="flex items-center gap-2 text-[#997819] font-bold text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 cursor-pointer">
-                      Explore More <span>→</span>
+                    {/* 2. Watermark */}
+                    <div className="absolute top-8 left-8 pointer-events-none z-10 overflow-hidden">
+                      <h3 className="text-[4rem] font-black text-white/[0.05] uppercase leading-none tracking-tighter transition-transform duration-1000 lg:group-hover:-translate-y-2 lg:group-hover:text-[#997819]/30">
+                        {service.title.split(" ")[0]}
+                      </h3>
                     </div>
-                  </Link>
 
-                  <div className="absolute bottom-0 left-0 w-0 h-2 bg-[#997819] group-hover:w-full transition-all duration-500" />
-                </div>
+                    {/* 3. Gradient */}
+                    <div className="absolute inset-0 z-20 bg-gradient-to-t from-[#12066a] via-[#12066a]/60 to-transparent" />
+
+                    {/* 4. Content */}
+                    <div className="relative z-30 h-full p-8 md:p-10 flex flex-col justify-end">
+                      {/* Spinning Icon */}
+                      <div className="absolute top-8 right-8 md:top-10 md:right-10">
+                        <div className="relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 lg:group-hover:border-[#997819] lg:group-hover:bg-[#997819]/20 shadow-2xl">
+                          <div className="absolute inset-0 rounded-full border-t-2 border-r-2 border-[#997819] animate-[spin_4s_linear_infinite] opacity-60 lg:group-hover:opacity-100 lg:group-hover:animate-[spin_1.5s_linear_infinite] transition-all duration-500" />
+
+                          <div className="relative z-10 text-[#997819] lg:group-hover:scale-110 transition-transform duration-500">
+                            {service.icon &&
+                              React.cloneElement(service.icon, { size: 24 })}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Text Area */}
+                      <div className="transition-transform duration-500 lg:group-hover:-translate-y-4">
+                        <span className="text-[#997819] font-black text-[9px] tracking-[0.5em] uppercase mb-3 block opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-700 translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0">
+                          Professional Standard
+                        </span>
+
+                        <h3 className="text-2xl md:text-3xl font-black text-white mb-3 tracking-tighter uppercase leading-[0.9]">
+                          {service.title}
+                        </h3>
+
+                        <p className="text-blue-100/80 lg:text-blue-100/50 font-medium leading-relaxed text-sm line-clamp-3 lg:group-hover:text-white/90 transition-all duration-500">
+                          {service.desc}
+                        </p>
+                      </div>
+
+                      {/* Footer / CTA */}
+                      <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-between opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-700 translate-y-0 lg:translate-y-8 lg:group-hover:translate-y-0">
+                        <div className="flex items-center gap-3 text-white font-black text-[9px] uppercase tracking-[0.3em]">
+                          <span className="text-[#997819] lg:text-white lg:group-hover:text-[#997819] transition-colors">
+                            Read More
+                          </span>
+
+                          <div className="w-10 lg:w-8 h-[1px] bg-[#997819] lg:group-hover:w-12 transition-all duration-500" />
+                        </div>
+
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#997819] text-white shadow-[0_0_20px_rgba(153,120,25,0.4)]">
+                          <ArrowRight size={14} />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Glow Effect */}
+                    <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-[#997819]/10 rounded-full blur-[100px] lg:group-hover:bottom-0 lg:group-hover:left-0 transition-all duration-1000 opacity-0 lg:group-hover:opacity-100" />
+                  </div>
+                </Link>
               </FadeIn>
             ))}
           </div>
@@ -178,104 +216,129 @@ const page = () => {
       </section>
 
       {/* OUR DISTINCTION */}
-      <section className="bg-white dark:bg-gray-900 py-14 md:py-40 transition-colors duration-500 relative">
+      <section className="bg-white dark:bg-gray-900 py-14 md:py-40 transition-colors duration-500 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20 dark:opacity-40">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-gray-200 dark:via-white/10 to-transparent hidden md:block" />
         </div>
 
         <div className="max-w-5xl mx-auto px-6 relative z-10">
-          <div className="mb-32 text-center">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#997819] animate-pulse" />
-              <span className="text-[#997819] font-black uppercase tracking-[0.4em] text-[10px]">
-                Our Distinction
-              </span>
-            </div>
+          {/* HEADER */}
+          <FadeIn direction="up" delay={0.1}>
+            <div className="mb-32 text-center">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <span className="w-2 h-2 rounded-full bg-[#997819] animate-pulse" />
 
-            <h2 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black  tracking-tighter leading-[0.9] -mb-12 md:mb-8 ">
-              What Makes Our 
-              <span className="text-[#997819] not-italic ml-1">
-                 Process Different
-              </span>
-            </h2>
-
-            <div className="w-24 h-[1px] bg-[#997819] mx-auto opacity-50" />
-          </div>
-
-          <div className="relative space-y-24">
-            {[
-              {
-                label: "Experience",
-                title:
-                  "We Pay Attention To How Your Brand Is Experienced",
-                desc: "People often form an impression of how a brand feels online before any conversation begins. Our process is built around helping your business appear more polished, intentional, and professionally presented through every piece of media.",
-              },
-              {
-                label: "Quality",
-                title:
-                  "We Prioritise Meaningful Content Over Constant Posting",
-                desc: "We believe strong brands are built through purposeful content, not endless posting. Every piece of media is created to feel relevant, valuable, and worth paying attention to.",
-              },
-              {
-                label: "Personalization",
-                title:
-                  "Your Business Doesn’t Get Treated Like Another Project",
-                desc: "Every business communicates differently, which is why our process is shaped by your brand identity, audience, and growth direction rather than a generic approach.",
-              },
-              {
-                label: "Communication",
-                title: "We Think Beyond Cameras And Editing",
-                desc: "Strong media is not only about visuals. It is also about how clearly your business communicates and the impression your brand leaves behind.",
-              },
-              {
-                label: "Impact",
-                title:
-                  "We Focus Less On Promises And More On Meaningful Results",
-                desc: "Our focus is on creating professional media that helps your business build stronger audience connections, better brand perception, and more valuable opportunities over time.",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className={`relative flex flex-col md:flex-row items-center gap-8 md:gap-20 ${
-                  index % 2 !== 0 ? "md:flex-row-reverse" : ""
-                }`}
-              >
-                <div className="flex-1 w-full">
-                  <div className="p-10 rounded-[2.5rem] bg-gray-50/50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 hover:border-[#997819]/30 transition-all duration-700 group shadow-sm hover:shadow-2xl">
-                    <span className="inline-block text-[#997819] font-black uppercase tracking-[0.3em] text-[10px] mb-4">
-                      Section // 0{index + 1}
-                    </span>
-
-                    <h3 className="text-[#12066a] dark:text-white text-2xl font-black  tracking-tight mb-6 group-hover:text-[#997819] transition-colors duration-500 leading-tight">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-slate-800 dark:text-white/40 text-sm leading-relaxed font-medium">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-xl group-hover:border-[#997819] transition-colors duration-500">
-                  <div className="w-2 h-2 rounded-full bg-[#997819]" />
-                </div>
-
-                <div className="flex-1 hidden md:block" />
+                <span className="text-[#997819] font-black uppercase tracking-[0.4em] text-[10px]">
+                  Our Distinction
+                </span>
               </div>
-            ))}
+
+              <h2 className="text-[#12066a] dark:text-white text-5xl md:text-6xl font-black tracking-tighter leading-[0.9] -mb-12 md:mb-8">
+                What Makes Our
+                <span className="text-[#997819] not-italic ml-1">
+                  Process Different
+                </span>
+              </h2>
+
+              <div className="w-24 h-[1px] bg-[#997819] mx-auto opacity-50" />
+            </div>
+          </FadeIn>
+
+          {/* TIMELINE */}
+          <div className="relative">
+            {/* Center Line */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full hidden md:block bg-gradient-to-b from-[#997819]/0 via-[#997819]/60 to-[#997819]/0" />
+
+            <div className="space-y-24">
+              {[
+                {
+                  label: "Experience",
+                  title: "We Pay Attention To How Your Brand Is Experienced",
+                  desc: "People often form an impression of how a brand feels online before any conversation begins. Our process is built around helping your business appear more polished, intentional, and professionally presented through every piece of media.",
+                },
+                {
+                  label: "Quality",
+                  title:
+                    "We Prioritise Meaningful Content Over Constant Posting",
+                  desc: "We believe strong brands are built through purposeful content, not endless posting. Every piece of media is created to feel relevant, valuable, and worth paying attention to.",
+                },
+                {
+                  label: "Personalization",
+                  title:
+                    "Your Business Doesn’t Get Treated Like Another Project",
+                  desc: "Every business communicates differently, which is why our process is shaped by your brand identity, audience, and growth direction rather than a generic approach.",
+                },
+                {
+                  label: "Communication",
+                  title: "We Think Beyond Cameras And Editing",
+                  desc: "Strong media is not only about visuals. It is also about how clearly your business communicates and the impression your brand leaves behind.",
+                },
+                {
+                  label: "Impact",
+                  title:
+                    "We Focus Less On Promises And More On Meaningful Results",
+                  desc: "Our focus is on creating professional media that helps your business build stronger audience connections, better brand perception, and more valuable opportunities over time.",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className={`relative flex flex-col md:flex-row items-center gap-8 md:gap-20 ${
+                    index % 2 !== 0 ? "md:flex-row-reverse" : ""
+                  }`}
+                >
+                  {/* CARD */}
+                  <div className="flex-1 w-full">
+                    <FadeIn
+                      direction={index % 2 === 0 ? "right" : "left"}
+                      delay={0.05}
+                      duration={0.7}
+                    >
+                      <div className="p-10 rounded-[2.5rem] bg-gray-50/50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 hover:border-[#997819]/30 transition-all duration-700 group shadow-sm hover:shadow-2xl">
+                        <span className="inline-block text-[#997819] font-black uppercase tracking-[0.3em] text-[10px] mb-4">
+                          Section // 0{index + 1}
+                        </span>
+
+                        <h3 className="text-[#12066a] dark:text-white text-2xl font-black tracking-tight mb-6 group-hover:text-[#997819] transition-colors duration-500 leading-tight">
+                          {item.title}
+                        </h3>
+
+                        <p className="text-slate-800 dark:text-white/40 text-sm leading-relaxed font-medium">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </FadeIn>
+                  </div>
+
+                  {/* CENTER DOT */}
+                  <div className="relative z-20 flex-shrink-0 hidden md:flex items-center justify-center w-12 h-12">
+                    <FadeIn direction="none" delay={0.2} duration={0.5}>
+                      <div className="w-12 h-12 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-white/10 flex items-center justify-center shadow-xl hover:border-[#997819] transition-colors duration-500">
+                        <div className="w-2 h-2 rounded-full bg-[#997819]" />
+                      </div>
+                    </FadeIn>
+                  </div>
+
+                  {/* EMPTY SIDE */}
+                  <div className="flex-1 hidden md:block" />
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="mt-32 flex flex-col items-center">
-            <div className="h-16 w-px bg-gradient-to-b from-[#997819] to-transparent mb-8" />
+          {/* END */}
+          <FadeIn direction="up" delay={0.1}>
+            <div className="mt-32 flex flex-col items-center">
+              <div className="h-16 w-px bg-gradient-to-b from-[#997819] to-transparent mb-8" />
 
-            <p className="text-[10px] font-black uppercase tracking-[0.6em] text-gray-600">
-              End of Methodology
-            </p>
-          </div>
+              <p className="text-[10px] font-black uppercase tracking-[0.6em] text-gray-600">
+                End of Methodology
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* 🔥 PINNED COMPONENTS FIXED */}
+      {/* 🔥 PINNED COMPONENTS  */}
       <div className="relative z-10">
         <HorizontalProcess />
       </div>
