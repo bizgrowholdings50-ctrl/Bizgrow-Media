@@ -23,37 +23,29 @@ const page = () => {
       title: "Studio & Production",
       path: "/studio-production",
       desc: "From podcasts and interviews to branded video content, we create professional media that helps your business appear more polished and engaging.",
-      icon: <Mic2 className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10",
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
+      icon: <Mic2 className="w-8 h-8 text-[#997819]" />,
+      image: "/services-studio-bg.jpg", // Yahan apni image ka path dein
     },
     {
       title: "Content Engine",
       path: "/content-engine",
       desc: "BizGrow Media creates valuable, well-structured content that helps your brand stay visible, connect with the right audience, and communicate with clarity.",
-      icon: <Layers className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10",
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
+      icon: <Layers className="w-8 h-8 text-[#997819]" />,
+      image: "/services-content-bg.jpg",
     },
     {
       title: "Authority Builder",
       path: "/authority-builder",
       desc: "BizGrow Media helps businesses and personal brands build a stronger presence through professional branding, credibility, and consistent media positioning.",
-      icon: <ShieldCheck className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10",
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
+      icon: <ShieldCheck className="w-8 h-8 text-[#997819]" />,
+      image: "/services-authority-bg.jpg",
     },
     {
       title: "Growth Engine",
       path: "/growth-engine",
       desc: "Our growth-focused media strategies are designed to help your business reach more people, attract better leads, and create new opportunities.",
-      icon: <Rocket className="w-8 h-8" />,
-      bgColor: "bg-[#997819]/10",
-      hoverIcon: "group-hover:text-white",
-      hoverBg: "group-hover:bg-[#997819]",
+      icon: <Rocket className="w-8 h-8 text-[#997819]" />,
+      image: "/services-growth-bg.jpg",
     },
   ];
 
@@ -108,7 +100,7 @@ const page = () => {
       {/* 🔹 3. SERVICES GRID (Compact Luxury with Continuous Icon Spin) */}
       <section className="relative py-10 pb-20 bg-white overflow-hidden">
         {/* Decorative Glow */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#997819]/5 blur-[120px] rounded-full -z-10 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#997819]/5 blur-[100px] rounded-full -z-10 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
@@ -139,13 +131,13 @@ const page = () => {
             {services.map((service, i) => (
               <FadeIn key={i} direction="up" delay={0} duration={0.6}>
                 <Link href={service.path || "#"}>
-                  <div className="group relative h-[450px] md:h-[420px] rounded-[3rem] overflow-hidden bg-[#12066a] transition-all duration-700 lg:hover:-translate-y-3 lg:hover:shadow-[0_40px_80px_-20px_rgba(18,6,106,0.4)] active:scale-[0.98]">
-                    {/* 1. Background Image */}
+                  <div className="group relative h-[450px] md:h-[420px] rounded-[3rem] overflow-hidden bg-[#12066a]/90 transition-all duration-700 lg:hover:-translate-y-3 lg:hover:shadow-[0_40px_80px_-20px_rgba(18,6,106,0.4)] active:scale-[0.98]">
+                    {/* 1. Background Image (Updated to service.image) */}
                     <div
-                      className="absolute inset-0 z-0 bg-cover bg-center transition-all duration-[1.5s] ease-in-out lg:group-hover:scale-125 lg:group-hover:rotate-2 opacity-40 lg:opacity-50 lg:group-hover:opacity-30"
+                      className="absolute inset-0 z-0 bg-cover bg-center transition-all duration-[1.5s] ease-in-out lg:group-hover:scale-125 lg:group-hover:rotate-2 opacity-90 lg:opacity-90 lg:group-hover:opacity-100"
                       style={{
                         backgroundImage: `url(${
-                          service.bgImage || "/service-bg.jpg"
+                          service.image || "/service-bg.jpg"
                         })`,
                       }}
                     />

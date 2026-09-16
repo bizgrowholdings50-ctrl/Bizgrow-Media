@@ -52,7 +52,7 @@ const HomePage = () => {
                 </div>
 
                 <h2 className="text-3xl md:text-5xl font-black text-[#12066a] dark:text-white mb-8 tracking-normal">
-                  Where Businesses Become  <br />
+                  Where Businesses Become <br />
                   <span className="text-[#997819] bg-clip-text ">
                     Industry Voices
                   </span>
@@ -313,14 +313,28 @@ const HomePage = () => {
       </section>
 
       {/* 5. RESULTS YOU CAN EXPECT */}
-      <section className="py-24 bg-[#12066a] dark:bg-gray-900 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="relative py-24 bg-black dark:bg-gray-900 overflow-hidden">
+        {/* Background Image with Cinematic Overlay & Custom Linear Gradients */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <Image
+            src="/path-to-your-image.jpg" // Yahan apni image ka path ya URL daal dein
+            alt="Results You Can Expect Background"
+            fill
+            sizes="100vw"
+            className="object-cover object-center opacity-20 grayscale contrast-125"
+          />
+          {/* Custom Linear Color Overlays */}
+          <div className="absolute inset-0 bg-linear-to-t from-[#12066a] via-[#12066a]/20 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-[#12066a] via-transparent to-[#12066a]/40" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn direction="right">
               <h2 className="text-white text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-none">
-                Results You  Can Expect
+                Results You Can Expect
               </h2>
-              <p className="text-white/80 text-lg font-medium ">
+              <p className="text-white/80 text-lg font-medium">
                 At BizGrow Media, we shape every strategy, content piece, and
                 campaign to help your business build a stronger presence,
                 communicate with purpose, and create more growth opportunities.
@@ -335,9 +349,9 @@ const HomePage = () => {
                 "Better Opportunities For Enquiries And Growth",
               ].map((text, idx) => (
                 <FadeIn key={idx} direction="up" delay={idx * 0.1}>
-                  <div className="flex items-center gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 group hover:bg-white transition-all duration-500">
+                  <div className="flex items-center gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm group hover:bg-white transition-all duration-500">
                     <CheckCircle2 size={24} className="text-[#997819]" />
-                    <span className="text-white group-hover:text-[#12066a] font-black  tracking-normal text-sm md:text-base transition-colors">
+                    <span className="text-white group-hover:text-[#12066a] font-black tracking-normal text-sm md:text-base transition-colors">
                       {text}
                     </span>
                   </div>

@@ -117,28 +117,59 @@ const DigitalMarketingPage = () => {
   return (
     <section className="w-full bg-white ">
       <StructuredData schema={contentEngineSchema} />
-      {/* --- 1 HERO SECTION: Responsive & Centered --- */}
-      <div className="relative h-[80vh]  md:h-screen pt-10 lg:pt-20 w-full flex items-center justify-center overflow-hidden">
+      {/* --- 1 HERO SECTION: Balanced, Compact & With CTA --- */}
+      <div className="relative h-[80vh] md:h-screen w-full flex items-center justify-center overflow-hidden bg-[#0b033c]">
+        {/* Background Image */}
         <Image
           src="/content-engine hero.jpg"
           alt="Content Engine - BizGrow Media"
           fill
           fetchPriority="high"
-          className="object-cover object-center"
+          className="object-cover object-center opacity-40"
           priority
         />
-        <div className="absolute inset-0 bg-black/70" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col items-center text-center">
-          <FadeIn direction="up">
-            <span className="text-[#997819] font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-4 block">
-              Boost Your Online Presence
-            </span>
-            <h1 className="text-white text-2xl md:text-6xl font-black leading-[1.1] mb-6 uppercase">
+        {/* Multi-layer Luxury Gradients */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0b033c] via-[#0b033c]/70 to-black/80" />
+
+        {/* Ambient Golden Glow */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] bg-[#997819]/15 blur-[120px] rounded-full pointer-events-none -z-10" />
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6 w-full flex flex-col items-center text-center mt-8">
+          <FadeIn direction="up" delay={0.1}>
+            {/* Glassmorphic Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#997819]/30 bg-white/5 backdrop-blur-xl mb-5 shadow-[0_0_20px_rgba(153,120,25,0.15)]">
+              <span className="w-2 h-2 rounded-full bg-[#997819] animate-ping" />
+              <span className="text-[#997819] font-black text-[10px] tracking-[0.3em] uppercase">
+                BizGrow Media Standard
+              </span>
+            </div>
+          </FadeIn>
+
+          <FadeIn direction="up" delay={0.3}>
+            <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-black tracking-tight uppercase leading-[1.15] mb-5">
               Build a Powerful{" "}
-              <span className="text-[#997819]">Digital Presence </span> Through
-              Strategic, Purpose-Led Content
+              <span className="text-[#997819]">Digital Presence</span> Through
+              Strategic Content
             </h1>
+          </FadeIn>
+
+          <FadeIn direction="up" delay={0.4}>
+            <p className="text-blue-100/70 max-w-xl mx-auto text-sm md:text-base font-medium leading-relaxed mb-8">
+              Transforming brand authority into high-converting digital assets
+              with precision, elite frameworks, and long-term momentum.
+            </p>
+          </FadeIn>
+
+          <FadeIn direction="up" delay={0.5}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-bold text-xs uppercase tracking-[0.2em] hover:bg-white/10 transition-all duration-300"
+              >
+                Let's Talk
+              </Link>
+            </div>
           </FadeIn>
         </div>
       </div>
@@ -157,7 +188,7 @@ const DigitalMarketingPage = () => {
                   </span>
                 </div>
 
-                <h2 className="text-[#12066a] dark:text-white text-3xl md:text-5xl font-black uppercase tracking-tighter leading-[0.98] mb-10">
+                <h2 className="text-[#12066a] dark:text-white text-3xl md:text-5xl font-black  tracking-tighter leading-[0.98] mb-10">
                   Your Ideas
                   <span className="text-transparent ml-1 bg-clip-text bg-gradient-to-r from-[#997819] to-[#997819]/60">
                     Deserve More
@@ -166,16 +197,19 @@ const DigitalMarketingPage = () => {
                 </h2>
 
                 <div className="space-y-8 max-w-2xl">
-                  <p className="text-xl md:text-2xl font-bold text-[#12066a] dark:text-white leading-tight italic border-l-4 border-[#997819] pl-8">
+                  <p className="text-xl md:text-xl font-bold text-[#12066a] dark:text-white leading-tight  border-l-4 border-[#997819] pl-8">
                     Strong businesses are not held back by a lack of ideas. They
                     are held back when those ideas are not shaped, shared, and
                     delivered with clarity, consistency, and purpose.
                   </p>
 
-                  <div className="space-y-6 text-gray-500 dark:text-white/60 text-lg leading-relaxed">
+                  <div className="space-y-6 text-gray-800 dark:text-white/60 text-lg leading-relaxed">
                     <p>
                       <span className="text-[#12066a] dark:text-white font-bold">
-                        Content Engine by <Link href="/" className="text-[#997819] font-bold">BizGrow Media</Link>
+                        Content Engine by{" "}
+                        <Link href="/" className="text-[#997819] font-bold">
+                          BizGrow Media
+                        </Link>
                       </span>{" "}
                       helps businesses turn their expertise, insights, and brand
                       message into high-quality content that builds visibility,
@@ -190,15 +224,15 @@ const DigitalMarketingPage = () => {
                   </div>
 
                   {/* Premium CTA */}
-                  <div className="pt-8">
-                    <Link href="/contact-us/" >
-                    <button className="group relative flex items-center gap-8 bg-[#12066a] dark:bg-[#997819] px-10 py-5 rounded-full text-white dark:text-white font-black uppercase tracking-[0.2em] text-[10px]  transition-all shadow-xl">
-                      Book Your Strategy Call
-                      <ArrowRight
-                        size={18}
-                        className="group-hover:translate-x-2 transition-transform"
-                      />
-                    </button>
+                  <div className="pt-2">
+                    <Link href="/contact-us/">
+                      <button className="group relative flex items-center gap-8 bg-[#12066a] dark:bg-[#997819] px-10 py-5 rounded-full text-white dark:text-white font-black uppercase tracking-[0.2em] text-[10px]  transition-all shadow-xl">
+                        Book Your Strategy Call
+                        <ArrowRight
+                          size={18}
+                          className="group-hover:translate-x-2 transition-transform"
+                        />
+                      </button>
                     </Link>
                   </div>
                 </div>
@@ -230,18 +264,19 @@ const DigitalMarketingPage = () => {
         </div>
       </section>
       {/* 🏛️ 3 PURPOSE-LED CONTENT: THE CONTENT MATRIX */}
-      <section className="bg-white dark:bg-gray-900 py-14 md:py-40 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-900 py-14  transition-colors duration-500 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header Section (Exact Wording) --- */}
-          <div className="flex flex-col  justify-between items-start mb-20">
+          <div className="flex flex-col  justify-between mx-auto mb-20">
             <div className="lg:w-2/3">
               <div className="flex items-center gap-4 mb-8">
                 <span className="w-12 h-[2px] bg-[#997819]" />
                 <span className="text-[#997819] font-bold uppercase tracking-[0.5em] text-[10px]">
                   Purpose-Led
                 </span>
+                <span className="w-12 h-[2px] bg-[#997819]" />
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black uppercase tracking-tighter leading-[0.98]">
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black tracking-tighter leading-[0.98]">
                 Content That Brings <br className="hidden md:block" />
                 Your <span className="text-[#997819]">Brand to Life</span>
               </h2>
@@ -277,7 +312,19 @@ const DigitalMarketingPage = () => {
               },
               {
                 title: "Creative Campaigns",
-                desc: <>We create <Link href="/studio-production/" className="text-[#997819] font-bold">campaign-led content</Link> for brand awareness, promotions, launches, engagement, and lead generation.</>,
+                desc: (
+                  <>
+                    We create{" "}
+                    <Link
+                      href="/studio-production/"
+                      className="text-[#997819] font-bold"
+                    >
+                      campaign-led content
+                    </Link>{" "}
+                    for brand awareness, promotions, launches, engagement, and
+                    lead generation.
+                  </>
+                ),
               },
               {
                 title: "Brand-Aligned Visuals",
@@ -308,7 +355,7 @@ const DigitalMarketingPage = () => {
 
                 {/* Content */}
                 <div>
-                  <h3 className="text-[#12066a] dark:text-white text-2xl font-black uppercase tracking-tight mb-6 leading-none">
+                  <h3 className="text-[#12066a] dark:text-white text-2xl font-black tracking-tight mb-6 leading-none">
                     {service.title}
                   </h3>
                   <p className="text-gray-500 dark:text-white/60 text-sm leading-relaxed group-hover:text-gray-700 dark:group-hover:text-white/70 transition-colors">
@@ -333,7 +380,7 @@ const DigitalMarketingPage = () => {
                   <span className="text-white dark:text-white text-[10px] font-bold uppercase tracking-widest">
                     Book Strategy Call
                   </span>
-                </Link> 
+                </Link>
                 <div className="w-12 h-12 rounded-full border border-white/20 dark:border-[#12066a]/20 flex items-center justify-center group-hover:bg-white dark:group-hover:bg-[#12066a] transition-all">
                   <ArrowUpRight className="text-white dark:group-hover:text-white group-hover:text-[#12066a] dark:group-hover:text-[#997819] transition-all" />
                 </div>
@@ -344,7 +391,7 @@ const DigitalMarketingPage = () => {
       </section>
 
       {/* 💎 4 THE VALUE OF CONSISTENCY: STACKING IMPACT SECTION */}
-      <section className="bg-white dark:bg-gray-800 py-14 md:py-20 transition-colors duration-500">
+      <section className="bg-white dark:bg-gray-800 py-14  transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6">
           {/* --- Header: Clean & Centered --- */}
           <div className="text-center mb-32">
@@ -355,66 +402,71 @@ const DigitalMarketingPage = () => {
                   Strategic Value
                 </span>
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black uppercase tracking-tighter leading-none ">
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black tracking-tighter leading-none ">
                 The Value of a <br />
                 <span className="text-[#997819]">Consistent</span> Brand
                 Presence
               </h2>
-              <div className="flex justify-center">
-                <ArrowDown
-                  className="text-[#997819] animate-bounce mt-4"
-                  size={52}
-                  strokeWidth={1}
-                />
-              </div>
             </FadeIn>
           </div>
-
-          {/* --- The Value Stack --- */}
-          <div className="space-y-12">
+          {/* --- The Value Stack: Ultra-Premium Cinematic Bento --- */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {[
               {
                 title: "Increases Brand Visibility",
                 desc: "Keeps your business active and present across the platforms where your audience spends their time.",
+                tag: "Market Reach",
+                span: "md:col-span-2",
               },
               {
                 title: "Builds Audience Trust",
                 desc: "Helps people recognise your brand, understand your value, and feel more confident choosing you.",
+                tag: "Credibility",
+                span: "md:col-span-1",
               },
               {
-                title: "Strengthens Brand Communication",
+                title: "Strengthens Communication",
                 desc: "Allows your message, offers, and expertise to be shared clearly, consistently, and professionally.",
+                tag: "Authority",
+                span: "md:col-span-1",
               },
               {
                 title: "Supports Lead Generation",
                 desc: "Creates regular opportunities to attract interest, start conversations, and move potential clients closer to action.",
+                tag: "Conversion",
+                span: "md:col-span-2",
               },
             ].map((item, index) => (
               <FadeIn key={index} direction="up" delay={index * 0.1}>
-                <div className="group relative bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 rounded-[3rem] md:rounded-[5rem] p-12 overflow-hidden hover:border-[#997819]/30 transition-all duration-700">
-                  {/* Background Number Reveal */}
-                  <span className="absolute right-10 top-1/2 -translate-y-1/2 text-[15rem] md:text-[25rem] font-black text-[#12066a]/[0.02] dark:text-white/[0.01] group-hover:text-[#997819]/5 transition-all duration-1000 pointer-events-none">
-                    0{index + 1}
-                  </span>
+                <div
+                  className={`group relative rounded-[2.5rem] bg-gradient-to-br from-[#12066a]/90 via-[#0b033c] to-[#05011a] border border-white/10 p-8 md:p-12 overflow-hidden hover:border-[#997819]/50 transition-all duration-700 hover:shadow-[0_30px_70px_rgba(153,120,25,0.15)] flex flex-col justify-between min-h-[300px] ${item.span}`}
+                >
+                  {/* Background Ambient Glow & Mesh Texture */}
+                  <div className="absolute -right-20 -bottom-20 w-72 h-72 bg-[#997819]/10 rounded-full blur-[90px] group-hover:bg-[#997819]/20 transition-all duration-700 pointer-events-none" />
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/[0.03] via-transparent to-transparent pointer-events-none" />
 
-                  <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                    {/* Heading */}
-                    <div className="lg:col-span-7">
-                      <h3 className="text-[#12066a] dark:text-white text-4xl  font-black uppercase tracking-tighter leading-[0.9] transition-transform duration-700 group-hover:translate-x-4">
-                        {item.title}
-                      </h3>
-                    </div>
-
-                    {/* Description */}
-                    <div className="lg:col-span-5 border-l-2 border-[#997819] pl-6">
-                      <p className="text-gray-500 dark:text-white/50 text-lg md:text-xl font-medium leading-relaxed italic">
-                        {item.desc}
-                      </p>
-                    </div>
+                  {/* Top Header Row (Tag & Big Number) */}
+                  <div className="relative z-10 flex items-center justify-between mb-8">
+                    <span className="px-4 py-1.5 rounded-full bg-[#997819]/10 border border-[#997819]/30 text-[#997819] font-black text-[10px] tracking-[0.3em] uppercase backdrop-blur-md">
+                      {item.tag}
+                    </span>
+                    <span className="text-4xl md:text-5xl font-black text-white/10 group-hover:text-[#997819]/40 transition-colors duration-500 font-mono">
+                      0{index + 1}
+                    </span>
                   </div>
 
-                  {/* Bottom Glow Line */}
-                  <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-transparent via-[#997819] to-transparent group-hover:w-full transition-all duration-1000" />
+                  {/* Bottom Content Area */}
+                  <div className="relative z-10">
+                    <h3 className="text-white text-2xl md:text-3xl font-black  tracking-tight mb-4 group-hover:translate-x-1 transition-transform duration-500">
+                      {item.title}
+                    </h3>
+                    <p className="text-blue-100/60 text-sm md:text-base font-medium leading-relaxed max-w-xl group-hover:text-blue-100/90 transition-colors duration-500">
+                      {item.desc}
+                    </p>
+                  </div>
+
+                  {/* Bottom Accent Glow Border Line */}
+                  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#997819] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 </div>
               </FadeIn>
             ))}
@@ -432,7 +484,7 @@ const DigitalMarketingPage = () => {
       </section>
 
       {/* 🔄 5 THE STRATEGIC SHIFT: COLUMN-WISE REFINED */}
-      <section className="bg-white dark:bg-gray-900 py-14 md:py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-900 py-14  transition-colors duration-500 overflow-hidden">
         <div className="max-w-4xl mx-auto px-6">
           {/* --- Top Header (Exact Wording) --- */}
           <div className="mb-20">
@@ -444,9 +496,9 @@ const DigitalMarketingPage = () => {
                 </span>
               </div>
 
-              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black uppercase tracking-tighter leading-[0.98] mb-8">
-                A Strategic Shift <br />
-                Towards a <span className="text-[#997819]">Smarter</span> <br />
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black  tracking-tighter leading-[0.98] mb-8">
+                A Strategic Shift Towards a{" "}
+                <span className="text-[#997819]">Smarter</span> <br />
                 Content System
               </h2>
 
@@ -458,8 +510,8 @@ const DigitalMarketingPage = () => {
             </FadeIn>
           </div>
 
-          {/* --- Column-wise "No More" List --- */}
-          <div className="space-y-4">
+          {/* --- Column-wise "No More" List (Ultra-Premium Redesign) --- */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
             {[
               "No more last-minute content pressure",
               "No more posting without a strategic direction",
@@ -469,30 +521,32 @@ const DigitalMarketingPage = () => {
               "No more struggling to maintain online visibility",
             ].map((text, index) => (
               <FadeIn key={index} direction="up" delay={index * 0.05}>
-                <div className="group relative flex items-center justify-between  p-4 md:p-10 rounded-[2rem] bg-gray-50/50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 hover:border-[#997819]/30 hover:bg-white dark:hover:bg-white/[0.05] transition-all duration-500 shadow-sm">
-                  <div className="flex items-center gap-8 relative z-10">
-                    {/* Gold Ring Icon (As per Image) */}
-                    <div className="w-6 h-6 rounded-full border-2 border-[#997819] flex items-center justify-center flex-shrink-0">
-                      <div className="w-2 h-2 rounded-full bg-[#997819] scale-0 group-hover:scale-100 transition-transform" />
+                <div className="group relative flex items-center justify-between p-6 md:p-8 rounded-[2rem] bg-[#12066a]/[0.02] dark:bg-white/[0.02] border border-[#12066a]/10 dark:border-white/5 hover:border-[#997819]/50 hover:bg-white dark:hover:bg-white/[0.06] transition-all duration-500 shadow-sm hover:shadow-[0_15px_30px_rgba(153,120,25,0.1)] overflow-hidden">
+                  {/* Subtle Background Glow on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#997819]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                  <div className="flex items-center gap-6 relative z-10">
+                    {/* Modern Animated Gold Indicator Ring */}
+                    <div className="w-8 h-8 rounded-full border border-[#997819]/40 bg-[#997819]/10 flex items-center justify-center flex-shrink-0 group-hover:border-[#997819] group-hover:scale-110 transition-all duration-500">
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#997819] scale-75 group-hover:scale-100 transition-transform duration-300" />
                     </div>
 
-                    <span className="text-[#12066a] dark:text-white text-base md:text-xl font-black uppercase tracking-tight group-hover:text-[#997819] transition-colors">
+                    <span className="text-[#12066a] dark:text-white text-sm md:text-base font-bold tracking-wide group-hover:text-[#997819] transition-colors duration-300">
                       {text}
                     </span>
                   </div>
 
-                  {/* Ghost Number (01, 02...) */}
-                  <span className="text-4xl md:text-6xl font-black text-gray-200/30 dark:text-white/[0.02] italic select-none">
+                  {/* Ghost Number with Gold Tint on Hover */}
+                  <span className="text-3xl md:text-4xl font-black text-gray-300/40 dark:text-white/10 group-hover:text-[#997819]/40 transition-colors duration-500 font-mono select-none pl-4">
                     0{index + 1}
                   </span>
 
-                  {/* Hover Accent Line */}
-                  <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-[#997819] group-hover:h-1/2 transition-all duration-500" />
+                  {/* Left Accent Bar */}
+                  <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-0 bg-[#997819] group-hover:h-full transition-all duration-500 rounded-r" />
                 </div>
               </FadeIn>
             ))}
           </div>
-
           {/* --- Call to Action Footer --- */}
           <FadeIn direction="up">
             <div className="mt-20 flex justify-center">
@@ -507,7 +561,7 @@ const DigitalMarketingPage = () => {
       </section>
 
       {/* 🔄 6 THE SEAMLESS CONTENT SYSTEM: ARCHITECTURAL FLOW */}
-      <section className="bg-white dark:bg-gray-800 py-14 md:py-32 transition-colors duration-500 overflow-hidden">
+      <section className="bg-white dark:bg-gray-800 py-14 transition-colors duration-500 overflow-hidden">
         <div className="max-w-5xl mx-auto px-6">
           {/* --- Header Section --- */}
           <div className="mb-24 text-center">
@@ -518,12 +572,12 @@ const DigitalMarketingPage = () => {
                   The Ecosystem
                 </span>
               </div>
-              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black uppercase tracking-tighter leading-[0.98] mb-8">
-                A Seamless <br />
-                <span className="text-[#997819] mr-1">Content System</span>{" "}
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black tracking-tighter leading-[0.98] mb-8">
+                A Seamless
+                <span className="text-[#997819] mx-2">Content System</span>
                 Built Around Your Brand
               </h2>
-              <p className="text-gray-500 dark:text-white/40 text-lg font-medium max-w-2xl mx-auto leading-relaxed italic">
+              <p className="text-gray-700 dark:text-white/40 text-lg font-medium max-w-2xl mx-auto leading-relaxed ">
                 With Content Engine, your brand follows a clear monthly content
                 flow designed to keep your online presence active, consistent,
                 and purposeful.
@@ -575,7 +629,7 @@ const DigitalMarketingPage = () => {
                       <span className="inline-block text-[#997819] font-black uppercase tracking-[0.3em] text-[10px] mb-4">
                         {step.label}
                       </span>
-                      <h3 className="text-[#12066a] dark:text-white text-2xl font-black uppercase tracking-tight mb-4 group-hover:text-[#997819] transition-colors">
+                      <h3 className="text-[#12066a] dark:text-white text-2xl font-black  tracking-tight mb-4 group-hover:text-[#997819] transition-colors">
                         {step.title}
                       </h3>
                       <p className="text-gray-500 dark:text-white/50 text-sm leading-relaxed">
@@ -621,12 +675,12 @@ const DigitalMarketingPage = () => {
                 </span>
               </div>
 
-              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black uppercase tracking-tighter leading-[0.98] mb-8">
-                Who This
-                Service Is <span className="text-[#997819]">Designed For</span>
+              <h2 className="text-[#12066a] dark:text-white text-3xl md:text-6xl font-black  tracking-tighter leading-[0.98] mb-8">
+                Who This Service Is{" "}
+                <span className="text-[#997819]">Designed For</span>
               </h2>
 
-              <p className="text-gray-500 dark:text-white/60 text-lg md:text-xl font-medium leading-relaxed max-w-3xl border-l-4 border-[#997819] pl-10 italic">
+              <p className="text-gray-700 dark:text-white/60 text-lg md:text-xl font-medium leading-relaxed max-w-3xl border-l-4 border-[#997819] pl-10">
                 Content Engine is created for businesses that understand the
                 value of showing up online, but need the right structure,
                 creativity, and consistency to turn their ideas into meaningful
@@ -641,7 +695,19 @@ const DigitalMarketingPage = () => {
               {
                 icon: <UserCheck size={24} />,
                 title: "Founders & Entrepreneurs",
-                desc: <>For business leaders who want to stay visible, share their expertise, and <Link href="/authority-builder/" className="text-[#997819] font-bold">build stronger trust</Link> with their audience.</>,
+                desc: (
+                  <>
+                    For business leaders who want to stay visible, share their
+                    expertise, and{" "}
+                    <Link
+                      href="/authority-builder/"
+                      className="text-[#997819] font-bold"
+                    >
+                      build stronger trust
+                    </Link>{" "}
+                    with their audience.
+                  </>
+                ),
               },
               {
                 icon: <Rocket size={24} />,
@@ -673,7 +739,7 @@ const DigitalMarketingPage = () => {
                     </div>
 
                     <div className="flex-grow">
-                      <h3 className="text-[#12066a] dark:text-white text-2xl font-black uppercase tracking-tight mb-4 leading-tight group-hover:text-[#997819] transition-colors">
+                      <h3 className="text-[#12066a] dark:text-white text-2xl font-black  tracking-tight mb-4 leading-tight group-hover:text-[#997819] transition-colors">
                         {profile.title}
                       </h3>
                       <p className="text-gray-500 dark:text-white/50 text-sm md:text-base leading-relaxed font-medium">
@@ -708,66 +774,99 @@ const DigitalMarketingPage = () => {
         </div>
       </section>
 
-      {/* 🚀 FINAL CTA: THE GROWTH ASSET SECTION */}
-   <section className="bg-white dark:bg-gray-900 py-10 md:py-40 transition-colors duration-500 overflow-hidden">
-  <div className="max-w-7xl mx-auto px-4 md:px-6">
-    {/* Container: Mobile par padding kam ki */}
-    <div className="relative bg-[#12066a] dark:bg-gray-800 rounded-[2rem] md:rounded-[4rem] p-6 md:p-24 overflow-hidden border border-[#997819]/20 shadow-2xl">
-      
-      {/* Background Elements (Mobile par chote) */}
-      <div className="absolute top-0 right-0 w-48 h-48 md:w-96 md:h-96 bg-[#997819]/10 blur-[80px] rounded-full -translate-y-1/2 translate-x-1/2" />
+      {/* 🚀 FINAL CTA: THE GROWTH ASSET SECTION (True Parallax) */}
+      <section className="bg-white dark:bg-gray-900 py-10 md:py-24 px-4 md:px-6 lg:px-20 transition-colors duration-500 overflow-hidden">
+        {/* --- The Floating Card Container --- */}
+        <div className="relative w-full max-w-7xl mx-auto rounded-[2rem] md:rounded-[4rem] overflow-hidden min-h-[550px] md:min-h-[650px] flex items-center justify-center shadow-2xl border border-[#997819]/30 group">
+          {/* --- True Parallax Background --- */}
+          <div
+            className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-1000"
+            style={{
+              backgroundImage: `url('/content-engine-cta.jpg')`,
+              backgroundAttachment: "fixed", // Ye real parallax effect create karega
+              backgroundPosition: "center",
+            }}
+          />
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
-        
-        {/* --- Left Side: The Hook --- */}
-        <div className="lg:col-span-7 text-center lg:text-left">
-          <FadeIn direction="right">
-            {/* Mobile par Heading size balance kiya */}
-            <h2 className="text-white dark:text-[#997819] text-3xl md:text-6xl font-black uppercase tracking-normal leading-[1.1] mb-6">
-              Ready to Turn Your Content Into a <br className="hidden md:block"/>
-              <span className="text-[#997819] ml-1 dark:text-white">Growth Asset?</span>
-            </h2>
-            <p className="text-white/70 dark:text-white/60 text-base md:text-xl font-medium leading-relaxed max-w-xl mx-auto lg:mx-0 border-l-2 border-[#997819] pl-6 md:pl-8 italic">
-              Content Engine is designed for brands that want to stay visible, communicate with purpose, and turn their ideas into consistent, high-quality content.
-            </p>
-          </FadeIn>
-        </div>
+          {/* --- Luxury Contrast Overlay & Gradients --- */}
+          <div className="absolute inset-0 bg-[#0b033c]/85 dark:bg-black/80 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#12066a]/60 via-transparent to-[#05011a]/70 z-10 pointer-events-none" />
 
-        {/* --- Right Side: The Benefits List --- */}
-        <div className="lg:col-span-5 bg-white/5 dark:bg-white/[0.02] p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] backdrop-blur-md border border-white/10">
-          <div className="space-y-5 mb-8">
-            {[
-              "Build a consistent online presence",
-              "Turn ideas into publish-ready content",
-              "Stay visible across key platforms",
-              "Communicate your value with clarity",
-              "Create content that supports business growth",
-            ].map((benefit, index) => (
-              <FadeIn key={index} direction="up" delay={index * 0.1}>
-                <div className="flex items-center gap-4">
-                  <CheckCircle2 size={20} className="text-[#997819] flex-shrink-0" />
-                  <span className="text-white text-xs md:text-sm font-bold uppercase tracking-wider">
-                    {benefit}
+          {/* --- Ambient Golden Glows --- */}
+          <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-[#997819]/20 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2 z-10 pointer-events-none" />
+
+          {/* --- Content Grid --- */}
+          <div className="relative z-20 w-full max-w-6xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
+            {/* --- Left Side: The Hook --- */}
+            <div className="lg:col-span-7 text-center lg:text-left">
+              <FadeIn direction="right">
+                {/* Glassmorphic Mini Tag */}
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#997819]/50 bg-black/30 backdrop-blur-md mb-6">
+                  <span className="w-2 h-2 rounded-full bg-[#997819] animate-pulse" />
+                  <span className="text-white font-black text-[10px] tracking-[0.3em] uppercase">
+                    Ready For Takeoff
                   </span>
                 </div>
-              </FadeIn>
-            ))}
-          </div>
 
-          <FadeIn direction="up" delay={0.6}>
-            <Link href="/contact-us/" className="block">
-              {/* Button: Mobile par padding thodi adjust ki */}
-              <button className="w-full flex items-center justify-center gap-3 bg-[#997819] dark:bg-white px-6 py-4 rounded-xl text-white font-black uppercase tracking-[0.1em] text-[10px] md:text-xs hover:scale-[1.02] transition-all">
-                <span>Build Your Content Engine Today</span>
-                <ArrowRight size={16} />
-              </button>
-            </Link>
-          </FadeIn>
+                <h2 className="text-white text-3xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-6">
+                  Ready to Turn Your Content Into a{" "}
+                  <br className="hidden md:block" />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#997819] via-[#e5c158] to-[#997819]">
+                    Growth Asset?
+                  </span>
+                </h2>
+
+                <p className="text-blue-100/80 text-base md:text-xl font-medium leading-relaxed max-w-xl mx-auto lg:mx-0 border-l-2 border-[#997819] pl-6 md:pl-8">
+                  Content Engine is designed for brands that want to stay
+                  visible, communicate with purpose, and turn their ideas into
+                  consistent, high-quality content.
+                </p>
+              </FadeIn>
+            </div>
+
+            {/* --- Right Side: The Benefits List & CTA --- */}
+            <div className="lg:col-span-5 bg-white/[0.04] p-6 md:p-8 rounded-[2rem] backdrop-blur-xl border border-white/10 shadow-2xl">
+              <div className="space-y-4 mb-8">
+                {[
+                  "Build a consistent online presence",
+                  "Turn ideas into publish-ready content",
+                  "Stay visible across key platforms",
+                  "Communicate your value with clarity",
+                  "Create content that supports business growth",
+                ].map((benefit, index) => (
+                  <FadeIn key={index} direction="up" delay={index * 0.1}>
+                    <div className="flex items-center gap-3.5 group">
+                      <div className="w-5 h-5 rounded-full bg-[#997819]/20 border border-[#997819]/50 flex items-center justify-center flex-shrink-0 group-hover:bg-[#997819] transition-colors">
+                        <CheckCircle2
+                          size={12}
+                          className="text-[#997819] group-hover:text-white transition-colors"
+                        />
+                      </div>
+                      <span className="text-white/90 text-xs md:text-sm font-bold uppercase tracking-wider group-hover:text-white transition-colors">
+                        {benefit}
+                      </span>
+                    </div>
+                  </FadeIn>
+                ))}
+              </div>
+
+              <FadeIn direction="up" delay={0.5}>
+                <Link href="/contact-us/">
+                  <button className="group relative w-full flex items-center justify-center gap-3 bg-[#997819] px-6 py-4 rounded-xl text-white font-black uppercase tracking-[0.2em] text-xs shadow-[0_10px_30px_rgba(153,120,25,0.4)] hover:shadow-[0_20px_50px_rgba(153,120,25,0.6)] hover:bg-[#b0891d] transition-all duration-300">
+                    <span className="relative z-10 flex items-center gap-2">
+                      Build Your Content Engine Today
+                      <ArrowRight
+                        size={16}
+                        className="group-hover:translate-x-1.5 transition-transform"
+                      />
+                    </span>
+                  </button>
+                </Link>
+              </FadeIn>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
     </section>
   );
 };
