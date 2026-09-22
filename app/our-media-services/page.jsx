@@ -98,7 +98,7 @@ const page = () => {
       </div>
 
       {/* 🔹 3. SERVICES GRID (Compact Luxury with Continuous Icon Spin) */}
-      <section className="relative py-10 pb-20 bg-white overflow-hidden">
+      <section className="relative py-10 pb-20 bg-white dark:bg-gray-800 overflow-hidden">
         {/* Decorative Glow */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#997819]/5 blur-[100px] rounded-full -z-10 pointer-events-none" />
 
