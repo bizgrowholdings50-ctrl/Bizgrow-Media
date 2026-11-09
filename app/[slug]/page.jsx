@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import styles from "./BlogContent.module.css";
 
+export const revalidate = 3600;
+
 function decodeHtmlEntities(text) {
   if (!text) return "";
 

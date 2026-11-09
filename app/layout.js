@@ -6,8 +6,8 @@ import Footer from "@components/Footer";
 import { Providers } from "./providers";
 import SmoothScroll from "@components/SmoothScroll";
 import ChatBotComponent from "@components/WhatsAppWidget";
-import WhatsAppWidget from "@components/WhatsAppWidget"; 
-import { Analytics } from '@vercel/analytics/next';
+import WhatsAppWidget from "@components/WhatsAppWidget";
+import { Analytics } from "@vercel/analytics/next";
 import CustomCursor from "@components/Cursor";
 import { Toaster } from "sonner";
 
@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   weight: ["700", "900"],
-  style: ['italic', 'normal'],
+  style: ["italic", "normal"],
   display: "swap",
 });
 
@@ -27,9 +27,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://bizgrowmedia.co.uk/"), 
+  metadataBase: new URL("https://bizgrowmedia.co.uk/"),
   title: "BizGrow Media | Professional Podcast & Business Growth Studio UK",
-  description: "BizGrow Media creates authority-driven podcasts, studio production, and strategic content that builds trust, visibility, and growth.",
+  description:
+    "BizGrow Media creates authority-driven podcasts, studio production, and strategic content that builds trust, visibility, and growth.",
   icons: {
     icon: [
       { url: "/site-logo-rounded.png", href: "/site-logo-rounded.png" },
@@ -41,7 +42,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: "https://bizgrowmedia.co.uk/", 
+    canonical: "https://bizgrowmedia.co.uk/",
     languages: {
       "en-GB": "https://bizgrowmedia.co.uk/",
     },
@@ -56,9 +57,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-GB" className={`${playfair.variable} ${montserrat.variable}`} suppressHydrationWarning={true}>
+    <html
+      lang="en-GB"
+      className={`${playfair.variable} ${montserrat.variable}`}
+      suppressHydrationWarning={true}
+    >
       <head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://www.googletagmanager.com"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="font-body bg-[#FDFCF9] text-[#1f2937] antialiased">
         <Providers>
@@ -72,7 +81,7 @@ export default function RootLayout({ children }) {
             <Footer />
           </SmoothScroll>
           <ChatBotComponent />
-          <WhatsAppWidget /> 
+          {/* <WhatsAppWidget />  */}
 
           <Toaster richColors position="top-right" />
         </Providers>
@@ -86,12 +95,13 @@ export default function RootLayout({ children }) {
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){window.dataLayer.push(arguments);}
-
-gtag('js', new Date());
-gtag('config', 'G-L8DY157W82');`,
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-L8DY157W82');`,
           }}
         />
+
+     
       </body>
     </html>
   );

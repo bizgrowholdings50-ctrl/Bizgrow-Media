@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import FadeIn from "@components/MotionWrapper"; // Aapka custom wrapper
 import Link from "next/link";
+import PodcastPortfolio from "@components/PodcastHighlights";
 
 export const metadata = {
   title: "BizGrow Media Packages | Professional Media Support",
@@ -476,6 +477,8 @@ const PremiumPackagesPage = () => {
           </div>
         </div>
       </section>
+
+      <PodcastPortfolio />
       {/* CTA */}
       <section className="bg-white dark:bg-gray-900 py-24 px-6 md:px-20 lg:px-40 transition-colors duration-500">
         {/* --- The Floating Card Container --- */}

@@ -1,5 +1,7 @@
 // app/sitemap.js
 
+export const revalidate = 3600;
+
 export default async function sitemap() {
   const baseUrl = 'https://bizgrowmedia.co.uk';
 
@@ -7,7 +9,9 @@ export default async function sitemap() {
   
   try {
     // WordPress se blogs fetch karna (Subdomain use ho rahi hai)
-    const response = await fetch('https://cms.bizgrow-digital.co.uk/wp-json/wp/v2/posts?_fields=slug,modified&per_page=100');
+    const response = await fetch('https://cms.bizgrow-digital.co.uk/wp-json/wp/v2/posts?_fields=slug,modified&per_page=100', {
+      next: { revalidate: 3600 },
+    });
     
     if (response.ok) {
       const posts = await response.json();

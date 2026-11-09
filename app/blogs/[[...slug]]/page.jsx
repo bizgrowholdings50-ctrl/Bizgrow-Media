@@ -3,6 +3,12 @@ import Image from "next/image";
 import FilterBar from "@/components/FilterBar.jsx"; // Digital site wala FilterBar
 import { notFound } from "next/navigation";
 
+export const revalidate = 3600;
+
+export function generateStaticParams() {
+  return [{ slug: [] }];
+}
+
 const YoastSchema = ({ schema }) => {
   if (!schema) return null;
 
