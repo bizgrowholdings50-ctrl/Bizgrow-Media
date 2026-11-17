@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: true,
+  experimental: {
+    inlineCss: true,
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "bizgrowmedia.co.uk", pathname: "/**" },
