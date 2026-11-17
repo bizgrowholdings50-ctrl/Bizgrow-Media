@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import ServicesServer from "@components/ServicesServer";
 import Link from "next/link";
 import FadeIn from "@components/MotionWrapper";
 import StructuredData from "@components/StructuredData";

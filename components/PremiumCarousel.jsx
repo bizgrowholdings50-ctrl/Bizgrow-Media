@@ -56,12 +56,12 @@ export default function KineticStudioHeroAuto() {
       
       {/* Background Cinematic Image with Snappy & Smooth Fade */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <AnimatePresence mode="wait">
+        <AnimatePresence initial={false} mode="wait">
           <motion.div
             key={activeTab}
-            initial={{ opacity: 0, scale: 1.05, filter: "blur(10px)" }}
-            animate={{ opacity: 0.25, scale: 1, filter: "blur(0px)" }}
-            exit={{ opacity: 0, scale: 0.98, filter: "blur(10px)" }}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 0.25, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 0.7, ease: [0.25, 1, 0.5, 1] }}
             className="absolute inset-0 w-full h-full"
           >
@@ -71,7 +71,7 @@ export default function KineticStudioHeroAuto() {
               fill
               sizes="100vw"
               className="object-cover object-center grayscale contrast-125"
-              priority
+              priority={activeTab === 0}
               unoptimized={current.img.startsWith("http")}
             />
             {/* Dark immersive gradients with your custom linear colors */}
@@ -99,7 +99,7 @@ export default function KineticStudioHeroAuto() {
         
         {/* Left Side: Massive Live Typography */}
         <div className="lg:col-span-8 flex flex-col justify-center">
-          <AnimatePresence mode="wait">
+          <AnimatePresence initial={false} mode="wait">
             <motion.div
               key={activeTab}
               initial={{ opacity: 0, y: 30 }}
@@ -149,7 +149,7 @@ export default function KineticStudioHeroAuto() {
               <button
                 key={idx}
                 onClick={() => setActiveTab(idx)}
-                className={`group text-left py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl transition-all duration-500 relative overflow-hidden flex items-center justify-between ${
+                className={`group text-left py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl transition-colors duration-500 relative overflow-hidden flex items-center justify-between ${
                   isActive
                     ? "bg-white/10 border border-[#997819]/60 backdrop-blur-md shadow-2xl"
                     : "bg-white/[0.02] border border-white/5 hover:bg-white/[0.05]"
@@ -169,7 +169,7 @@ export default function KineticStudioHeroAuto() {
                   </span>
                 </div>
 
-                <div className={`w-2 h-2 rounded-full transition-all ${isActive ? "bg-[#997819] scale-125 shadow-[0_0_10px_#997819]" : "bg-white/20"}`} />
+                <div className={`w-2 h-2 rounded-full transition-[background-color,transform] ${isActive ? "bg-[#997819] scale-125 shadow-[0_0_10px_#997819]" : "bg-white/20"}`} />
               </button>
             );
           })}
