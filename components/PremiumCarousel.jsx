@@ -129,7 +129,7 @@ export default function KineticStudioHeroAuto() {
                 <motion.button
                   whileHover={{ scale: 1.05, x: 10 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full sm:w-auto px-6 sm:px-8 py-4 rounded-full bg-white text-black font-black text-xs uppercase tracking-[0.3em] hover:bg-[#997819] hover:text-white transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.1)] text-center"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-4 rounded-full bg-white text-black font-black text-xs uppercase tracking-[0.3em] hover:bg-[#997819] hover:text-black transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.1)] text-center"
                 >
                   Explore Ecosystem →
                 </motion.button>

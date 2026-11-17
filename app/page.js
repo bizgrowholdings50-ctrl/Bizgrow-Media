@@ -125,9 +125,11 @@ const HomePage = () => {
                     <Image
                       src="/single studio pic-.jpeg"
                       alt="The power of business media - BizGrow Media Studio"
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      priority
+                      width={534}
+                      height={535}
+                      sizes="(min-width: 1280px) 534px, (min-width: 1024px) calc((100vw - 212px) / 2), calc(100vw - 82px)"
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
                 </div>
