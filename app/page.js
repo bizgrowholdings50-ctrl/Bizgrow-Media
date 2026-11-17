@@ -239,14 +239,15 @@ const HomePage = () => {
           </div>
 
           <div className="text-center mt-16">
-            <Link href="/our-media-services">
-              <button className="text-[#12066a] dark:text-[#997819] font-black uppercase tracking-widest text-[10px] flex items-center gap-2 mx-auto group">
-                See More About Our Services
-                <ArrowRight
-                  size={14}
-                  className="group-hover:translate-x-2 transition-transform"
-                />
-              </button>
+            <Link
+              href="/our-media-services"
+              className="min-h-12 px-3 text-[#12066a] dark:text-[#997819] font-black uppercase tracking-widest text-[10px] inline-flex items-center justify-center gap-2 mx-auto group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#997819]"
+            >
+              See More About Our Services
+              <ArrowRight
+                size={14}
+                className="group-hover:translate-x-2 transition-transform"
+              />
             </Link>
           </div>
         </div>
