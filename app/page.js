@@ -61,13 +61,17 @@ const HomePage = () => {
                   <p className="text-slate-800 dark:text-white/80 text-md md:text-lg font-medium leading-relaxed pl-8 border-l-4 border-[#997819]">
                     BizGrow Media is a collection of organised platforms that
                     promote your company with a message to the industry. As a
-                    business media connection, we convey the word and advertise
+                     <Link href="/personal-branding-businesses/" className="text-[#997819] underline font-bold ml-1">
+                     business 
+                    </Link> media connection, we convey the word and advertise
                     your brand with value so that your audience recognises the
                     value that you may bring to the customer you serve.
                     <br />
                     <br />
                     At Bizgrow, we believe every business has valuable knowledge
-                    worth sharing. Through the CEO’s diaries podcast, video
+                    worth sharing. Through the CEO’s diaries <Link href="/business-podcast-strategy/" className="text-[#997819] underline font-bold">
+                      podcast
+                    </Link>, video
                     content, and strategic digital campaigns, we transform that
                     knowledge into a powerful business asset.
                   </p>
@@ -266,14 +270,18 @@ const HomePage = () => {
                   <span className="text-[#997819]">BizGrow Media?</span>
                 </h2>
                 <p className="text-slate-800 dark:text-white/70 text-md leading-normal mb-6">
-                  Brands choose BizGrow Media because we go beyond creating
+                  Brands choose <Link href="/our-media-services/" className="text-[#997819] underline font-bold">
+                    BizGrow Media
+                  </Link> because we go beyond creating
                   content; we build strategic media systems that help businesses
                   become more visible, credible, and consistent across the
                   platforms where their audience is already paying attention.
                 </p>
                 <p className="text-slate-800 dark:text-white/40 ">
                   Our approach brings together creative production, brand
-                  positioning, content strategy, and growth-led marketing to
+                  positioning, <Link href="/high-quality-content-complete-guide/" className="text-[#997819] underline font-bold">
+                    content strategy
+                  </Link>, and growth-led marketing to
                   help your business show up with clarity, confidence, and
                   intention.
                 </p>
@@ -339,7 +347,9 @@ const HomePage = () => {
               <p className="text-white/80 text-lg font-medium">
                 At BizGrow Media, we shape every strategy, content piece, and
                 campaign to help your business build a stronger presence,
-                communicate with purpose, and create more growth opportunities.
+                communicate with purpose, and create more <Link href="/benefits-of-growing-podcasts/" className="text-[#997819] underline font-bold">
+                  growth opportunities
+                </Link>.
               </p>
             </FadeIn>
             <div className="space-y-4">

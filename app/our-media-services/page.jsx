@@ -116,7 +116,7 @@ const page = () => {
 
             <FadeIn direction="up" delay={0.4}>
               <p className="mt-8 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg md:text-xl font-medium">
-                <Link href="/" className="text-[#997819] font-bold">
+                <Link href="/" className="text-[#997819] font-bold underline">
                   BizGrow Media{" "}
                 </Link>
                 provides all-in-one media services designed to help brands build
@@ -168,7 +168,7 @@ const page = () => {
 
                       {/* Text Area */}
                       <div className="transition-transform duration-500 lg:group-hover:-translate-y-4">
-                        <span className="text-[#997819] font-black text-[9px] tracking-[0.5em] uppercase mb-3 block opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-700 translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0">
+                        <span className="text-white font-black text-[9px] tracking-[0.5em] uppercase mb-3 block opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-700 translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0">
                           Professional Standard
                         </span>
 
@@ -246,13 +246,27 @@ const page = () => {
                 {
                   label: "Experience",
                   title: "We Pay Attention To How Your Brand Is Experienced",
-                  desc: "People often form an impression of how a brand feels online before any conversation begins. Our process is built around helping your business appear more polished, intentional, and professionally presented through every piece of media.",
+                  desc: (
+                    <>
+                      People often form an impression of how a{" "}
+                      <Link
+                        href="/brand-storytelling-small-businesses-uk/"
+                        className="text-[#997819] underline font-bold"
+                      >
+                        brand
+                      </Link>{" "}
+                      feels online before any conversation begins. Our process
+                      is built around helping your business appear more
+                      polished, intentional, and professionally presented
+                      through every piece of media.
+                    </>
+                  ),
                 },
                 {
                   label: "Quality",
                   title:
                     "We Prioritise Meaningful Content Over Constant Posting",
-                  desc: "We believe strong brands are built through purposeful content, not endless posting. Every piece of media is created to feel relevant, valuable, and worth paying attention to.",
+                  desc: <>We believe strong brands are built through purposeful <Link href="/content-creation-agency/" className="text-[#997819] underline font-bold">content</Link>, not endless posting. Every piece of media is created to feel relevant, valuable, and worth paying attention to.</>,
                 },
                 {
                   label: "Personalization",
@@ -367,8 +381,8 @@ const page = () => {
 
                 <h2 className="text-4xl md:text-6xl mt-8 font-black mb-8 leading-[1.1] tracking-tighter ">
                   Develop your presence in the
-                  <span className="text-transparent ml-1 bg-clip-text bg-gradient-to-r from-[#997819] to-orange-400">
-                    right way,
+                  <span className="text-[#997819] mx-2">
+                    right way 
                   </span>
                   from day one
                 </h2>

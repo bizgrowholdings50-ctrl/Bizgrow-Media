@@ -102,7 +102,7 @@ const GrowthEnginePage = () => {
 
                   <div className="space-y-6 text-gray-800 dark:text-white/60 text-lg leading-relaxed">
                     <p>
-                      <Link href="/" className="text-[#997819] font-bold mr-1">
+                      <Link href="/" className="text-[#997819] underline font-bold mr-1">
                         BizGrow Media
                       </Link>
                       provides strategic growth-focused businesses generate
@@ -112,7 +112,10 @@ const GrowthEnginePage = () => {
                     </p>
 
                     <p>
-                      Long-term business growth becomes significantly easier
+                      Long-term business <Link href="/7-podcast-growth-strategies/" className="text-[#997819] underline font-bold">
+                        growth
+                      </Link>{" "}
+                      becomes significantly easier
                       when the right systems consistently operate behind your
                       brand.
                     </p>
@@ -147,7 +150,7 @@ const GrowthEnginePage = () => {
                     <img
                       src="/growth-system-mockup.jpg"
                       alt="Growth Engine Strategic System - BizGrow Media"
-                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                      className="w-full h-full object-cover hover:scale-105 transition-all duration-1000"
                     />
                   </div>
                   {/* Decorative Elements */}
@@ -182,7 +185,7 @@ const GrowthEnginePage = () => {
                 grow, but scales with predictability and{" "}
                 <Link
                   href="/authority-builder/"
-                  className="text-[#997819] font-bold"
+                  className="text-[#997819] underline font-bold"
                 >
                   authority
                 </Link>
@@ -454,7 +457,7 @@ const GrowthEnginePage = () => {
                 Real{" "}
                 <Link
                   href="/studio-production/"
-                  className="text-[#997819] font-bold"
+                  className="text-[#997819] underline font-bold"
                 >
                   business growth
                 </Link>{" "}

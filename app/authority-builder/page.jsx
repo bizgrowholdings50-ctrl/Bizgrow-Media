@@ -242,7 +242,7 @@ const CreativeContentPage = () => {
 
                   <p className="text-gray-700 dark:text-gray-400 text-base leading-relaxed border-l-4 border-[#997819] pl-6">
                     Authority Builder by{" "}
-                    <Link href="/" className="text-[#997819] font-bold">
+                    <Link href="/" className="text-[#997819] underline font-bold">
                       BizGrow Media
                     </Link>{" "}
                     helps founders, startups, and growing businesses build a
@@ -280,7 +280,7 @@ const CreativeContentPage = () => {
                 The <span className="text-[#997819]">Shift</span>
               </h2>
               <p className="text-lg md:text-xl font-medium text-gray-200 mb-16 max-w-2xl mx-auto">
-                How Authority Changes The Way Your Brand Is Perceived
+                How <Link href="/podcast-industry-authority/" className="text-[#997819] underline font-bold">Authority</Link> Changes The Way Your Brand Is Perceived
               </p>
             </FadeIn>
 
@@ -440,7 +440,7 @@ const CreativeContentPage = () => {
                           2–4 professionally managed{" "}
                           <Link
                             href="/studio-production"
-                            className="text-[#997819] font-bold"
+                            className="text-[#997819] underline font-bold"
                           >
                             studio sessions
                           </Link>{" "}
@@ -519,7 +519,7 @@ const CreativeContentPage = () => {
                     Our{" "}
                     <Link
                       href="/content-engine"
-                      className="text-[#997819] font-bold"
+                      className="text-[#997819] underline font-bold"
                     >
                       Content Engine
                     </Link>{" "}
@@ -599,7 +599,7 @@ const CreativeContentPage = () => {
                     authorities.
                   </p>
                   <p className="text-lg text-gray-800 dark:text-gray-400 font-medium leading-relaxed">
-                    Businesses with strong authority are perceived differently.
+                    Businesses with strong <Link href="/build-credibility-authority/" className="text-[#997819] underline font-bold">authority</Link> are perceived differently.
                     They appear more professional, more established, and more
                     reliable before conversations even begin.
                   </p>
@@ -692,7 +692,7 @@ const CreativeContentPage = () => {
                     Our{" "}
                     <Link
                       href="/growth-engine"
-                      className="text-[#997819] font-bold"
+                      className="text-[#997819] underline font-bold"
                     >
                       Growth Engine
                     </Link>{" "}
@@ -767,7 +767,7 @@ const CreativeContentPage = () => {
               <p className="text-lg text-gray-800 dark:text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">
                 This is not built for vanity metrics or temporary attention. It
                 is designed for serious business owners who want credible
-                visibility, stronger market positioning, and authority that
+                visibility, stronger market positioning, and <Link href="/how-to-build-topical-authority/" className="text-[#997819] underline font-bold">authority</Link> that
                 converts into real business opportunities.
               </p>
             </FadeIn>
@@ -930,8 +930,8 @@ const CreativeContentPage = () => {
             <FadeIn direction="up">
               <p className="text-2xl md:text-4xl max-w-5xl mx-auto text-[#12066a] dark:text-white/80 font-black  tracking-tighter mb-16 leading-tighter">
                 Each stage is designed to strengthen{" "}
-                <span className="text-[#997819]">
-                  visibility, credibility, and long-term brand growth.
+                <span className="text-[#997819] mr-1">
+                  visibility, credibility, and long-term brand growth
                 </span>
                 through strategic media and authority
               </p>
@@ -980,27 +980,25 @@ const CreativeContentPage = () => {
                 <p className="mx-auto mb-12 text-lg md:text-xl text-white/80 leading-relaxed font-light  max-w-2xl">
                   We work closely with each client to understand what they need.
                   Our solutions are designed to establish your legacy and get
-                  real results in the UK market.
+                  real results in the <Link href="/video-generate-leads-uk/" className="text-[#997819] underline font-bold">UK market</Link>.
                 </p>
               </FadeIn>
 
-             <FadeIn direction="up" delay={0.4}>
-  <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-    <Link href="/contact-us">
-      <button className="group relative z-40 px-6 md:px-12 py-5 bg-[#997819] text-white font-black uppercase tracking-widest text-[11px] rounded-2xl overflow-hidden border border-[#997819]/40 transition-all duration-500 hover:bg-[#12066a]  hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(153,120,25,0.25)]">
-        
-        <span className="relative z-10 flex items-center gap-3">
-          Book your strategy call
-          <ArrowRight
-            size={16}
-            className="transition-transform duration-300 group-hover:translate-x-1"
-          />
-        </span>
-
-      </button>
-    </Link>
-  </div>
-</FadeIn>
+              <FadeIn direction="up" delay={0.4}>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+                  <Link href="/contact-us">
+                    <button className="group relative z-40 px-6 md:px-12 py-5 bg-[#997819] text-white font-black uppercase tracking-widest text-[11px] rounded-2xl overflow-hidden border border-[#997819]/40 transition-all duration-500 hover:bg-[#12066a]  hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(153,120,25,0.25)]">
+                      <span className="relative z-10 flex items-center gap-3">
+                        Book your strategy call
+                        <ArrowRight
+                          size={16}
+                          className="transition-transform duration-300 group-hover:translate-x-1"
+                        />
+                      </span>
+                    </button>
+                  </Link>
+                </div>
+              </FadeIn>
             </div>
 
             {/* 🔹 Decorative Elements */}

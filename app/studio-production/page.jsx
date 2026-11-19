@@ -59,11 +59,12 @@ const StudioProductionPage = () => {
               </p>
             </div>
           </FadeIn>
-           <Link href="/contact-us">
-                <button className="h-16 px-12 mt-10 group bg-[#997819] dark:bg-white text-white dark:text-black font-normal tracking-tighter text-md flex items-center gap-3 hover:bg-[#997819] dark:hover:bg-[#997819] hover:text-white transition-all duration-500 rounded-full shadow-2xl">
-                  Start Your Podcast Today <ArrowUpRight className="w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
-              </Link>
+          <Link href="/contact-us">
+            <button className="h-16 px-12 mt-10 group bg-[#997819] dark:bg-white text-white dark:text-black font-normal tracking-tighter text-md flex items-center gap-3 hover:bg-[#997819] dark:hover:bg-[#997819] hover:text-white transition-all duration-500 rounded-full shadow-2xl">
+              Start Your Podcast Today{" "}
+              <ArrowUpRight className="w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" />
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -112,10 +113,12 @@ const StudioProductionPage = () => {
                     confidence, and credibility your audience expects.
                   </p>
                   <p className="text-gray-800 dark:text-gray-400 text-lg leading-relaxed italic border-l-4 border-[#997819] pl-6">
-                     <Link href="/" className="text-[#997819] font-bold">BizGrow Media</Link> helps founders, startups, and growing
-                    businesses create premium visual content that brings their
-                    brand story, services, and message to life more engagingly
-                    and memorably.
+                    <Link href="/" className="text-[#997819] font-bold">
+                      BizGrow Media
+                    </Link>{" "}
+                    helps founders, startups, and growing businesses create
+                    premium visual content that brings their brand story,
+                    services, and message to life more engagingly and memorably.
                   </p>
                   <Link href="/contact-us" className="inline-block pt-6">
                     <button className="px-10 py-5 bg-[#12066a] text-white font-black rounded-2xl tracking-widest text-sm hover:bg-[#997819] transition-all duration-500">
@@ -153,7 +156,7 @@ const StudioProductionPage = () => {
               {
                 icon: <Play />,
                 t: "Brand Story Videos",
-                d: "Powerful videos that present your values, services, and message clearly.",
+                d: <>Powerful <Link href="/top-business-videos/" className="text-[#997819] underline font-bold">videos</Link> that present your values, services, and message clearly.</>,
               },
               {
                 icon: <Video />,
@@ -168,7 +171,18 @@ const StudioProductionPage = () => {
               {
                 icon: <Radio />,
                 t: "Podcast & Interview",
-                d: <>Production for expert-led conversations that build trust and <Link href="/authority-builder" className="text-[#997819] font-bold">authority</Link>.</>,
+                d: (
+                  <>
+                    Production for expert-led conversations that build trust and{" "}
+                    <Link
+                      href="/authority-builder"
+                      className="text-[#997819] font-bold"
+                    >
+                      authority
+                    </Link>
+                    .
+                  </>
+                ),
               },
               {
                 icon: <Sparkles />,
@@ -178,7 +192,18 @@ const StudioProductionPage = () => {
               {
                 icon: <Users />,
                 t: "Corporate & Business",
-                d: <>Professional <Link href="/content-engine" className="text-[#997819] font-bold">content</Link> for company profiles and brand communications.</>,
+                d: (
+                  <>
+                    Professional{" "}
+                    <Link
+                      href="/content-engine"
+                      className="text-[#997819] font-bold"
+                    >
+                      content
+                    </Link>{" "}
+                    for company profiles and brand communications.
+                  </>
+                ),
               },
             ].map((item, i) => (
               <FadeIn key={i} direction="up" delay={i * 0.1}>
@@ -311,9 +336,16 @@ const StudioProductionPage = () => {
                 </p>
                 <p className="text-gray-800 dark:text-gray-300 text-lg leading-relaxed">
                   At{" "}
-                  <span className="text-[#12066a] dark:text-white font-bold">
-                    BizGrow Media
-                  </span>
+                  
+                    <Link
+                      href="/our-media-services/"
+                      className="text-[#997819] underline font-bold"
+                    >
+                      <span className=" dark:text-white font-bold">
+                      BizGrow Media
+                      </span>
+                    </Link>
+                  
                   , we create production-led content that helps your brand
                   appear more polished, credible, and confident across every
                   digital touchpoint.
@@ -379,7 +411,7 @@ const StudioProductionPage = () => {
                 <span className="text-[#997819]">Around Your Brand</span>
               </h2>
               <p className="text-gray-300 mt-6 text-lg">
-                At BizGrow Media, we help your brand move from basic content to
+                At <Link href="/contact-us/" className="text-[#997819] underline font-bold">BizGrow Media</Link>, we help your brand move from basic content to
                 professionally produced media that feels intentional, polished,
                 and aligned with your business goals. Our production support is
                 designed to make your brand look credible, memorable, and
@@ -415,7 +447,9 @@ const StudioProductionPage = () => {
                     size={24}
                     strokeWidth={3}
                   />
-                  <h3 className="font-bold text-md leading-normal mb-2">{item.t}</h3>
+                  <h3 className="font-bold text-md leading-normal mb-2">
+                    {item.t}
+                  </h3>
                   <p className="text-gray-400 text-xs leading-relaxed">
                     {item.d}
                   </p>

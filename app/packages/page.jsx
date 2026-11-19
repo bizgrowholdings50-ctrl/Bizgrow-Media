@@ -36,7 +36,7 @@ const PremiumPackagesPage = () => {
       label: "Phase 02",
       icon: <Palette size={20} />,
       title: "Brand Identity & Artwork",
-      desc: "Professional podcast artwork and branded visuals designed to give your show a cleaner and more established appearance.",
+      desc: <><Link href="/is-a-professional-podcast-worth-the-investment/" className="text-[#997819] hover:underline font-bold">Professional podcast</Link> artwork and branded visuals designed to give your show a cleaner and more established appearance.</>,
     },
     {
       label: "Phase 03",
@@ -60,7 +60,7 @@ const PremiumPackagesPage = () => {
       label: "Phase 06",
       icon: <Rocket size={20} />,
       title: "Podcast Launch Support",
-      desc: "BizGrow Media helps prepare your podcast for major platforms while also creating short-form content ready for social media and audience engagement.",
+      desc: <><Link href="/our-media-services/" className="text-[#997819] hover:underline font-bold">BizGrow Media</Link> helps prepare your podcast for major platforms while also creating short-form content ready for social media and audience engagement.</>,
     },
   ];
 
@@ -330,14 +330,14 @@ const PremiumPackagesPage = () => {
                 id: "01",
                 icon: <PhoneCall size={24} />,
                 title: "Strategy Call",
-                desc: "We discuss your podcast idea, audience, format, and the direction you want your brand to communicate through the show.",
+                desc: <>We discuss your <Link href="/make-your-podcast-business-focused/" className="text-[#997819] underline font-bold">podcast</Link> idea, audience, format, and the direction you want your brand to communicate through the show.</>,
                 color: "bg-blue-50/50 dark:bg-white/[0.02]",
               },
               {
                 id: "02",
                 icon: <Mic size={24} />,
                 title: "Studio Sessions",
-                desc: "You come into a professionally prepared studio environment while we handle the cameras, audio, production setup, and recording experience.",
+                desc: <>You come into a professionally prepared <Link href="/podcast-recording-studios/" className="text-[#997819] underline font-bold">studio</Link> environment while we handle the cameras, audio, production setup, and recording experience.</>,
                 color: "bg-gray-50 dark:bg-white/[0.04]",
               },
               {
@@ -478,7 +478,7 @@ const PremiumPackagesPage = () => {
         </div>
       </section>
 
-      <PodcastPortfolio />
+      {/* <PodcastPortfolio /> */}
       {/* CTA */}
       <section className="bg-white dark:bg-gray-900 py-24 px-6 md:px-20 lg:px-40 transition-colors duration-500">
         {/* --- The Floating Card Container --- */}

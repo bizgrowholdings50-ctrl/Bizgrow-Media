@@ -156,7 +156,7 @@ const DigitalMarketingPage = () => {
 
           <FadeIn direction="up" delay={0.4}>
             <p className="text-blue-100/70 max-w-xl mx-auto text-sm md:text-base font-medium leading-relaxed mb-8">
-              Transforming brand authority into high-converting digital assets
+              Transforming <Link href="/brand-storytelling-uk/" className="text-[#997819] underline font-bold">brand authority</Link> into high-converting digital assets
               with precision, elite frameworks, and long-term momentum.
             </p>
           </FadeIn>
@@ -207,7 +207,7 @@ const DigitalMarketingPage = () => {
                     <p>
                       <span className="text-[#12066a] dark:text-white font-bold">
                         Content Engine by{" "}
-                        <Link href="/" className="text-[#997819] font-bold">
+                        <Link href="/" className="text-[#997819] underline font-bold">
                           BizGrow Media
                         </Link>
                       </span>{" "}
@@ -250,7 +250,7 @@ const DigitalMarketingPage = () => {
                     <img
                       src="/frame mockup.jpg"
                       alt="Build a Powerful Digital Presence with BizGrow Media"
-                      className="w-full h-full relative object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                      className="w-full h-full relative object-cover hover:scale-105 transition-all duration-1000"
                     />
                   </div>
                   {/* 3. Decorative Spinner */}
@@ -283,7 +283,7 @@ const DigitalMarketingPage = () => {
             </div>
             <div className="lg:w-1/2 pt-10">
               <p className="text-gray-500 dark:text-white/60 text-lg font-medium leading-relaxed italic border-l-4 border-[#997819] pl-8">
-                Your brand deserves more than content created simply to fill a
+                Your brand deserves more than <Link href="/high-quality-content-complete-guide/" className="text-[#997819] underline font-bold">content</Link> created simply to fill a
                 feed. It needs a clear, strategic content system that expresses
                 your value, reflects your identity, and keeps your audience
                 connected with the right message at the right moment.
@@ -332,7 +332,11 @@ const DigitalMarketingPage = () => {
               },
               {
                 title: "Content Repurposing",
-                desc: "We transform your existing ideas, videos, blogs, and expertise into fresh content formats tailored for different platforms.",
+                desc: (
+                  <>
+                    We transform your existing ideas, videos, <Link href="/blogs/" className="text-[#997819] underline font-bold">blogs</Link>, and expertise into fresh content formats tailored for different platforms.
+                  </>
+                ),
               },
             ].map((service, index) => (
               <div
@@ -414,7 +418,7 @@ const DigitalMarketingPage = () => {
             {[
               {
                 title: "Increases Brand Visibility",
-                desc: "Keeps your business active and present across the platforms where your audience spends their time.",
+                desc: <>Keeps your <Link href="/top-business-videos/" className="text-[#997819] underline font-bold">business</Link> active and present across the platforms where your audience spends their time.</>,
                 tag: "Market Reach",
                 span: "md:col-span-2",
               },
@@ -503,7 +507,10 @@ const DigitalMarketingPage = () => {
               </h2>
 
               <p className="text-gray-500 dark:text-white/40 text-lg md:text-xl font-medium leading-relaxed border-l-4 border-[#997819] pl-10 italic">
-                Content Engine helps your brand move beyond rushed, inconsistent
+                <Link href="/consistent-content-2026/" className="text-[#997819] underline font-bold">
+                  Content Engine
+                </Link>{" "}
+                helps your brand move beyond rushed, inconsistent
                 posting and towards a more intentional content presence shaped
                 by clarity, consistency, and long-term growth.
               </p>
@@ -701,7 +708,7 @@ const DigitalMarketingPage = () => {
                     expertise, and{" "}
                     <Link
                       href="/authority-builder/"
-                      className="text-[#997819] font-bold"
+                      className="text-[#997819] underline font-bold"
                     >
                       build stronger trust
                     </Link>{" "}
